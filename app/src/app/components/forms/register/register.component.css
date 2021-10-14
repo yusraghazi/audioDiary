@@ -4,6 +4,7 @@
   color: #AF2C0E;
   margin: 0 auto;
   float: none;
+  border-radius: 21px ;
 }
 
 .btn-create {
@@ -16,6 +17,9 @@
   border-radius: 40px;
   background:  #AF2C0E;
   transition: all 0.3s ease 0s;
+  position: center;
+  display:inline;
+  width: 150px;
 }
 
 .btn-create:hover {
@@ -34,6 +38,10 @@
   border-radius: 40px;
   background:  #757575;
   transition: all 0.3s ease 0s;
+  position:center;
+  margin-top: 2px;
+  display:inline;
+  width: 150px;
 }
 
 
