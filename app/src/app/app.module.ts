@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './components/forms/login/login.component';
 import { RegisterComponent } from './components/forms/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     RegisterComponent,
   ],
   imports: [
@@ -20,4 +22,6 @@ import { RegisterComponent } from './components/forms/register/register.componen
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
