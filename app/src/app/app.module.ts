@@ -8,9 +8,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/forms/login/login.component';
 import { RegisterComponent } from './components/forms/register/register.component';
 import { ForgotPasswordComponent } from './components/forms/forgot-password/forgot-password.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
+    FooterComponent,
+    HeaderComponent,
     AppComponent,
     LoginComponent,
     RegisterComponent,
@@ -24,6 +29,4 @@ import { ForgotPasswordComponent } from './components/forms/forgot-password/forg
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule { }
