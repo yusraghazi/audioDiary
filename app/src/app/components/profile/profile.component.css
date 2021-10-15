@@ -73,3 +73,29 @@ li {
   color: #94260d;
   margin-left:20px ;
 }
+.profile-audio1{
+  background-color: #A28EB2;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.profile-audio2{
+  background-color: #FFB366;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.profile-audio3{
+  background-color: #ACDF8D;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.profile-audio4{
+  background-color: #F99679;
+  padding: 10px;
+  border-radius: 10px;
+}
+.profile-audio{
+  width: 100%;
+}
