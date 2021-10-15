@@ -59,10 +59,14 @@ li {
   padding-left: 10px;
 }
 .profile-bin{
+  cursor: pointer;
   padding-top: 5px;
   float: right;
   color: #AF2C0E;
   font-size: 25px;
+}
+.profile-bin:hover{
+  font-size: 30px;
 }
 .fa-user{
   color: #AF2C0E;
