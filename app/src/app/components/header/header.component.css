@@ -4,9 +4,9 @@
 }
 .header nav {
   display: none;
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 100px);
   transition: 0.5s;
   background: #AF2C0E;
   text-align: center;

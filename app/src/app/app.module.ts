@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/forms/register/register.componen
 import { ForgotPasswordComponent } from './components/forms/forgot-password/forgot-password.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,8 @@ import { HeaderComponent } from './components/header/header.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
+    ProfileComponent,
+
     ForgotPasswordComponent,
   ],
   imports: [
