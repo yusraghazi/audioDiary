@@ -1,17 +1,22 @@
-span.a ,span.b {
+.profile-header-pic, .profile-header-name {
   display: inline-block;
   padding: 5px;
 }
+.profile-hr{
+  width: 80%;
+  background-color: #AF2C0E;
+  opacity: 30%;
+}
 
-span.b{
+.profile-header-name{
   background-color:#AF2C0E ;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 20px;
 }
-span.a{
-  /*margin-top: 10px;*/
+.profile-header-pic{
+  margin-top: 10px;
 }
 .title-container{
   margin-left:5% ;
@@ -48,4 +53,23 @@ li {
   background-color: #ffeded;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   border-radius: 10px;
+}
+
+.profile-rec-item1{
+  padding-left: 10px;
+}
+.profile-bin{
+  padding-top: 5px;
+  float: right;
+  color: #AF2C0E;
+  font-size: 25px;
+}
+.fa-user{
+  color: #AF2C0E;
+  font-size: 60px;
+}
+
+.profile-section-title{
+  color: #94260d;
+  margin-left:20px ;
 }
