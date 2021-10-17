@@ -12,6 +12,8 @@ import { ForgotPasswordComponent } from './components/forms/forgot-password/forg
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { RecordingPostComponent } from './components/feed/recording-post/recording-post.component';
+import { FeedviewComponent } from './components/feed/feedview/feedview.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     ProfileComponent,
 
     ForgotPasswordComponent,
+     RecordingPostComponent,
+     FeedviewComponent,
   ],
   imports: [
     BrowserModule,

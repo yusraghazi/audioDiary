@@ -1,6 +1,8 @@
 .header{
   background: #AF2C0E;
   width: 100%;
+  margin-bottom: 9px;
+
 }
 .header nav {
   display: none;
