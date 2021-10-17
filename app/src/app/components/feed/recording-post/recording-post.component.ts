@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Post} from "../../../models/post";
 
 @Component({
   selector: 'app-recording-post',
@@ -6,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recording-post.component.css']
 })
 export class RecordingPostComponent implements OnInit {
+  @Input()
+  audioPost: Post
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

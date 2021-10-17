@@ -1,14 +1,15 @@
-<div class="postCard">
-  <img class="shadow-lg card-img-top" src="../../../../assets/img/river.jpg" alt="Card image cap">
+<div class="postCard" [ngStyle]="{'background-color':audioPost.theme}">
+  <img class="shadow-lg card-img-top" src="../../../../assets/img/postsimgs/{{audioPost.img}}">
   <div class="card-body">
     <div class=" shadow-lg title-container">
-    <h5 class="card-title"> River Sounds</h5>
+    <h5 class="card-title"> {{audioPost.title}}</h5>
     </div>
     <div class="shadow-lg text-container">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">{{audioPost.description}}</p>
     </div>
     <div class="icons">
-    <i class="bi bi-heart-fill"></i>
+    <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
+    <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>
     <i class="bi bi-chat-dots-fill"></i>
     <i class="bi bi-share-fill"></i>
       <i class="bi bi-flag-fill"></i>
