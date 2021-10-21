@@ -14,6 +14,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RecordingPostComponent } from './components/feed/recording-post/recording-post.component';
 import { FeedviewComponent } from './components/feed/feedview/feedview.component';
+import { EditingComponent } from './components/editing/editing.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { FeedviewComponent } from './components/feed/feedview/feedview.component
     ForgotPasswordComponent,
      RecordingPostComponent,
      FeedviewComponent,
+     EditingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
