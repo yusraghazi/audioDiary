@@ -14,6 +14,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RecordingPostComponent } from './components/feed/recording-post/recording-post.component';
 import { FeedviewComponent } from './components/feed/feedview/feedview.component';
+import { RecDoneComponent } from './components/rec-done/rec-done/rec-done.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FeedviewComponent } from './components/feed/feedview/feedview.component
     ForgotPasswordComponent,
      RecordingPostComponent,
      FeedviewComponent,
+     RecDoneComponent,
   ],
   imports: [
     BrowserModule,
