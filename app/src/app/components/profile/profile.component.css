@@ -57,6 +57,8 @@ li {
 
 .profile-rec-item1{
   padding-left: 10px;
+  font-weight: bold;
+  color: #911d02;
 }
 .profile-bin{
   cursor: pointer;
@@ -106,4 +108,101 @@ li {
 
 .whiteSpace{
   height: 150px;
+}
+
+
+/**********animation********/
+.css_animation {
+  width: 100%;
+  /*height: 20%;*/
+  margin: 0 auto;
+}
+
+.css_animation .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /*   padding-top: 78%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.css_animation .wrapper div {
+  display: block;
+  width: 15px;
+  margin-right: 8px;
+  height: 15px;
+  border-radius: 20px;
+  animation: sound 0ms 1.2s linear infinite alternate;
+  transition: height 0.8s;
+}
+.css_animation .wrapper .pro-rec1{
+  background: #aa06f0;
+}
+
+.css_animation .wrapper .pro-rec2{
+  background: #f5ac57;
+}
+
+.css_animation .wrapper .pro-rec3{
+  background: #73ce0d;
+}
+
+.css_animation .wrapper .pro-rec4{
+  background: #da4d10;
+}
+
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 5px;
+  }
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+.css_animation .wrapper div:nth-of-type(1) {
+  /*   height: 2px; */
+  animation-duration: 458ms;
+}
+.css_animation .wrapper div:nth-of-type(2) {
+  /*   height: 15px; */
+  animation-duration: 400ms;
+}
+.css_animation .wrapper div:nth-of-type(3) {
+  /*   height: 25px; */
+  animation-duration: 427ms;
+}
+.css_animation .wrapper div:nth-of-type(4) {
+  /*   height: 30px; */
+  animation-duration: 441ms;
+}
+.css_animation .wrapper div:nth-of-type(5) {
+  /*   height: 40px; */
+  animation-duration: 419ms;
+}
+.css_animation .wrapper div:nth-of-type(6) {
+  /*   height: 45px; */
+  animation-duration: 487ms;
+}
+.css_animation .wrapper div:nth-of-type(7) {
+  /*   height: 60px; */
+  animation-duration: 442ms;
+}
+
+
+.css_animation .wrapper div:nth-of-type(8) {
+  height: 36px;
+  animation-duration: 419ms;
+}
+.css_animation .wrapper div:nth-of-type(9) {
+  height: 40px;
+  animation-duration: 487ms;
+}
+.css_animation .wrapper div:nth-of-type(10) {
+  height: 62px;
+  animation-duration: 442ms;
 }
