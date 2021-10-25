@@ -19,4 +19,12 @@ export class HeaderComponent implements OnInit {
       });
     })
   }
+
+  closeMenu() {
+    $(document).ready(function () {
+      $('.menu-close').click(function () {
+        $('nav').toggleClass('active');
+      });
+    })
+  }
 }

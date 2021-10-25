@@ -1,12 +1,12 @@
 <div class="header">
   <img class="logo-audio-diary" src="./assets/img/main-logo.png" alt="recording button" >
-  <nav id="click-fix">
+  <nav>
     <ul>
-      <li><a routerLink="feedview">Home</a></li>
-      <li><a routerLink="./profile" >Profile</a></li>
+      <li><a class="menu-close" (click)="closeMenu()" routerLink="feedview">Home</a></li>
+      <li><a class="menu-close" (click)="closeMenu()" routerLink="./profile">Profile</a></li>
 <!--      <li><a href="#">Settings</a></li>-->
-      <li><a routerLink="login">Login</a></li>
-      <li><a routerLink="register">Sign Up</a></li>
+      <li><a class="menu-close" (click)="closeMenu()" routerLink="login">Login</a></li>
+      <li><a class="menu-close" (click)="closeMenu()" routerLink="register">Sign Up</a></li>
     </ul>
   </nav>
   <div class="menu-toggle"
