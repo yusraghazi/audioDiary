@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RecordingPostComponent } from './components/feed/recording-post/recording-post.component';
 import { FeedviewComponent } from './components/feed/feedview/feedview.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
