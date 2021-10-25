@@ -6,6 +6,7 @@ import {RegisterComponent} from "./components/forms/register/register.component"
 import {FeedviewComponent} from "./components/feed/feedview/feedview.component";
 
 const routes: Routes = [
+  {path: '', component: FeedviewComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
