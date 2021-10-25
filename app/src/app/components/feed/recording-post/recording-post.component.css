@@ -1,6 +1,6 @@
 .postCard{
   width: 379px;
-  height: 164px;
+  height: auto;
   /*background: #F4B371;*/
   color: #AF2C0E;
   margin: 10px auto;
@@ -10,12 +10,27 @@
   flex: 1 1 auto;
 }
 
+
+
+app-comments{
+  position: relative;
+display: flex;
+  right: 345px;
+margin-top: 200px;
+}
+.postedByTag{
+  color: #FFFFFF;
+  margin-left: 10px;
+  font-size: 10px;
+}
 .card-img-top{
   width: 182px;
   height: 125px;
-  margin-top: 20px;
+  margin-top: 23px;
   margin-left: 20px;
   border-radius: 17px;
+  position: absolute;
+
 }
 .title-container{
   width: 130px;
@@ -49,4 +64,116 @@
 }
 .bi-flag-fill {
 margin-left: 36px;
+}
+
+/**********animation********/
+.css_animation {
+  width: 100%;
+  margin-top: 30px;
+  margin-left: -13px;
+
+}
+
+.css_animation .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /*   padding-top: 78%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.css_animation .wrapper div {
+  display: block;
+  width: 15px;
+  margin-right: 8px;
+  height: 15px;
+  border-radius: 20px;
+  animation: sound 0ms 1.2s linear infinite alternate;
+  transition: height 0.8s;
+}
+.css_animation .wrapper .pro-rec1{
+  background: #f9edf6;
+}
+
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 5px;
+  }
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+.css_animation .wrapper div:nth-of-type(1) {
+  /*   height: 2px; */
+  animation-duration: 458ms;
+}
+.css_animation .wrapper div:nth-of-type(2) {
+  /*   height: 15px; */
+  animation-duration: 400ms;
+}
+.css_animation .wrapper div:nth-of-type(3) {
+  /*   height: 25px; */
+  animation-duration: 427ms;
+}
+.css_animation .wrapper div:nth-of-type(4) {
+  /*   height: 30px; */
+  animation-duration: 441ms;
+}
+.css_animation .wrapper div:nth-of-type(5) {
+  /*   height: 40px; */
+  animation-duration: 419ms;
+}
+.css_animation .wrapper div:nth-of-type(6) {
+  /*   height: 45px; */
+  animation-duration: 487ms;
+}
+
+
+/*Onclick sound waves*/
+.css_animation .onClickWrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /*   padding-top: 78%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.css_animation .onClickWrapper div {
+  display: block;
+  width: 15px;
+  margin-right: 8px;
+  height: 15px;
+  border-radius: 20px;
+
+}
+
+.css_animation .onClickWrapper .pro-rec1{
+  background: #f9edf6;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(1) {
+     height: 70px;
+}
+.css_animation .onClickWrapper div:nth-of-type(2) {
+     height: 60px;
+}
+.css_animation .onClickWrapper div:nth-of-type(3) {
+     height: 50px;
+}
+.css_animation .onClickWrapper div:nth-of-type(4) {
+     height: 40px;
+}
+.css_animation .onClickWrapper div:nth-of-type(5) {
+     height: 30px;
+}
+.css_animation .onClickWrapper div:nth-of-type(6) {
+     height: 20px;
 }

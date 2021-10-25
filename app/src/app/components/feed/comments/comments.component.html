@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [ngStyle]="{'background-color':postInfo.theme}">
   <div class="card-body">
     <div *ngFor="let comment of comments">
       <app-single-comment [postComment]="comment"></app-single-comment>

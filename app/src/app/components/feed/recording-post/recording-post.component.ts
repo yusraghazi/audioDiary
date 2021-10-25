@@ -9,12 +9,29 @@ import {Post} from "../../../models/post";
 export class RecordingPostComponent implements OnInit {
   @Input()
   audioPost: Post
+  isShown: boolean;
+
 
   constructor() {
 
   }
 
   ngOnInit(): void {
+
+
   }
+  toggleShow() {
+
+    this.isShown = ! this.isShown;
+
+  }
+  activateSoundWaves(){
+   const soundWaves = document.getElementById("soundwavesWrapper");
+
+    soundWaves.classList.remove('onClickWrapper');
+    soundWaves.classList.add("wrapper");
+  }
+
+
 
 }
