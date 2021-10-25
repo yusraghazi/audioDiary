@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <div *ngFor="let comment of comments">
+      <app-single-comment [postComment]="comment"></app-single-comment>
+    </div>
+    <mat-form-field appearance="outline">
+      <mat-label>Type a comment...</mat-label>
+      <input matInput [(ngModel)]="description">
+      <button type="button" (click)="sendComment()" mat-icon-button matSuffix>
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>
