@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { RecordingPostComponent } from './components/feed/recording-post/recording-post.component';
 import { MapviewComponent } from "./components/feed/mapview/mapview.component";
 import { FeedviewComponent } from './components/feed/feedview/feedview.component';
+import { EditingComponent } from './components/editing/editing.component';
 import { CommentsComponent } from './components/feed/comments/comments.component';
 import {FormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -43,6 +44,7 @@ import { SwitchComponent } from './components/feed/switch/switch.component';
      RecordingPostComponent,
       MapviewComponent,
      FeedviewComponent,
+     EditingComponent,
      CommentsComponent,
      SingleCommentComponent,
      SwitchComponent,
