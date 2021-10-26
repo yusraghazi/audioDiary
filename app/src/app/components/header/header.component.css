@@ -52,6 +52,7 @@
 
 .logo-audio-diary{
   width: 100px;
+  cursor: pointer;
   display: block;
   position: relative;
   top: 0;

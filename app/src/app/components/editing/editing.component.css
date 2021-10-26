@@ -1,0 +1,207 @@
+.editingRec {
+  background-color: lightgray;
+  border-radius: 34px;
+  margin-bottom: 10px;
+  padding-bottom: 17px;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+h2#editHeader {
+  text-align: center;
+  color: #AF2C0E;
+}
+
+
+.postCard {
+  width: 379px;
+  height: 164px;
+  /*background: #F4B371;*/
+  color: #AF2C0E;
+  margin: 10px auto;
+  float: none;
+  border-radius: 21px;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.card-img-top {
+  width: 182px;
+  height: 125px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 17px;
+}
+
+.title-container {
+  width: 130px;
+  height: 21px;
+  border-radius: 7px;
+  background: #94260d;
+
+
+}
+
+.card-title {
+  font-size: 15px;
+  color: white;
+  margin-left: 10px;
+}
+
+.text-container {
+  width: 130px;
+  height: 90px;
+  margin-top: 2px;
+  border-radius: 7px;
+  background: white;
+}
+
+.card-text {
+  margin-top: 1px;
+  margin-left: 2px;
+  font-size: 10px;
+  color: black;
+}
+
+.bi {
+  padding: 3px;
+}
+
+.bi-flag-fill {
+  margin-left: 36px;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+h2, h2 {
+  font-size: 2rem;
+  padding-top: 20px;
+}
+
+.editInputs {
+
+}
+
+
+.inputHeader {
+  color: #AF2C0E;
+  font-size: 130%;
+  margin: 1% 3% 4% 4%;
+  width: 23%;
+}
+
+.inputValue {
+  margin: 1%;
+  width: 80%;
+  height: 40px;
+  margin-left: 7%;
+}
+
+
+.addLocationIcon {
+  height: 36px;
+}
+
+#locationInput {
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  background: #AF2C0E url(../../../assets/img/editimgs/location_icon.png) no-repeat scroll 97% -1px;
+  background-size: 35px;
+}
+
+
+#descriptionArea {
+  height: 100px;
+}
+
+
+#durationInput {
+  border-radius: 6px;
+  background-color: #AF2C0E;
+  color: white;
+  text-align: center;
+}
+
+
+#descriptionInput {
+  width: 340px;
+}
+
+.picture {
+  display: flex;
+}
+
+.addPictureIcon {
+  height: 55px;
+}
+
+
+#themeInput {
+  color: #AF2C0E;
+  font-size: 115%;
+  margin: 2% -9% 3% 4%;
+  width: 35%;
+}
+
+.themeSelection {
+  display: flex;
+}
+
+
+#chooseTheme {
+  display: flex;
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.themeOptions {
+  margin-right: 6px;
+  width: 24px;
+  height: 24px;
+}
+
+#option1 {
+  background: #FE5F38;
+}
+
+#option2 {
+  background: #FFAA5B;
+}
+
+#option3 {
+  background: #9BC111;
+}
+
+#option4 {
+  background: #7A9BC6;
+}
+
+#option5 {
+  background: #A28EB2;
+}
+
+#option6 {
+  background: #73251E;
+}
+
+
+.editButtons {
+  width: 96px;
+  height: 36px;
+  margin-left: 15%;
+  border-radius: 15px;
+  color: white;
+  border-width: 0;
+}
+
+#discardButton {
+  background-color: gray;
+}
+
+#postButton {
+  background-color: #AF2C0E;
+}
