@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {SingleComment} from "../../../models/singleComment";
+import {Post} from "../../../models/post";
 
 
 @Component({
@@ -8,8 +9,13 @@ import {SingleComment} from "../../../models/singleComment";
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
+
+  @Input()
+  postInfo: Post;
+
   comments: SingleComment[];
   description: string;
+
 
   constructor() { }
 
@@ -24,5 +30,6 @@ export class CommentsComponent implements OnInit {
     this.description = "";
 
 }
+
 
 }
