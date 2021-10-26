@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,7 +12,7 @@ export class RecDoneComponent implements OnInit {
   closeResult = '';
   cardColor = '#FE5F38'
 
-  constructor(private modalService: NgbModal) {
+  constructor(private modalService: NgbModal, private router: Router) {
 
   }
 
@@ -47,10 +48,12 @@ stopSound(){
 }
 
 
-
-
   getSelectedColor(){
     return this.cardColor;
+  }
+
+  buttonEditing(){
+    this.router.navigateByUrl('editing');
   }
 
 }
