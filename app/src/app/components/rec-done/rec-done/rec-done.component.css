@@ -116,8 +116,8 @@ body{
 svg.video-overlay-play-button {
   width: 28%;
   position: relative;
-  left: 37%;
-  top: 209px;
+  left: 24%;
+  top: 202px;
 }
 .editFileCard {
   margin-top: 85px;
@@ -141,4 +141,12 @@ button#nextFile {
   border-radius: 29%;
   width: 77px;
   top: 290px;
+}
+i.bi.bi-pause {
+  position: fixed;
+  bottom: -11%;
+  width: 41%;
+  height: 51%;
+  right: 40px;
+  font-size: 121px;
 }

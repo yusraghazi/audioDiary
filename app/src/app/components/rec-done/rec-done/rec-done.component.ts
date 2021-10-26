@@ -21,12 +21,25 @@ export class RecDoneComponent implements OnInit {
   }
 
 
-  playSound(){
-    let audio = new Audio();
-    audio.src = "../assets/audio/creative_minds.mp3";
-    audio.load();
-    audio.play();
-  }
+playSound(){
+  let audio = new Audio();
+  audio.src = "../assets/audio/creative_minds.mp3";
+  audio.load();
+  audio.play();
+
+}
+
+stopSound(){
+  let audio = new Audio();
+
+  audio.pause();
+  audio.currentTime = 0;
+
+
+
+}
+
+
 
 
   getSelectedColor(){
