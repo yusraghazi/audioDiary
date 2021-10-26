@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
@@ -8,7 +8,9 @@ import {ActivatedRoute, Router} from "@angular/router";
 })
 export class SwitchComponent implements OnInit {
 
-  switch: boolean;
+  @Input()
+  switchText: string;
+
   router: Router;
 
   constructor(router: Router) {
@@ -18,12 +20,12 @@ export class SwitchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  click(view: string) {
-    // if (view == "feed") {
-    //   this.router.navigateByUrl('/feedview');
-    // } else {
-    //   this.router.navigateByUrl('/mapview');
-    // }
+  click() {
+    if (this.switchText == "Feedview") {
+      this.router.navigateByUrl('/feedview');
+    } else {
+      this.router.navigateByUrl("/mapview");
+    }
   }
 
 }

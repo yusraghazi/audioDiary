@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 
@@ -11,6 +11,8 @@ export class FeedviewComponent implements OnInit {
   posts: Post[];
   text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
+  @Output()
+  mapview: string = "Mapview";
 
   constructor() {
   }

@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, Output} from '@angular/core';
 
 // @ts-ignore
 import H from '@here/maps-api-for-javascript';
@@ -16,6 +16,9 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
   map: mapboxgl.map;
   places: any;
+
+  @Output()
+  feedview: string = "Feedview";
 
   constructor() {
   }
