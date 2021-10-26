@@ -1,0 +1,52 @@
+<script src="../../assets/js/audio.js"></script>
+<div class="editFileCard">
+  <div class="fileCard" [ngStyle]="{'background-color':getSelectedColor()}">
+
+    <div class="card-body">
+      <div class=" shadow-lg title-container">
+        <h5 class="card-title"> </h5>
+      </div>
+      <div class="shadow-lg text-container">
+        <p class="card-text"></p>
+      </div>
+      <div class="reportFlag">
+      </div>
+    </div>
+
+    <div class="boxContainer">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+      <div class="box box5"></div>
+
+    </div>
+
+
+
+      <div class="spinner-wrap">
+        <div class="spinner-outer"></div>
+        <div class="spinner-center"></div>
+        <div class="play-sprite"></div>
+    </div>
+      </div>
+
+
+
+
+      <!-- musicplayer -->
+
+    <svg class="video-overlay-play-button"  (click)="playSound()" viewBox="0 0 200 200" alt="Play video">
+      <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#000"/>
+      <polygon points="70, 55 70, 145 145, 100" fill="#000" id="svg-play"/>
+    </svg>
+    <i class="bi bi-pause" id="pauseSound" (click)="stopSound()"></i>
+
+      <button class="btn-primary" id="discardFile">Discard</button>
+      <button class="btn-primary" id="nextFile">Next</button>
+
+
+
+
+
+  </div>

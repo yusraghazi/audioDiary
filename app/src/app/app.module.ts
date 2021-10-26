@@ -25,6 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { SingleCommentComponent } from './components/feed/single-comment/single-comment.component';
 import { SwitchComponent } from './components/feed/switch/switch.component';
+import { RecDoneComponent } from './components/rec-done/rec-done/rec-done.component';
 
 
 
@@ -48,6 +49,7 @@ import { SwitchComponent } from './components/feed/switch/switch.component';
      CommentsComponent,
      SingleCommentComponent,
      SwitchComponent,
+     RecDoneComponent,
   ],
   imports: [
     BrowserModule,
