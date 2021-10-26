@@ -15,7 +15,7 @@ import {environment} from "../../../../environments/environment.prod";
 export class MapviewComponent implements OnInit, AfterViewInit {
 
   map: mapboxgl.map;
-  geojson: any;
+  places: any;
 
   constructor() {
   }
@@ -24,7 +24,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.geojson = {
+    this.places = {
       'type': 'FeatureCollection',
       'features': [
         {
@@ -59,7 +59,18 @@ export class MapviewComponent implements OnInit, AfterViewInit {
             'type': 'Point',
             'coordinates': [4.997070, 52.377956]
           }
-        }
+        },
+        {
+          'type': 'Feature',
+          'properties': {
+            'iconSize': [20, 20],
+            'color': 'yellow'
+          },
+          'geometry': {
+            'type': 'Point',
+            'coordinates': [6.2167070, 52.377956]
+          }
+        },
       ]
     };
 
@@ -73,61 +84,87 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
     const nav = new mapboxgl.NavigationControl();
     this.map.addControl(nav, 'top-left');
+    const filterGroup = document.getElementById('filter-group');
 
-    for (const marker of this.geojson.features) {
-      const el = document.createElement('div');
-      const width = marker.properties.iconSize[0];
-      const height = marker.properties.iconSize[1];
-      el.className = 'marker';
-      el.style.backgroundColor = marker.properties.color;
-      el.style.width = `${width}px`;
-      el.style.height = `${height}px`;
-      el.style.backgroundSize = '100%';
-      el.style.borderRadius = "50%";
-      el.style.borderColor = "white";
+    this.map.on('load', () => {
 
-      el.addEventListener('click', () => {
-        if (el.innerHTML === "") {
-          el.innerHTML = '<div class="card" style="width: 18rem;">\n' +
-            '  <img class="card-img-top" s<div class="postCard" [ngStyle]="{\'background-color\':audioPost.theme}">\n' +
-            '  <img class="shadow-lg card-img-top" src="../../../../assets/img/postsimgs/{{audioPost.img}}">\n' +
-            '  <div class="card-body">\n' +
-            '    <div class=" shadow-lg title-container">\n' +
-            '    <h5 class="card-title"> {{audioPost.title}}</h5>\n' +
-            '    </div>\n' +
-            '    <div class="shadow-lg text-container">\n' +
-            '    <p class="card-text">{{audioPost.description}}</p>\n' +
-            '    </div>\n' +
-            '    <div class="icons">\n' +
-            '    <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>\n' +
-            '    <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>\n' +
-            '    <i class="bi bi-chat-dots-fill"></i>\n' +
-            '    <i class="bi bi-share-fill"></i>\n' +
-            '      <i class="bi bi-flag-fill"></i>\n' +
-            '\n' +
-            '    </div>\n' +
-            '    <div class="reportFlag">\n' +
-            '    </div>\n' +
-            '  </div>\n' +
-            '\n' +
-            '</div>src="..." alt="Card image cap">\n' +
-            '  <div class="card-body">\n' +
-            '    <h5 class="card-title">Card title</h5>\n' +
-            '    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>\n' +
-            '    <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
-            '  </div>\n' +
-            '</div>';
-          el.style.zIndex = String(2);
-        } else {
-          el.innerHTML = "";
-          el.style.zIndex = String(1);
-        }
+      this.map.addSource('places', {
+        'type': 'geojson',
+        'data': this.places
       });
 
-      new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(this.map);
-    }
+      for (const feature of this.places.features) {
+        const symbol = feature.properties.color;
+        const layerID = `poi-${symbol}`;
+
+        if (!this.map.getLayer(layerID)) {
+          this.map.addLayer({
+            'id': layerID,
+            'type': 'circle',
+            'source': 'places',
+            'paint': {
+              'circle-color': symbol,
+              'circle-radius': 10,
+            },
+            'filter': ['==', 'color', symbol]
+          });
+
+          const input = document.createElement('input');
+          input.type = 'checkbox';
+          input.id = layerID;
+          input.checked = true;
+          filterGroup.appendChild(input);
+
+          const label = document.createElement('label');
+          label.setAttribute('for', layerID);
+          label.textContent = symbol;
+          filterGroup.appendChild(label);
+
+          input.addEventListener('change', (e) => {
+            this.map.setLayoutProperty(
+              layerID,
+              'visibility',
+              // @ts-ignore
+              e.target.checked ? 'visible' : 'none'
+            );
+          });
+        }
+
+
+        // @ts-ignore
+        this.map.on('click', layerID, (e) => {
+          const coordinates = e.features[0].geometry.coordinates.slice();
+
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+
+          new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(`<div class="card">
+                <img class="card-img-top" <div class="postCard" [ngStyle]="{\'background-color\':audioPost.theme}">
+            <img class="shadow-lg card-img-top" src="../../../../assets/img/postsimgs/{{audioPost.img}}">
+            <div class="card-body">
+            <div class=" shadow-lg title-container">
+            <h5 class="card-title"> {{audioPost.title}}</h5>
+            </div>
+            <div class="shadow-lg text-container">
+            <p class="card-text">{{audioPost.description}}</p>
+            </div>
+            <div class="icons">
+            <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
+            <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>
+            <i class="bi bi-chat-dots-fill"></i>
+            <i class="bi bi-share-fill"></i>
+            <i class="bi bi-flag-fill"></i>
+            </div>
+            <div class="reportFlag">
+            </div>
+            </div>`)
+            .addTo(this.map);
+        });
+      }
+    });
   }
 
 

@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { RecordingPostComponent } from './components/feed/recording-post/recording-post.component';
+import { MapviewComponent } from "./components/feed/mapview/mapview.component";
 import { FeedviewComponent } from './components/feed/feedview/feedview.component';
 import { CommentsComponent } from './components/feed/comments/comments.component';
 import {FormsModule} from "@angular/forms";
@@ -22,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { SingleCommentComponent } from './components/feed/single-comment/single-comment.component';
+import { SwitchComponent } from './components/feed/switch/switch.component';
 
 
 
@@ -39,9 +41,11 @@ import { SingleCommentComponent } from './components/feed/single-comment/single-
 
     ForgotPasswordComponent,
      RecordingPostComponent,
+      MapviewComponent,
      FeedviewComponent,
      CommentsComponent,
      SingleCommentComponent,
+     SwitchComponent,
   ],
   imports: [
     BrowserModule,
