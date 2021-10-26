@@ -42,11 +42,31 @@
     </svg>
     <i class="bi bi-pause" id="pauseSound" (click)="stopSound()"></i>
 
-      <button class="btn-primary" id="discardFile">Discard</button>
+      <button class="btn-primary" id="discardFile" (click)="open(content)">Discard</button>
       <button class="btn-primary" id="nextFile">Next</button>
 
 
 
 
 
-  </div>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Are you sure you want to discard the?</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <button class="btn-primary" id="confirmFile">Confirm</button>
+
+            </div>
+          </form>
+        </div>
+      </ng-template>
+
+
+      <hr>
+
+      <pre>{{ closeResult }}</pre>

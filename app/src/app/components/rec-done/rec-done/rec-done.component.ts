@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-rec-done',
@@ -8,16 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rec-done.component.css']
 })
 export class RecDoneComponent implements OnInit {
-
+  closeResult = '';
   cardColor = '#FE5F38'
 
-  constructor() {
+  constructor(private modalService: NgbModal) {
 
   }
 
   ngOnInit(): void {
 
 
+  }
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+
+    }, (reason) => {
+
+    });
   }
 
 

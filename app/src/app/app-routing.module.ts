@@ -6,6 +6,7 @@ import {RegisterComponent} from "./components/forms/register/register.component"
 import {FeedviewComponent} from "./components/feed/feedview/feedview.component";
 import {MapviewComponent} from "./components/feed/mapview/mapview.component";
 import {ForgotPasswordComponent} from "./components/forms/forgot-password/forgot-password.component";
+import {RecDoneComponent} from "./components/rec-done/rec-done/rec-done.component";
 
 const routes: Routes = [
   {path: '', component: FeedviewComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'feedview', component: FeedviewComponent},
   {path: 'mapview', component: MapviewComponent},
-  {path: 'forgot-password', component: ForgotPasswordComponent}
+  {path: 'forgot-password', component: ForgotPasswordComponent},
+  {path: 'rec-done', component: RecDoneComponent}
 ];
 
 @NgModule({
