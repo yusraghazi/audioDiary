@@ -8,191 +8,24 @@
 
   <div class="profile-top-section">
     <h5 class="profile-section-title">My Fragments</h5>
-    <ul class="top-ul">
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">River sound</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-              </div>
-            </div>
-            <audio class="profile-audio1" controls style="width: 85%">
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-            <i class="fa fa-trash profile-bin" aria-hidden="true"></i>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">Forest</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-              </div>
-            </div>
-            <audio class="profile-audio2" controls style="width: 85%">
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-            <i class="fa fa-trash profile-bin" aria-hidden="true"></i>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">City Sound</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-              </div>
-            </div>
-            <audio class="profile-audio3" controls style="width: 85%">
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-            <i class="fa fa-trash profile-bin" aria-hidden="true"></i>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">Mountains</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-              </div>
-            </div>
-            <audio class="profile-audio4" controls style="width: 85%">
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-            <i class="fa fa-trash profile-bin" aria-hidden="true"></i>
-          </div>
-        </div>
-      </li>
-
-    </ul>
+    <div class="allPosts">
+      <div *ngFor="let post of posts;">
+        <app-profile-post [audioPost]="post"></app-profile-post>
+      </div>
+    </div>
   </div>
 
-  <div class="profile-bot-section">
-    <h5 class="profile-section-title">Favorites Fragments</h5>
-    <ul class="bot-ul">
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">Mountains</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-                <div class="pro-rec2"></div>
-              </div>
-            </div>
-            <audio class="profile-audio profile-audio2" controls>
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">Mountains</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-                <div class="pro-rec3"></div>
-              </div>
-            </div>
-            <audio class="profile-audio profile-audio3" controls>
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">Mountains</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-                <div class="pro-rec4"></div>
-              </div>
-            </div>
-            <audio class="profile-audio profile-audio4" controls>
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="profile rec container">
-          <div class="profile-rec-item profile-rec-item1">Mountains</div>
-          <div class="profile-rec-item profile-rec-item2">
-            <div class="css_animation">
-              <div class="wrapper">
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-                <div class="pro-rec1"></div>
-              </div>
-            </div>
-            <audio class="profile-audio profile-audio1" controls>
-              <source src="#" type="audio/ogg">
-              <source src="#" type="audio/mpeg">
-            </audio>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="whiteSpace"></div>
+  <div style="height: 30px" class="whiteSpace"></div>
 
+
+  <div class="profile-top-section">
+    <hr class="profile-hr">
+    <h5 class="profile-section-title">Favorites</h5>
+    <div class="allPosts">
+      <div *ngFor="let post of posts;">
+        <app-profile-post [audioPost]="post"></app-profile-post>
+      </div>
+    </div>
+  </div>
 </div>
+<div style="height: 150px" class="whiteSpace"></div>
