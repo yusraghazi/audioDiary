@@ -1,0 +1,70 @@
+<div class="editingRec">
+
+  <h2 id="editHeader" >Edit recording</h2>
+
+
+  <div class="editCard">
+    <div class="postCard" [ngStyle]="{'background-color':getSelectedColor()}">
+      <img class="shadow-lg card-img-top" src="../../../assets/img/postsimgs/amsterdamBikes.jpg">
+      <div class="card-body">
+        <div class=" shadow-lg title-container">
+          <h5 class="card-title"> {{editTitle}} </h5>
+        </div>
+        <div class="shadow-lg text-container">
+          <p class="card-text"> {{editDescription}}</p>
+        </div>
+        <div class="icons">
+          <i class="bi bi-chat-dots-fill"></i>
+          <i class="bi bi-share-fill"></i>
+          <i class="bi bi-flag-fill"></i>
+
+        </div>
+        <div class="reportFlag">
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="editInputs">
+      <div class="inputsTitle">
+        <p class="inputHeader">Titel:</p>
+        <input class="inputValue" [(ngModel)]="editTitle">
+      </div>
+
+      <p class="inputHeader"> Duration:</p>
+      <input class="inputValue" id="durationInput" value="01:30:00">
+
+      <p class="inputHeader"> Location:</p>
+      <input class="inputValue" id="locationInput" value="Amsterdam">
+
+
+      <p class="inputHeader"> Description:</p>
+      <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
+      <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="editDescription"></textarea>
+
+      <div class="picture">
+        <p class="inputHeader"> Picture: </p>
+        <img class="addPictureIcon" src="../../../assets/img/editimgs/add_picture_icon.png">
+        <input type="image">
+      </div>
+
+      <div class="themeSelection">
+        <p id="themeInput">Choose theme:</p>
+        <div id="chooseTheme">
+          <p class="themeOptions" id="option1" (click)="cardColor = '#FE5F38'"></p>
+          <p class="themeOptions" id="option2" (click)="cardColor = '#FFAA5B'" ></p>
+          <p class="themeOptions" id="option3" (click)="cardColor = '#9BC111'"></p>
+          <p class="themeOptions" id="option4" (click)="cardColor = '#7A9BC6'"></p>
+          <p class="themeOptions" id="option5" (click)="cardColor = '#A28EB2'"></p>
+          <p class="themeOptions" id="option6" (click)="cardColor = '#73251E'"></p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="editButtons" id="discardButton">discard</button>
+        <button class="editButtons" id="postButton">post</button>
+      </div>
+    </div>
+  </div>
+</div>
