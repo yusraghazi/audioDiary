@@ -1,3 +1,12 @@
-<app-switch [switchText]="feedview"></app-switch>
-<div id="filter-group" class="filter-group"></div>
+
+<div class="btn-group mb-2">
+  <app-switch [switchText]="feedview"></app-switch>
+<div ngbDropdown class="d-inline-block">
+  <button class="btn btn-outline-primary ml-2" id="dropdownMenuButton" ngbDropdownToggle>Filter theme</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
+    <span id="filter-group" class="filter-group"></span>
+  </div>
+</div>
+</div>
+
 <div id="map-mapbox" style="cursor: pointer"></div>
