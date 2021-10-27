@@ -28,6 +28,10 @@ import { SwitchComponent } from './components/feed/switch/switch.component';
 import { RecDoneComponent } from './components/rec-done/rec-done/rec-done.component';
 import { ProfilePostComponent } from './components/profile/profile-post/profile-post.component';
 import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { HomeComponent } from './components/admin/home/home.component';
+import { AdminPostsComponent } from './components/admin/admin-posts/admin-posts.component';
+import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
 
 
 
@@ -54,6 +58,10 @@ import { ProfileSettingsComponent } from './components/profile-settings/profile-
      RecDoneComponent,
      ProfilePostComponent,
      ProfileSettingsComponent,
+     AdminComponent,
+     HomeComponent,
+     AdminPostsComponent,
+     AdminUsersComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,10 @@ import {ForgotPasswordComponent} from "./components/forms/forgot-password/forgot
 import {RecDoneComponent} from "./components/rec-done/rec-done/rec-done.component";
 import {EditingComponent} from "./components/editing/editing.component";
 import {ProfileSettingsComponent} from "./components/profile-settings/profile-settings.component";
+import {AdminComponent} from "./components/admin/admin.component";
+import {HomeComponent} from "./components/admin/home/home.component";
+import {AdminPostsComponent} from "./components/admin/admin-posts/admin-posts.component";
+import {AdminUsersComponent} from "./components/admin/admin-users/admin-users.component";
 
 const routes: Routes = [
   {path: '', component: FeedviewComponent},
@@ -20,7 +24,12 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'rec-done', component: RecDoneComponent},
   {path: 'editing', component: EditingComponent},
-  {path: 'profile-settings', component: ProfileSettingsComponent}
+  {path: 'profile-settings', component: ProfileSettingsComponent},
+  {path: 'admin', component: AdminComponent, children: [
+      {path: '', component: HomeComponent},
+      {path: 'location', component: AdminPostsComponent},
+      {path: 'users', component: AdminUsersComponent}
+    ]}
 ];
 
 @NgModule({
