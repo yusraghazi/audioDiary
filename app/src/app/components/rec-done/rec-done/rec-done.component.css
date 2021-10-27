@@ -16,6 +16,8 @@
     top: 49px;
   }
 
+
+
   /* visualizer */
   @keyframes quiet {
     25%{
@@ -107,10 +109,16 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
   img#audio_clipper {
     position: relative;
@@ -189,6 +197,43 @@ img#play-btn_new {
     margin-left: 209px;
     top: -88%;
 }
+
+h4#modal-basic-title {
+  position: relative;
+  top: 264%;
+  left: 12%;
+  color:white;
+}
+
+::ng-deep.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #00000087 !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+  height: 778px;
+  border-radius: 50px;
+}
+button.close {
+  color: white;
+}
+/*
+::ng-deep .modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+  position: relative;
+  top: 19%;
+} */
 
 .btn-edit {
   font-family: Raleway-SemiBold;
@@ -426,10 +471,14 @@ h1#max_recording_time {
   }
   button#confirmFile {
     position: relative;
-    left: 37%;
-  }
-
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -698,11 +747,16 @@ h1#max_recording_time {
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -972,11 +1026,16 @@ h1#max_recording_time {
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -1248,12 +1307,16 @@ h1#max_recording_time {
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
     left: 37%;
-  }
-
-
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -1467,5 +1530,33 @@ h1#max_recording_time {
   color: black;
   margin-left: 790px;
 }
+
+
+h4#modal-basic-title {
+  position: relative;
+  top: 264%;
+  left: 12%;
+  color:white;
+}
+
+::ng-deep.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #00000087 !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+  height: 778px;
+  border-radius: 50px;
+}
+button.close {
+  color: white;
+}
+
+
 
 }
