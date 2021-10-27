@@ -28,8 +28,7 @@ import { SwitchComponent } from './components/feed/switch/switch.component';
 import { RecDoneComponent } from './components/rec-done/rec-done/rec-done.component';
 import { ProfilePostComponent } from './components/profile/profile-post/profile-post.component';
 import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
-
-
+import { ProfilePostFavoriteComponent } from './components/profile/profile-post-favorite/profile-post-favorite.component';
 
 
 @NgModule({
@@ -54,6 +53,7 @@ import { ProfileSettingsComponent } from './components/profile-settings/profile-
      RecDoneComponent,
      ProfilePostComponent,
      ProfileSettingsComponent,
+     ProfilePostFavoriteComponent,
   ],
   imports: [
     BrowserModule,

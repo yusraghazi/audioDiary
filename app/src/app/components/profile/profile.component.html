@@ -9,8 +9,13 @@
   <div class="profile-top-section">
     <h5 class="profile-section-title">My Fragments</h5>
     <div class="allPosts">
-      <div *ngFor="let post of posts;">
-        <app-profile-post [audioPost]="post"></app-profile-post>
+      <div *ngFor="let post of posts;" (click)="postSelection(post)">
+        <app-profile-post
+          [selectedPost]="getSelectedPost"
+          (deletedSelected)="onDelete($event)"
+          [audioPost]="post">
+
+        </app-profile-post>
       </div>
     </div>
   </div>
@@ -22,8 +27,13 @@
     <hr class="profile-hr">
     <h5 class="profile-section-title">Favorites</h5>
     <div class="allPosts">
-      <div *ngFor="let post of posts;">
-        <app-profile-post [audioPost]="post"></app-profile-post>
+      <div *ngFor="let post of favoritePost" (click)="favoritePostSelection(post)">
+        <app-profile-post-favorite
+                          [selectedFavoritePost]="getSelectedFavoritePost"
+                          (deletedFavoriteSelected)="onDeleteFavorite($event)"
+                          [audioPost]="post">
+
+        </app-profile-post-favorite>
       </div>
     </div>
   </div>

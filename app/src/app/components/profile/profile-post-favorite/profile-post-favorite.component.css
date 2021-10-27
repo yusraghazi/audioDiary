@@ -1,0 +1,214 @@
+.profile-header-pic, .profile-header-name {
+  display: inline-block;
+  padding: 5px;
+}
+
+.profile-post-header {
+  padding: 5px;
+}
+
+.profile-header-name {
+  color: white;
+  background-color: #AF2C0E;
+  border-radius: 15px;
+  padding: 2px 20px;
+}
+
+.profile-bin {
+  cursor: pointer;
+  padding: 10px;
+  float: right;
+  color: #AF2C0E;
+  font-size: 25px;
+}
+
+.profile-bin:hover {
+  font-size: 30px;
+}
+
+.fa-user {
+  color: #AF2C0E;
+  font-size: 30px;
+}
+
+.postCard {
+  width: 90%;
+  height: auto;
+  color: #AF2C0E;
+  margin: 15px auto;
+  border-radius: 21px;
+}
+
+.card-body {
+  display: grid;
+  margin: 0;
+  padding: 13px;
+  grid-column-gap: 5px;
+  grid-template-columns: auto auto;
+}
+
+.card-img-top {
+  width: 150px;
+  height: 130px;
+  border-radius: 17px;
+}
+
+.title-container {
+  width: 90%;
+  height: 21px;
+  border-radius: 7px;
+  background: #94260d;
+}
+
+.card-title {
+  font-size: 15px;
+  color: white;
+  padding-left: 15px;
+}
+
+.text-container {
+  width: 90%;
+  height: 95px;
+  margin-top: 2px;
+  border-radius: 7px;
+  background: white;
+  overflow: hidden;
+}
+
+.card-text {
+  padding: 5px;
+  font-size: 15px;
+  color: black;
+}
+
+.bi {
+  padding: 3px;
+}
+
+.bi-flag-fill {
+  margin-left: 36px;
+}
+
+/**********animation********/
+.css_animation {
+  width: 70%;
+  margin-top: -110px;
+  margin-left: 25px;
+
+}
+
+.css_animation .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /*padding-top: 78%;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.css_animation .wrapper div {
+  display: block;
+  width: 15px;
+  margin-right: 8px;
+  height: 15px;
+  border-radius: 20px;
+  animation: sound 0ms 1.2s linear infinite alternate;
+  transition: height 0.8s;
+}
+
+.css_animation .wrapper .pro-rec1 {
+  background: #f9edf6;
+}
+
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 5px;
+  }
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+.css_animation .wrapper div:nth-of-type(1) {
+  /*   height: 2px; */
+  animation-duration: 458ms;
+}
+
+.css_animation .wrapper div:nth-of-type(2) {
+  /*   height: 15px; */
+  animation-duration: 400ms;
+}
+
+.css_animation .wrapper div:nth-of-type(3) {
+  /*   height: 25px; */
+  animation-duration: 427ms;
+}
+
+.css_animation .wrapper div:nth-of-type(4) {
+  /*   height: 30px; */
+  animation-duration: 441ms;
+}
+
+.css_animation .wrapper div:nth-of-type(5) {
+  /*   height: 40px; */
+  animation-duration: 419ms;
+}
+
+.css_animation .wrapper div:nth-of-type(6) {
+  /*   height: 45px; */
+  animation-duration: 487ms;
+}
+
+
+/*Onclick sound waves*/
+.css_animation .onClickWrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /*   padding-top: 78%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.css_animation .onClickWrapper div {
+  display: block;
+  width: 15px;
+  margin-right: 8px;
+  height: 15px;
+  border-radius: 20px;
+
+}
+
+.css_animation .onClickWrapper .pro-rec1 {
+  background: #f9edf6;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(1) {
+  height: 70px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(2) {
+  height: 60px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(3) {
+  height: 50px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(4) {
+  height: 40px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(5) {
+  height: 30px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(6) {
+  height: 20px;
+}
