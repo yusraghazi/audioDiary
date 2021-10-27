@@ -26,6 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { SingleCommentComponent } from './components/feed/single-comment/single-comment.component';
 import { SwitchComponent } from './components/feed/switch/switch.component';
 import { RecDoneComponent } from './components/rec-done/rec-done/rec-done.component';
+import { ProfilePostComponent } from './components/profile/profile-post/profile-post.component';
 
 
 
@@ -50,6 +51,7 @@ import { RecDoneComponent } from './components/rec-done/rec-done/rec-done.compon
      SingleCommentComponent,
      SwitchComponent,
      RecDoneComponent,
+     ProfilePostComponent,
   ],
   imports: [
     BrowserModule,
