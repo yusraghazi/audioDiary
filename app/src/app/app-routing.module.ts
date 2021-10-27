@@ -8,6 +8,7 @@ import {MapviewComponent} from "./components/feed/mapview/mapview.component";
 import {ForgotPasswordComponent} from "./components/forms/forgot-password/forgot-password.component";
 import {RecDoneComponent} from "./components/rec-done/rec-done/rec-done.component";
 import {EditingComponent} from "./components/editing/editing.component";
+import {ProfileSettingsComponent} from "./components/profile-settings/profile-settings.component";
 
 const routes: Routes = [
   {path: '', component: FeedviewComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'mapview', component: MapviewComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'rec-done', component: RecDoneComponent},
-  {path: 'editing', component: EditingComponent}
+  {path: 'editing', component: EditingComponent},
+  {path: 'profile-settings', component: ProfileSettingsComponent}
 ];
 
 @NgModule({

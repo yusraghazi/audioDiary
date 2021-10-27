@@ -1,9 +1,10 @@
 .postCard{
+  max-width: 500px;
+  margin: auto;
   width: 95%;
   height: 450px;
   background: #F4B371;
   color: #AF2C0E;
-  margin: 0 auto;
   float: none;
   border-radius: 21px ;
 }

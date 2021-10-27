@@ -27,6 +27,7 @@ import { SingleCommentComponent } from './components/feed/single-comment/single-
 import { SwitchComponent } from './components/feed/switch/switch.component';
 import { RecDoneComponent } from './components/rec-done/rec-done/rec-done.component';
 import { ProfilePostComponent } from './components/profile/profile-post/profile-post.component';
+import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
 
 
 
@@ -52,6 +53,7 @@ import { ProfilePostComponent } from './components/profile/profile-post/profile-
      SwitchComponent,
      RecDoneComponent,
      ProfilePostComponent,
+     ProfileSettingsComponent,
   ],
   imports: [
     BrowserModule,

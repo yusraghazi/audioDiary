@@ -1,0 +1,76 @@
+.profile-settings-container{
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  background-color: #F4B371;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+label{
+  color: #5e140c;
+}
+.title-container{
+  margin-bottom: 20px;
+}
+.profile-header-pic, .profile-header-name {
+  display: inline-block;
+  padding: 5px;
+}
+
+.profile-header-name {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+
+.fa-user {
+  color: #AF2C0E;
+  font-size: 60px;
+}
+
+.profile-hr {
+  width: 80%;
+  background-color: #AF2C0E;
+  opacity: 30%;
+}
+
+h3{
+  font-size: 1.5rem;
+  color: #73251E;
+  margin-left: 5%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  margin-top:20px;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.submit-profile{
+  background-color: #932424;
+  color: white;
+}
+.submit-profile:hover{
+  background-color: #601a1a;
+}
+.cancel-submit{
+  background-color: #5d5d5d;
+  color: white;
+}
+
+.cancel-submit:hover{
+  background-color: #424242;
+}

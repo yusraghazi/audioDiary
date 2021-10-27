@@ -1,0 +1,31 @@
+
+<h3>Profile Settings</h3>
+<div class="profile-settings-container">
+  <div class="title-container">
+    <span class="profile-header-pic"> <i class="fa fa-user" aria-hidden="true"></i></span>
+    <span class="profile-header-name"><input type="file" id="myFile" name="filename"></span>
+  </div>
+
+  <hr class="profile-hr">
+
+  <form>
+    <label for="userName">User name</label>
+    <input type="text" id="userName" name="userName" placeholder="Your name..">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+
+    <label for="con-email">Confirm Email</label>
+    <input type="text" id="con-email" name="con-email" placeholder="Confirm Your email..">
+
+    <label for="password">Change password</label>
+    <input type="text" id="password" name="password" placeholder="create new password">
+
+    <input routerLink="/feedview" class="submit-profile" type="submit" value="Submit">
+
+    <input routerLink="/feedview" class="cancel-submit" type="submit" value="cancel">
+
+  </form>
+</div>
+
+<div style="height: 150px"></div>
