@@ -2,13 +2,12 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .fileCard {
-    width: 379px;
+    width: 90%;
     height: 164px;
-    /*background: #F4B371;*/
     background-color: #AF2C0E !important;
     margin: 10px auto;
     float: none;
-    border-radius: 23%;
+    border-radius: 20px;
     display: flex;
     flex: 1 1 auto;
   }
@@ -16,6 +15,8 @@
     position: relative;
     top: 49px;
   }
+
+
 
   /* visualizer */
   @keyframes quiet {
@@ -82,7 +83,13 @@
     animation-iteration-count: infinite;
     border-radius: 8px;
   }
-
+  i.bi.bi-exclamation-circle-fill {
+    font-size: 39px;
+    position: relative;
+    bottom: 418px;
+    right: 172px;
+    color:red;
+}
   .box1{
     animation-name: quiet;
   }
@@ -102,12 +109,29 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
+  img#audio_clipper {
+    position: relative;
+    top: -41px;
+    width: 90%;
+    left: 20px;
+}
 
+img#play-btn_new {
+  width: 24%;
+  position: relative;
+  left: 37%;
+}
 
 
 
@@ -134,20 +158,23 @@
   }
   button#discardFile {
     position: relative;
-    right: 9%;
+    right: -17%;
     border-radius: 29%;
     height: 49px;
     top: 290px;
-    background-color: grey;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
-    left: 15%;
+    left: 44%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
     top: 290px;
-    background-color: grey;
+    background: #AF2C0E;
+    border: 2px solid #AF2C0E;
+
   }
   i.bi.bi-pause {
     position: fixed;
@@ -163,6 +190,74 @@
     margin-left: -13px;
 
   }
+  h1#time{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    margin-left: 209px;
+    top: -88%;
+}
+
+h4#modal-basic-title {
+  position: relative;
+  top: 264%;
+  left: 12%;
+  color:white;
+}
+
+::ng-deep.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #00000087 !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+  height: 778px;
+  border-radius: 50px;
+}
+button.close {
+  color: white;
+}
+/*
+::ng-deep .modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+  position: relative;
+  top: 19%;
+} */
+
+.btn-edit {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2pxsolid #AF2C0E;
+  border-radius: 40px;
+  background: #AF2C0E;
+  position: center;
+  display: inline;
+  width: 98px;
+  position: relative;
+  bottom: 424px;
+  left: 44%;
+}
+h1#max_recording_time {
+  position: relative;
+  font-size: 13px;
+  bottom: 486px;
+  color: black;
+  margin-left: 70px;
+}
 
   .css_animation .wrapper {
     position: relative;
@@ -376,10 +471,14 @@
   }
   button#confirmFile {
     position: relative;
-    left: 37%;
-  }
-
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -410,6 +509,8 @@
     border-radius: 29%;
     height: 49px;
     top: 268px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
@@ -418,6 +519,8 @@
     border-radius: 29%;
     width: 77px;
     top: 268px;
+    background:#AF2C0E;
+    border: 2px solid #AF2C0E;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -644,11 +747,16 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -680,6 +788,8 @@
     border-radius: 29%;
     height: 49px;
     top: 290px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
@@ -688,6 +798,8 @@
     border-radius: 29%;
     width: 77px;
     top: 290px;
+    background: #5e5e5e;
+    border: 2px solid #5e5e5e;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -914,11 +1026,16 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -950,6 +1067,8 @@
     border-radius: 29%;
     height: 49px;
     top: 290px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
@@ -958,6 +1077,8 @@
     border-radius: 29%;
     width: 77px;
     top: 290px;
+    background: #AF2C0E;
+    border: 2px solid #AF2C0E;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -1186,12 +1307,16 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
     left: 37%;
-  }
-
-
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -1206,7 +1331,7 @@
     width: 6%;
     position: relative;
     left: 47%;
-    top: 11px;
+    top: 169px;
   }
 
   .editFileCard {
@@ -1219,21 +1344,23 @@
   }
   button#discardFile {
     position: relative;
-    left: 36%;
+    left: 42%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 219px;
-    background-color: grey !important;
+    top: 268px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
-    left: 45%;
+    left: 50%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 218px;
-    background-color: grey !important;
+    top: 268px;
+    background: #AF2C0E;
+    border: 2px solid #AF2C0E;
   }
   i.bi.bi-pause {
 
@@ -1355,6 +1482,81 @@
   .css_animation .onClickWrapper div:nth-of-type(6) {
        height: 20px;
   }
+  h1#time {
+    font-size: 20px;
+    color: white;
+    position: RELATIVE;
+    left: 71%;
+    top: -83%;
+  }
+  img#audio_clipper {
+    position: relative;
+    left: 32%;
+    top: 19px;
+}
+img#play-btn_new {
+  width: 120px;
+  position: relative;
+  top: 172px;
+  left: 19%;
+}
+.btn-edit {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid #AF2C0E;
+  border-radius: 40px;
+  background: #AF2C0E;
+  position: center;
+  display: inline;
+  width: 150px;
+  position: relative;
+  bottom: 278px;
+  left: 24%;
+}
+i.bi.bi-exclamation-circle-fill {
+  font-size: 39px;
+  position: relative;
+  bottom: 271px;
+  right: 99px;
+  color:red;
+}
+h1#max_recording_time {
+  position: relative;
+  font-size: 17px;
+  bottom: 364px;
+  color: black;
+  margin-left: 790px;
+}
+
+
+h4#modal-basic-title {
+  position: relative;
+  top: 264%;
+  left: 12%;
+  color:white;
+}
+
+::ng-deep.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #00000087 !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+  height: 778px;
+  border-radius: 50px;
+}
+button.close {
+  color: white;
+}
+
 
 
 }
