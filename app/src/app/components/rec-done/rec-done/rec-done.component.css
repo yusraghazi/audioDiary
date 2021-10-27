@@ -757,8 +757,8 @@
   svg.video-overlay-play-button {
     width: 6%;
     position: relative;
-    left: 40%;
-    top: 24px;
+    left: 38%;
+    top: -44px;
   }
 
   .editFileCard {
@@ -771,25 +771,26 @@
   }
   button#discardFile {
     position: relative;
-    left: 25%;
+    left: 18%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 200px;
+    top: 117px;
   }
   button#nextFile {
     position: relative;
-    left: 41%;
+    left: 40%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 200px;
+    top: 117px;
   }
   i.bi.bi-pause {
+
     width: 4%;
     position: relative;
     left: 48%;
-    top: 98px;
+    top: 21px;
     font-size: 186px;
   }
 
