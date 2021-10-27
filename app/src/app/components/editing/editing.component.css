@@ -55,6 +55,7 @@ h2#editHeader {
   margin-top: 2px;
   border-radius: 7px;
   background: white;
+  overflow: initial;
 }
 
 .card-text {
