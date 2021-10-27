@@ -182,13 +182,13 @@ img#play-btn_new {
     margin-left: -13px;
 
   }
-  h1#time {
+  h1#time{
     font-size: 20px;
     color: white;
-    position: fixed;
-    left: 73%;
-    top: 21%;
-  }
+    position: relative;
+    margin-left: 209px;
+    top: -88%;
+}
 
 .btn-edit {
   font-family: Raleway-SemiBold;
