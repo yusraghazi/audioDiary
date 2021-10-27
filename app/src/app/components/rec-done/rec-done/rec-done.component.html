@@ -1,4 +1,5 @@
 <script src="../../assets/js/audio.js"></script>
+
 <div class="editFileCard">
   <div class="fileCard" [ngStyle]="{'background-color':getSelectedColor()}">
 
@@ -12,6 +13,7 @@
       <div class="reportFlag">
       </div>
     </div>
+
 <!--
     <div class="boxContainer">
       <div class="box box1"></div>
@@ -43,22 +45,32 @@
         <div class="pro-rec1"></div>
         <div class="pro-rec1"></div>
       </div>
+      <h1 id="time">01:07:40</h1>
     </div>
+
       </div>
+
+
 
 
 
 
       <!-- musicplayer -->
 
-    <svg class="video-overlay-play-button"  (click)="playSound()" viewBox="0 0 200 200" alt="Play video">
+    <!-- <svg class="video-overlay-play-button"  (click)="playSound()" viewBox="0 0 200 200" alt="Play video">
       <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#000"/>
       <polygon points="70, 55 70, 145 145, 100" fill="#000" id="svg-play"/>
-    </svg>
+    </svg> -->
+
     <!-- <i class="bi bi-pause" id="pauseSound" (click)="stopSound()"></i> -->
 
       <button class="btn-primary" id="discardFile" (click)="open(content)">Discard</button>
-      <button class="btn-primary" id="nextFile" (click)="buttonEditing()">Next</button>
+      <button class="btn-primary"  id="nextFile" (click)="buttonEditing()">Next</button>
+      <img src="../../../../assets/images/audio_clipper.png" id="audio_clipper">
+      <img src="../../../../assets/images/play-btn.png" id="play-btn_new" (click)="playSound()">
+      <button class="btn btn-edit">Edit</button>
+      <i class="bi bi-exclamation-circle-fill"></i>
+      <h1 id="max_recording_time">max 00:03:00 minutes of  <br> recording</h1>
 
 
 
@@ -74,7 +86,7 @@
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <button class="btn-primary" id="confirmFile">Confirm</button>
+              <button class="btn-primary" routerLink="/feedview" id="confirmFile"  (click)="modal.dismiss('Cross click')">Confirm</button>
 
             </div>
           </form>

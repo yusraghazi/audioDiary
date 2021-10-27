@@ -7,6 +7,7 @@
   color: #AF2C0E;
   float: none;
   border-radius: 21px ;
+  box-shadow: 2px 4px 10px black;
 }
 
 .btn-login {
