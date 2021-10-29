@@ -1,7 +1,7 @@
 .footer{
   position: fixed;
   bottom: 0;
-  background-color: #AF2C0E;
+  background-color: #f87e5b;
   width: 100%;
   height: 80px;
 }
@@ -10,15 +10,66 @@
   width: 90px;
   height: 90px;
   display: block;
-  position: relative;
-  bottom:40px ;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  bottom:25px ;
+  left: 15px;
   cursor: pointer;
   transition : width 0.1s ease;
+}
+
+.dot {
+ position: relative;
+  bottom: 40px;
+  left: 4px;
+  height: 110px;
+  width: 110px;
+  background-color: #f87e5b;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .footer-rec-button:hover {
   width: 95px;
   height: 95px;
 }
+
+.footer .onClickWrapper{
+  width: 90%;
+  display:flex;
+  margin: 0px 0px;
+  padding: 0;
+  position: absolute;
+  bottom: 5px;
+  left: 28%;
+  max-width: 500px;
+
+
+}
+
+.footer ul{
+  margin: 0;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.footer a {
+  color: white;
+  /*line-height: 50px;*/
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer li{
+  list-style: none;
+}
+
+.footer li i{
+  color: #FFF5EB;
+  list-style: none;
+  padding-left: 10px;
+  font-size: 1.5rem;
+}
+
