@@ -1,10 +1,10 @@
 export enum Theme {
-  SUN = "#FE5F38",
-  SAND = "#FFAA5B",
-  FOREST = "#9BC111",
-  WATER = "#7A9BC6",
+  SUN = "#ff7f61",
+  SAND = "#FFB366",
+  FOREST = "#ACDF8D",
+  WATER = "#90D2E0",
   CITY = "#A28EB2",
-  MOUNTAIN = "#73251E"
+  MOUNTAIN = "#9F7D5A"
 
 
 }

@@ -55,6 +55,7 @@ h2#editHeader {
   margin-top: 2px;
   border-radius: 7px;
   background: white;
+  overflow: initial;
 }
 
 .card-text {
@@ -136,7 +137,7 @@ h2, h2 {
 }
 
 .addPictureIcon {
-  height: 55px;
+  height: 40px;
 }
 
 

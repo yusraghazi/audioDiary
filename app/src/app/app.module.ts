@@ -34,6 +34,7 @@ import { AdminPostsComponent } from './components/admin/admin-posts/admin-posts.
 import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
 
 
+import { ProfilePostFavoriteComponent } from './components/profile/profile-post-favorite/profile-post-favorite.component';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { AdminUsersComponent } from './components/admin/admin-users/admin-users.
      RecDoneComponent,
      ProfilePostComponent,
      ProfileSettingsComponent,
+     ProfilePostFavoriteComponent,
      AdminComponent,
      HomeComponent,
      AdminPostsComponent,

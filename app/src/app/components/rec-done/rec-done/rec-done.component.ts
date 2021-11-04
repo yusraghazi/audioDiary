@@ -43,10 +43,14 @@ stopSound(){
   audio.pause();
   audio.currentTime = 0;
 
-
-
 }
 
+activateSoundWaves(){
+  const soundWaves = document.getElementById("soundwavesWrapper");
+
+   soundWaves.classList.remove('onClickWrapper');
+   soundWaves.classList.add("wrapper");
+ }
 
   getSelectedColor(){
     return this.cardColor;

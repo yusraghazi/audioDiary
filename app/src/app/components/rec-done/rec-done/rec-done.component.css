@@ -2,13 +2,12 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .fileCard {
-    width: 379px;
+    width: 90%;
     height: 164px;
-    /*background: #F4B371;*/
     background-color: #AF2C0E !important;
     margin: 10px auto;
     float: none;
-    border-radius: 23%;
+    border-radius: 20px;
     display: flex;
     flex: 1 1 auto;
   }
@@ -16,6 +15,8 @@
     position: relative;
     top: 49px;
   }
+
+
 
   /* visualizer */
   @keyframes quiet {
@@ -82,7 +83,13 @@
     animation-iteration-count: infinite;
     border-radius: 8px;
   }
-
+  i.bi.bi-exclamation-circle-fill {
+    font-size: 39px;
+    position: relative;
+    bottom: 418px;
+    right: 172px;
+    color:red;
+}
   .box1{
     animation-name: quiet;
   }
@@ -102,12 +109,29 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
+  img#audio_clipper {
+    position: relative;
+    top: -41px;
+    width: 90%;
+    left: 20px;
+}
 
+img#play-btn_new {
+  width: 24%;
+  position: relative;
+  left: 37%;
+}
 
 
 
@@ -121,7 +145,7 @@
   svg.video-overlay-play-button {
     width: 28%;
     position: relative;
-    left: 22%;
+    left: 36%;
     top: 172px;
   }
   .editFileCard {
@@ -134,18 +158,23 @@
   }
   button#discardFile {
     position: relative;
-    right: 9%;
+    right: -17%;
     border-radius: 29%;
     height: 49px;
     top: 290px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
-    left: 15%;
+    left: 44%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
     top: 290px;
+    background: #AF2C0E;
+    border: 2px solid #AF2C0E;
+
   }
   i.bi.bi-pause {
     position: fixed;
@@ -155,6 +184,185 @@
     right: 40px;
     font-size: 121px;
   }
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+  h1#time{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    margin-left: 209px;
+    top: -88%;
+}
+
+h4#modal-basic-title {
+  position: relative;
+  top: 264%;
+  left: 12%;
+  color:white;
+}
+
+::ng-deep.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #00000087 !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+  height: 778px;
+  border-radius: 50px;
+}
+button.close {
+  color: white;
+}
+/*
+::ng-deep .modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(.3rem - 1px);
+  border-top-right-radius: calc(.3rem - 1px);
+  position: relative;
+  top: 19%;
+} */
+
+.btn-edit {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2pxsolid #AF2C0E;
+  border-radius: 40px;
+  background: #AF2C0E;
+  position: center;
+  display: inline;
+  width: 98px;
+  position: relative;
+  bottom: 424px;
+  left: 44%;
+}
+h1#max_recording_time {
+  position: relative;
+  font-size: 13px;
+  bottom: 486px;
+  color: black;
+  margin-left: 70px;
+}
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    /*   height: 2px; */
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    /*   height: 15px; */
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    /*   height: 25px; */
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    /*   height: 30px; */
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    /*   height: 40px; */
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    /*   height: 45px; */
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+       height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+       height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+       height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+       height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+       height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+       height: 20px;
+  }
+
 
 }
 
@@ -263,10 +471,14 @@
   }
   button#confirmFile {
     position: relative;
-    left: 37%;
-  }
-
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -280,8 +492,8 @@
   svg.video-overlay-play-button {
     width: 28%;
     position: relative;
-    left: 24%;
-    top: 202px;
+    left: 36%;
+    top: 147px;
   }
   .editFileCard {
     margin-top: 85px;
@@ -296,7 +508,9 @@
     right: 9%;
     border-radius: 29%;
     height: 49px;
-    top: 290px;
+    top: 268px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
@@ -304,7 +518,9 @@
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 290px;
+    top: 268px;
+    background:#AF2C0E;
+    border: 2px solid #AF2C0E;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -314,6 +530,117 @@
     right: 40px;
     font-size: 121px;
   }
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    /*   height: 2px; */
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    /*   height: 15px; */
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    /*   height: 25px; */
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    /*   height: 30px; */
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    /*   height: 40px; */
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    /*   height: 45px; */
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+       height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+       height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+       height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+       height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+       height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+       height: 20px;
+  }
+
 
 }
 
@@ -420,11 +747,16 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -456,6 +788,8 @@
     border-radius: 29%;
     height: 49px;
     top: 290px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
@@ -464,6 +798,8 @@
     border-radius: 29%;
     width: 77px;
     top: 290px;
+    background: #5e5e5e;
+    border: 2px solid #5e5e5e;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -473,6 +809,117 @@
     right: 40px;
     font-size: 121px;
   }
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    /*   height: 2px; */
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    /*   height: 15px; */
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    /*   height: 25px; */
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    /*   height: 30px; */
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    /*   height: 40px; */
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    /*   height: 45px; */
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+       height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+       height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+       height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+       height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+       height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+       height: 20px;
+  }
+
 
 }
 
@@ -579,11 +1026,16 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
-    left: 37%;
-  }
-
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -615,6 +1067,8 @@
     border-radius: 29%;
     height: 49px;
     top: 290px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
@@ -623,6 +1077,8 @@
     border-radius: 29%;
     width: 77px;
     top: 290px;
+    background: #AF2C0E;
+    border: 2px solid #AF2C0E;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -632,6 +1088,119 @@
     right: 40px;
     font-size: 121px;
   }
+
+
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    /*   height: 2px; */
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    /*   height: 15px; */
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    /*   height: 25px; */
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    /*   height: 30px; */
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    /*   height: 40px; */
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    /*   height: 45px; */
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+       height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+       height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+       height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+       height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+       height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+       height: 20px;
+  }
+
 
 }
 
@@ -738,12 +1307,16 @@
   .box5{
     animation-name: quiet;
   }
-  button#confirmFile {
+  button#confirmFile{
     position: relative;
     left: 37%;
-  }
-
-
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+}
 
 
 
@@ -757,8 +1330,8 @@
   svg.video-overlay-play-button {
     width: 6%;
     position: relative;
-    left: 38%;
-    top: -44px;
+    left: 47%;
+    top: 169px;
   }
 
   .editFileCard {
@@ -771,19 +1344,23 @@
   }
   button#discardFile {
     position: relative;
-    left: 18%;
+    left: 42%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 117px;
+    top: 268px;
+    background: red;
+    border: 2px solid red;
   }
   button#nextFile {
     position: relative;
-    left: 40%;
+    left: 50%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 117px;
+    top: 268px;
+    background: #AF2C0E;
+    border: 2px solid #AF2C0E;
   }
   i.bi.bi-pause {
 
@@ -793,5 +1370,193 @@
     top: 21px;
     font-size: 186px;
   }
+
+
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    /*   height: 2px; */
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    /*   height: 15px; */
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    /*   height: 25px; */
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    /*   height: 30px; */
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    /*   height: 40px; */
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    /*   height: 45px; */
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+       height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+       height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+       height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+       height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+       height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+       height: 20px;
+  }
+  h1#time {
+    font-size: 20px;
+    color: white;
+    position: RELATIVE;
+    left: 71%;
+    top: -83%;
+  }
+  img#audio_clipper {
+    position: relative;
+    left: 32%;
+    top: 19px;
+}
+img#play-btn_new {
+  width: 120px;
+  position: relative;
+  top: 172px;
+  left: 19%;
+}
+.btn-edit {
+  font-family: Raleway-SemiBold;
+  font-size: 13px;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid #AF2C0E;
+  border-radius: 40px;
+  background: #AF2C0E;
+  position: center;
+  display: inline;
+  width: 150px;
+  position: relative;
+  bottom: 278px;
+  left: 24%;
+}
+i.bi.bi-exclamation-circle-fill {
+  font-size: 39px;
+  position: relative;
+  bottom: 271px;
+  right: 99px;
+  color:red;
+}
+h1#max_recording_time {
+  position: relative;
+  font-size: 17px;
+  bottom: 364px;
+  color: black;
+  margin-left: 790px;
+}
+
+
+h4#modal-basic-title {
+  position: relative;
+  top: 264%;
+  left: 12%;
+  color:white;
+}
+
+::ng-deep.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #00000087 !important;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+  height: 778px;
+  border-radius: 50px;
+}
+button.close {
+  color: white;
+}
+
+
 
 }
