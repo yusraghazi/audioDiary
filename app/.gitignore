@@ -11,9 +11,6 @@
 /node_modules
 
 
-/.idea
-
-
 # profiling files
 chrome-profiler-events*.json
 
