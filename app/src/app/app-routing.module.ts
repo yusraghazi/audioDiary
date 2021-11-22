@@ -13,6 +13,7 @@ import {AdminComponent} from "./components/admin/admin.component";
 import {HomeComponent} from "./components/admin/home/home.component";
 import {AdminPostsComponent} from "./components/admin/admin-posts/admin-posts.component";
 import {AdminUsersComponent} from "./components/admin/admin-users/admin-users.component";
+import {ResetPasswordComponent} from "./components/forms/reset-password/reset-password.component";
 
 const routes: Routes = [
   {path: '', component: FeedviewComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'rec-done', component: RecDoneComponent},
   {path: 'editing', component: EditingComponent},
   {path: 'profile-settings', component: ProfileSettingsComponent},
+  {path: 'reset-password', component: ResetPasswordComponent},
   {path: 'admin', component: AdminComponent, children: [
       {path: '', component: HomeComponent},
       {path: 'location', component: AdminPostsComponent},
