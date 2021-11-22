@@ -5,7 +5,7 @@
   background-color: #ffffff;
   width: 100%;
   height: 80px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 .footer-rec-button{
@@ -43,13 +43,13 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  bottom: 7px;
+  bottom: -5px;
   /*max-width: 500px;*/
 }
 .onClickWrapper a i{
   font-size: 25px;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
 }
 
 .i-shadow{
