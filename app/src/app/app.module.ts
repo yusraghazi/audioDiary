@@ -33,10 +33,10 @@ import { HomeComponent } from './components/admin/home/home.component';
 import { AdminPostsComponent } from './components/admin/admin-posts/admin-posts.component';
 import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
 
-
 import { ProfilePostFavoriteComponent } from './components/profile/profile-post-favorite/profile-post-favorite.component';
+import { FooterNoRecBtnComponent } from './components/footer-no-rec-btn/footer-no-rec-btn.component';
 
-
+// @ts-ignore
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,6 +64,7 @@ import { ProfilePostFavoriteComponent } from './components/profile/profile-post-
      HomeComponent,
      AdminPostsComponent,
      AdminUsersComponent,
+     FooterNoRecBtnComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,4 +80,6 @@ import { ProfilePostFavoriteComponent } from './components/profile/profile-post-
   providers: [],
   bootstrap: [AppComponent]
 })
+// @ts-ignore
 export class AppModule { }
+// @ts-ignore
