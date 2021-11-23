@@ -1,5 +1,6 @@
 package app.repositories;
 
+import app.models.Audio;
 import app.models.Posts;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +12,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class PostsRepositoryJPA implements PostsRepository {
+public class PostsRepositoryJPA implements JPARepository<Posts> {
     @PersistenceContext
     EntityManager em;
 

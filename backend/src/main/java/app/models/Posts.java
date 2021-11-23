@@ -1,9 +1,8 @@
 package app.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -25,27 +24,54 @@ public class Posts {
     public String title;
     public String description;
     public String img;
-    public Theme theme;
+    public String theme;
     public boolean isLiked;
+    public int amountReport;
 
-    public Posts() {}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private User user;
 
-    public Posts(Integer id, String title, String description, String img, Theme theme, boolean isLiked) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.img = img;
-        this.theme = theme;
-        this.isLiked = isLiked;
+//    @OneToMany
+//    private Comment comment;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Audio audio;
+
+    public void setUser(User user, Audio audio) {
+        this.user = user;
+        user.addPost(this);
+        this.audio = audio;
+        user.addAudio(audio);
+    }
+
+    public int getAmountReport() {
+        return amountReport;
+    }
+
+    public void setAmountReport(int amountReport) {
+        this.amountReport = amountReport;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Audio getAudio() {
+        return audio;
+    }
+
+    public void setAudio(Audio audio) {
+        this.audio = audio;
+    }
+
+    public User getUser() {
+        return user;
     }
 
     public Integer getId() {
         return id;
-    }
-
-    public static Posts createRandomPosts() {
-        return new Posts(null, "Bird sounds", "The birds singing at Amsterdamsche Bos", "amazon.jpg",
-                Theme.SUN, true);
     }
 
     public void setId(Integer id) {
@@ -76,11 +102,11 @@ public class Posts {
         this.img = img;
     }
 
-    public Theme getTheme() {
+    public String getTheme() {
         return theme;
     }
 
-    public void setTheme(Theme theme) {
+    public void setTheme(String theme) {
         this.theme = theme;
     }
 
@@ -97,7 +123,7 @@ public class Posts {
         if (this == o) return true;
         if (!(o instanceof Posts)) return false;
         Posts posts = (Posts) o;
-        return isLiked() == posts.isLiked() && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && getTheme() == posts.getTheme();
+        return isLiked() == posts.isLiked() && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && Objects.equals(getTheme(), posts.getTheme());
     }
 
     @Override

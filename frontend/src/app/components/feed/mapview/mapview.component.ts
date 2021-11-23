@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, Output} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit, Output} from '@angular/core';
 
 // @ts-ignore
 import H from '@here/maps-api-for-javascript';
@@ -10,6 +10,9 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import {environment} from "../../../../environments/environment.prod";
 import {Theme} from "../../../enums/theme";
 import {Post} from "../../../models/post";
+import {PostsService} from "../../../services/posts.service";
+import {ActivatedRoute, Params, Router} from "@angular/router";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-mapview',
@@ -21,11 +24,27 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
   map: mapboxgl.map;
   places: any;
+  posts: Post[] = [];
+  // isShown: boolean;
+
+  // @Input()
+  // audioPost: Post = null;
 
   @Output()
   feedview: string = "Feedview";
 
-  constructor() {
+  @Input()
+  showOverlay: boolean = false;
+
+  constructor(private postsService: PostsService , private router: Router,
+              private activatedRoute: ActivatedRoute) {
+    this.postsService.restGetPosts().subscribe(
+      (data) => {
+        // @ts-ignore
+        this.posts = data; console.log(data);
+      },
+      (error) => console.log("Error: " + error.status + " - " + error.error)
+    );
   }
 
   ngOnInit() {
@@ -39,6 +58,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 1,
             'color': Theme.CITY,
             'theme': 'city',
             'image': 'paris.jpg',
@@ -54,6 +74,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 2,
             'color': Theme.CITY,
             'theme': 'city',
             'image': 'beijing.jpg',
@@ -69,6 +90,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 3,
             'color': Theme.SAND,
             'theme': 'sand',
             'image': 'safari.jpg',
@@ -84,6 +106,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 4,
             'color': Theme.FOREST,
             'theme': 'forest',
             'image': 'river.jpg',
@@ -99,6 +122,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 5,
             'color': Theme.FOREST,
             'theme': 'forest',
             'image': 'river.jpg',
@@ -114,6 +138,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 6,
             'color': Theme.WATER,
             'theme': 'water',
             'image': 'seawaves.jpg',
@@ -129,6 +154,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 7,
             'color': Theme.SUN,
             'theme': 'sun',
             'image': 'sandstorm.jpg',
@@ -144,6 +170,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 8,
             'color': Theme.MOUNTAIN,
             'theme': 'mountain',
             'image': 'mountain.jpg',
@@ -159,6 +186,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'type': 'Feature',
           'properties': {
             'iconSize': [20, 20],
+            'audioID': 9,
             'color': Theme.MOUNTAIN,
             'theme': 'mountain',
             'image': 'mountain.jpg',
@@ -240,14 +268,12 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           input.checked = true;
           container.appendChild(input);
 
-
           const label = document.createElement('label');
           label.setAttribute('for', layerID);
           label.textContent = symbol;
           label.className = "mr-3";
 
           container.appendChild(label);
-
           filterGroup.appendChild(container);
 
           input.addEventListener('change', (e) => {
@@ -260,9 +286,24 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           });
         }
 
+        const popup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false
+        });
 
         // @ts-ignore
-        this.map.on('click', layerID, (e) => {
+        this.map.on('mouseenter', layerID, (e) => {
+
+          this.map.on('click', layerID, (e: { features: { properties: { audioID: number; }; }[]; }) => {
+
+            this.overlayTrue(true);
+            this.openOverlay(e.features[0].properties.audioID);
+          });
+
+          // this.overlayTrue(true);
+          // this.openOverlay(e.features[0].properties.audioID);
+          this.map.getCanvas().style.cursor = 'pointer';
+
           this.map.flyTo({
             center: e.features[0].geometry.coordinates
           });
@@ -281,6 +322,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
             .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
             <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
           <img class="card-img-top" src="../../../../assets/img/postsimgs/`+img+`">
+          <button>More info</button>
           <div class="css_animation">
           <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper" style="z-index: 5">
             </div>
@@ -309,10 +351,29 @@ export class MapviewComponent implements OnInit, AfterViewInit {
         `)
             .addTo(this.map);
         });
+
+        this.map.on('mouseleave', 'places', () => {
+          this.map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
       }
     });
   }
 
+  overlayTrue(condition: boolean) {
+    this.showOverlay = condition;
+    console.log("overlay acitvated");
+    if (condition == true) {
+      this.openOverlay(1);
+    }
+  }
 
+  async openOverlay(pId: number) {
+    //this.audioPost = new Post(pId, 'hi', 'hallo', 'paris.jpg', Theme.SUN, false)
+   // console.log(this.audioPost);
+    await this.router.navigate([pId], {relativeTo: this.activatedRoute});
+    console.log("true");
+    this.showOverlay = true;
+  }
 
 }
