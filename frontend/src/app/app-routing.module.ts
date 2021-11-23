@@ -13,6 +13,7 @@ import {AdminComponent} from "./components/admin/admin.component";
 import {HomeComponent} from "./components/admin/home/home.component";
 import {AdminPostsComponent} from "./components/admin/admin-posts/admin-posts.component";
 import {AdminUsersComponent} from "./components/admin/admin-users/admin-users.component";
+import {SingleAudioComponent} from "./components/feed/single-audio/single-audio.component";
 
 const routes: Routes = [
   {path: '', component: FeedviewComponent},
@@ -20,7 +21,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'feedview', component: FeedviewComponent},
-  {path: 'mapview', component: MapviewComponent},
+  {path: 'mapview', component: MapviewComponent, children: [
+      {path: ":id", component: SingleAudioComponent}
+    ] },
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'rec-done', component: RecDoneComponent},
   {path: 'editing', component: EditingComponent},

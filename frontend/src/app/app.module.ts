@@ -35,6 +35,8 @@ import { AdminUsersComponent } from './components/admin/admin-users/admin-users.
 
 
 import { ProfilePostFavoriteComponent } from './components/profile/profile-post-favorite/profile-post-favorite.component';
+import {HttpClientModule} from "@angular/common/http";
+import { SingleAudioComponent } from './components/feed/single-audio/single-audio.component';
 
 
 @NgModule({
@@ -64,10 +66,12 @@ import { ProfilePostFavoriteComponent } from './components/profile/profile-post-
      HomeComponent,
      AdminPostsComponent,
      AdminUsersComponent,
+     SingleAudioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgbModule,
     FormsModule,
     BrowserAnimationsModule,

@@ -21,13 +21,13 @@ public class PostsController {
     @Autowired
     private PostsRepository postRepo;
 
-    @GetMapping("/rest/users/{id}/posts")
-    public List<Posts> getPosts(@PathVariable int id) {
-
-        User user = userResource.getUserById(id);
-
-        return user.getPosts();
-    }
+//    @GetMapping("/posts/{id}")
+//    public List<Posts> getPosts(@PathVariable int id) {
+//
+//        User user = userResource.getUserById(id);
+//
+//        return user.getPosts();
+//    }
 
     @PostMapping("/rest/users/{id}/posts")
     @Transactional
@@ -51,20 +51,21 @@ public class PostsController {
     }
 //    private PostsRepository postsRepository = new PostsRepositoryMock();
 //
-//    @GetMapping("/posts")
-//    public List<Posts> getAllEvents() {
-//        return postsRepository.findAll();
-//    }
+    @GetMapping("/posts")
+    public List<Posts> getAllEvents() {
+        return postRepo.findAll();
+    }
 //
-//    @GetMapping("/posts/{id}")
-//    public ResponseEntity<Posts> getEventById(@PathVariable int id) {
-//
-//        Posts post = postsRepository.findById(id);
-//        if(post == null) {
-//            throw new PostNotFoundException("Not found id=" + id);
-//        }
-//        return ResponseEntity.ok(post);
-//    }
+    @GetMapping("/posts/{id}")
+    public Posts getEventById(@PathVariable int id) {
+
+        Posts post = postRepo.findById(id);
+        if(post == null) {
+            throw new PostNotFoundException("Not found id=" + id);
+        }
+        return post;
+        //return ResponseEntity.ok(post);
+    }
 //
 //    @PostMapping("/posts")
 //    public ResponseEntity<Posts> createAEvent(@RequestBody Posts post) {

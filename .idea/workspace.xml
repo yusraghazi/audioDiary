@@ -5,145 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="add animation to profile rec's">
-      <change beforePath="$PROJECT_DIR$/.idea/ad-vmc-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ad-vmc-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.browserslistrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-posts/admin-posts.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-posts/admin-posts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-posts/admin-posts.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-posts/admin-posts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-users/admin-users.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-users/admin-users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-users/admin-users.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin-users/admin-users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/admin.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/home/home.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/admin/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/editing/editing.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/editing/editing.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/editing/editing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/comments/comments.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/comments/comments.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/comments/comments.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/comments/comments.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/feedview/feedview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/feedview/feedview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/feedview/feedview.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/mapview/mapview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/mapview/mapview.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/recording-post/recording-post.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/recording-post/recording-post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/recording-post/recording-post.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/recording-post/recording-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/single-comment/single-comment.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/single-comment/single-comment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/single-comment/single-comment.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/single-comment/single-comment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/switch/switch.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/switch/switch.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/switch/switch.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/switch/switch.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/switch/switch.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/switch/switch.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/feed/switch/switch.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/switch/switch.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/forgot-password/forgot-password.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/forgot-password/forgot-password.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/forgot-password/forgot-password.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/forgot-password/forgot-password.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/forgot-password/forgot-password.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/forgot-password/forgot-password.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/forgot-password/forgot-password.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/forgot-password/forgot-password.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/register/register.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/reset-password/reset-password.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/reset-password/reset-password.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/reset-password/reset-password.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/reset-password/reset-password.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/reset-password/reset-password.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/reset-password/reset-password.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/forms/reset-password/reset-password.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/reset-password/reset-password.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/header/header.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile-settings/profile-settings.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile-settings/profile-settings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile-settings/profile-settings.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile-settings/profile-settings.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile-post/profile-post.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile-post/profile-post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile-post/profile-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/rec-done/rec-done/rec-done.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/rec-done/rec-done/rec-done.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/rec-done/rec-done/rec-done.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/components/rec-done/rec-done/rec-done.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/enums/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/enums/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/models/comment.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/comment.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/models/comment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/comment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/models/post.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/app/models/singleComment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/singleComment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/audio/creative_minds.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/audio/creative_minds.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/audio/sea-wave.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/audio/sea-wave.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/images/audio_clipper.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/images/audio_clipper.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/images/play-btn.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/images/play-btn.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/editimgs/add_picture_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/editimgs/add_picture_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/editimgs/location_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/editimgs/location_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/main-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/main-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/amazon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/amazon.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/amsterdamBikes.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/amsterdamBikes.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/beijing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/beijing.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/mountain.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/mountain.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/paris.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/paris.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/river.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/river.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/safari.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/safari.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/sandstorm.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/sandstorm.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/postsimgs/seawaves.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/postsimgs/seawaves.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/profile-pic-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/profile-pic-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/assets/img/rec-button.png" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/assets/img/rec-button.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/polyfills.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.spec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,21 +35,21 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="fix-master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -212,7 +82,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -222,12 +92,15 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
       <recent name="E:\HVA ICT 2\EWA\Project\ad-vmc-1\app\src\assets\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="npm.start (1)">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -309,6 +182,8 @@
       <workItem from="1635603635612" duration="436000" />
       <workItem from="1637163306241" duration="795000" />
       <workItem from="1637223415949" duration="25000" />
+      <workItem from="1637592165172" duration="16778000" />
+      <workItem from="1637666980554" duration="302000" />
     </task>
     <task id="LOCAL-00001" summary="Footer with re button">
       <created>1634299651216</created>

@@ -16,33 +16,35 @@ export class PostsService {
   }
 
   restGetPosts():Observable<Post[]> {
-    return this.http.get<Post[]>("http://localhost:8083/aevents").pipe(
-      map( (events: any[]) => {
-        const aEvents: Post[] = [];
-        for (const event of events) {
+    return this.http.get<Post[]>("http://localhost:8084/posts").pipe(
+      map( (postCards: any[]) => {
+        const posts: Post[] = [];
+        for (const post of postCards) {
           //aEvents.push(Post.trueCopy(event));
+          console.log(post);
+          posts.push(post);
         }
-        return aEvents;
+        return posts;
       }));
   }
 
-  restGetPost(aEventId: number):Observable<Post[]> {
-    return this.http.get<Post[]>(`http://localhost:8083/aevents/${aEventId}`);
+  restGetPost(postId: number):Observable<Post[]> {
+    return this.http.get<Post[]>(`http://localhost:8084/posts/${postId}`);
   }
 
-  restPostPost(aEvent: Post):Observable<Post[]> {
-    const url = `http://localhost:8083/aevents/${aEvent.id}`;
-    return this.http.post<Post[]>(url, aEvent);
+  restPostPost(postId: number):Observable<Post[]> {
+    const url = `http://localhost:8084/posts/${postId}`;
+    return this.http.post<Post[]>(url, postId);
   }
 
   restPutPost(post: Post):Observable<Post[]> {
     console.log(post);
-    const url = `http://localhost:8083/aevents/${post.id}`;
+    const url = `http://localhost:8084/posts/${post.id}`;
     return this.http.put<Post[]>(url, post);
   }
 
   restDeletePosts(postId: number):void {
-    const url = `http://localhost:8083/aevents/${postId}`;
+    const url = `http://localhost:8084/posts/${postId}`;
     this.http.delete<Post[]>(url);
   }
 
