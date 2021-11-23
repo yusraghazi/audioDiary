@@ -26,26 +26,46 @@ public class Posts {
     public String img;
     public String theme;
     public boolean isLiked;
+    public int amountReport;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private User user;
-//    public Posts() {
-//    }
 
-//    public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked) {
-//        this.id = id;
-//        this.title = title;
-//        this.description = description;
-//        this.img = img;
-//        this.theme = theme;
-//        this.isLiked = isLiked;
-//    }
+//    @OneToMany
+//    private Comment comment;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private Audio audio;
+
+    public void setUser(User user, Audio audio) {
+        this.user = user;
+        user.addPost(this);
+        this.audio = audio;
+        user.addAudio(audio);
+    }
+
+    public int getAmountReport() {
+        return amountReport;
+    }
+
+    public void setAmountReport(int amountReport) {
+        this.amountReport = amountReport;
+    }
 
     public void setUser(User user) {
         this.user = user;
-        user.addPost(this);
     }
+
+    public Audio getAudio() {
+        return audio;
+    }
+
+    public void setAudio(Audio audio) {
+        this.audio = audio;
+    }
+
     public User getUser() {
         return user;
     }
@@ -53,11 +73,6 @@ public class Posts {
     public Integer getId() {
         return id;
     }
-
-//    public static Posts createRandomPosts() {
-//        return new Posts(null, "Bird sounds", "The birds singing at Amsterdamsche Bos", "amazon.jpg",
-//                "SUN", true);
-//    }
 
     public void setId(Integer id) {
         this.id = id;

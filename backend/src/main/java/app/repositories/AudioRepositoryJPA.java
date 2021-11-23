@@ -1,7 +1,6 @@
 package app.repositories;
 
 import app.models.Audio;
-import app.models.Posts;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -12,31 +11,30 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class PostsRepositoryJPA implements JPARepository<Posts> {
+public class AudioRepositoryJPA implements JPARepository<Audio> {
     @PersistenceContext
     EntityManager em;
 
     @Override
-    public List<Posts> findAll() {
-        TypedQuery<Posts> namedQuery = em.createNamedQuery("find_all_posts", Posts.class);
-
+    public List<Audio> findAll() {
+        TypedQuery<Audio> namedQuery = em.createNamedQuery("find_all_audios", Audio.class);
         return namedQuery.getResultList();
     }
 
     @Override
-    public Posts findById(int id) {
-        return em.find(Posts.class,id);
+    public Audio findById(int id) {
+        return em.find(Audio.class,id);
     }
 
     @Override
-    public Posts save(Posts post) {
-        return em.merge(post);
+    public Audio save(Audio audio) {
+        return em.merge(audio);
     }
 
     @Override
-    public Posts deleteById(int id) {
-        Posts post = findById(id);
-        Posts toRemove = em.merge(post);
+    public Audio deleteById(int id) {
+        Audio audio = findById(id);
+        Audio toRemove = em.merge(audio);
         em.remove(toRemove);
         return toRemove;
     }

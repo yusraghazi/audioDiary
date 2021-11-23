@@ -1,7 +1,9 @@
 package app.rest;
 import app.exceptions.PostNotFoundException;
+import app.models.Audio;
 import app.models.Posts;
 import app.models.User;
+import app.repositories.JPARepository;
 import app.repositories.PostsRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +21,10 @@ public class PostsController {
     private UserController userResource;
 
     @Autowired
-    private PostsRepository postRepo;
+    private AudioController audioResource;
+
+    @Autowired
+    private JPARepository<Posts> postRepo;
 
 //    @GetMapping("/posts/{id}")
 //    public List<Posts> getPosts(@PathVariable int id) {
@@ -35,8 +40,9 @@ public class PostsController {
                                              @PathVariable int id, @RequestBody Posts post) {
 
         User user = userResource.getUserById(id);
+        Audio audio = audioResource.getAudioById(id);
 
-        post.setUser(user);
+        post.setUser(user, audio);
 
         postRepo.save(post);
 
