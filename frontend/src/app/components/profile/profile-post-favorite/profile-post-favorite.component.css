@@ -3,13 +3,13 @@
   padding: 5px;
 }
 
-.profile-post-header {
-  padding: 5px;
-}
+/*.profile-post-header {*/
+/*  padding: 5px;*/
+/*}*/
 
 .profile-header-name {
   color: white;
-  background-color: #AF2C0E;
+  background-color: #333333;
   border-radius: 15px;
   padding: 2px 20px;
 }
@@ -17,84 +17,30 @@
 .profile-bin {
   cursor: pointer;
   padding: 10px;
-  float: right;
-  color: #AF2C0E;
+  /*float: right;*/
+  margin-right: 0;
+  color: #333333;
   font-size: 25px;
+  position: absolute;
+  top:202px;
+  right: 0;
 }
 
 .profile-bin:hover {
-  font-size: 30px;
+  font-size: 27px;
+  color: #f13030;
 }
 
 .fa-user {
-  color: #AF2C0E;
+  color: #333333;
   font-size: 30px;
 }
 
-.postCard {
-  width: 90%;
-  height: auto;
-  color: #AF2C0E;
-  margin: 15px auto;
-  border-radius: 21px;
-}
-
-.card-body {
-  display: grid;
-  margin: 0;
-  padding: 13px;
-  grid-column-gap: 5px;
-  grid-template-columns: auto auto;
-}
-
-.card-img-top {
-  width: 150px;
-  height: 130px;
-  border-radius: 17px;
-}
-
-.title-container {
-  width: 90%;
-  height: 21px;
-  border-radius: 7px;
-  background: #94260d;
-}
-
-.card-title {
-  font-size: 15px;
-  color: white;
-  padding-left: 15px;
-}
-
-.text-container {
-  width: 90%;
-  height: 95px;
-  margin-top: 2px;
-  border-radius: 7px;
-  background: white;
-  overflow: hidden;
-}
-
-.card-text {
-  padding: 5px;
-  font-size: 15px;
-  color: black;
-}
-
-.bi {
-  padding: 3px;
-}
-
-.bi-flag-fill {
-  margin-left: 36px;
-}
-
-/**********animation********/
 .css_animation {
   width: 70%;
-  margin-top: -110px;
-  margin-left: 25px;
-
+  position: absolute;
+  left: 60px;
+  top:50px
 }
 
 .css_animation .wrapper {
@@ -186,7 +132,7 @@
 }
 
 .css_animation .onClickWrapper .pro-rec1 {
-  background: white;
+  background: #f9edf6;
 }
 
 .css_animation .onClickWrapper div:nth-of-type(1) {
@@ -212,3 +158,101 @@
 .css_animation .onClickWrapper div:nth-of-type(6) {
   height: 20px;
 }
+
+
+
+.card{
+  margin: 10px auto;
+  border-radius: 20px 20px 30px 30px ;
+  color: black;
+  width: 350px;
+  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
+  float: none;
+  display: flex;
+  flex: 1 1 auto;
+
+}
+.card-img-top{
+  border-radius: 17px 17px 30px 30px ;
+}
+.card-username{
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+}
+.card-title{
+  margin-bottom: 0;
+}
+
+.card-body{
+  padding-top: 0;
+}
+
+.icons{
+  display: inline-block;
+  float: right;
+
+}
+.bi{
+  padding: 3px;
+}
+
+
+/*.postCard {*/
+/*  width: 90%;*/
+/*  height: auto;*/
+/*  color: #AF2C0E;*/
+/*  margin: 15px auto;*/
+/*  border-radius: 21px;*/
+/*}*/
+
+/*.card-body {*/
+/*  display: grid;*/
+/*  margin: 0;*/
+/*  padding: 13px;*/
+/*  grid-column-gap: 5px;*/
+/*  grid-template-columns: auto auto;*/
+/*}*/
+
+/*.card-img-top {*/
+/*  width: 150px;*/
+/*  height: 130px;*/
+/*  border-radius: 17px;*/
+/*}*/
+
+/*.title-container {*/
+/*  width: 90%;*/
+/*  height: 21px;*/
+/*  border-radius: 7px;*/
+/*  background: #94260d;*/
+/*}*/
+
+/*.card-title {*/
+/*  font-size: 15px;*/
+/*  color: white;*/
+/*  padding-left: 15px;*/
+/*}*/
+
+/*.text-container {*/
+/*  width: 90%;*/
+/*  height: 95px;*/
+/*  margin-top: 2px;*/
+/*  border-radius: 7px;*/
+/*  background: white;*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*.card-text {*/
+/*  padding: 5px;*/
+/*  font-size: 15px;*/
+/*  color: black;*/
+/*}*/
+
+/*.bi {*/
+/*  padding: 3px;*/
+/*}*/
+
+/*.bi-flag-fill {*/
+/*  margin-left: 36px;*/
+/*}*/
