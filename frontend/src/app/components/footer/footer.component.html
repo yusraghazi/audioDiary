@@ -1,6 +1,10 @@
 <div class="footer">
 <!--  <span class="dot"></span>-->
-  <img routerLink="/rec-done" class="footer-rec-button" src="./assets/img/rec-button.png" alt="recording button">
+<!--  <img routerLink="/rec-done"  class="footer-rec-button" id="footerLeg" src="./assets/img/rec-button.png" alt="recording button" (click)="startRecording()">-->
+    <a><img routerLink="/rec-done"  class="footer-rec-button" id="footerLeg" [src]="value" alt="recording button" (click)="startRecording()"></a>
+
+<!--  <button type="button" (click)="stopRecording()" id="eye" class="btn btn-default"><i class="fa fa-eye"></i> </button>-->
+
 
   <div class="onClickWrapper">
     <a class="menu-close" routerLink="feedview"><i class="fa fa-home i-shadow" aria-hidden="true"></i></a>
@@ -39,3 +43,5 @@
 
 <!--  </div>-->
 </div>
+
+

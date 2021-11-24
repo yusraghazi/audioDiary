@@ -6,7 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="add animation to profile rec's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +188,7 @@
       <workItem from="1637592165172" duration="16778000" />
       <workItem from="1637666980554" duration="302000" />
       <workItem from="1637769907073" duration="950000" />
-      <workItem from="1637772234836" duration="12111000" />
+      <workItem from="1637772234836" duration="20288000" />
     </task>
     <task id="LOCAL-00001" summary="Footer with re button">
       <created>1634299651216</created>
