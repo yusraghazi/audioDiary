@@ -17,12 +17,12 @@ public class UserController {
     @Autowired
     private JPARepository<User> userRepo;
 
-    @GetMapping("/rest/users")
+    @GetMapping("/users")
     public List<User> getAllUsers() {
         return userRepo.findAll();
     }
 
-    @GetMapping("/rest/users/{id}")
+    @GetMapping("/users/{id}")
     public User getUserById(
             @PathVariable int id) {
 
@@ -35,7 +35,7 @@ public class UserController {
         return userById;
     }
 
-    @PostMapping("/rest/users")
+    @PostMapping("/users")
     public ResponseEntity<User> createUser(@RequestBody User user) {
         User savedUser = userRepo.save(user);
         URI location = ServletUriComponentsBuilder.
@@ -44,14 +44,14 @@ public class UserController {
         return ResponseEntity.created(location).body(savedUser);
     }
 
-    @DeleteMapping("/rest/users/{id}")
+    @DeleteMapping("/users/{id}")
     public ResponseEntity<User> deleteUser(@PathVariable int id) {
         User user = getUserById(id);
         userRepo.deleteById(id);
         return ResponseEntity.ok(user);
     }
 
-    @PutMapping("/rest/users")
+    @PutMapping("/users")
     public ResponseEntity<Object> updateUser(@RequestBody User user) {
         User userById = userRepo.findById(user.getId());
         if (userById == null) {

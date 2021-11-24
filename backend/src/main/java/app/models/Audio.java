@@ -33,6 +33,10 @@ public class Audio {
         this.id = id;
     }
 
+    public User getUser() {
+        return user;
+    }
+
     public String getFilename() {
         return filename;
     }

@@ -24,7 +24,7 @@ public class PostsController {
     private AudioController audioResource;
 
     @Autowired
-    private JPARepository<Posts> postRepo;
+    private PostsRepository postRepo;
 
 //    @GetMapping("/posts/{id}")
 //    public List<Posts> getPosts(@PathVariable int id) {
@@ -71,6 +71,11 @@ public class PostsController {
         }
         return post;
         //return ResponseEntity.ok(post);
+    }
+
+    @GetMapping("users/{userId}/posts")
+    public List findPostByUserId(@PathVariable int userId) {
+        return postRepo.findPostByUserId(userId);
     }
 //
 //    @PostMapping("/posts")
