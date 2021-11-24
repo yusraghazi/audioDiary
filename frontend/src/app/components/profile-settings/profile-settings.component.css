@@ -2,13 +2,14 @@
   width: 90%;
   max-width: 500px;
   margin: auto;
-  background-color: #F4B371;
+  background-color: #ffffff;
   border-radius: 20px;
   padding: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 label{
-  color: #5e140c;
+  color: #2a2a2a;
 }
 .title-container{
   margin-bottom: 20px;
@@ -25,19 +26,19 @@ label{
 }
 
 .fa-user {
-  color: #AF2C0E;
+  color: #232323;
   font-size: 60px;
 }
 
 .profile-hr {
   width: 80%;
-  background-color: #AF2C0E;
+  background-color: #101010;
   opacity: 30%;
 }
 
 h3{
   font-size: 1.5rem;
-  color: #73251E;
+  color: #000000;
   margin-left: 5%;
 }
 
@@ -60,17 +61,17 @@ input[type=submit] {
   cursor: pointer;
 }
 .submit-profile{
-  background-color: #932424;
+  background-color: #2c2c2c;
   color: white;
 }
 .submit-profile:hover{
-  background-color: #601a1a;
+  background-color: #3b3b3b;
 }
 .cancel-submit{
-  background-color: #5d5d5d;
-  color: white;
+  background-color: #8f8f8f;
+  color: black;
 }
 
 .cancel-submit:hover{
-  background-color: #424242;
+  background-color: #ff4b4b;
 }
