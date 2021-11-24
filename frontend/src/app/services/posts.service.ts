@@ -20,16 +20,14 @@ export class PostsService {
       map( (postCards: any[]) => {
         const posts: Post[] = [];
         for (const post of postCards) {
-          //aEvents.push(Post.trueCopy(event));
-          console.log(post);
           posts.push(post);
         }
         return posts;
       }));
   }
 
-  restGetPost(postId: number):Observable<Post[]> {
-    return this.http.get<Post[]>(`http://localhost:8084/posts/${postId}`);
+  restGetPost(postId: number):Observable<Post> {
+    return this.http.get<Post>(`http://localhost:8084/posts/${postId}`);
   }
 
   restPostPost(postId: number):Observable<Post[]> {

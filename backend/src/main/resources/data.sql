@@ -13,7 +13,19 @@ insert into user (id, name, username, email, password, password_reset, is_admin,
 insert into audio (id, description, duration, filename, location, user_id)
 VALUES (2, 'hallo', 2.34, 'hi', 2000291, 1);
 insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
-VALUES (4, 5, 'vet', 'joe.img', true, 'sun', 'blabla', 2, 1);
+VALUES (4, 5, 'vet', 'paris.img', true, 'SUN', 'blabla', 2, 1);
 insert into comment(id, description, post_id, user_id) VALUES (1, 'blabliep', 4, 1);
 insert into likes (id, post_id, user_id) VALUES (1, 4, 1);
 
+insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
+VALUES (1, 5, 'vet', 'paris.img', true, 'SUN', 'blabla', 2, 1);
+insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
+VALUES (2, 5, 'vet', 'paris.img', true, 'SUN', 'blabla', 2, 1);
+insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
+VALUES (3, 5, 'vet', 'paris.img', true, 'SUN', 'blabla', 2, 1);
+insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
+VALUES (5, 5, 'vet', 'paris.img', true, 'SUN', 'blabla', 2, 1);
+insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
+VALUES (6, 5, 'vet', 'paris.img', true, 'SUN', 'blabla', 2, 1);
+insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
+VALUES (7, 5, 'vet', 'paris.img', true, 'SUN', 'blabla', 2, 1);

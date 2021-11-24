@@ -4,7 +4,7 @@ import app.models.Likes;
 
 import java.util.List;
 
-public class LikeRepositoryJPA implements JPARepository<Likes> {
+public class LikeRepositoryJPA implements LikeRepository {
     @Override
     public List<Likes> findAll() {
         return null;

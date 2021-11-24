@@ -1,8 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {PostsService} from "../../../services/posts.service";
 import {ActivatedRoute, Params} from "@angular/router";
 import {Subscription} from "rxjs";
 import {Post} from "../../../models/post";
+import {CommentsService} from "../../../services/comments.service";
 
 @Component({
   selector: 'app-single-audio',
@@ -13,7 +14,9 @@ export class SingleAudioComponent implements OnInit {
   private childParamsSubscription: Subscription;
 
   @Input()
-  audioPost: Post = null;
+  audioPost: Post;
+
+  //commentsList: Comment[];
 
   isShown: boolean;
 
@@ -27,7 +30,7 @@ export class SingleAudioComponent implements OnInit {
           this.setPost(params['id'] || -1);
         });
     // @ts-ignore
-    this.audioPost = null;
+    //this.audioPost = null;
   }
 
   // TODO: fix display of post
@@ -40,6 +43,21 @@ export class SingleAudioComponent implements OnInit {
       }
     );
   }
+
+  // setComments(id: number) {
+  //   console.log(id);
+  //   this.comments.restFindCommentByPostId(id).subscribe(
+  //     (data) => {
+  //       for (let i = 0; i < data.length; i++) {
+  //         this.commentsList.push(data[i]);
+  //       }
+  //     }
+  //   );
+  // }
+
+  // getComments() {
+  //   return this.commentsList;
+  // }
 
   toggleShow() {
       this.isShown = ! this.isShown;

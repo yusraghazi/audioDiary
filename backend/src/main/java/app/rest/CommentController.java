@@ -2,20 +2,32 @@ package app.rest;
 
 import app.exceptions.PostNotFoundException;
 import app.models.Comment;
+import app.models.Posts;
+import app.models.User;
+import app.repositories.CommentRepository;
+import app.repositories.CommentRepositoryJPA;
 import app.repositories.JPARepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
 public class CommentController {
 
-    JPARepository<Comment> commentRepo;
+    @Autowired
+    CommentRepository commentRepo;
 
-    @GetMapping("/comments")
-    public List<Comment> getAllComments() {
+    @GetMapping("/posts/{postId}/comments")
+    public List findCommentByPostId(@PathVariable int postId) {
+        return commentRepo.findCommentByPostId(postId);
+    }
+
+    @GetMapping("/posts/comments")
+    public List<Comment> getAllComments(@PathVariable int postId) {
         return commentRepo.findAll();
     }
     //
@@ -28,5 +40,14 @@ public class CommentController {
         }
         return comment;
         //return ResponseEntity.ok(post);
+    }
+
+    @PostMapping("/comments")
+    public ResponseEntity<Comment> createComment(@RequestBody Comment comment) {
+        Comment savedComment = commentRepo.save(comment);
+        URI location = ServletUriComponentsBuilder.
+                fromCurrentRequest().path("/{id}").
+                buildAndExpand(savedComment.getId()).toUri();
+        return ResponseEntity.created(location).body(comment);
     }
 }
