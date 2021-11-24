@@ -236,6 +236,11 @@ export class MapviewComponent implements OnInit, AfterViewInit {
         'data': this.places
       });
 
+      const popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+      });
+
       for (const feature of this.places.features) {
         const symbol = feature.properties.theme;
         const color = feature.properties.color;
@@ -282,11 +287,6 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           });
         }
 
-        const popup = new mapboxgl.Popup({
-          closeButton: false,
-          closeOnClick: false
-        });
-
         // @ts-ignore
         this.map.on('mouseenter', layerID, (e) => {
 
@@ -299,12 +299,39 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
           this.map.getCanvas().style.cursor = 'pointer';
 
-          this.map.flyTo({
-            center: e.features[0].geometry.coordinates
-          });
-        });
+          // this.map.flyTo({
+          //   center: e.features[0].geometry.coordinates
+          // });
 
-        this.map.on('mouseleave', 'places', () => {
+          const coordinates = e.features[0].geometry.coordinates.slice();
+          const theme = e.features[0].properties.color;
+          const img = e.features[0].properties.image.trim();
+          const title = e.features[0].properties.title;
+          const description = e.features[0].properties.description;
+
+          popup
+            .setLngLat(coordinates)
+            .setHTML('hiiiiii')
+            .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
+            <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
+          <img class="card-img-top" src="../../../../assets/img/postsimgs/`+img+`">
+          <div class="css_animation">
+          <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper" style="z-index: 5">
+            </div>
+            <div class="card-body">
+
+          <div class=" shadow-lg title-container">
+          <h5 class="card-title" style="color: white">` + title + `</h5>
+          </div>
+          <div class="shadow-lg text-container">
+          <p class="card-text" style="color: white">` + description + `</p>
+          </div>
+
+            </div>
+        `)
+            .addTo(this.map);
+        });
+        this.map.on('mouseleave', layerID, () => {
           this.map.getCanvas().style.cursor = '';
           popup.remove();
         });
@@ -324,7 +351,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
                 const title = this.places.features[i].properties.title;
                 const description = this.places.features[i].properties.description;
               new mapboxgl.Popup()
-                .setLngLat(this.places.features[i].geometry.coordinates)
+                .setLngLat(coordinates)
                 .setHTML('hiiiiii')
                 .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
             <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
@@ -346,6 +373,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
                 .addTo(this.map);
              }
         }
+        this.map.on('mouseleave', 'places', () => {
+          this.map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
       }
     });
   }
