@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/app/components/rec-done/rec-done/rec-done.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/app/components/rec-done/rec-done/rec-done.component.css" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
