@@ -17,7 +17,7 @@ import { MapviewComponent } from "./components/feed/mapview/mapview.component";
 import { FeedviewComponent } from './components/feed/feedview/feedview.component';
 import { EditingComponent } from './components/editing/editing.component';
 import { CommentsComponent } from './components/feed/comments/comments.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -37,7 +37,6 @@ import { AdminUsersComponent } from './components/admin/admin-users/admin-users.
 import { ProfilePostFavoriteComponent } from './components/profile/profile-post-favorite/profile-post-favorite.component';
 import {HttpClientModule} from "@angular/common/http";
 import { SingleAudioComponent } from './components/feed/single-audio/single-audio.component';
-import {CommentsService} from "./services/comments.service";
 
 
 @NgModule({
@@ -79,7 +78,8 @@ import {CommentsService} from "./services/comments.service";
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

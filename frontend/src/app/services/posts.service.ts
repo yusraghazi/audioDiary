@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Post} from "../models/post";
 import {catchError, map} from "rxjs/operators";
+import {SingleComment} from "../models/singleComment";
 
 
 @Injectable({
@@ -28,6 +29,17 @@ export class PostsService {
 
   restGetPost(postId: number):Observable<Post> {
     return this.http.get<Post>(`http://localhost:8084/posts/${postId}`);
+  }
+
+  restGetPostsOfUser(userId: number) {
+    return this.http.get<Post[]>(`http://localhost:8084/users/${userId}/posts`).pipe(
+      map( (postList: any[]) => {
+        const posts: Post[] = [];
+        for (const post of postList) {
+          posts.push(post);
+        }
+        return posts;
+      }));
   }
 
   restPostPost(postId: number):Observable<Post[]> {
