@@ -32,9 +32,6 @@ public class Posts {
     @JsonIgnore
     private User user;
 
-//    @OneToMany
-//    private Comment comment;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private Audio audio;
