@@ -1,11 +1,19 @@
 export class SingleComment {
-  user: string | undefined;
-  comment: string | undefined;
-  image: string | undefined;
+  // user: string | undefined;
+  // comment: string | undefined;
+  // image: string | undefined;
 
-  constructor(user: string | undefined, comment: string | undefined, image: string | undefined) {
-    this.user = user;
-    this.comment = comment;
-    this.image = image;
+  description: string | undefined;
+  // constructor(user: string | undefined, comment: string | undefined, image: string | undefined) {
+  //   this.user = user;
+  //   this.comment = comment;
+  //   this.image = image;
+  // }
+
+  constructor() {}
+
+  static trueCopy(comment: SingleComment): SingleComment {
+    // @ts-ignore
+    return comment == null ? null : Object.assign(new SingleComment(), comment);
   }
 }

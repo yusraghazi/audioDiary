@@ -58,12 +58,12 @@ public class PostsController {
 //    private PostsRepository postsRepository = new PostsRepositoryMock();
 //
     @GetMapping("/posts")
-    public List<Posts> getAllEvents() {
+    public List<Posts> getAllPosts() {
         return postRepo.findAll();
     }
 //
     @GetMapping("/posts/{id}")
-    public Posts getEventById(@PathVariable int id) {
+    public Posts getPostById(@PathVariable int id) {
 
         Posts post = postRepo.findById(id);
         if(post == null) {

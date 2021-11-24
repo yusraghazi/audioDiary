@@ -29,18 +29,14 @@ public class AudioController {
                                              @PathVariable int id, @RequestBody Audio audio) {
 
         User user = userResource.getUserById(id);
-
         audio.setUser(user);
-
         audioRepository.save(audio);
-
         // used to demonstrate transaction handling
         if(shouldFail) {
             throw new RuntimeException("Failed for demo purposes. This action will rollback the database transaction");
         }
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{postId}").buildAndExpand(audio.getId()).toUri();
-
         return ResponseEntity.created(location).build();
     }
 
