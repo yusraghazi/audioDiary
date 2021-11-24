@@ -16,6 +16,19 @@
     position: relative;
     top: 49px;
   }
+  /*playlist*/
+  div#playlist {
+    position: relative;
+    right: 23px;
+    top: 6px;
+  }
+  i#playAudio {
+    position: fixed;
+    top: 391px;
+    left: 67px;
+    font-size: 110px;
+
+  }
 
 
 
@@ -86,10 +99,11 @@
   }
   i.bi.bi-exclamation-circle-fill {
     font-size: 39px;
-    position: relative;
-    bottom: 418px;
-    right: 172px;
-    color:red;
+    position: fixed;
+    bottom: 423px;
+    color: red;
+    left: 9%;
+    top: 12%;
 }
   .box1{
     animation-name: quiet;
@@ -162,7 +176,7 @@ img#play-btn_new {
     right: -17%;
     border-radius: 29%;
     height: 49px;
-    top: 290px;
+    top: 248px;
     background: #484848;
     border: #484848;
     box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
@@ -173,7 +187,7 @@ img#play-btn_new {
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 290px;
+    top: 244px;
     background: white;
     border: white;
     color: black;
@@ -184,8 +198,8 @@ img#play-btn_new {
     position: fixed;
     bottom: -11%;
     width: 41%;
-    height: 55%;
-    right: 40px;
+    height: 64%;
+    right: 21px;
     font-size: 121px;
   }
   .css_animation {
@@ -199,7 +213,7 @@ img#play-btn_new {
     color: white;
     position: relative;
     margin-left: 209px;
-    top: -88%;
+    top: -78%;
 }
 
 h4#modal-basic-title {
@@ -238,7 +252,7 @@ button.close {
   position: relative;
   top: 19%;
 } */
-
+/*600 px edit*/
 .btn-edit {
   font-family: Raleway-SemiBold;
   font-size: 13px;
@@ -248,20 +262,21 @@ button.close {
   border: white;
   border-radius: 40px;
   background: white;
-  position: center;
   display: inline;
   width: 98px;
-  position: relative;
-  bottom: 424px;
-  left: 44%;
+  position: fixed;
+  left: 64%;
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  top: 110px;
 }
 h1#max_recording_time {
-  position: relative;
+  position: fixed;
   font-size: 13px;
-  bottom: 486px;
+  bottom: 428px;
   color: black;
-  margin-left: 70px;
+  margin-left: 29px;
+  color: black;
+  font-size: 15px;
 }
 
   .css_animation .wrapper {
@@ -1362,11 +1377,11 @@ h1#max_recording_time {
   }
   button#discardFile {
     position: relative;
-    left: 42%;
+    left: 32%;
     height: 49px;
     border-radius: 29%;
-    width: 77px;
-    top: 268px;
+    width: 102px;
+    top: 122px;
     background: #484848;
     border: #484848;
     box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
@@ -1376,19 +1391,18 @@ h1#max_recording_time {
     left: 50%;
     height: 49px;
     border-radius: 29%;
-    width: 77px;
-    top: 268px;
+    width: 113px;
+    top: 121px;
     background: white;
     border: white;
     color: black;
     box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
   i.bi.bi-pause {
-
     width: 4%;
     position: relative;
-    left: 48%;
-    top: 21px;
+    left: 19%;
+    top: 9px;
     font-size: 186px;
   }
 
@@ -1533,24 +1547,25 @@ img#play-btn_new {
   position: center;
   display: inline;
   width: 150px;
-  position: relative;
-  bottom: 278px;
-  left: 24%;
+  position: fixed;
+  top: 11%;
+  left: 56%;
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+
 }
 i.bi.bi-exclamation-circle-fill {
   font-size: 39px;
-  position: relative;
-  bottom: 271px;
-  right: 99px;
-  color:red;
+  position: fixed;
+  top: 10%;
+  color: red;
+  left: 33%;
 }
 h1#max_recording_time {
-  position: relative;
+  position: fixed;
   font-size: 17px;
-  bottom: 364px;
+  bottom: 58%;
   color: black;
-  margin-left: 790px;
+  margin-left: 26%;
 }
 
 
@@ -1578,7 +1593,18 @@ h4#modal-basic-title {
 button.close {
   color: white;
 }
+  div#playlist {
+    position: relative;
+    right: 19px;
+    top: 6px;
+    width: 348px;
+  }
 
+  i#playAudio {
+    position: relative;
+    font-size: 161px;
+    left: 14%;
+  }
 
 
 }
