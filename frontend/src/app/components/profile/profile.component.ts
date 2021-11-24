@@ -40,18 +40,6 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.posts =[];
-    // this.posts.push(new Post(1,"RenouYuyut", "River Sounds", this.text,"river.jpg",Theme.SUN, true))
-    // this.posts.push(new Post(3,"RenouYuyut", "Amazon Birds", this.text,"amazon.jpg",Theme.FOREST, true))
-    // this.posts.push(new Post(4,"RenouYuyut", "Sound of Waves", this.text,"seawaves.jpg",Theme.WATER, false))
-    // this.posts.push(new Post(5, "RenouYuyut","Sound of Waves", this.text,"seawaves.jpg",Theme.MOUNTAIN, false))
-    //
-    // this.favoritePost =[];
-    // this.favoritePost.push(new Post(1, "RenouYuyut","River Sounds", this.text,"river.jpg",Theme.SUN, true))
-    // this.favoritePost.push(new Post(3, "RenouYuyut","Amazon Birds", this.text,"amazon.jpg",Theme.FOREST, true))
-    // this.favoritePost.push(new Post(4, "RenouYuyut","Sound of Waves", this.text,"seawaves.jpg",Theme.WATER, false))
-
-
     this.getAllPosts();
     this.getFavPosts();
     // this.posts =[];

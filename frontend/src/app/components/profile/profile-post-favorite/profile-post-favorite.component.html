@@ -9,6 +9,9 @@
       <div class="pro-rec1"></div>
     </div>
   </div>
+  <div>
+    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+  </div>
   <img style="max-height: 200px" class="card-img-top" src="assets/img/postsimgs/{{audioPost.img}}" alt="Card image cap">
   <div class="card-body">
     <div class="headerBody">
@@ -17,7 +20,7 @@
         <span class="profile-header-name">user Diary</span>
       </div>
       <div>
-        <i (click)="toRemoveFavoritePost()" class="fa fa-trash profile-bin" aria-hidden="true"></i>
+        <i (click)="toRemoveFavoritePost()" class="fa fa-times-circle profile-bin" aria-hidden="true"></i>
       </div>
       <p class="card-username">{{audioPost.user}}</p>
       <div class="icons">
@@ -26,6 +29,7 @@
     </div>
     <h5 class="card-title">{{audioPost.title}}</h5>
     <p class="card-text">{{audioPost.description}}</p>
+
   </div>
 </div>
 
