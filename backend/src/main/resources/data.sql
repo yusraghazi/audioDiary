@@ -29,3 +29,5 @@ insert into posts (id, amount_report, description, img, is_liked, theme, title, 
 VALUES (6, 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 'amazon.jpg', true, 'Theme.FOREST', 'Amazon Birds', 2, 1);
 insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
 VALUES (7, 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 'seawaves.jpg', true, 'Theme.WATER', 'Sound of Waves', 2, 1);
+insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id)
+VALUES (8, 5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 'seawaves.jpg', true, 'Theme.WATER', 'Sound of Waves', 2, 1);

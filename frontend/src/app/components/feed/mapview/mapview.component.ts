@@ -41,31 +41,6 @@ export class MapviewComponent implements OnInit, AfterViewInit {
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );
-
-    // const id = parseInt(router.url.split("/")[2]);
-    // if (!isNaN(id)) {
-    //   this.openOverlay(id);
-    // }
-  }
-
-  flyto() {
-    //this.map.on('load', () => {
-      const id = parseInt(this.router.url.split("/")[2]);
-      if (!isNaN(id)) {
-        console.log(this.places.features.length);
-        for (let i = 0; i < this.places.length; i++) {
-          console.log(this.places[i].features.properties.audioID);
-          console.log(id);
-        //   if (this.places[i].properties.audioID == id) {
-        //     this.map.flyTo({
-        //       center: this.places[i].features[0].geometry.coordinates
-        //     });
-        //   }
-        }
-      }
-
-
-    //});
   }
 
   ngOnInit() {
@@ -322,57 +297,11 @@ export class MapviewComponent implements OnInit, AfterViewInit {
             this.openOverlay(e.features[0].properties.audioID);
           });
 
-
-          // this.overlayTrue(true);
-          // this.openOverlay(e.features[0].properties.audioID);
           this.map.getCanvas().style.cursor = 'pointer';
 
           this.map.flyTo({
             center: e.features[0].geometry.coordinates
           });
-          const coordinates = e.features[0].geometry.coordinates.slice();
-          const theme = e.features[0].properties.color;
-          const img = e.features[0].properties.image.trim();
-          const title = e.features[0].properties.title;
-          const description = e.features[0].properties.description;
-
-          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-          }
-
-        //   new mapboxgl.Popup()
-        //     .setLngLat(coordinates)
-        //     .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
-        //     <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
-        //   <img class="card-img-top" src="../../../../assets/img/postsimgs/`+img+`">
-        //   <button>More info</button>
-        //   <div class="css_animation">
-        //   <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper" style="z-index: 5">
-        //     </div>
-        //     <div class="card-body">
-        //
-        //   <div class=" shadow-lg title-container">
-        //   <h5 class="card-title" style="color: white">` + title + `</h5>
-        //   </div>
-        //   <div class="shadow-lg text-container">
-        //   <p class="card-text" style="color: white">` + description + `</p>
-        //   </div>
-        //
-        //   <div class="icons">
-        //   <i *ngIf="audioPost.isLiked" style="color: white" class="bi bi-heart-fill"></i>
-        //     <i class="bi bi-chat-dots-fill" style="color: white"></i>
-        //     <i class="bi bi-share-fill" style="color: white"></i>
-        //     <i class="bi bi-flag-fill" style="color: white"></i>
-        //     </div>
-        //     <div class="reportFlag">
-        //     </div>
-        //     </div>
-        //     <div class="commentsPart">
-        //   <app-comments [postInfo]="audioPost" *ngIf="isShown"></app-comments>
-        //     </div>
-        //     </div>
-        // `)
-        //     .addTo(this.map);
         });
 
         this.map.on('mouseleave', 'places', () => {
@@ -382,60 +311,42 @@ export class MapviewComponent implements OnInit, AfterViewInit {
       }
       //this.map.on('load', () => {
       const id = parseInt(this.router.url.split("/")[2]);
-      console.log(id);
       if (!isNaN(id)) {
-        console.log(this.places.features.length);
         for (let i = 0; i < this.places.features.length; i++) {
-
-          console.log(this.places.features[i].properties.audioID);
-          // console.log(this.places[i].features[0].properties.audioID);
-          console.log(id);
             if (this.places.features[i].properties.audioID == id) {
               this.map.flyTo({
-                //center: this.places[i].features[0].geometry.coordinates
                 center: this.places.features[i].geometry.coordinates
               });
 
+                const coordinates = this.places.features[i].geometry.coordinates.slice();
+                const theme = this.places.features[i].properties.color;
+                const img = this.places.features[i].properties.image.trim();
+                const title = this.places.features[i].properties.title;
+                const description = this.places.features[i].properties.description;
               new mapboxgl.Popup()
                 .setLngLat(this.places.features[i].geometry.coordinates)
                 .setHTML('hiiiiii')
-        //         .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
-        //     <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
-        //   <img class="card-img-top" src="../../../../assets/img/postsimgs/`+img+`">
-        //   <button>More info</button>
-        //   <div class="css_animation">
-        //   <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper" style="z-index: 5">
-        //     </div>
-        //     <div class="card-body">
-        //
-        //   <div class=" shadow-lg title-container">
-        //   <h5 class="card-title" style="color: white">` + title + `</h5>
-        //   </div>
-        //   <div class="shadow-lg text-container">
-        //   <p class="card-text" style="color: white">` + description + `</p>
-        //   </div>
-        //
-        //   <div class="icons">
-        //   <i *ngIf="audioPost.isLiked" style="color: white" class="bi bi-heart-fill"></i>
-        //     <i class="bi bi-chat-dots-fill" style="color: white"></i>
-        //     <i class="bi bi-share-fill" style="color: white"></i>
-        //     <i class="bi bi-flag-fill" style="color: white"></i>
-        //     </div>
-        //     <div class="reportFlag">
-        //     </div>
-        //     </div>
-        //     <div class="commentsPart">
-        //   <app-comments [postInfo]="audioPost" *ngIf="isShown"></app-comments>
-        //     </div>
-        //     </div>
-        // `)
+                .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
+            <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
+          <img class="card-img-top" src="../../../../assets/img/postsimgs/`+img+`">
+          <div class="css_animation">
+          <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper" style="z-index: 5">
+            </div>
+            <div class="card-body">
+
+          <div class=" shadow-lg title-container">
+          <h5 class="card-title" style="color: white">` + title + `</h5>
+          </div>
+          <div class="shadow-lg text-container">
+          <p class="card-text" style="color: white">` + description + `</p>
+          </div>
+
+            </div>
+        `)
                 .addTo(this.map);
-            }
+             }
         }
       }
-
-
-      //});
     });
   }
 
