@@ -17,25 +17,28 @@ export class LoginComponent implements OnInit {
   constructor(private authService : AuthService, private router : Router) { }
 
   ngOnInit() {
-    this.formData = new FormGroup({
-      userName: new FormControl("admin"),
-      password: new FormControl("admin"),
-    });
   }
 
-  onClickSubmit(data: any) {
-    this.userName = data.userName;
-    this.password = data.password;
-
-    console.log("Login page: " + this.userName);
-    console.log("Login page: " + this.password);
-
-    this.authService.login(this.userName, this.password)
-      .subscribe( (data: unknown) => {
-        console.log("Is Login Success: " + data);
-
-        if(data) this.router.navigate(['/expenses']);
-      });
-  }
+  // ngOnInit() {
+  //   this.formData = new FormGroup({
+  //     userName: new FormControl("admin"),
+  //     password: new FormControl("admin"),
+  //   });
+  // }
+  //
+  // onClickSubmit(data: any) {
+  //   this.userName = data.userName;
+  //   this.password = data.password;
+  //
+  //   console.log("Login page: " + this.userName);
+  //   console.log("Login page: " + this.password);
+  //
+  //   this.authService.login(this.userName, this.password)
+  //     .subscribe( (data: unknown) => {
+  //       console.log("Is Login Success: " + data);
+  //
+  //       if(data) this.router.navigate(['/expenses']);
+  //     });
+  // }
 
 }
