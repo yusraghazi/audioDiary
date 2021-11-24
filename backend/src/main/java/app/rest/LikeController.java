@@ -14,8 +14,8 @@ import java.util.List;
 
 @RestController
 public class LikeController {
-    @Autowired
-   JPARepository<Likes> likeRepo;
+
+   LikeRepositoryJPA likeRepo;
 
     @GetMapping("/likes")
     public List<Likes> getAllEvents() {

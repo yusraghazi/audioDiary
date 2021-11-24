@@ -25,12 +25,7 @@ export class RecordingPostComponent implements OnInit {
     this.isShown = ! this.isShown;
 
   }
-  activateSoundWaves(){
-   const soundWaves = document.getElementById("soundwavesWrapper");
 
-    soundWaves.classList.remove('onClickWrapper');
-    soundWaves.classList.add("wrapper");
-  }
 
 
 

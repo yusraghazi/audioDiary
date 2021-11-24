@@ -13,6 +13,7 @@ export class CommentsComponent implements OnInit {
   @Input()
   postInfo: Post;
 
+
   comments: SingleComment[];
   description: string;
 
@@ -29,7 +30,7 @@ export class CommentsComponent implements OnInit {
     this.comments.push(new SingleComment("Taner", this.description, "https://live.staticflickr.com/4314/35471113064_9599836188_b.jpg"));
     this.description = "";
 
-}
+  }
 
 
 }

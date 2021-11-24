@@ -26,10 +26,12 @@
   z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
 }
 
-.postCard{
+.postCard {
+  position: absolute;
+  z-index: 100;
   width: 379px;
   height: auto;
-  /*background: #F4B371;*/
+  background: #F4B371;
   color: #AF2C0E;
   margin: 10px auto;
   float: none;
@@ -37,8 +39,6 @@
   display: flex;
   flex: 1 1 auto;
 }
-
-
 
 app-comments{
   position: relative;

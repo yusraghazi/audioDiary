@@ -8,12 +8,12 @@
 }
 .profile-hr {
   width: 80%;
-  background-color: #AF2C0E;
+  background-color: #262626;
   opacity: 30%;
 }
 
 .profile-header-name {
-  background-color: #AF2C0E;
+  background-color: #262626;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
@@ -41,7 +41,7 @@
 }
 
 .fa-user {
-  color: #AF2C0E;
+  color: #262626;
   font-size: 60px;
 }
 

@@ -1,42 +1,20 @@
-<div class="postCard" [ngStyle]="{'background-color':audioPost.theme}">
-  <p class="postedByTag"><i class="bi bi-person-circle"></i>RenouYuyut</p>
-  <img class="card-img-top" src="../../../../assets/img/postsimgs/{{audioPost.img}}">
-  <div class="css_animation">
-    <div id="soundwavesWrapper"   (click)="activateSoundWaves()" class="onClickWrapper" >
-      <div class="pro-rec1"></div>
-      <div class="pro-rec1"></div>
-      <div class="pro-rec1"></div>
-      <div class="pro-rec1"></div>
-      <div class="pro-rec1"></div>
-      <div class="pro-rec1"></div>
-    </div>
-  </div>
+<div class="card" >
+  <img class="card-img-top" src="assets/img/postsimgs/{{audioPost.img}}" alt="Card image cap">
   <div class="card-body">
-
-    <div class=" shadow-lg title-container">
-    <h5 class="card-title"> {{audioPost.title}}</h5>
+    <div class="headerBody">
+      <p class="card-username">@{{audioPost.user}}</p>
+      <div class="icons">
+        <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
+        <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>
+        <i class="bi bi-chat-dots"  (click)="toggleShow()"></i>
+        <i class="bi bi-share-fill"></i>
+      </div>
     </div>
-    <div class="shadow-lg text-container">
-    <p class="card-text">{{audioPost.description}}</p>
-    </div>
-
-    <div class="icons">
-    <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
-    <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>
-    <i class="bi bi-chat-dots-fill" (click)="toggleShow()"></i>
-    <i class="bi bi-share-fill"></i>
-      <i class="bi bi-flag-fill"></i>
-
-    </div>
-
-    <div class="reportFlag">
-    </div>
-
+    <h5 class="card-title">{{audioPost.title}}</h5>
+    <p class="card-text">Some .</p>
   </div>
-
   <div class="commentsPart">
-  <app-comments [postInfo]="audioPost" *ngIf="isShown"></app-comments>
+    <app-comments [postInfo]="audioPost" *ngIf="isShown"></app-comments>
   </div>
 </div>
-
 

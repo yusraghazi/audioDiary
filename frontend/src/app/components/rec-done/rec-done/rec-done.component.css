@@ -4,12 +4,13 @@
   .fileCard {
     width: 90%;
     height: 164px;
-    background-color: #AF2C0E !important;
+    background-color: #ff7f61 !important;
     margin: 10px auto;
     float: none;
     border-radius: 20px;
     display: flex;
     flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
   }
   .editFileCard[_ngcontent-qmo-c18] {
     position: relative;
@@ -162,8 +163,9 @@ img#play-btn_new {
     border-radius: 29%;
     height: 49px;
     top: 290px;
-    background: red;
-    border: 2px solid red;
+    background: #484848;
+    border: #484848;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
   }
   button#nextFile {
     position: relative;
@@ -172,8 +174,10 @@ img#play-btn_new {
     border-radius: 29%;
     width: 77px;
     top: 290px;
-    background: #AF2C0E;
-    border: 2px solid #AF2C0E;
+    background: white;
+    border: white;
+    color: black;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
 
   }
   i.bi.bi-pause {
@@ -238,18 +242,19 @@ button.close {
 .btn-edit {
   font-family: Raleway-SemiBold;
   font-size: 13px;
-  color: #FFFFFF;
+  color: black;
   letter-spacing: 1px;
   line-height: 15px;
-  border: 2pxsolid #AF2C0E;
+  border: white;
   border-radius: 40px;
-  background: #AF2C0E;
+  background: white;
   position: center;
   display: inline;
   width: 98px;
   position: relative;
   bottom: 424px;
   left: 44%;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 h1#max_recording_time {
   position: relative;
@@ -372,12 +377,13 @@ h1#max_recording_time {
     width: 379px;
     height: 164px;
     /*background: #F4B371;*/
-    background-color: #AF2C0E !important;
+    background-color: #ff7f61 !important;
     margin: 10px auto;
     float: none;
     border-radius: 23%;
     display: flex;
     flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
   }
   .editFileCard[_ngcontent-qmo-c18] {
     position: relative;
@@ -509,8 +515,9 @@ h1#max_recording_time {
     border-radius: 29%;
     height: 49px;
     top: 268px;
-    background: red;
-    border: 2px solid red;
+    background: #484848;
+    border: #484848;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
   }
   button#nextFile {
     position: relative;
@@ -519,8 +526,10 @@ h1#max_recording_time {
     border-radius: 29%;
     width: 77px;
     top: 268px;
-    background:#AF2C0E;
-    border: 2px solid #AF2C0E;
+    background: white;
+    border: white;
+    color: black;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -650,12 +659,13 @@ h1#max_recording_time {
     width: 379px;
     height: 164px;
     /*background: #F4B371;*/
-    background-color: #AF2C0E !important;
+    background-color: #ff7f61 !important;
     margin: 10px auto;
     float: none;
     border-radius: 23%;
     display: flex;
     flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
   }
   .editFileCard[_ngcontent-qmo-c18] {
     position: relative;
@@ -788,8 +798,9 @@ h1#max_recording_time {
     border-radius: 29%;
     height: 49px;
     top: 290px;
-    background: red;
-    border: 2px solid red;
+    background: #484848;
+    border: #484848;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
   }
   button#nextFile {
     position: relative;
@@ -798,8 +809,10 @@ h1#max_recording_time {
     border-radius: 29%;
     width: 77px;
     top: 290px;
-    background: #5e5e5e;
-    border: 2px solid #5e5e5e;
+    background: white;
+    border: white;
+    color: black;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -929,12 +942,13 @@ h1#max_recording_time {
     width: 379px;
     height: 164px;
     /*background: #F4B371;*/
-    background-color: #AF2C0E !important;
+    background-color: #ff7f61 !important;
     margin: 10px auto;
     float: none;
     border-radius: 23%;
     display: flex;
     flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
   }
   .editFileCard[_ngcontent-qmo-c18] {
     position: relative;
@@ -1067,8 +1081,9 @@ h1#max_recording_time {
     border-radius: 29%;
     height: 49px;
     top: 290px;
-    background: red;
-    border: 2px solid red;
+    background: #484848;
+    border: #484848;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
   }
   button#nextFile {
     position: relative;
@@ -1077,8 +1092,10 @@ h1#max_recording_time {
     border-radius: 29%;
     width: 77px;
     top: 290px;
-    background: #AF2C0E;
-    border: 2px solid #AF2C0E;
+    background: white;
+    border: white;
+    color: black;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -1210,12 +1227,13 @@ h1#max_recording_time {
     width: 379px;
     height: 164px;
     /*background: #F4B371;*/
-    background-color: #AF2C0E !important;
+    background-color: #ff7f61 !important;
     margin: 10px auto;
     float: none;
     border-radius: 23%;
     display: flex;
     flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
   }
   .editFileCard[_ngcontent-qmo-c18] {
     position: relative;
@@ -1349,8 +1367,9 @@ h1#max_recording_time {
     border-radius: 29%;
     width: 77px;
     top: 268px;
-    background: red;
-    border: 2px solid red;
+    background: #484848;
+    border: #484848;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
   }
   button#nextFile {
     position: relative;
@@ -1359,8 +1378,10 @@ h1#max_recording_time {
     border-radius: 29%;
     width: 77px;
     top: 268px;
-    background: #AF2C0E;
-    border: 2px solid #AF2C0E;
+    background: white;
+    border: white;
+    color: black;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
   }
   i.bi.bi-pause {
 
@@ -1503,18 +1524,19 @@ img#play-btn_new {
 .btn-edit {
   font-family: Raleway-SemiBold;
   font-size: 13px;
-  color: #FFFFFF;
+  color: black;
   letter-spacing: 1px;
   line-height: 15px;
-  border: 2px solid #AF2C0E;
+  border: white;
   border-radius: 40px;
-  background: #AF2C0E;
+  background: white;
   position: center;
   display: inline;
   width: 150px;
   position: relative;
   bottom: 278px;
   left: 24%;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 i.bi.bi-exclamation-circle-fill {
   font-size: 39px;

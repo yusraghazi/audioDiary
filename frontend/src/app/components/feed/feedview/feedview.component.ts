@@ -16,15 +16,15 @@ export class FeedviewComponent implements OnInit {
 
   constructor() {
   }
-
   ngOnInit(): void {
+
     this.posts =[];
-    this.posts.push(new Post(1, "River Sounds", this.text,"river.jpg",Theme.SUN, true))
-    this.posts.push(new Post(2, "Brown Mountains", this.text,"mountain.jpg",Theme.MOUNTAIN, false))
-    this.posts.push(new Post(3, "Amazon Birds", this.text,"amazon.jpg",Theme.FOREST, true))
-    this.posts.push(new Post(4, "Sound of Waves", this.text,"seawaves.jpg",Theme.WATER, false))
-    this.posts.push(new Post(5, "Sand storm", this.text,"sandstorm.jpg",Theme.SAND, true))
-    this.posts.push(new Post(6, "Amsterdam bikes", this.text,"amsterdamBikes.jpg",Theme.CITY, false))
+    this.posts.push(new Post(1,"haji", "River Sounds", this.text,"river.jpg",Theme.SUN, true))
+    this.posts.push(new Post(2,"amshoum", "Brown Mountains", this.text,"mountain.jpg",Theme.MOUNTAIN, false))
+    this.posts.push(new Post(3,"boras", "Amazon Birds", this.text,"amazon.jpg",Theme.FOREST, true))
+    this.posts.push(new Post(4, "farid","Sound of Waves", this.text,"seawaves.jpg",Theme.WATER, false))
+    this.posts.push(new Post(5, "aziz","Sand storm", this.text,"sandstorm.jpg",Theme.SAND, true))
+    this.posts.push(new Post(6, "joost","Amsterdam bikes", this.text,"amsterdamBikes.jpg",Theme.CITY, false))
   }
 
 }

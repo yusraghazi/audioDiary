@@ -1,11 +1,13 @@
 package app.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.data.jpa.repository.Query;
 
 import javax.persistence.*;
 
 @Entity
 @NamedQuery(name="find_all_comments", query="select c from Comment c")
+//@NamedQuery(name="get_comments_by_postId", query="select c From Comment c WHERE c.post = :id")
 public class Comment {
 
     @Id
@@ -30,20 +32,20 @@ public class Comment {
         this.id = id;
     }
 
-    public Posts getPostId() {
+    public Posts getPost() {
         return post;
     }
 
-    public void setPostId(Posts postId) {
-        this.post = postId;
+    public void setPost(Posts post) {
+        this.post = post;
     }
 
-    public User getUserId() {
+    public User getUser() {
         return user;
     }
 
-    public void setUserId(User userId) {
-        this.user = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getDescription() {

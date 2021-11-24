@@ -16,52 +16,9 @@
 
 <div id="map-mapbox" style="cursor: pointer">
   <div *ngIf="showOverlay">
-    <div id="overlay"></div>
+    <div id="overlay">
     <button id="close" (click)="overlayTrue(false)"><h3>X</h3></button>
-
     <router-outlet></router-outlet>
-<!--    <div id="context" *ngIf="audioPost">-->
-<!--      <div class="postCard" [ngStyle]="{'background-color':audioPost.theme}">-->
-<!--        <p class="postedByTag"><i class="bi bi-person-circle"></i>RenouYuyut</p>-->
-<!--        <img class="card-img-top" src="../../../../assets/img/postsimgs/{{audioPost.img}}">-->
-<!--        <div class="css_animation">-->
-<!--          <div style="z-index: 300" id="soundwavesWrapper"   (click)="activateSoundWaves()" class="onClickWrapper" >-->
-<!--            <div class="pro-rec1"></div>-->
-<!--            <div class="pro-rec1"></div>-->
-<!--            <div class="pro-rec1"></div>-->
-<!--            <div class="pro-rec1"></div>-->
-<!--            <div class="pro-rec1"></div>-->
-<!--            <div class="pro-rec1"></div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="card-body">-->
-
-<!--          <div class=" shadow-lg title-container">-->
-<!--            <h5 class="card-title"> {{audioPost.title}}</h5>-->
-<!--          </div>-->
-<!--          <div class="shadow-lg text-container">-->
-<!--            <p class="card-text">{{audioPost.description}}</p>-->
-<!--          </div>-->
-
-<!--          <div class="icons">-->
-<!--            <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>-->
-<!--            <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>-->
-<!--            <i class="bi bi-chat-dots-fill" (click)="toggleShow()"></i>-->
-<!--            <i class="bi bi-share-fill"></i>-->
-<!--            <i class="bi bi-flag-fill"></i>-->
-
-<!--          </div>-->
-
-<!--          <div class="reportFlag">-->
-<!--          </div>-->
-
-<!--        </div>-->
-
-<!--        <div class="commentsPart">-->
-<!--          <app-comments [postInfo]="audioPost" *ngIf="isShown"></app-comments>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--    </div>-->
+    </div>
   </div>
 </div>

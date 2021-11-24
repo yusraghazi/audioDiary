@@ -1,11 +1,13 @@
 .postCard{
-  width: 95%;
   max-width: 500px;
   margin: auto;
-  background: #F4B371;
-  color: #AF2C0E;
+  width: 95%;
+  height: auto;
+  background: #FFFFFF;
+  color: black;
   float: none;
   border-radius: 21px ;
+  box-shadow: 2px 4px 10px black;
 }
 
 .btn-create {
@@ -14,9 +16,8 @@
   color: #FFFFFF;
   letter-spacing: 1px;
   line-height: 15px;
-  border: 2px solid  #AF2C0E;
   border-radius: 40px;
-  background:  #AF2C0E;
+  background: #bad3f8;
   transition: all 0.3s ease 0s;
   position: center;
   display:inline;
@@ -25,8 +26,8 @@
 
 .btn-create:hover {
   color: #FFF;
-  background: #ab6252;
-  border: 2px solid rgba(217, 83, 78, 0.75);
+  background: #4496ec;
+  border: 2px solid #4496ec;
 }
 
 .btn-cancel{
@@ -35,9 +36,9 @@
   color: #FFFFFF;
   letter-spacing: 1px;
   line-height: 15px;
-  border: 2px solid  #757575;
+  border: 2px solid #dedddd;
   border-radius: 40px;
-  background:  #757575;
+  background: #cdcbcb;
   transition: all 0.3s ease 0s;
   position:center;
   margin-top: 2px;
