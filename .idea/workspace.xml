@@ -7,14 +7,25 @@
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="add animation to profile rec's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/enums/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/enums/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/singleComment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/singleComment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,14 +48,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -180,6 +191,7 @@
       <workItem from="1637592165172" duration="16778000" />
       <workItem from="1637666980554" duration="302000" />
       <workItem from="1637682861218" duration="723000" />
+      <workItem from="1637762852617" duration="661000" />
     </task>
     <task id="LOCAL-00001" summary="Footer with re button">
       <created>1634299651216</created>
