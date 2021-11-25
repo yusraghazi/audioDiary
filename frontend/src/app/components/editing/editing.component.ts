@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Post} from "../../models/post";
+import {Subscription} from "rxjs";
+import {PostsService} from "../../services/posts.service";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 
 @Component({
   selector: 'app-editing',
@@ -6,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editing.component.css']
 })
 export class EditingComponent implements OnInit {
+private childparamsSub: Subscription;
+  newPost: Post;
 
   editTitle: string = 'card title';
   editDescription: string = 'here comes the description';
@@ -14,9 +20,10 @@ export class EditingComponent implements OnInit {
 
   imageSrc: string | ArrayBuffer;
 
-  constructor() { }
+  constructor(private postService: PostsService, private route: Router) { }
 
   ngOnInit(): void {
+
   }
 
   url: any; //Angular 11, for stricter type
@@ -32,6 +39,27 @@ export class EditingComponent implements OnInit {
       reader.readAsDataURL(file);
     }
   }
+
+
+  createNewPost(id: number) {
+    this.postService.restCreateNewPost(id).subscribe(
+      (data) => {
+        this.newPost = data; console.log(data);
+      },
+      (error) => console.log("Error: " + error.status + " - " + error.error)
+    );
+  }
+
+  backButton(){
+    if (confirm("do you want to discard changes")) {
+      this.route.navigateByUrl('rec-done')
+    }
+  }
+
+  postButton(){
+    this.route.navigateByUrl('feedview');
+  }
+
 
   getSelectedColor(){
     return this.cardColor;

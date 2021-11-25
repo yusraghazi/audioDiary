@@ -6,6 +6,7 @@ import app.models.User;
 import app.repositories.JPARepository;
 import app.repositories.PostsRepository;
 
+import app.repositories.PostsRepositoryJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +26,8 @@ public class PostsController {
 
     @Autowired
     private JPARepository<Posts> postRepo;
+
+    private PostsRepositoryJPA postsPostsRepositoryJPA;
 
 //    @GetMapping("/posts/{id}")
 //    public List<Posts> getPosts(@PathVariable int id) {
@@ -72,6 +75,12 @@ public class PostsController {
         return post;
         //return ResponseEntity.ok(post);
     }
+
+
+@PostMapping("/posts/create/{id}")
+    public Posts addNewPost(@PathVariable int id){
+    return this.postsPostsRepositoryJPA.createNewPost(id);
+}
 //
 //    @PostMapping("/posts")
 //    public ResponseEntity<Posts> createAEvent(@RequestBody Posts post) {

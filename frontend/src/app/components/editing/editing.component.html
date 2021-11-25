@@ -4,26 +4,27 @@
 
 
   <div class="editCard">
-    <div class="postCard" >
-      <img class="editCardImg" [src]="imageSrc || 'http://placehold.it/180' ">
-      <!--      <div class="card-body">-->
-      <!--        <div class=" shadow-lg title-container">-->
-      <!--          <h5 class="card-title"> {{editTitle}} </h5>-->
-      <!--        </div>-->
-      <!--        <div class="shadow-lg text-container">-->
-      <!--          <p class="card-text"> {{editDescription}}</p>-->
-      <!--        </div>-->
-      <!--        <div class="icons">-->
-      <!--          <i class="bi bi-chat-dots-fill"></i>-->
-      <!--          <i class="bi bi-share-fill"></i>-->
-      <!--          <i class="bi bi-flag-fill"></i>-->
 
-      <!--        </div>-->
-      <!--        <div class="reportFlag">-->
-      <!--        </div>-->
-      <!--      </div>-->
-
+    <div class="card" >
+      <img class="cardImg" [src]="imageSrc" alt="Add an image below">
+      <div class="card-body">
+        <div class="headerBody">
+          <p class="card-username">@user</p>
+          <div class="icons">
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-heart"></i>
+            <i class="bi bi-chat-dots"></i>
+            <i class="bi bi-share-fill"></i>
+          </div>
+        </div>
+        <h5 class="postCardTitle">{{editTitle}}</h5>
+        <p class="card-text">{{editDescription}}</p>
+      </div>
+      <div class="commentsPart">
+      </div>
     </div>
+
+
 
 
     <div class="editInputs">
@@ -61,8 +62,8 @@
       </div>
 
       <div class="buttons">
-        <button class="editButtons" id="discardButton">discard</button>
-        <button class="editButtons" id="postButton">post</button>
+        <button class="editButtons" id="discardButton" (click)="backButton()">Go back</button>
+        <button class="editButtons" id="postButton" (click)="postButton()">post</button>
       </div>
     </div>
   </div>
