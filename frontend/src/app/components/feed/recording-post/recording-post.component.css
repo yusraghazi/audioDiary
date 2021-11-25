@@ -34,3 +34,12 @@
 .bi{
   padding: 3px;
 }
+
+.fa-play-circle-o{
+  color: white;
+  font-size: 70px;
+  opacity: 90%;
+  position: absolute;
+  top:75px;
+  left: 145px;
+}
