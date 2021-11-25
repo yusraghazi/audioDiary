@@ -1,6 +1,7 @@
-import {ActivatedRoute, Router} from "@angular/router";
-import {Component, OnInit} from '@angular/core';
 import {NgAudioRecorderService, OutputFormat} from 'ng-audio-recorder';
+import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-footer',
@@ -11,16 +12,15 @@ import {NgAudioRecorderService, OutputFormat} from 'ng-audio-recorder';
 
 
 export class FooterComponent implements OnInit {
+  showRecordBtn: boolean = true;
   value = './assets/img/rec-button.png'; //default_value
-  constructor(private audioRecorderService: NgAudioRecorderService) {
+  constructor(private audioRecorderService: NgAudioRecorderService, private router: Router, private activatedRoute: ActivatedRoute) {
     this.audioRecorderService.recorderError.subscribe(recorderErrorCase => {
       // Handle Error
     })
 
-  showRecordBtn: boolean = true;
   }
-
-  constructor(private router: Router,
+  
   startRecording() {
     this.audioRecorderService.startRecording();
     console.log("recording")
@@ -39,6 +39,9 @@ export class FooterComponent implements OnInit {
   // updateImage() {
   //   this.value = 'https://www.pngall.com/wp-content/uploads/5/Pause-Button-Transparent.png';
   // }
+
+
+
 
 
   ngOnInit(): void {
