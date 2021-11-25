@@ -7,7 +7,7 @@ export class Post {
   title:string | undefined;
   description:string | undefined;
   img:string | undefined;
-  theme: string | undefined;
+  theme: string| undefined;
   isLiked: boolean | undefined;
 
   constructor(id: number | undefined, user: string | undefined, title: string | undefined, description: string | undefined, img: string | undefined, theme: string | undefined, isLiked: boolean | undefined) {
