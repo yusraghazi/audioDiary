@@ -4,17 +4,17 @@
   position: absolute;
 }
 
-#overlay {
-  position: absolute; /* Sit on top of the page content */
-  /*display: none; !* Hidden by default *!*/
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
+/*#overlay {*/
+/*  position: absolute; !* Sit on top of the page content *!*/
+/*  !*display: none; !* Hidden by default *!*!*/
+/*  width: 100%; !* Full width (cover the whole page) *!*/
+/*  height: 100%; !* Full height (cover the whole page) *!*/
+/*  z-index: 10; !* Specify a stack order in case you're using a different order for other elements *!*/
+/*  cursor: pointer; !* Add a pointer on hover *!*/
+/*  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+/*  background-size: 400% 400%;*/
+/*  animation: gradient 15s ease infinite;*/
+/*}*/
 
 #close, #context {
   position: sticky;
@@ -24,6 +24,10 @@
   background-color: white;
   color: grey;
   z-index: 100; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#close {
+  background-color: transparent;
 }
 
 .postCard {

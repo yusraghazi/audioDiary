@@ -1,3 +1,4 @@
+import {ActivatedRoute, Router} from "@angular/router";
 import {Component, OnInit} from '@angular/core';
 import {NgAudioRecorderService, OutputFormat} from 'ng-audio-recorder';
 
@@ -16,8 +17,10 @@ export class FooterComponent implements OnInit {
       // Handle Error
     })
 
+  showRecordBtn: boolean = true;
   }
 
+  constructor(private router: Router,
   startRecording() {
     this.audioRecorderService.startRecording();
     console.log("recording")

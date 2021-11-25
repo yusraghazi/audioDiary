@@ -24,7 +24,9 @@ public class Posts {
     public String title;
     public String description;
     public String img;
-    public String theme;
+
+    @Enumerated()
+    public Theme theme;
     public boolean isLiked;
     public int amountReport;
 
@@ -99,11 +101,11 @@ public class Posts {
         this.img = img;
     }
 
-    public String getTheme() {
+    public Theme getTheme() {
         return theme;
     }
 
-    public void setTheme(String theme) {
+    public void setTheme(Theme theme) {
         this.theme = theme;
     }
 

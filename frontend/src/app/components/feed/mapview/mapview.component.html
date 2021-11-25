@@ -3,7 +3,7 @@
 <!--  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>-->
 <!--</div>-->
 <!--<div id="filter-group" class="filter-group"></div>-->
-
+<div *ngIf="!showOverlay">
 <div class="btn-group mb-2">
   <app-switch [switchText]="feedview"></app-switch>
 <div ngbDropdown class="d-inline-block">
@@ -13,11 +13,12 @@
   </div>
 </div>
 </div>
+</div>
 
 <div id="map-mapbox" style="cursor: pointer">
   <div *ngIf="showOverlay">
-    <div id="overlay">
     <button id="close" (click)="overlayTrue(false)"><h3>X</h3></button>
+    <div id="overlay" class="onClickWrapper">
     <router-outlet></router-outlet>
     </div>
   </div>
