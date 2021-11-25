@@ -19,8 +19,9 @@
   /*playlist*/
   div#playlist {
     position: relative;
-    right: 23px;
+    right: 44px;
     top: 6px;
+    width: 255px;
   }
   i#playAudio {
     position: fixed;

@@ -61,6 +61,8 @@ export class RecDoneComponent implements OnInit {
       document.getElementById("pauseAudio").addEventListener("click", function () {
         ee.emit("pause");
       });
+
+
     });
 
 
@@ -95,6 +97,14 @@ activateSoundWaves(){
    soundWaves.classList.remove('onClickWrapper');
    soundWaves.classList.add("wrapper");
  }
+
+  // stopRecording() {
+  //   this.audioRecorderService.stopRecording(OutputFormat.WEBM_BLOB).then((output) => {
+  //     // do post output steps
+  //   }).catch(errrorCase => {
+  //     // Handle Error
+  //   });
+  // }
 
   getSelectedColor(){
     return this.cardColor;

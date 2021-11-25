@@ -1,8 +1,11 @@
 <div class="footer">
 <!--  <span class="dot"></span>-->
   <div *ngIf="showRecordBtn">
-  <img routerLink="/rec-done" class="footer-rec-button" src="./assets/img/rec-button.png" alt="recording button">
+    <a><img routerLink="/rec-done"  class="footer-rec-button" id="footerLeg" [src]="value" alt="recording button" (click)="startRecording()"></a>
   </div>
+
+<!--  <button type="button" (click)="stopRecording()" id="eye" class="btn btn-default"><i class="fa fa-eye"></i> </button>-->
+
 
   <div class="onClickWrapper">
     <a class="menu-close" (click)="showRecordBtn = true"  routerLink="feedview"><i class="fa fa-home i-shadow" aria-hidden="true"></i></a>
@@ -41,3 +44,5 @@
 
 <!--  </div>-->
 </div>
+
+
