@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Post} from "../../models/post";
 import {Theme} from "../../enums/theme";
 import {PostsService} from "../../services/posts.service";
@@ -11,6 +11,9 @@ declare var $: any;
 export class ProfileComponent implements OnInit {
   posts!: Post[];
   favoritePost!: Post[];
+
+  @Input()
+  audioPost: Post;
 
   selectedPost: Post | undefined;
   selectedFavoritePost: Post | undefined;
