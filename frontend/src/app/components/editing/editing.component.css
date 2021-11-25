@@ -5,64 +5,51 @@
 
 
 /*-------------------------------------------------------------------------------------------*/
+/*Card styling*/
+
 
 h2#editHeader {
   text-align: center;
 }
 
 
-.postCard{
-  width: 379px;
-  height: 164px;
-  /*background: #F4B371;*/
-  color: #AF2C0E;
+.card{
   margin: 10px auto;
+  border-radius: 20px 20px 30px 30px ;
+  color: black;
+  width: 350px;
+  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
   float: none;
-  border-radius: 21px ;
   display: flex;
   flex: 1 1 auto;
-}
-
-.card-img-top{
-  width: 182px;
-  height: 125px;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 17px;
-}
-.title-container{
-  width: 130px;
-  height: 21px;
-  border-radius: 7px ;
-  background: #94260d;
-
 
 }
-.card-title{
-  font-size:15px;
-  color: white;
-  margin-left: 10px;
+.cardImg{
+  border-radius: 17px 17px 30px 30px ;
+}
+.card-username{
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+}
+.postCardTitle{
+  margin-bottom: 0;
 }
 
-.text-container{
-  width: 130px;
-  height: 90px;
-  margin-top: 2px;
-  border-radius: 7px ;
-  background: white;
+.card-body{
+  padding-top: 0;
 }
-.card-text{
-  margin-top: 1px;
-  margin-left: 2px;
-  font-size: 10px;
-  color: black;
+
+.icons{
+  display: inline-block;
+  float: right;
+
 }
 .bi{
   padding: 3px;
 }
-.bi-flag-fill {
-  margin-left: 36px;
-}
+
 
 
 /*-------------------------------------------------------------------------------------------*/

@@ -46,4 +46,22 @@ public class PostsRepositoryJPA implements PostsRepository {
         em.remove(toRemove);
         return toRemove;
     }
+
+
+  public Posts createNewPost(int id){
+        Query query = em.createNativeQuery("insert into posts (id, amount_report, description, img, is_liked, theme, title, audio_id, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);");
+        em.getTransaction().begin();
+        query.setParameter(1, id);
+        query.setParameter(2, 5);
+        query.setParameter(3, "dit is een post om de insert te testen");
+        query.setParameter(4, "river.jpg");
+        query.setParameter(5, true);
+        query.setParameter(6, "Theme.SUN");
+        query.setParameter(7, "test post ");
+        query.setParameter(8, 2);
+        query.setParameter(9, 1);
+        query.executeUpdate();
+        em.getTransaction().commit();
+      return null;
+  }
 }
