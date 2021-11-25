@@ -1,7 +1,6 @@
-<div class="card" >
-  <div>
-    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-  </div>
+
+<div class="card"  [ngStyle]="{'border-color':audioPost.theme, 'box-shadow':'2.4px 4.8px 4.8px'+audioPost.theme}">
+  <i class="fa fa-play-circle-o" aria-hidden="true"></i>
   <img class="card-img-top" src="assets/img/postsimgs/{{audioPost.img}}" alt="Card image cap">
   <div class="card-body">
     <div class="headerBody">

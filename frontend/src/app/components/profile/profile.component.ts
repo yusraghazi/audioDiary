@@ -32,6 +32,8 @@ export class ProfileComponent implements OnInit {
     );
   }
 
+
+
   getFavPosts(): void{
     this.postsService.restGetPosts().subscribe(
       (data) => {

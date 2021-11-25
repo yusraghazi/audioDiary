@@ -3,10 +3,12 @@
   border-radius: 20px 20px 30px 30px ;
   color: black;
   width: 350px;
-  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
+
+
   float: none;
   display: flex;
   flex: 1 1 auto;
+
 
 }
 .card-img-top{

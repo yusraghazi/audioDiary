@@ -19,16 +19,22 @@ export class CommentsComponent implements OnInit {
   description: string;
 
 
-  constructor(private service: CommentsService) {
-  }
-
-  ngOnInit(): void {
-    this.service.restFindCommentByPostId(this.postInfo.id).subscribe(
+  constructor(private commentService: CommentsService) { }
+  getComments(): void{
+    this.commentService.restFindCommentByPostId(4).subscribe(
       (data) => {
-        this.comments = data
-        console.log(data);
-      }
-    )
+        // @ts-ignore
+        this.comments = data; console.log(data);
+      },
+      (error) => console.log("Error: " + error.status + " - " + error.error));
+
+  }
+  ngOnInit(): void {
+
+
+
+    this.getComments();
+
     // this.comments.push(new SingleComment("Yuyut", "i like this sound of renouuuuuuuuuu", "https://m.media-amazon.com/images/M/MV5BNDQwMjlmMmYtOTNkMS00OGIzLWEyNjUtZjliYTY5MzMyNmJkXkEyXkFqcGdeQXVyNTE0MDc0NTM@._V1_.jpg" ));
     // this.comments.push(new SingleComment("Renou", "i like this sound of yuyuuuuuuuuuut", "https://i.pinimg.com/originals/61/2f/da/612fdaf59ea3daa811b53682d43033a3.jpg" ));
 
