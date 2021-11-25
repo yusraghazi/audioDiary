@@ -42,10 +42,10 @@ export class PostsService {
       }));
   }
 
-  restPostPost(postId: number):Observable<Post[]> {
-    const url = `http://localhost:8084/posts/${postId}`;
-    return this.http.post<Post>(url, postId);
-  }
+  // restPostPost(postId: number):Observable<Post[]> {
+  //   const url = `http://localhost:8084/posts/${postId}`;
+  //   return this.http.post<Post>(url, postId);
+  // }
 
   restCreateNewPost(postId: number):Observable<Post>{
     const url = `http://localhost:8084/posts/create/${postId}`;
