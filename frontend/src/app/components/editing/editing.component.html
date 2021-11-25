@@ -5,7 +5,7 @@
 
   <div class="editCard">
 
-    <div class="card" >
+    <div class="card" [ngStyle]="{'color': getSelectedColor()}">
       <img class="cardImg" [src]="imageSrc" alt="Add an image below">
       <div class="card-body">
         <div class="headerBody">
