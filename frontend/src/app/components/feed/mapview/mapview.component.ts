@@ -55,11 +55,11 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 1,
-            'color': Theme.CITY,
-            'theme': 'city',
-            'image': 'paris.jpg',
-            'description': 'The bubbly sounds of the centre of Paris',
-            'title': 'Bonjour Paris'
+            'color': Theme.SUN,
+            'theme': 'sun',
+            'image': 'river.jpg',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            'title': 'River Sounds'
           },
           'geometry': {
             'type': 'Point',
@@ -71,11 +71,11 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 2,
-            'color': Theme.CITY,
-            'theme': 'city',
-            'image': 'beijing.jpg',
-            'description': 'All the chinese people gathering to eat together',
-            'title': 'Street food China'
+            'color': Theme.FOREST,
+            'theme': 'forest',
+            'image': 'amazon.jpg',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            'title': 'Amazon Birds'
           },
           'geometry': {
             'type': 'Point',
@@ -87,11 +87,11 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 3,
-            'color': Theme.SAND,
-            'theme': 'sand',
-            'image': 'safari.jpg',
-            'description': 'The noises of lions and elephants at safari',
-            'title': 'Safari'
+            'color': Theme.WATER,
+            'theme': 'water',
+            'image': 'seawaves.jpg',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            'title': 'Sound of Waves'
           },
           'geometry': {
             'type': 'Point',
@@ -103,10 +103,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 4,
-            'color': Theme.FOREST,
-            'theme': 'forest',
+            'color': Theme.WATER,
+            'theme': 'river',
             'image': 'river.jpg',
-            'description': 'The beautiful sounds of a river',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
             'title': 'River Sounds'
           },
           'geometry': {
@@ -119,10 +119,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 5,
-            'color': Theme.FOREST,
+            'color': Theme.SUN,
             'theme': 'forest',
-            'image': 'river.jpg',
-            'description': 'The beautiful sounds of a river',
+            'image': 'amazon.jpg',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
             'title': 'River Sounds'
           },
           'geometry': {
@@ -135,11 +135,11 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 6,
-            'color': Theme.WATER,
-            'theme': 'water',
-            'image': 'seawaves.jpg',
-            'description': 'Waves shattering the coast',
-            'title': 'Wave after wave'
+            'color': Theme.FOREST,
+            'theme': 'forest',
+            'image': 'amazon.jpg',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            'title': 'Amazon birds'
           },
           'geometry': {
             'type': 'Point',
@@ -151,11 +151,11 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 7,
-            'color': Theme.SUN,
+            'color': Theme.WATER,
             'theme': 'sun',
-            'image': 'sandstorm.jpg',
-            'description': 'The burning sun on the sizzling sand',
-            'title': 'The desert'
+            'image': 'seawaves.jpg',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            'title': 'Sound of waves'
           },
           'geometry': {
             'type': 'Point',
@@ -167,33 +167,33 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           'properties': {
             'iconSize': [20, 20],
             'audioID': 8,
-            'color': Theme.MOUNTAIN,
-            'theme': 'mountain',
-            'image': 'mountain.jpg',
-            'description': 'The sounds of the birds circling around the mountains',
-            'title': 'Brown Mountains'
+            'color': Theme.WATER,
+            'theme': 'water',
+            'image': 'seawaves.jpg',
+            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+            'title': 'Sound of waves'
           },
           'geometry': {
             'type': 'Point',
             'coordinates': [6.2167070, 52.377956]
           }
         },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 9,
-            'color': Theme.MOUNTAIN,
-            'theme': 'mountain',
-            'image': 'mountain.jpg',
-            'description': 'The sounds of the birds circling around the mountains',
-            'title': 'Brown Mountains'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [1.00000, 42.666668]
-          }
-        },
+        // {
+        //   'type': 'Feature',
+        //   'properties': {
+        //     'iconSize': [20, 20],
+        //     'audioID': 9,
+        //     'color': Theme.MOUNTAIN,
+        //     'theme': 'mountain',
+        //     'image': 'mountain.jpg',
+        //     'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        //     'title': 'Brown Mountains'
+        //   },
+        //   'geometry': {
+        //     'type': 'Point',
+        //     'coordinates': [1.00000, 42.666668]
+        //   }
+        // },
       ]
     };
 
