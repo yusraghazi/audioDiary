@@ -52,15 +52,15 @@ export class SingleAudioComponent implements OnInit, AfterViewInit {
 
   setColor() {
     const overlay = document.getElementById("overlay");
-    if (this.audioPost.theme.toString() == "Theme.SUN") {
+    if (this.audioPost.theme == "Theme.SUN") {
       this.backgroundColor = "#fa4114";
       overlay.style.background = "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)";
-    } else if (this.audioPost.theme.toString() == "Theme.SAND") {
+    } else if (this.audioPost.theme == "Theme.SAND") {
       this.backgroundColor = "#FFB366"
-    } else if (this.audioPost.theme.toString() == "Theme.WATER") {
+    } else if (this.audioPost.theme == "Theme.WATER") {
       overlay.style.backgroundImage = 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)';
       this.backgroundColor = "#90D2E0";
-    } else if (this.audioPost.theme.toString() == "Theme.CITY") {
+    } else if (this.audioPost.theme == "Theme.CITY") {
       this.backgroundColor = "#A28EB2"
     } else {
       this.backgroundColor = "#9F7D5A"
