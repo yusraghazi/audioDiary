@@ -25,7 +25,7 @@ public class User {
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his posts */)
     private List<Posts> posts;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his posts */)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */)
     private List<Audio> audios;
 
     public User() {
@@ -42,8 +42,6 @@ public class User {
         this.passwordReset = passwordReset;
         this.isAdmin = isAdmin;
         this.isVerified = isVerified;
-//        this.posts = posts;
-//        this.audios = audios;
     }
 
     public String getUsername() {

@@ -8,6 +8,8 @@ public interface PostsRepository {
     List<Posts> findAll();
     Posts findById(int id);
 
+    List findPostByUserId(int userId);
+
     Posts save(Posts aEvent);
 
     Posts deleteById(int id);

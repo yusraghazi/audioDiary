@@ -1,7 +1,8 @@
 <script src="../../assets/js/audio.js"></script>
-
+<link rel="stylesheet" href="https://unpkg.com/waveform-playlist@4.0.6/styles/playlist.css">
+<script src="https://kit.fontawesome.com/ef69927139.js" crossorigin="anonymous"></script>
 <div class="editFileCard">
-  <div class="fileCard" [ngStyle]="{'background-color':getSelectedColor()}">
+  <div class="fileCard" [style.background-color]="getSelectedColor()">
 
     <div class="card-body">
       <div class=" shadow-lg title-container">
@@ -33,19 +34,17 @@
         <div class="spinner-center"></div>
         <div class="play-sprite"></div>
     </div> -->
+    <script>
+
+    </script>
 
 
-
-    <div class="css_animation">
-      <div id="soundwavesWrapper"   (click)="activateSoundWaves()" class="onClickWrapper" >
-        <div class="pro-rec1"></div>
-        <div class="pro-rec1"></div>
-        <div class="pro-rec1"></div>
-        <div class="pro-rec1"></div>
-        <div class="pro-rec1"></div>
-        <div class="pro-rec1"></div>
+    <div class="Waves">
+      <div id="soundWave">
+        <div id="playlist"></div>
+        <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>
       </div>
-      <h1 id="time">01:07:40</h1>
+      <h1 id="time"></h1>
     </div>
 
       </div>
@@ -62,19 +61,22 @@
       <polygon points="70, 55 70, 145 145, 100" fill="#000" id="svg-play"/>
     </svg> -->
 
-    <!-- <i class="bi bi-pause" id="pauseSound" (click)="stopSound()"></i> -->
-
+    <div class="container">
       <button class="btn-primary" id="discardFile" (click)="open(content)">Discard</button>
       <button class="btn-primary"  id="nextFile" (click)="buttonEditing()">Next</button>
-      <img src="../../../../assets/images/audio_clipper.png" id="audio_clipper">
-      <img src="../../../../assets/images/play-btn.png" id="play-btn_new" (click)="playSound()">
-      <button class="btn btn-edit">Edit</button>
-      <i class="bi bi-exclamation-circle-fill"></i>
+    <i class="bi bi-play" id="playAudio"></i>
+    <i class="bi bi-pause" id="pauseAudio"></i>
+
+  <!--      <img src="../../../../assets/images/play-btn.png" id="play-btn_new">-->
+<!--      <div id="playlist"></div>-->
+<!--      <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
+
       <h1 id="max_recording_time">max 00:03:00 minutes of  <br> recording</h1>
 
+  </div>
 
-
-
+        <button class="btn btn-edit">Edit File</button>
+        <i class="bi bi-exclamation-circle-fill"></i>
 
       <ng-template #content let-modal>
         <div class="modal-header">
@@ -93,6 +95,7 @@
         </div>
       </ng-template>
 
+    </div>
 
 
       <pre>{{ closeResult }}</pre>

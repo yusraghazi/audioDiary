@@ -25,7 +25,7 @@ public class PostsController {
     private AudioController audioResource;
 
     @Autowired
-    private JPARepository<Posts> postRepo;
+    private PostsRepository postRepo;
 
     private PostsRepositoryJPA postsPostsRepositoryJPA;
 
@@ -76,11 +76,10 @@ public class PostsController {
         //return ResponseEntity.ok(post);
     }
 
-
-@PostMapping("/posts/create/{id}")
-    public Posts addNewPost(@PathVariable int id){
-    return this.postsPostsRepositoryJPA.createNewPost(id);
-}
+    @GetMapping("users/{userId}/posts")
+    public List findPostByUserId(@PathVariable int userId) {
+        return postRepo.findPostByUserId(userId);
+    }
 //
 //    @PostMapping("/posts")
 //    public ResponseEntity<Posts> createAEvent(@RequestBody Posts post) {

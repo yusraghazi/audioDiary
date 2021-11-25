@@ -13,7 +13,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class PostsRepositoryJPA implements JPARepository<Posts> {
+public class PostsRepositoryJPA implements PostsRepository {
     @PersistenceContext
     EntityManager em;
 
@@ -22,6 +22,11 @@ public class PostsRepositoryJPA implements JPARepository<Posts> {
         TypedQuery<Posts> namedQuery = em.createNamedQuery("find_all_posts", Posts.class);
 
         return namedQuery.getResultList();
+    }
+
+    public List findPostByUserId(int userId) {
+        Query query = em.createQuery("select p From Posts p WHERE p.user.id = ?1").setParameter(1, userId);
+        return query.getResultList();
     }
 
     @Override

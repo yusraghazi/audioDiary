@@ -32,7 +32,7 @@
   cursor: pointer;
   padding-top: 5px;
   float: right;
-  color: #AF2C0E;
+  color: #000000;
   font-size: 25px;
 }
 
@@ -46,6 +46,6 @@
 }
 
 .profile-section-title {
-  color: #94260d;
+  color: #000000;
   margin-left: 7%;
 }

@@ -1,36 +1,79 @@
-<div class="postCard" [ngStyle]="{'background-color':audioPost.theme}">
+<div class="card" >
+  <div class="css_animation">
+    <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper">
+      <div class="pro-rec1"></div>
+      <div class="pro-rec1"></div>
+      <div class="pro-rec1"></div>
+      <div class="pro-rec1"></div>
+      <div class="pro-rec1"></div>
+      <div class="pro-rec1"></div>
+    </div>
+  </div>
   <div>
-    <i (click)="toRemoveFavoritePost()" class="fa fa-trash profile-bin" aria-hidden="true"></i>
+    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
   </div>
-  <div class="profile-post-header">
-    <span class="profile-header-pic"> <i class="fa fa-user" aria-hidden="true"></i></span>
-    <span class="profile-header-name">user Diary</span>
-  </div>
-
+  <img style="max-height: 200px" class="card-img-top" src="assets/img/postsimgs/{{audioPost.img}}" alt="Card image cap">
   <div class="card-body">
+    <div class="headerBody">
+      <div class="profile-post-header">
+        <span class="profile-header-pic"> <i class="fa fa-user" aria-hidden="true"></i></span>
+        <span class="profile-header-name">user Diary</span>
+      </div>
+      <div>
+        <i (click)="toRemoveFavoritePost()" class="fa fa-times-circle profile-bin" aria-hidden="true"></i>
+      </div>
+      <p class="card-username">{{audioPost.user}}</p>
+      <div class="icons">
 
-    <div>
-      <img class="card-img-top" src="../../../../assets/img/postsimgs/{{audioPost.img}}">
-      <div class="css_animation">
-        <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper">
-          <div class="pro-rec1"></div>
-          <div class="pro-rec1"></div>
-          <div class="pro-rec1"></div>
-          <div class="pro-rec1"></div>
-          <div class="pro-rec1"></div>
-          <div class="pro-rec1"></div>
-        </div>
       </div>
     </div>
-    <div>
-      <h5 class=" shadow-lg title-container card-title"> {{audioPost.title}}</h5>
-
-      <div class="shadow-lg text-container">
-        <p class="card-text">{{audioPost.description}}</p>
-      </div>
-    </div>
+    <h5 class="card-title">{{audioPost.title}}</h5>
+    <p class="card-text">{{audioPost.description}}</p>
 
   </div>
 </div>
+
+<div style="height: 20px"></div>
+
+
+
+
+<!--<div class="postCard" [ngStyle]="{'background-color':audioPost.theme}">-->
+<!--  <div>-->
+<!--    <i (click)="toRemovePost()" class="fa fa-trash profile-bin" aria-hidden="true"></i>-->
+<!--  </div>-->
+<!--  <div class="profile-post-header">-->
+<!--    <span class="profile-header-pic"> <i class="fa fa-user" aria-hidden="true"></i></span>-->
+<!--    <span class="profile-header-name">user Diary</span>-->
+<!--  </div>-->
+
+<!--  <div class="card-body">-->
+
+<!--&lt;!&ndash;    <div>&ndash;&gt;-->
+<!--&lt;!&ndash;      <img class="card-img-top" src="../../../../assets/img/postsimgs/{{audioPost.img}}">&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="css_animation">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div id="soundwavesWrapper" (click)="activateSoundWaves()" class="onClickWrapper">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="pro-rec1"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="pro-rec1"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="pro-rec1"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="pro-rec1"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="pro-rec1"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="pro-rec1"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--    <div>-->
+<!--      <h5 class=" shadow-lg title-container card-title"> {{audioPost.title}}</h5>-->
+
+<!--      <div class="shadow-lg text-container">-->
+<!--        <p class="card-text">{{audioPost.description}}</p>-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+
+
 
 

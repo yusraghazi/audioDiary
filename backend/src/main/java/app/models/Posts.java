@@ -24,6 +24,7 @@ public class Posts {
     public String title;
     public String description;
     public String img;
+
     public String theme;
     public boolean isLiked;
     public int amountReport;
@@ -31,9 +32,6 @@ public class Posts {
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
     private User user;
-
-//    @OneToMany
-//    private Comment comment;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JsonIgnore
