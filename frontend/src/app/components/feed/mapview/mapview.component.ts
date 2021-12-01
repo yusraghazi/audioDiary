@@ -7,7 +7,6 @@ import * as mapboxgl from "mapbox-gl";
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
-import {environment} from "../../../../environments/environment.prod";
 import {Theme} from "../../../enums/theme";
 import {Post} from "../../../models/post";
 import {PostsService} from "../../../services/posts.service";
@@ -197,7 +196,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
       ]
     };
 
-    mapboxgl.accessToken = environment.mapboxKey;
+    mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ';
     this.map = new mapboxgl.Map({
       style: 'mapbox://styles/mapbox/outdoors-v11',
       center: [4.897070, 50.877956],
@@ -210,7 +209,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
     this.map.addControl(
       new MapboxGeocoder({
-        accessToken: environment.mapboxKey,
+        accessToken: 'pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ',
         mapboxgl: mapboxgl
       })
     );
