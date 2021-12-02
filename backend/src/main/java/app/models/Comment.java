@@ -1,7 +1,6 @@
 package app.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.data.jpa.repository.Query;
 
 import javax.persistence.*;
 
