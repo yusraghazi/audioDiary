@@ -11,7 +11,6 @@ import {Theme} from "../../../enums/theme";
 import {Post} from "../../../models/post";
 import {PostsService} from "../../../services/posts.service";
 import {ActivatedRoute, Params, Router} from "@angular/router";
-import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-mapview',
@@ -386,11 +385,8 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
   async openOverlay(pId: number) {
-    // console.log(pId);
-    // if (pId != null || !isNaN(pId)) {
-      await this.router.navigate([pId], {relativeTo: this.activatedRoute});
-      this.showOverlay = true;
-    //}
+    await this.router.navigate([pId], {relativeTo: this.activatedRoute});
+    this.showOverlay = true;
   }
 
 }
