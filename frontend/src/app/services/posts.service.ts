@@ -3,7 +3,6 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Post} from "../models/post";
 import {catchError, map} from "rxjs/operators";
-import {SingleComment} from "../models/singleComment";
 import {environment} from "../../environments/environment";
 
 
