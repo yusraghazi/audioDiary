@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="second test for pipelining">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test 2.0" />
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -430,7 +427,28 @@
       <option name="project" value="LOCAL" />
       <updated>1638446005779</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added variable">
+      <created>1638452220063</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1638452220063</updated>
+    </task>
+    <task id="LOCAL-00033" summary="test">
+      <created>1638452267027</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1638452267027</updated>
+    </task>
+    <task id="LOCAL-00034" summary="test 2.0">
+      <created>1638452404545</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1638452404545</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,8 +468,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Header/nav done" />
-    <MESSAGE value="add jquery &amp; fontawesome library to mail html in master branch" />
     <MESSAGE value="merge footer and header to master" />
     <MESSAGE value="fix" />
     <MESSAGE value="add libraries to main html head" />
@@ -473,8 +489,10 @@
     <MESSAGE value="workspace" />
     <MESSAGE value="quick fix" />
     <MESSAGE value="fixed error" />
-    <MESSAGE value="test" />
     <MESSAGE value="second test for pipelining" />
-    <option name="LAST_COMMIT_MESSAGE" value="second test for pipelining" />
+    <MESSAGE value="added variable" />
+    <MESSAGE value="test" />
+    <MESSAGE value="test 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 2.0" />
   </component>
 </project>
