@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="last test">
+      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -487,7 +487,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638469260377</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="removed variables bc pipelining is not working anymore">
+      <created>1638470250828</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1638470250828</updated>
+    </task>
+    <task id="LOCAL-00041" summary="last test">
+      <created>1638470337830</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1638470337830</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,8 +521,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add header to master manually" />
-    <MESSAGE value="Profile almost done (may need some tweaks later)" />
     <MESSAGE value="add colors to recordings" />
     <MESSAGE value="some tweaks to the header and profile components" />
     <MESSAGE value="bug fixed in profile" />
@@ -532,6 +544,8 @@
     <MESSAGE value="ANOTHER TEST" />
     <MESSAGE value="further implementation of deployment" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="removed variables bc pipelining is not working anymore" />
+    <MESSAGE value="last test" />
+    <option name="LAST_COMMIT_MESSAGE" value="last test" />
   </component>
 </project>
