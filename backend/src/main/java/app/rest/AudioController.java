@@ -6,7 +6,6 @@ import app.models.Posts;
 import app.models.User;
 import app.repositories.AudioRepository;
 import app.repositories.JPARepository;
-import app.repositories.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
