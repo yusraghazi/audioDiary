@@ -3,7 +3,6 @@ import app.exceptions.PostNotFoundException;
 import app.models.Audio;
 import app.models.Posts;
 import app.models.User;
-import app.repositories.JPARepository;
 import app.repositories.PostsRepository;
 
 import app.repositories.PostsRepositoryJPA;
