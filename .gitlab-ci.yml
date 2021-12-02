@@ -11,8 +11,8 @@ deploy_be:
       - master
     changes:
       - "backend/**/*"
-    variables:
-      - $DEPLOYMENT == "true"
+#    variables:
+#      - $DEPLOYMENT == "true"
   script:
     - git branch -D splitting-be
     - git remote rm backend || true
@@ -31,8 +31,8 @@ deploy_fe:
       - master
     changes:
       - "frontend/**/*"
-    variables:
-      - $DEPLOYMENT == "true"
+#    variables:
+#      - $DEPLOYMENT == "true"
   script:
     - git remote rm frontend || true
     - git remote add frontend https://heroku:$HEROKU_API_KEY@git.heroku.com/audiodiary-fe-team1-staging.git || true
