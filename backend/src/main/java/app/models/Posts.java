@@ -25,6 +25,7 @@ public class Posts {
     public String description;
     public String img;
 
+//    @Enumerated()
     public String theme;
     public boolean isLiked;
     public int amountReport;
