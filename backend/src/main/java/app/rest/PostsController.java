@@ -79,6 +79,9 @@ public class PostsController {
     public List findPostByUserId(@PathVariable int userId) {
         return postRepo.findPostByUserId(userId);
     }
+
+
+    // TEST
 //
 //    @PostMapping("/posts")
 //    public ResponseEntity<Posts> createAEvent(@RequestBody Posts post) {
