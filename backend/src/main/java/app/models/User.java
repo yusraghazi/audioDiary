@@ -8,8 +8,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
-@Entity
-@NamedQuery(name="find_all_users", query="select u from User u")
+@Entity(name = "AudioUser")
+@NamedQuery(name="find_all_users", query="select u from AudioUser u")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

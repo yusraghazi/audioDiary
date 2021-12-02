@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://hva-be-app.herokuapp.com/rest',
+  apiUrl: 'https://audiodiary-be-team1-staging.herokuapp.com',
   environmentName: 'staging',
 };
