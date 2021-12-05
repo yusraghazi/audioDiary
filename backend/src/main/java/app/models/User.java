@@ -22,10 +22,10 @@ public class User {
     private boolean isAdmin;
     private boolean isVerified;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his posts */)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his posts */, fetch = FetchType.EAGER )
     private List<Posts> posts;
 
-    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */, fetch = FetchType.EAGER)
     private List<Audio> audios;
 
     public User() {
