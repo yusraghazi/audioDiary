@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="attempt on error fix">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="changed services from hardcoded code to environment apiUrl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
@@ -213,6 +213,7 @@
       <workItem from="1637769382865" duration="13862000" />
       <workItem from="1637828890004" duration="677000" />
       <workItem from="1638439984618" duration="2931000" />
+      <workItem from="1638709815691" duration="1032000" />
     </task>
     <task id="LOCAL-00001" summary="Footer with re button">
       <created>1634299651216</created>
@@ -522,7 +523,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638476251451</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="changed services from hardcoded code to environment apiUrl">
+      <created>1638710119453</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1638710119453</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +550,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add animation to profile rec's" />
     <MESSAGE value="added overlay" />
     <MESSAGE value="edited card" />
     <MESSAGE value="worked on getting comments from backend" />
@@ -567,6 +574,7 @@
     <MESSAGE value="last try" />
     <MESSAGE value="really the last try to fix backend in deployment" />
     <MESSAGE value="attempt on error fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="attempt on error fix" />
+    <MESSAGE value="changed services from hardcoded code to environment apiUrl" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed services from hardcoded code to environment apiUrl" />
   </component>
 </project>
