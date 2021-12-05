@@ -14,11 +14,11 @@ deploy_be:
 #    variables:
 #      - $DEPLOYMENT == "true"
   script:
-    - git branch -D splitting-be
     - git remote rm backend || true
     - git remote add backend https://heroku:$HEROKU_API_KEY@git.heroku.com/audiodiary-be-team1-staging.git || true
     - git subtree split --prefix backend -b splitting-be
     - git push --force backend splitting-be:master
+    - git branch -D splitting-be
 
 deploy_fe:
   stage: deploy

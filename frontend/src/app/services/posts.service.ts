@@ -52,7 +52,7 @@ export class PostsService {
   }
 
   restCreateNewPost(postId: number):Observable<Post>{
-    const url = `http://localhost:8084/posts/create/${postId}`;
+    const url = `${environment.apiUrl}/posts/create/${postId}`;
     return this.http.post<Post>(url, postId);
   }
 

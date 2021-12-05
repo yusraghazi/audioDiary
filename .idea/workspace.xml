@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="really the last try to fix backend in deployment">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="attempt on error fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
@@ -515,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638471800711</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="attempt on error fix">
+      <created>1638476251451</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1638476251451</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="bug fixed in profile" />
     <MESSAGE value="add animation to profile rec's" />
     <MESSAGE value="added overlay" />
     <MESSAGE value="edited card" />
@@ -560,6 +566,7 @@
     <MESSAGE value="last test" />
     <MESSAGE value="last try" />
     <MESSAGE value="really the last try to fix backend in deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="really the last try to fix backend in deployment" />
+    <MESSAGE value="attempt on error fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt on error fix" />
   </component>
 </project>

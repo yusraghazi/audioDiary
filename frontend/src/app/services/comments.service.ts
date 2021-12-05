@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {map} from "rxjs/operators";
 import {SingleComment} from "../models/singleComment";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +20,12 @@ export class CommentsService {
   // }
 
   restPostComment(commentId: number):Observable<Post[]> {
-    const url = `http://localhost:8084/comments/${commentId}`;
+    const url = `${environment.apiUrl}/comments/${commentId}`;
     return this.http.post<Post[]>(url, commentId);
   }
 
   restFindCommentByPostId(postId: number):Observable<SingleComment[]> {
-    return this.http.get<SingleComment[]>(`http://localhost:8084/posts/${postId}/comments`).pipe(
+    return this.http.get<SingleComment[]>(`${environment.apiUrl}/posts/${postId}/comments`).pipe(
     map( (commentList: any[]) => {
       const comments: SingleComment[] = [];
       for (const comment of commentList) {
