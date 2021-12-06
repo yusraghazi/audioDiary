@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="changed services from hardcoded code to environment apiUrl">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="changed services from hardcoded code to environment apiUrl" />
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -216,6 +214,7 @@
       <workItem from="1638709815691" duration="1815000" />
       <workItem from="1638711824369" duration="182000" />
       <workItem from="1638739250256" duration="1201000" />
+      <workItem from="1638786052205" duration="706000" />
     </task>
     <task id="LOCAL-00001" summary="Footer with re button">
       <created>1634299651216</created>
@@ -539,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638711121429</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="changed services from hardcoded code to environment apiUrl">
+      <created>1638786190387</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1638786190387</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
