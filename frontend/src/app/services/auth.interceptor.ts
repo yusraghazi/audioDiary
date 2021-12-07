@@ -3,7 +3,7 @@ import {HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest}
 import {BehaviorSubject, Observable, of, throwError} from 'rxjs';
 import {catchError, filter, finalize, map, share, switchMap, take} from 'rxjs/operators';
 import {AuthService} from './auth.service';
-import {Router, RouterStateSnapshot} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
