@@ -4,39 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="cors mapping issue">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_30_0_jre.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_api_0_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_impl_0_11_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_jsonwebtoken_jjwt_jackson_0_11_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/UserRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/UserRepositoryJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/Webconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/Webconfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/expense.guard.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/expense.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.staging.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.staging.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on login">
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -143,7 +112,7 @@
       <recent name="E:\HVA ICT 2\EWA\Project\ad-vmc-1\app\src\assets\img" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -248,14 +217,7 @@
       <workItem from="1638711824369" duration="182000" />
       <workItem from="1638739250256" duration="1201000" />
       <workItem from="1638786052205" duration="961000" />
-      <workItem from="1638890010240" duration="4097000" />
-    </task>
-    <task id="LOCAL-00001" summary="Footer with re button">
-      <created>1634299651216</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1634299651216</updated>
+      <workItem from="1638890010240" duration="4425000" />
     </task>
     <task id="LOCAL-00002" summary="delete external components from Footer">
       <created>1634300270942</created>
@@ -586,7 +548,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638786911556</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="worked on login">
+      <created>1638894217926</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1638894217926</updated>
+    </task>
+    <task id="LOCAL-00050" summary="worked on login">
+      <created>1638894344209</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1638894344210</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +582,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="edited card" />
     <MESSAGE value="worked on getting comments from backend" />
     <MESSAGE value="worked on backend" />
     <MESSAGE value="make universal colors (black/gray) for buttons" />
@@ -631,6 +606,7 @@
     <MESSAGE value="attempt on error fix" />
     <MESSAGE value="changed services from hardcoded code to environment apiUrl" />
     <MESSAGE value="cors mapping issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="cors mapping issue" />
+    <MESSAGE value="worked on login" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on login" />
   </component>
 </project>
