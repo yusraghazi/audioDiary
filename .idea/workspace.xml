@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="quick fix">
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -109,11 +109,12 @@
       <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="E:\HVA ICT 2\EWA\Project\ad-vmc-1\app\src\assets\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="npm.start (1)">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -219,20 +220,7 @@
       <workItem from="1638739250256" duration="1201000" />
       <workItem from="1638786052205" duration="961000" />
       <workItem from="1638890010240" duration="4425000" />
-    </task>
-    <task id="LOCAL-00004" summary="Add header starting files &amp; delete external components from Header">
-      <created>1634300493770</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1634300493770</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Header/nav done">
-      <created>1634304104934</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1634304104934</updated>
+      <workItem from="1638897634516" duration="336000" />
     </task>
     <task id="LOCAL-00006" summary="add jquery &amp; fontawesome library to mail html in master branch">
       <created>1634304217217</created>
@@ -563,7 +551,21 @@
       <option name="project" value="LOCAL" />
       <updated>1638895726430</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="quick fix">
+      <created>1638896059900</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1638896059901</updated>
+    </task>
+    <task id="LOCAL-00054" summary="test">
+      <created>1638896357026</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1638896357026</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +592,6 @@
     <MESSAGE value="fixed errors" />
     <MESSAGE value="small fix" />
     <MESSAGE value="workspace" />
-    <MESSAGE value="quick fix" />
     <MESSAGE value="fixed error" />
     <MESSAGE value="second test for pipelining" />
     <MESSAGE value="added variable" />
@@ -598,7 +599,6 @@
     <MESSAGE value="second try" />
     <MESSAGE value="ANOTHER TEST" />
     <MESSAGE value="further implementation of deployment" />
-    <MESSAGE value="test" />
     <MESSAGE value="removed variables bc pipelining is not working anymore" />
     <MESSAGE value="last test" />
     <MESSAGE value="last try" />
@@ -608,6 +608,8 @@
     <MESSAGE value="cors mapping issue" />
     <MESSAGE value="worked on login" />
     <MESSAGE value="quick fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="quick fix" />
+    <MESSAGE value="quick fix" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
