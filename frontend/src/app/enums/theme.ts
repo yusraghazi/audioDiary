@@ -6,7 +6,5 @@ export enum Theme {
   "WATER" = "#90D2E0",
   "CITY" = "#A28EB2",
   "MOUNTAIN" = "#9F7D5A"
-
-
 }
 
