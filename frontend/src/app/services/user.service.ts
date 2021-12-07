@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
 import {Post} from "../models/post";
 import {HttpClient} from "@angular/common/http";
-import {environment} from "../../environments/environment";
+import {environment} from "../../environments/environment.staging";
 import {User} from "../models/user";
 
 @Injectable({

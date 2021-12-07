@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import {tap, delay, share} from 'rxjs/operators';
 import {User} from "../models/user";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {environment} from "../../environments/environment";
+import {environment} from "../../environments/environment.staging";
 import {JwtHelperService} from "@auth0/angular-jwt";
 
 @Injectable({
