@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class UserRepositoryJPA implements JPARepository<User> {
+public class UserRepositoryJPA implements UserRepository {
     @Autowired
     private EntityManager em;
 
@@ -21,23 +21,20 @@ public class UserRepositoryJPA implements JPARepository<User> {
     }
 
     @Override
-    public User findById(int id) {
+    public User findByEmail(String email) {
 
-        return em.find(User.class,id);
+        return em.find(User.class,email);
     }
 
     @Override
     public List<User> findAll() {
         TypedQuery<User> namedQuery = em.createNamedQuery("find_all_users", User.class);
-
         return namedQuery.getResultList();
     }
 
     @Override
-    public User deleteById(int id) {
-        User user = this.findById(id);
+    public void delete(User user) {
         User toRemove = em.merge(user);
         em.remove(toRemove);
-        return user;
     }
 }

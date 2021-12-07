@@ -36,13 +36,13 @@ public class PostsController {
 //        return user.getPosts();
 //    }
 
-    @PostMapping("/rest/users/{id}/posts")
+    @PostMapping("/rest/users/{email}/posts")
     @Transactional
     public ResponseEntity<Object> createPost(@RequestParam(name = "fail",required = false, defaultValue = "false") boolean shouldFail,
-                                             @PathVariable int id, @RequestBody Posts post) {
+                                             @PathVariable String email, @RequestBody Posts post) {
 
-        User user = userResource.getUserById(id);
-        Audio audio = audioResource.getAudioById(id);
+        User user = userResource.getUserByEmail(email);
+        Audio audio = audioResource.getAudioById(1);
 
         post.setUser(user, audio);
 

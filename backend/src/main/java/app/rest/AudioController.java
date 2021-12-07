@@ -25,9 +25,9 @@ public class AudioController {
     @PostMapping("/rest/users/{id}/audios")
     @Transactional
     public ResponseEntity<Object> createAudio(@RequestParam(name = "fail",required = false, defaultValue = "false") boolean shouldFail,
-                                             @PathVariable int id, @RequestBody Audio audio) {
+                                             @PathVariable String email, @RequestBody Audio audio) {
 
-        User user = userResource.getUserById(id);
+        User user = userResource.getUserByEmail(email);
         audio.setUser(user);
         audioRepository.save(audio);
         // used to demonstrate transaction handling
