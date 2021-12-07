@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on login">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="quick fix">
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
@@ -218,13 +219,6 @@
       <workItem from="1638739250256" duration="1201000" />
       <workItem from="1638786052205" duration="961000" />
       <workItem from="1638890010240" duration="4425000" />
-    </task>
-    <task id="LOCAL-00003" summary="Add header starting files &amp; delete external components from Header">
-      <created>1634300487844</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1634300487844</updated>
     </task>
     <task id="LOCAL-00004" summary="Add header starting files &amp; delete external components from Header">
       <created>1634300493770</created>
@@ -562,7 +556,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638894742883</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="quick fix">
+      <created>1638895726430</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1638895726430</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +587,6 @@
     <MESSAGE value="worked on backend" />
     <MESSAGE value="make universal colors (black/gray) for buttons" />
     <MESSAGE value="fixed overlay" />
-    <MESSAGE value="quick fix" />
     <MESSAGE value="fixed errors" />
     <MESSAGE value="small fix" />
     <MESSAGE value="workspace" />
@@ -607,6 +607,7 @@
     <MESSAGE value="changed services from hardcoded code to environment apiUrl" />
     <MESSAGE value="cors mapping issue" />
     <MESSAGE value="worked on login" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on login" />
+    <MESSAGE value="quick fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="quick fix" />
   </component>
 </project>

@@ -1,10 +1,6 @@
 {
   "name": "ad-vmc",
   "version": "0.0.0",
-  "engines": {
-    "node": "14.x",
-    "npm": "6.14.15"
-  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
