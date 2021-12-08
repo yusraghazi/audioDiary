@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="removed try">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="changed gitlab-ci.yml to fix deployment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -224,27 +222,6 @@
       <workItem from="1638786052205" duration="961000" />
       <workItem from="1638890010240" duration="4425000" />
       <workItem from="1638897634516" duration="336000" />
-    </task>
-    <task id="LOCAL-00010" summary="add libraries to main html head">
-      <created>1634306785905</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1634306785905</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add header to master manually">
-      <created>1634309657521</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1634309657521</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Profile almost done (may need some tweaks later)">
-      <created>1634327998103</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1634327998103</updated>
     </task>
     <task id="LOCAL-00013" summary="add colors to recordings">
       <created>1634328703731</created>
@@ -568,7 +545,28 @@
       <option name="project" value="LOCAL" />
       <updated>1638902587417</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="changed gitlab-ci.yml to fix deployment">
+      <created>1638986021391</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1638986021391</updated>
+    </task>
+    <task id="LOCAL-00060" summary="changed gitlab-ci.yml to fix deployment">
+      <created>1638986161268</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1638986161268</updated>
+    </task>
+    <task id="LOCAL-00061" summary="changed gitlab-ci.yml to fix deployment">
+      <created>1638986229396</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1638986229396</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +586,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed overlay" />
     <MESSAGE value="fixed errors" />
     <MESSAGE value="small fix" />
     <MESSAGE value="workspace" />
@@ -613,6 +610,7 @@
     <MESSAGE value="final test" />
     <MESSAGE value="last try..." />
     <MESSAGE value="removed try" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed try" />
+    <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed gitlab-ci.yml to fix deployment" />
   </component>
 </project>
