@@ -39,7 +39,7 @@ deploy_fe:
 #    - git push --force frontend splitting-fe:master
 #    - git branch -D splitting-fe
       - git branch -D splitting-fe || true
-      - git remote rm heroku-fe-app || true
-      - git remote add heroku-fe-app https://heroku:$HEROKU_API_KEY@git.heroku.com/hbo-ict-fe-app-staging1.git || true
-      - git subtree split --prefix my-fe-app -b splitting-fe
-      - git push --force heroku-fe-app splitting-fe:master
+      - git remote rm frontend || true
+      - git remote add frontend https://heroku:$HEROKU_API_KEY@git.heroku.com/hbo-ict-fe-app-staging1.git || true
+      - git subtree split --prefix frontend -b splitting-fe
+      - git push --force frontend splitting-fe:master
