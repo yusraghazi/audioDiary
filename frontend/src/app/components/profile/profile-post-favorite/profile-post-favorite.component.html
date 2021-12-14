@@ -20,7 +20,7 @@
         <span class="profile-header-name">user Diary</span>
       </div>
       <div>
-        <i (click)="toRemoveFavoritePost()" class="fa fa-times-circle profile-bin" aria-hidden="true"></i>
+        <i onclick="document.getElementById('id02').style.display='block'" class="fa fa-times-circle profile-bin" aria-hidden="true"></i>
       </div>
       <p class="card-username">{{audioPost.user}}</p>
       <div class="icons">
@@ -33,8 +33,32 @@
   </div>
 </div>
 
-<div style="height: 20px"></div>
+<!--//pop up-->
+<div id="id02" class="modal">
 
+  <form class="modal-content">
+    <div class="container">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+      <h4>Delete Favorite Post</h4>
+      <p>Are you sure you want to delete your Favorite post?</p>
+
+      <div class="clearfix">
+        <button  type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <button (click)="toRemoveFavoritePost()" type="button" onclick="document.getElementById('id02').style.display='none'" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div style="height: 20px"></div>
+<script>
+  const modal = document.getElementById('id02');
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 
 
 
