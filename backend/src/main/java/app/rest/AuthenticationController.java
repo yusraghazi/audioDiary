@@ -34,16 +34,21 @@ public class AuthenticationController {
     @Autowired
     private JWTokenUtils tokenUtils;
 
-    @PostMapping("/rest/auth/users")
+    @PostMapping("/auth/users")
     public ResponseEntity<Object> createUser(@RequestBody ObjectNode signupInfo) {
 
         String email = signupInfo.get("email") == null  ? null : signupInfo.get("email").asText();
+        String username = signupInfo.get("username") == null  ? null : signupInfo.get("username").asText();
         String name = signupInfo.get("name") == null  ? null : signupInfo.get("name").asText();
-        String givenPassword = signupInfo.get("password") == null  ? null : signupInfo.get("password").asText();
+//        String resetPassword = signupInfo.get("password_reset") == null  ? null : signupInfo.get("password_reset").asText();
+        String givenPassword = signupInfo.get("encoded_password") == null  ? null : signupInfo.get("encoded_password").asText();
+
 
         User user = new User();
         user.setEmail(email);
         user.setName(name);
+        user.setUsername(username);
+//        user.setPasswordReset(encoder.encode(resetPassword));
         user.setEncodedPassword(encoder.encode(givenPassword));
         user.setAdmin(false);
 
@@ -56,7 +61,7 @@ public class AuthenticationController {
         return ResponseEntity.created(location).build();
     }
 
-    @PostMapping(path = "/rest/refresh-token", produces = "application/json")
+    @PostMapping(path = "/refresh-token", produces = "application/json")
     public ResponseEntity refreshToken(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         String encodedToken = request.getHeader(HttpHeaders.AUTHORIZATION);
 
@@ -82,7 +87,7 @@ public class AuthenticationController {
         return ResponseEntity.ok().header(HttpHeaders.AUTHORIZATION, "Bearer " + tokenString).build();
     }
 
-    @PostMapping(path = "/rest/auth", produces = "application/json")
+    @PostMapping(path = "/auth", produces = "application/json")
     public ResponseEntity<User> authenticateUser(
             @RequestBody ObjectNode signOnInfo,
             HttpServletRequest request,
