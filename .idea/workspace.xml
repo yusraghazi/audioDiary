@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on crud">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -237,14 +237,7 @@
       <workItem from="1639514078797" duration="6667000" />
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
-      <workItem from="1639585905345" duration="12125000" />
-    </task>
-    <task id="LOCAL-00017" summary="add animation to profile rec's">
-      <created>1634910658561</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1634910658562</updated>
+      <workItem from="1639585905345" duration="12496000" />
     </task>
     <task id="LOCAL-00018" summary="add animation to profile rec's">
       <created>1634911164356</created>
@@ -582,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639600529009</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="worked on crud">
+      <created>1639601092651</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1639601092651</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
