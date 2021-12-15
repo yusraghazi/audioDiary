@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on welcome page">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="commit for merge">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_h2database_h2_1_4_200.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/Webconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/Webconfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/comments.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/comments.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -39,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login" />
+        <entry key="$PROJECT_DIR$" value="welcome-page" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,15 +51,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -91,7 +89,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DatabaseDriversLRU" value="postgresql&#10;mysql" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -181,8 +179,8 @@
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.start (1)" />
-      <item itemvalue="Spring Boot.BackendApplication" />
       <item itemvalue="npm.build" />
+      <item itemvalue="Spring Boot.BackendApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -604,10 +602,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="workspace" />
     <MESSAGE value="fixed error" />
     <MESSAGE value="second test for pipelining" />
     <MESSAGE value="added variable" />
@@ -632,6 +630,7 @@
     <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
     <MESSAGE value="updated node version due to error" />
     <MESSAGE value="worked on welcome page" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on welcome page" />
+    <MESSAGE value="commit for merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit for merge" />
   </component>
 </project>
