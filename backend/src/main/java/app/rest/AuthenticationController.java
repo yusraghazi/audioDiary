@@ -42,7 +42,7 @@ public class AuthenticationController {
         String name = signupInfo.get("name") == null  ? null : signupInfo.get("name").asText();
 //        String resetPassword = signupInfo.get("password_reset") == null  ? null : signupInfo.get("password_reset").asText();
         String givenPassword = signupInfo.get("encoded_password") == null  ? null : signupInfo.get("encoded_password").asText();
-
+        
 
         User user = new User();
         user.setEmail(email);

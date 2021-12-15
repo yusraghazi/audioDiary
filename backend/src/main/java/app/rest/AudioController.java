@@ -22,7 +22,7 @@ public class AudioController {
     @Autowired
     private JPARepository<Audio> audioRepository;
 
-    @PostMapping("/rest/users/{id}/audios")
+    @PostMapping("/users/{id}/audios")
     @Transactional
     public ResponseEntity<Object> createAudio(@RequestParam(name = "fail",required = false, defaultValue = "false") boolean shouldFail,
                                              @PathVariable String email, @RequestBody Audio audio) {
@@ -39,7 +39,7 @@ public class AudioController {
         return ResponseEntity.created(location).build();
     }
 
-    @GetMapping("/rest/audios/{id}")
+    @GetMapping("/audios/{id}")
     public Audio getAudioById(
             @PathVariable int id) {
 
