@@ -16,20 +16,20 @@ export class UserService {
     return this.http.get<Post>(`${environment.apiUrl}/users/${userId}`);
   }
 
-  updateUser(user: User) {
-    const observable = this.http.put(`${environment.apiUrl}/users`,
-      {email: user.email, username: user.username, encoded_password: user.password}).pipe(share());
-
-    observable.subscribe((data) => {
-      console.log("data" + data);
-      },
-      (err) => {
-        console.log('creation error', err);
-      });
-
-    return observable;
-    // return this.http.put<User>(`${environment.apiUrl}/users/${email}`, email);
-  }
+  // updateUser(user: User) {
+  //   const observable = this.http.put(`${environment.apiUrl}/users`,
+  //     {email: user.email, username: user.username, encoded_password: user.password}).pipe(share());
+  //
+  //   observable.subscribe((data) => {
+  //     console.log("data" + data);
+  //     },
+  //     (err) => {
+  //       console.log('creation error', err);
+  //     });
+  //
+  //   return observable;
+  //   // return this.http.put<User>(`${environment.apiUrl}/users/${email}`, email);
+  // }
 
   getUsers() {
     return this.http.get<User[]>(`${environment.apiUrl}/users`);

@@ -58,18 +58,18 @@ public class UserController {
 
     }
 
-    @PutMapping("/users/{email}")
-    public ResponseEntity<Object> updateUser(@RequestBody User user) {
-        user.setEmail(user.getEmail());
-        user.setUsername(user.getUsername());
-        user.setEncodedPassword(user.getEncodedPassword());
-
-        User savedUser = userRepo.save(user);
-
-        URI location = ServletUriComponentsBuilder.
-                fromCurrentRequest().path("/{email}").
-                buildAndExpand(savedUser.getEmail()).toUri();
-
-        return ResponseEntity.created(location).body(savedUser);
-    }
+//    @PutMapping("/users/{email}")
+//    public ResponseEntity<Object> updateUser(@RequestBody User user) {
+//        user.setEmail(user.getEmail());
+//        user.setUsername(user.getUsername());
+//        user.setEncodedPassword(user.getEncodedPassword());
+//
+//        User savedUser = userRepo.save(user);
+//
+//        URI location = ServletUriComponentsBuilder.
+//                fromCurrentRequest().path("/{email}").
+//                buildAndExpand(savedUser.getEmail()).toUri();
+//
+//        return ResponseEntity.created(location).body(savedUser);
+//    }
 }
