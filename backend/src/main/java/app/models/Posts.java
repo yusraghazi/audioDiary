@@ -31,11 +31,11 @@ public class Posts {
     public int amountReport;
 
     @ManyToOne(fetch = FetchType.LAZY)
-//    @JsonIgnore
+    @JsonIgnore
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-//    @JsonIgnore
+    @JsonIgnore
     private Audio audio;
 
     public void setUser(User user, Audio audio) {
