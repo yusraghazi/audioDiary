@@ -21,6 +21,7 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.user);
     this.userService.updateUser(this.user).subscribe(
       (data) => {
         this.welcomeMessage = "gelukt"

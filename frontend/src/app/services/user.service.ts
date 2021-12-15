@@ -18,7 +18,7 @@ export class UserService {
 
   updateUser(user: User) {
     const observable = this.http.put(`${environment.apiUrl}/users`,
-      {email: user.email, username: user.name, encoded_password: user.password}).pipe(share());
+      {email: user.email, username: user.username, encoded_password: user.password}).pipe(share());
 
     observable.subscribe((data) => {
 
