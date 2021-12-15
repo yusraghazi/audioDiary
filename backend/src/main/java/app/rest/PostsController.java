@@ -36,7 +36,7 @@ public class PostsController {
 //        return user.getPosts();
 //    }
 
-    @PostMapping("/rest/users/{email}/posts")
+    @PostMapping("/users/{email}/posts")
     @Transactional
     public ResponseEntity<Object> createPost(@RequestParam(name = "fail",required = false, defaultValue = "false") boolean shouldFail,
                                              @PathVariable String email, @RequestBody Posts post) {
