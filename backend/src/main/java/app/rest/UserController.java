@@ -85,17 +85,16 @@ public class UserController {
 
     @PutMapping("/users/{email}")
     public ResponseEntity<User> updateUser(@RequestBody User user, @PathVariable String email) {
-        User user1 = userRepo.findByEmail(email);
-        final User savedUser = userRepo.save(user1);
+        User User = userRepo.findByEmail(email);
+        final User savedUser = userRepo.save(user);
         // creates links based on the current HttpSerlvetrequest
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{email}").
                 //absolute path
                         buildAndExpand(savedUser.getEmail()).toUri();
-        savedUser.setEmail(user.getEmail());
-        user.setUsername(user.getUsername());
-        user.setEncodedPassword(user.getEncodedPassword());
-        user.setAdmin(false);
-        if(user1 == null){
+        User.setEmail(user.getEmail());
+        User.setUsername(user.getUsername());
+        User.setEncodedPassword(user.getEncodedPassword());
+        if(User == null){
             throw new UserNotFoundException("Offer with id "+ email + "Does not exist");
         }
         return (ResponseEntity<User>) ResponseEntity.created(location).body(savedUser);
