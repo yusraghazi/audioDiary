@@ -58,29 +58,46 @@ public class UserController {
 
     }
 
-    @PutMapping("/users")
-    public ResponseEntity<Object> updateUser(@RequestBody ObjectNode updateInfo) {
+//    @PutMapping("/users")
+//    public ResponseEntity<Object> updateUser(@RequestBody ObjectNode updateInfo) {
+//
+//        String email = updateInfo.get("email") == null  ? null : updateInfo.get("email").asText();
+//        String username = updateInfo.get("username") == null  ? null : updateInfo.get("username").asText();
+//        String name = updateInfo.get("name") == null  ? null : updateInfo.get("name").asText();
+//        String givenPassword = updateInfo.get("encoded_password") == null  ? null : updateInfo.get("encoded_password").asText();
+//
+//        User user = new User();
+//        user.setEmail(email);
+//        user.setName(name);
+//        user.setUsername(username);
+//        user.setEncodedPassword(encoder.encode(givenPassword));
+//        user.setAdmin(false);
+//
+//        User savedUser = userRepo.save(user);
+//
+//        URI location = ServletUriComponentsBuilder.
+//                fromCurrentRequest().path("/{email}").
+//                buildAndExpand(savedUser.getEmail()).toUri();
+//
+//        return ResponseEntity.created(location).build();
+//    }
 
-        String email = updateInfo.get("email") == null  ? null : updateInfo.get("email").asText();
-        String username = updateInfo.get("username") == null  ? null : updateInfo.get("username").asText();
-        String name = updateInfo.get("name") == null  ? null : updateInfo.get("name").asText();
-        String givenPassword = updateInfo.get("encoded_password") == null  ? null : updateInfo.get("encoded_password").asText();
 
-        User user = new User();
-        user.setEmail(email);
-        user.setName(name);
-        user.setUsername(username);
-        user.setEncodedPassword(encoder.encode(givenPassword));
+    @PutMapping("/users/{email}")
+    public ResponseEntity<User> updateUser(@RequestBody User user, @PathVariable String email) {
+        User user1 = userRepo.findByEmail(email);
+        final User savedUser = userRepo.save(user1);
+        // creates links based on the current HttpSerlvetrequest
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{email}").
+                //absolute path
+                        buildAndExpand(savedUser.getEmail()).toUri();
+        savedUser.setEmail(user.getEmail());
+        user.setUsername(user.getUsername());
+        user.setEncodedPassword(user.getEncodedPassword());
         user.setAdmin(false);
-
-        User savedUser = userRepo.save(user);
-
-        URI location = ServletUriComponentsBuilder.
-                fromCurrentRequest().path("/{email}").
-                buildAndExpand(savedUser.getEmail()).toUri();
-
-        return ResponseEntity.created(location).build();
+        if(user1 == null){
+            throw new UserNotFoundException("Offer with id "+ email + "Does not exist");
+        }
+        return (ResponseEntity<User>) ResponseEntity.created(location).body(savedUser);
     }
-
-
 }

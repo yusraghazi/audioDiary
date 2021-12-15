@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on crud">
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on crud, last test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -239,14 +238,7 @@
       <workItem from="1639514078797" duration="6667000" />
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
-      <workItem from="1639585905345" duration="13011000" />
-    </task>
-    <task id="LOCAL-00019" summary="worked on getting comments from backend">
-      <created>1637758871855</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1637758871855</updated>
+      <workItem from="1639585905345" duration="13700000" />
     </task>
     <task id="LOCAL-00020" summary="edited card">
       <created>1637763587488</created>
@@ -254,13 +246,6 @@
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
       <updated>1637763587488</updated>
-    </task>
-    <task id="LOCAL-00021" summary="worked on backend">
-      <created>1637763408403</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1637763408403</updated>
     </task>
     <task id="LOCAL-00022" summary="fixed error">
       <created>1637765389121</created>
@@ -584,7 +569,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639601349552</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="worked on crud">
+      <created>1639601886419</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1639601886420</updated>
+    </task>
+    <task id="LOCAL-00069" summary="worked on crud, last test">
+      <created>1639602120117</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1639602120117</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +603,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed error" />
     <MESSAGE value="second test for pipelining" />
     <MESSAGE value="added variable" />
     <MESSAGE value="test 2.0" />
@@ -629,6 +627,7 @@
     <MESSAGE value="commit for test" />
     <MESSAGE value="test" />
     <MESSAGE value="worked on crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on crud" />
+    <MESSAGE value="worked on crud, last test" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on crud, last test" />
   </component>
 </project>
