@@ -21,15 +21,16 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   onSubmit() {
-    this.userService.updateUser(this.user).subscribe(
-      (data) => {
-        this.welcomeMessage = "gelukt"
-        //this.router.navigate(['/feedview'], {queryParams: { email: this.user.email, msg: 'the user was successfuly addded - you can proceed with the login' } });
-      },(error) => {
-        this.errorMessage = error.message;
-        console.log(error);
-      }
-    );
+    console.log(this.user);
+    // this.userService.updateUser(this.user).subscribe(
+    //   (data) => {
+    //     this.welcomeMessage = "gelukt"
+    //     //this.router.navigate(['/feedview'], {queryParams: { email: this.user.email, msg: 'the user was successfuly addded - you can proceed with the login' } });
+    //   },(error) => {
+    //     this.errorMessage = error.message;
+    //     console.log(error);
+    //   }
+    // );
   }
 
 }
