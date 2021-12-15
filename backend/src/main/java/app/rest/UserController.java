@@ -59,7 +59,7 @@ public class UserController {
     }
 
     @PutMapping("/users")
-    public ResponseEntity<Object> createUser(@RequestBody ObjectNode updateInfo) {
+    public ResponseEntity<Object> updateUser(@RequestBody ObjectNode updateInfo) {
 
         String email = updateInfo.get("email") == null  ? null : updateInfo.get("email").asText();
         String username = updateInfo.get("username") == null  ? null : updateInfo.get("username").asText();

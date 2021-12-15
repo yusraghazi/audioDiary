@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on crud">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth-guard-admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth-guard-admin.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -250,14 +237,7 @@
       <workItem from="1639514078797" duration="6667000" />
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
-      <workItem from="1639585905345" duration="11444000" />
-    </task>
-    <task id="LOCAL-00016" summary="test">
-      <created>1634583900926</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1634583900926</updated>
+      <workItem from="1639585905345" duration="12125000" />
     </task>
     <task id="LOCAL-00017" summary="add animation to profile rec's">
       <created>1634910658561</created>
@@ -595,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639587757918</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="worked on crud">
+      <created>1639600529009</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1639600529009</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -615,7 +602,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="workspace" />
     <MESSAGE value="fixed error" />
     <MESSAGE value="second test for pipelining" />
     <MESSAGE value="added variable" />
@@ -640,6 +626,7 @@
     <MESSAGE value="updated node version due to error" />
     <MESSAGE value="commit for test" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="worked on crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on crud" />
   </component>
 </project>
