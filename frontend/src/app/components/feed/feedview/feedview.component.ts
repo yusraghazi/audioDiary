@@ -2,6 +2,7 @@ import {Component, OnInit, Output} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-feedview',
@@ -15,12 +16,12 @@ export class FeedviewComponent implements OnInit {
   @Output()
   mapview: string = "Mapview";
 
-  constructor(private postsService: PostsService) {
+  constructor(private postsService: PostsService, private auth: AuthService) {
 
   }
 
   getAllPosts(): void{
-    console.log(this.posts);
+    console.log(this.auth.getUser());
     this.postsService.restGetPosts().subscribe(
       (data) => {
         // @ts-ignore

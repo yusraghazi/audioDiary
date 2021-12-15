@@ -8,24 +8,38 @@
 
   <hr class="profile-hr">
 
+  <div class="row" *ngIf="welcomeMessage">
+    <div class="col">
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        {{ welcomeMessage }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <form>
     <label for="userName">User name</label>
-    <input type="text" id="userName" name="userName" placeholder="Your name..">
+    <input type="text" id="userName" name="userName" placeholder="Your name.." [value]="user.username">
 
     <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your email..">
+    <input type="text" id="email" name="email" placeholder="Your email.." [value]="user.email">
 
-    <label for="con-email">Confirm Email</label>
-    <input type="text" id="con-email" name="con-email" placeholder="Confirm Your email..">
+<!--    <label for="con-email">Confirm Email</label>-->
+<!--    <input type="text" id="con-email" name="con-email" placeholder="Confirm Your email..">-->
 
     <label for="password">Change password</label>
     <input type="text" id="password" name="password" placeholder="create new password">
 
-    <input routerLink="/feedview" class="submit-profile" type="submit" value="Submit">
+    <input class="submit-profile" type="submit" value="Submit" (click)="onSubmit()">
 
     <input routerLink="/feedview" class="cancel-submit" type="submit" value="cancel">
 
   </form>
+  <div class="col">
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  </div>
 </div>
 
 <div style="height: 150px"></div>

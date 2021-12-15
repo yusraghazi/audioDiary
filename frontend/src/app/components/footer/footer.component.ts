@@ -1,6 +1,7 @@
 import {NgAudioRecorderService, OutputFormat} from 'ng-audio-recorder';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
+import {AuthService} from "../../services/auth.service";
 
 
 @Component({
@@ -9,18 +10,25 @@ import {ActivatedRoute, Router} from "@angular/router";
   styleUrls: ['./footer.component.css']
 })
 
-
-
 export class FooterComponent implements OnInit {
+  login: boolean = true;
   showRecordBtn: boolean = true;
   value = './assets/img/rec-button.png'; //default_value
-  constructor(private audioRecorderService: NgAudioRecorderService, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private audioRecorderService: NgAudioRecorderService, public router: Router, private activatedRoute: ActivatedRoute,
+              public auth: AuthService) {
+    if (auth.isLoggedIn() == null) {
+      this.login = false;
+    }
     this.audioRecorderService.recorderError.subscribe(recorderErrorCase => {
       // Handle Error
     })
 
   }
-  
+
+  logOut() {
+    this.auth.logout();
+  }
+
   startRecording() {
     this.audioRecorderService.startRecording();
     console.log("recording")

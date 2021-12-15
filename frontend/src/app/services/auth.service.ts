@@ -116,7 +116,7 @@ export class AuthService {
     return this.currentUser.email;
   }
 
-  private updateUserInformation(): void {
+  public updateUserInformation(): void {
 
     if (this.currentToken) {
 
@@ -130,5 +130,9 @@ export class AuthService {
     } else {
       this.currentUser = null;
     }
+  }
+
+  getUser() {
+    return this.currentUser;
   }
 }
