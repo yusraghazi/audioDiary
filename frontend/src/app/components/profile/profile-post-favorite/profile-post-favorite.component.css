@@ -1,0 +1,770 @@
+.profile-header-pic, .profile-header-name {
+  display: inline-block;
+  padding: 5px;
+}
+
+/*.profile-post-header {*/
+/*  padding: 5px;*/
+/*}*/
+
+.profile-header-name {
+  color: white;
+  background-color: #333333;
+  border-radius: 15px;
+  padding: 2px 20px;
+}
+.fa-play-circle-o{
+  color: white;
+  font-size: 70px;
+  opacity: 90%;
+  position: absolute;
+  top:75px;
+  left: 145px;
+}
+.profile-bin {
+  cursor: pointer;
+  padding: 10px;
+  /*float: right;*/
+  margin-right: 0;
+  color: #333333;
+  font-size: 25px;
+  position: absolute;
+  top:202px;
+  right: 0;
+}
+
+.profile-bin:hover {
+  font-size: 27px;
+  color: #f13030;
+}
+
+.fa-user {
+  color: #333333;
+  font-size: 30px;
+}
+
+.css_animation {
+  width: 70%;
+  position: absolute;
+  left: 60px;
+  top:50px;
+  display:none;
+}
+
+.css_animation .wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /*padding-top: 78%;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.css_animation .wrapper div {
+  display: block;
+  width: 15px;
+  margin-right: 8px;
+  height: 15px;
+  border-radius: 20px;
+  animation: sound 0ms 1.2s linear infinite alternate;
+  transition: height 0.8s;
+}
+
+.css_animation .wrapper .pro-rec1 {
+  background: #f9edf6;
+}
+
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 5px;
+  }
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+.css_animation .wrapper div:nth-of-type(1) {
+  /*   height: 2px; */
+  animation-duration: 458ms;
+}
+
+.css_animation .wrapper div:nth-of-type(2) {
+  /*   height: 15px; */
+  animation-duration: 400ms;
+}
+
+.css_animation .wrapper div:nth-of-type(3) {
+  /*   height: 25px; */
+  animation-duration: 427ms;
+}
+
+.css_animation .wrapper div:nth-of-type(4) {
+  /*   height: 30px; */
+  animation-duration: 441ms;
+}
+
+.css_animation .wrapper div:nth-of-type(5) {
+  /*   height: 40px; */
+  animation-duration: 419ms;
+}
+
+.css_animation .wrapper div:nth-of-type(6) {
+  /*   height: 45px; */
+  animation-duration: 487ms;
+}
+
+
+/*Onclick sound waves*/
+.css_animation .onClickWrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /*   padding-top: 78%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.css_animation .onClickWrapper div {
+  display: block;
+  width: 15px;
+  margin-right: 8px;
+  height: 15px;
+  border-radius: 20px;
+
+}
+
+.css_animation .onClickWrapper .pro-rec1 {
+  background: #f9edf6;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(1) {
+  height: 70px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(2) {
+  height: 60px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(3) {
+  height: 50px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(4) {
+  height: 40px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(5) {
+  height: 30px;
+}
+
+.css_animation .onClickWrapper div:nth-of-type(6) {
+  height: 20px;
+}
+
+
+
+.card{
+  margin: 10px auto;
+  border-radius: 20px 20px 30px 30px ;
+  color: black;
+  width: 350px;
+  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);
+  float: none;
+  display: flex;
+  flex: 1 1 auto;
+
+}
+.card-img-top{
+  border-radius: 17px 17px 30px 30px ;
+}
+.card-username{
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+}
+.card-title{
+  margin-bottom: 0;
+}
+
+.card-body{
+  padding-top: 0;
+}
+
+.icons{
+  display: inline-block;
+  float: right;
+
+}
+.bi{
+  padding: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+  background-color: #ccc;
+  color: black;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+  background-color: #f44336;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+  padding: 16px;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /*background-color: #474e5d;*/
+  /*opacity: 50%;*/
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  /*border: 1px solid #888;*/
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  /*border: 1px solid #f1f1f1;*/
+  margin-bottom: 25px;
+}
+
+/* The Modal Close Button (x) */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .deletebtn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*.postCard {*/
+/*  width: 90%;*/
+/*  height: auto;*/
+/*  color: #AF2C0E;*/
+/*  margin: 15px auto;*/
+/*  border-radius: 21px;*/
+/*}*/
+
+/*.card-body {*/
+/*  display: grid;*/
+/*  margin: 0;*/
+/*  padding: 13px;*/
+/*  grid-column-gap: 5px;*/
+/*  grid-template-columns: auto auto;*/
+/*}*/
+
+/*.card-img-top {*/
+/*  width: 150px;*/
+/*  height: 130px;*/
+/*  border-radius: 17px;*/
+/*}*/
+
+/*.title-container {*/
+/*  width: 90%;*/
+/*  height: 21px;*/
+/*  border-radius: 7px;*/
+/*  background: #94260d;*/
+/*}*/
+
+/*.card-title {*/
+/*  font-size: 15px;*/
+/*  color: white;*/
+/*  padding-left: 15px;*/
+/*}*/
+
+/*.text-container {*/
+/*  width: 90%;*/
+/*  height: 95px;*/
+/*  margin-top: 2px;*/
+/*  border-radius: 7px;*/
+/*  background: white;*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*.card-text {*/
+/*  padding: 5px;*/
+/*  font-size: 15px;*/
+/*  color: black;*/
+/*}*/
+
+/*.bi {*/
+/*  padding: 3px;*/
+/*}*/
+
+/*.bi-flag-fill {*/
+/*  margin-left: 36px;*/
+/*}*/
+
+
+
+
+
+/*.profile-header-pic, .profile-header-name {*/
+/*  display: inline-block;*/
+/*  padding: 5px;*/
+/*}*/
+
+/*!*.profile-post-header {*!*/
+/*!*  padding: 5px;*!*/
+/*!*}*!*/
+
+/*.profile-header-name {*/
+/*  color: white;*/
+/*  background-color: #333333;*/
+/*  border-radius: 15px;*/
+/*  padding: 2px 20px;*/
+/*}*/
+
+/*.profile-bin {*/
+/*  cursor: pointer;*/
+/*  padding: 10px;*/
+/*  !*float: right;*!*/
+/*  margin-right: 0;*/
+/*  color: #333333;*/
+/*  font-size: 25px;*/
+/*  position: absolute;*/
+/*  top:202px;*/
+/*  right: 0;*/
+/*}*/
+
+/*.profile-bin:hover {*/
+/*  font-size: 27px;*/
+/*  color: #f13030;*/
+/*}*/
+
+/*.fa-play-circle-o{*/
+/*  color: white;*/
+/*  font-size: 70px;*/
+/*  opacity: 90%;*/
+/*  position: absolute;*/
+/*  top:75px;*/
+/*  left: 145px;*/
+/*}*/
+
+/*.fa-user {*/
+/*  color: #333333;*/
+/*  font-size: 30px;*/
+/*}*/
+
+/*.css_animation {*/
+/*  width: 70%;*/
+/*  position: absolute;*/
+/*  left: 60px;*/
+/*  top:50px*/
+/*}*/
+
+/*.css_animation .wrapper {*/
+/*  position: relative;*/
+/*  width: 100%;*/
+/*  height: 100px;*/
+/*  !*padding-top: 78%;*!*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*.css_animation .wrapper div {*/
+/*  display: block;*/
+/*  width: 15px;*/
+/*  margin-right: 8px;*/
+/*  height: 15px;*/
+/*  border-radius: 20px;*/
+/*  animation: sound 0ms 1.2s linear infinite alternate;*/
+/*  transition: height 0.8s;*/
+/*}*/
+
+/*.css_animation .wrapper .pro-rec1 {*/
+/*  background: #f9edf6;*/
+/*}*/
+
+/*@keyframes sound {*/
+/*  0% {*/
+/*    opacity: 0.35;*/
+/*    height: 5px;*/
+/*  }*/
+/*  100% {*/
+/*    opacity: 1;*/
+/*    height: 50px;*/
+/*  }*/
+/*}*/
+
+/*.css_animation .wrapper div:nth-of-type(1) {*/
+/*  !*   height: 2px; *!*/
+/*  animation-duration: 458ms;*/
+/*}*/
+
+/*.css_animation .wrapper div:nth-of-type(2) {*/
+/*  !*   height: 15px; *!*/
+/*  animation-duration: 400ms;*/
+/*}*/
+
+/*.css_animation .wrapper div:nth-of-type(3) {*/
+/*  !*   height: 25px; *!*/
+/*  animation-duration: 427ms;*/
+/*}*/
+
+/*.css_animation .wrapper div:nth-of-type(4) {*/
+/*  !*   height: 30px; *!*/
+/*  animation-duration: 441ms;*/
+/*}*/
+
+/*.css_animation .wrapper div:nth-of-type(5) {*/
+/*  !*   height: 40px; *!*/
+/*  animation-duration: 419ms;*/
+/*}*/
+
+/*.css_animation .wrapper div:nth-of-type(6) {*/
+/*  !*   height: 45px; *!*/
+/*  animation-duration: 487ms;*/
+/*}*/
+
+
+/*!*Onclick sound waves*!*/
+/*.css_animation .onClickWrapper {*/
+/*  position: relative;*/
+/*  width: 100%;*/
+/*  height: 100px;*/
+/*  !*   padding-top: 78%; *!*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  overflow: hidden;*/
+/*}*/
+
+/*.css_animation .onClickWrapper div {*/
+/*  display: block;*/
+/*  width: 15px;*/
+/*  margin-right: 8px;*/
+/*  height: 15px;*/
+/*  border-radius: 20px;*/
+
+/*}*/
+
+/*.css_animation .onClickWrapper .pro-rec1 {*/
+/*  background: #f9edf6;*/
+/*}*/
+
+/*.css_animation .onClickWrapper div:nth-of-type(1) {*/
+/*  height: 70px;*/
+/*}*/
+
+/*.css_animation .onClickWrapper div:nth-of-type(2) {*/
+/*  height: 60px;*/
+/*}*/
+
+/*.css_animation .onClickWrapper div:nth-of-type(3) {*/
+/*  height: 50px;*/
+/*}*/
+
+/*.css_animation .onClickWrapper div:nth-of-type(4) {*/
+/*  height: 40px;*/
+/*}*/
+
+/*.css_animation .onClickWrapper div:nth-of-type(5) {*/
+/*  height: 30px;*/
+/*}*/
+
+/*.css_animation .onClickWrapper div:nth-of-type(6) {*/
+/*  height: 20px;*/
+/*}*/
+
+
+
+/*.card{*/
+/*  margin: 10px auto;*/
+/*  border-radius: 20px 20px 30px 30px ;*/
+/*  color: black;*/
+/*  width: 350px;*/
+/*  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);*/
+/*  float: none;*/
+/*  display: flex;*/
+/*  flex: 1 1 auto;*/
+
+/*}*/
+/*.card-img-top{*/
+/*  border-radius: 17px 17px 30px 30px ;*/
+/*}*/
+/*.card-username{*/
+/*  font-size: 12px;*/
+/*  margin-bottom: 10px;*/
+/*  display: inline-block;*/
+
+/*}*/
+/*.card-title{*/
+/*  margin-bottom: 0;*/
+/*}*/
+
+/*.card-body{*/
+/*  padding-top: 0;*/
+/*}*/
+
+/*.icons{*/
+/*  display: inline-block;*/
+/*  float: right;*/
+
+/*}*/
+/*.bi{*/
+/*  padding: 3px;*/
+/*}*/
+
+
+
+
+
+/*!* Set a style for all buttons *!*/
+/*button {*/
+/*  background-color: #04AA6D;*/
+/*  color: white;*/
+/*  padding: 14px 20px;*/
+/*  margin: 8px 0;*/
+/*  border: none;*/
+/*  cursor: pointer;*/
+/*  width: 100%;*/
+/*  opacity: 0.9;*/
+/*}*/
+
+/*button:hover {*/
+/*  opacity:1;*/
+/*}*/
+
+/*!* Float cancel and delete buttons and add an equal width *!*/
+/*.cancelbtn, .deletebtn {*/
+/*  float: left;*/
+/*  width: 50%;*/
+/*}*/
+
+/*!* Add a color to the cancel button *!*/
+/*.cancelbtn {*/
+/*  background-color: #ccc;*/
+/*  color: black;*/
+/*}*/
+
+/*!* Add a color to the delete button *!*/
+/*.deletebtn {*/
+/*  background-color: #f44336;*/
+/*}*/
+
+/*!* Add padding and center-align text to the container *!*/
+/*.container {*/
+/*  padding: 16px;*/
+/*  text-align: center;*/
+/*  border-radius: 35px;*/
+/*  box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);*/
+/*}*/
+
+/*!* The Modal (background) *!*/
+/*.modal {*/
+/*  display: none; !* Hidden by default *!*/
+/*  position: fixed; !* Stay in place *!*/
+/*  z-index: 1; !* Sit on top *!*/
+/*  left: 0;*/
+/*  top: 0;*/
+/*  width: 100%; !* Full width *!*/
+/*  height: 100%; !* Full height *!*/
+/*  overflow: auto; !* Enable scroll if needed *!*/
+/*  !*background-color: #474e5d;*!*/
+/*  !*opacity: 50%;*!*/
+/*  padding-top: 50px;*/
+/*}*/
+
+/*!* Modal Content/Box *!*/
+/*.modal-content {*/
+/*  background-color: #fefefe;*/
+/*  margin: 5% auto 15% auto; !* 5% from the top, 15% from the bottom and centered *!*/
+/*  !*border: 1px solid #888;*!*/
+/*  width: 80%; !* Could be more or less, depending on screen size *!*/
+/*}*/
+
+/*!* Style the horizontal ruler *!*/
+/*hr {*/
+/*  !*border: 1px solid #f1f1f1;*!*/
+/*  margin-bottom: 25px;*/
+/*}*/
+
+/*!* The Modal Close Button (x) *!*/
+/*.close {*/
+/*  position: absolute;*/
+/*  right: 10px;*/
+/*  top: 0px;*/
+/*  font-size: 40px;*/
+/*  font-weight: bold;*/
+/*  color: #2a2a2a;*/
+/*}*/
+
+/*.close:hover,*/
+/*.close:focus {*/
+/*  color: #f44336;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*!* Clear floats *!*/
+/*.clearfix::after {*/
+/*  content: "";*/
+/*  clear: both;*/
+/*  display: table;*/
+/*}*/
+
+/*!* Change styles for cancel button and delete button on extra small screens *!*/
+/*@media screen and (max-width: 300px) {*/
+/*  .cancelbtn, .deletebtn {*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
+
+
+
+
+
+
+
+
+
+/*!*.postCard {*!*/
+/*!*  width: 90%;*!*/
+/*!*  height: auto;*!*/
+/*!*  color: #AF2C0E;*!*/
+/*!*  margin: 15px auto;*!*/
+/*!*  border-radius: 21px;*!*/
+/*!*}*!*/
+
+/*!*.card-body {*!*/
+/*!*  display: grid;*!*/
+/*!*  margin: 0;*!*/
+/*!*  padding: 13px;*!*/
+/*!*  grid-column-gap: 5px;*!*/
+/*!*  grid-template-columns: auto auto;*!*/
+/*!*}*!*/
+
+/*!*.card-img-top {*!*/
+/*!*  width: 150px;*!*/
+/*!*  height: 130px;*!*/
+/*!*  border-radius: 17px;*!*/
+/*!*}*!*/
+
+/*!*.title-container {*!*/
+/*!*  width: 90%;*!*/
+/*!*  height: 21px;*!*/
+/*!*  border-radius: 7px;*!*/
+/*!*  background: #94260d;*!*/
+/*!*}*!*/
+
+/*!*.card-title {*!*/
+/*!*  font-size: 15px;*!*/
+/*!*  color: white;*!*/
+/*!*  padding-left: 15px;*!*/
+/*!*}*!*/
+
+/*!*.text-container {*!*/
+/*!*  width: 90%;*!*/
+/*!*  height: 95px;*!*/
+/*!*  margin-top: 2px;*!*/
+/*!*  border-radius: 7px;*!*/
+/*!*  background: white;*!*/
+/*!*  overflow: hidden;*!*/
+/*!*}*!*/
+
+/*!*.card-text {*!*/
+/*!*  padding: 5px;*!*/
+/*!*  font-size: 15px;*!*/
+/*!*  color: black;*!*/
+/*!*}*!*/
+
+/*!*.bi {*!*/
+/*!*  padding: 3px;*!*/
+/*!*}*!*/
+
+/*!*.bi-flag-fill {*!*/
+/*!*  margin-left: 36px;*!*/
+/*!*}*!*/

@@ -1,0 +1,22 @@
+
+<div class="card"  [ngStyle]="{'border-color':audioPost.theme, 'box-shadow':'2.4px 4.8px 4.8px'+audioPost.theme}">
+  <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+  <img class="card-img-top" src="assets/img/postsimgs/{{audioPost.img}}" alt="Card image cap">
+  <div class="card-body">
+    <div class="headerBody">
+      <p class="card-username">@user{{audioPost.user}}</p>
+      <div class="icons">
+        <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
+        <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>
+        <i class="bi bi-chat-dots"  (click)="toggleShow()"></i>
+        <i class="bi bi-share-fill"></i>
+      </div>
+    </div>
+    <h5 class="card-title">{{audioPost.title}}</h5>
+    <p class="card-text">{{audioPost.description}}</p>
+  </div>
+  <div class="commentsPart">
+    <app-comments [postInfo]="audioPost" *ngIf="isShown"></app-comments>
+  </div>
+</div>
+

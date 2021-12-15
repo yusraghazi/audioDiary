@@ -1,0 +1,20 @@
+<div *ngIf="!showOverlay">
+<div class="btn-group mb-2">
+  <app-switch [switchText]="feedview"></app-switch>
+<div ngbDropdown class="d-inline-block">
+  <button class="btn btn-outline-primary ml-2" id="dropdownMenuButton" ngbDropdownToggle>Filter theme</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
+    <span id="filter-group" class="filter-group"></span>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="map-mapbox" style="cursor: pointer">
+  <div *ngIf="showOverlay">
+    <button id="close" (click)="overlayTrue(false)"><h3>X</h3></button>
+    <div id="overlay" class="onClickWrapper">
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
