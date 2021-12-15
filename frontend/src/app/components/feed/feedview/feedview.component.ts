@@ -18,7 +18,9 @@ export class FeedviewComponent implements OnInit {
   constructor(private postsService: PostsService) {
 
   }
+
   getAllPosts(): void{
+    console.log(this.posts);
     this.postsService.restGetPosts().subscribe(
       (data) => {
         // @ts-ignore

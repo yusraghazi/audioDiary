@@ -17,7 +17,6 @@ export class PostsService {
   }
 
   restGetPosts():Observable<Post[]> {
-
     return this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
       map( (postCards: any[]) => {
         const posts: Post[] = [];

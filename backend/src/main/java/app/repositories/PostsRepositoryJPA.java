@@ -19,13 +19,13 @@ public class PostsRepositoryJPA implements PostsRepository {
 
     @Override
     public List<Posts> findAll() {
+//        Query query = em.createQuery("select p, a.username From Posts p inner join AudioUser a on a.email = p.user.email");
         TypedQuery<Posts> namedQuery = em.createNamedQuery("find_all_posts", Posts.class);
-
         return namedQuery.getResultList();
     }
 
-    public List findPostByUserId(int userId) {
-        Query query = em.createQuery("select p From Posts p WHERE p.user.id = ?1").setParameter(1, userId);
+    public List findPostByEmail(String email) {
+        Query query = em.createQuery("select p From Posts p WHERE p.user.email = ?1").setParameter(1, email);
         return query.getResultList();
     }
 
