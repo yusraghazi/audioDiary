@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Post} from "../models/post";
 import {catchError, map} from "rxjs/operators";
-import {environment} from "../../environments/environment.staging";
+import {environment} from "../../environments/environment";
 
 
 @Injectable({
