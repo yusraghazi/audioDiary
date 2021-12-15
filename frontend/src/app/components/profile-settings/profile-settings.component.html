@@ -1,49 +1,4 @@
 
-<!--<h3>Profile Settings</h3>-->
-<!--<div class="profile-settings-container">-->
-<!--  <div class="title-container">-->
-<!--    <span class="profile-header-pic"> <i class="fa fa-user" aria-hidden="true"></i></span>-->
-<!--    <span class="profile-header-name"><input type="file" id="myFile" name="filename"></span>-->
-<!--  </div>-->
-
-<!--  <hr class="profile-hr">-->
-
-<!--  <div class="row" *ngIf="welcomeMessage">-->
-<!--    <div class="col">-->
-<!--      <div class="alert alert-info alert-dismissible fade show" role="alert">-->
-<!--        {{ welcomeMessage }}-->
-<!--        <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
-<!--          <span aria-hidden="true">&times;</span>-->
-<!--        </button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <form>-->
-<!--    <label for="userName">User name</label>-->
-<!--    <input type="text" id="userName" name="userName" placeholder="Your name.." [value]="user.username">-->
-
-<!--    <label for="email">Email</label>-->
-<!--    <input type="text" id="email" name="email" placeholder="Your email.." [value]="user.email">-->
-
-<!--&lt;!&ndash;    <label for="con-email">Confirm Email</label>&ndash;&gt;-->
-<!--&lt;!&ndash;    <input type="text" id="con-email" name="con-email" placeholder="Confirm Your email..">&ndash;&gt;-->
-
-<!--    <label for="password">Change password</label>-->
-<!--    <input type="text" id="password" name="password" placeholder="create new password">-->
-
-<!--    <input class="submit-profile" type="submit" value="Submit" (click)="onSubmit()">-->
-
-<!--    <input routerLink="/feedview" class="cancel-submit" type="submit" value="cancel">-->
-
-<!--  </form>-->
-<!--  <div class="col">-->
-<!--    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>-->
-<!--  </div>-->
-<!--</div>-->
-
-<div style="height: 150px"></div>
-
 <h3>Profile Settings</h3>
 <div class="profile-settings-container">
   <div class="title-container">
@@ -52,45 +7,39 @@
   </div>
 
   <hr class="profile-hr">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-        </div>
-        <div class="col-sm-6">
-          <form (ngSubmit)="onSubmit()" #f="ngForm">
 
-            <div class="form-group">
-              <label for="resetPassword">username</label>
-              <input type="text" class="form-control" id="resetPassword" name="name"
-                     [(ngModel)]="user.name" #nameComponent="ngModel" required >
-              <div *ngIf="!nameComponent.valid && nameComponent.touched" class="alert alert-warning">Please enter a valid name</div>
-            </div>
-
-            <div class="form-group">
-              <label for="inputEmail">E-mail</label>
-              <input type="email" class="form-control" id="inputEmail" name="email"
-                     [(ngModel)]="user.email" #emailComponent="ngModel" required email>
-              <div *ngIf="!emailComponent.valid && emailComponent.touched" class="alert alert-warning">Please enter a valid e-mail</div>
-            </div>
-
-            <div class="form-group">
-              <label for="inputPassword">Password</label>
-              <input type="password" class="form-control" id="inputPassword" name="password"
-                     [(ngModel)]="user.password" #passwordComponent="ngModel" required >
-              <div *ngIf="!passwordComponent.valid && passwordComponent.touched" class="alert alert-warning">Please enter a valid password</div>
-            </div>
-            <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Update</button>
-          </form>
-
-        </div>
-        <div class="col-sm-3">
-        </div>
-      </div>
-      <hr>
-      <div class="row>">
-        <div class="col">
-          <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
-        </div>
+  <div class="row" *ngIf="welcomeMessage">
+    <div class="col">
+      <div class="alert alert-info alert-dismissible fade show" role="alert">
+        {{ welcomeMessage }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
     </div>
   </div>
+
+  <form>
+    <label for="userName">User name</label>
+    <input type="text" id="userName" name="userName" placeholder="Your name.." [value]="user.username">
+
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email.." [value]="user.email">
+
+<!--    <label for="con-email">Confirm Email</label>-->
+<!--    <input type="text" id="con-email" name="con-email" placeholder="Confirm Your email..">-->
+
+    <label for="password">Change password</label>
+    <input type="text" id="password" name="password" placeholder="create new password">
+
+    <input class="submit-profile" type="submit" value="Submit" (click)="onSubmit()">
+
+    <input routerLink="/feedview" class="cancel-submit" type="submit" value="cancel">
+
+  </form>
+  <div class="col">
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  </div>
+</div>
+
+<div style="height: 150px"></div>
