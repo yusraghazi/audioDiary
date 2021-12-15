@@ -21,7 +21,7 @@ export class UserService {
       {email: user.email, username: user.username, encoded_password: user.password}).pipe(share());
 
     observable.subscribe((data) => {
-
+      console.log("data" + data);
       },
       (err) => {
         console.log('creation error', err);
