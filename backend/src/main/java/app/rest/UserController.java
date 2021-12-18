@@ -3,15 +3,11 @@ package app.rest;
 import app.exceptions.AuthorizationException;
 import app.exceptions.UserNotFoundException;
 import app.models.User;
-import app.repositories.JPARepository;
 import app.repositories.UserRepository;
 import app.security.JWTokenInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import java.net.URI;
 import java.util.List;
 
 @RestController

@@ -1,4 +1,6 @@
-
+/**
+ * Theme
+ */
 export enum Theme {
   "SUN" = "#fa4114",
   "SAND" = "#FFB366",
