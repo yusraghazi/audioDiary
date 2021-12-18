@@ -2,9 +2,7 @@ package app.rest;
 
 import app.exceptions.UserNotFoundException;
 import app.models.Audio;
-import app.models.Posts;
 import app.models.User;
-import app.repositories.AudioRepository;
 import app.repositories.JPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

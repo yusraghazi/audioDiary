@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test 1">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test 3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -73,7 +75,7 @@
         <entry key="JPA Inspector" value="false" />
         <entry key="JPA Palette" value="false" />
         <entry key="JPA Structure" value="false" />
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
@@ -236,20 +238,6 @@
       <workItem from="1639514078797" duration="6667000" />
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
-    </task>
-    <task id="LOCAL-00015" summary="bug fixed in profile">
-      <created>1634330129857</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1634330129857</updated>
-    </task>
-    <task id="LOCAL-00016" summary="test">
-      <created>1634583900926</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1634583900926</updated>
     </task>
     <task id="LOCAL-00017" summary="add animation to profile rec's">
       <created>1634910658561</created>
@@ -580,7 +568,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639853330009</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="test 2">
+      <created>1639853577143</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1639853577143</updated>
+    </task>
+    <task id="LOCAL-00065" summary="test 3">
+      <created>1639853744483</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1639853744483</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,8 +602,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="workspace" />
-    <MESSAGE value="fixed error" />
     <MESSAGE value="second test for pipelining" />
     <MESSAGE value="added variable" />
     <MESSAGE value="test 2.0" />
@@ -625,6 +625,8 @@
     <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
     <MESSAGE value="updated node version due to error" />
     <MESSAGE value="test 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 1" />
+    <MESSAGE value="test 2" />
+    <MESSAGE value="test 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 3" />
   </component>
 </project>
