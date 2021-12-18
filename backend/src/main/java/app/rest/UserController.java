@@ -21,9 +21,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{email}")
-    public User getUserByEmail(
-            @PathVariable String email) {
-
+    public User getUserByEmail(@PathVariable String email) {
         User userById = userRepo.findByEmail(email);
 
         if(userById == null) {
@@ -36,22 +34,18 @@ public class UserController {
 
     @DeleteMapping("/users/{email}")
     public ResponseEntity<User> deleteUser(@PathVariable String email, @RequestAttribute(value = JWTokenInfo.KEY) JWTokenInfo tokenInfo) {
-
         if(!tokenInfo.isAdmin()) {
             throw new AuthorizationException("only administrators can remove members");
         }
 
         User user = getUserByEmail(email);
-
         userRepo.delete(user);
-
         return ResponseEntity.ok(user);
 
     }
 
     @PutMapping("/users")
     public ResponseEntity<Object> updateUser(@RequestBody User user) {
-
         User userById = userRepo.findByEmail(user.getEmail());
 
         if(userById == null) {
@@ -59,7 +53,6 @@ public class UserController {
         }
 
         userRepo.save(user);
-
         return ResponseEntity.ok().build();
     }
 

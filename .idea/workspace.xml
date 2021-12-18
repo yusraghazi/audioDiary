@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test 3">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test 5">
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
@@ -238,20 +239,6 @@
       <workItem from="1639514078797" duration="6667000" />
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
-    </task>
-    <task id="LOCAL-00017" summary="add animation to profile rec's">
-      <created>1634910658561</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1634910658562</updated>
-    </task>
-    <task id="LOCAL-00018" summary="add animation to profile rec's">
-      <created>1634911164356</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1634911164356</updated>
     </task>
     <task id="LOCAL-00019" summary="worked on getting comments from backend">
       <created>1637758871855</created>
@@ -582,7 +569,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639853744483</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="test 4">
+      <created>1639854457866</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1639854457866</updated>
+    </task>
+    <task id="LOCAL-00067" summary="test 5">
+      <created>1639854638675</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1639854638675</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,8 +603,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="second test for pipelining" />
-    <MESSAGE value="added variable" />
     <MESSAGE value="test 2.0" />
     <MESSAGE value="second try" />
     <MESSAGE value="ANOTHER TEST" />
@@ -627,6 +626,8 @@
     <MESSAGE value="test 1" />
     <MESSAGE value="test 2" />
     <MESSAGE value="test 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 3" />
+    <MESSAGE value="test 4" />
+    <MESSAGE value="test 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 5" />
   </component>
 </project>
