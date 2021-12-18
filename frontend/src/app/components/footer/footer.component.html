@@ -1,4 +1,5 @@
-<div class="footer">
+<!--<div class="footer">-->
+  <div class="footer" *ngIf="router.url !== '/' && router.url !== '/login' && router.url !== '/register'">
 <!--  <span class="dot"></span>-->
   <div *ngIf="showRecordBtn">
     <a><img routerLink="/rec-done"  class="footer-rec-button" id="footerLeg" [src]="value" alt="recording button" (click)="startRecording()"></a>
@@ -9,9 +10,15 @@
 
   <div class="onClickWrapper">
     <a class="menu-close" (click)="showRecordBtn = true"  routerLink="feedview"><i class="fa fa-home i-shadow" aria-hidden="true"></i></a>
-    <a class="menu-close" (click)="showRecordBtn = false" routerLink="./profile"><i class="fa fa-user i-shadow" aria-hidden="true"></i></a>
-    <a class="menu-close" (click)="showRecordBtn = false" routerLink="./profile-settings"><i class="fa bi-gear-fill" aria-hidden="true"></i></a>
-    <a class="menu-close" (click)="showRecordBtn = false" routerLink="login"><i class="fa fa-sign-in i-shadow" aria-hidden="true"></i></a>
+<!--    <a class="menu-close" (click)="showRecordBtn = false" routerLink="./profile"><i class="fa fa-user i-shadow" aria-hidden="true"></i></a>-->
+<!--    <a class="menu-close" (click)="showRecordBtn = false" routerLink="./profile-settings"><i class="fa bi-gear-fill" aria-hidden="true"></i></a>-->
+<!--    <a class="menu-close" (click)="showRecordBtn = false" routerLink="login"><i class="fa fa-sign-in i-shadow" aria-hidden="true"></i></a>-->
+
+    <a class="menu-close" *ngIf="auth.isLoggedIn()" (click)="showRecordBtn = false" routerLink="./profile"><i class="fa fa-user i-shadow" aria-hidden="true"></i></a>
+    <a class="menu-close" *ngIf="auth.isLoggedIn()" (click)="showRecordBtn = false" routerLink="./profile-settings"><i class="fa bi-gear-fill" aria-hidden="true"></i></a>
+    <a class="menu-close" *ngIf="auth.isLoggedIn()" (click)="showRecordBtn = false; logOut()" routerLink="/"><i class="fa fa-sign-in i-shadow" aria-hidden="true"></i></a>
+
+
     <a class="menu-close" (click)="showRecordBtn = false" routerLink="register"><i class="fa fa-user-plus i-shadow" aria-hidden="true"></i></a>
   </div>
 
