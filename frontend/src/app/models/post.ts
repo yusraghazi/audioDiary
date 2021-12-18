@@ -1,4 +1,3 @@
-import {Theme} from "../enums/theme";
 
 export class Post {
 

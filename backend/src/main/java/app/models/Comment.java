@@ -6,7 +6,6 @@ import javax.persistence.*;
 
 @Entity
 @NamedQuery(name="find_all_comments", query="select c from Comment c")
-//@NamedQuery(name="get_comments_by_postId", query="select c From Comment c WHERE c.post = :id")
 public class Comment {
 
     @Id

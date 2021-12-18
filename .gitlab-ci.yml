@@ -18,6 +18,7 @@ deploy_be:
     - git remote rm backend || true
     - git remote add backend https://heroku:$HEROKU_API_KEY@git.heroku.com/audiodiary-be-team1-staging.git || true
     - git subtree split --prefix backend -b splitting-be
+    - git fetch --all --unshallow
     - git push --force backend splitting-be:master
 
 deploy_fe:
@@ -33,13 +34,9 @@ deploy_fe:
     variables:
       - $DEPLOYMENT == "true"
   script:
-#    - git remote rm frontend || true
-#    - git remote add frontend https://heroku:$HEROKU_API_KEY@git.heroku.com/audiodiary-fe-team1-staging.git || true
-#    - git subtree split --prefix frontend -b splitting-fe
-#    - git push --force frontend splitting-fe:master
-#    - git branch -D splitting-fe
       - git branch -D splitting-fe || true
       - git remote rm frontend || true
       - git remote add frontend https://heroku:$HEROKU_API_KEY@git.heroku.com/audiodiary-fe-team1-staging.git || true
       - git subtree split --prefix frontend -b splitting-fe
+      - git fetch --all --unshallow
       - git push --force frontend splitting-fe:master
