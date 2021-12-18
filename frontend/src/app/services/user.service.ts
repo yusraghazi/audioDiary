@@ -4,7 +4,6 @@ import {Post} from "../models/post";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment.staging";
 import {User} from "../models/user";
-import {share} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -16,22 +15,8 @@ export class UserService {
     return this.http.get<Post>(`${environment.apiUrl}/users/${userId}`);
   }
 
-  updateUser(user: User) {
-    const observable = this.http.put(`${environment.apiUrl}/auth/users`,
-      {email: user.email, name: user.name, encoded_password: user.password}).pipe(share());
-
-    observable.subscribe((data) => {
-
-      },
-      (err) => {
-        console.log('creation error', err);
-      });
-
-    return observable;
-    // return this.http.put<User>(`${environment.apiUrl}/users/${email}`, email);
-  }
-
   getUsers() {
+
     return this.http.get<User[]>(`${environment.apiUrl}/users`);
   }
 

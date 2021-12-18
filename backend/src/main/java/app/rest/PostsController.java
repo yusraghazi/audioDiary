@@ -75,9 +75,9 @@ public class PostsController {
         //return ResponseEntity.ok(post);
     }
 
-    @GetMapping("users/{email}/posts")
-    public List findPostByEmail(@PathVariable String email) {
-        return postRepo.findPostByEmail(email);
+    @GetMapping("users/{userId}/posts")
+    public List findPostByUserId(@PathVariable int userId) {
+        return postRepo.findPostByUserId(userId);
     }
 
 

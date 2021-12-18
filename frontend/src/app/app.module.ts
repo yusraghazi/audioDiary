@@ -39,7 +39,6 @@ import { SingleAudioComponent } from './components/feed/single-audio/single-audi
 import { NgAudioRecorderModule } from 'ng-audio-recorder';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptorService} from './services/auth.interceptor';
-import { WelcomeComponent } from './components/welcome/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +67,6 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
      AdminPostsComponent,
      AdminUsersComponent,
      SingleAudioComponent,
-     WelcomeComponent,
   ],
   imports: [
     BrowserModule,

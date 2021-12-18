@@ -14,7 +14,7 @@ export class AuthGuardAdminService implements CanActivate {
     Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     if (!this.authService.isAdmin()) {
-      this.router.navigate(['login']);
+      this.router.navigate(['forbidden']);
       return false;
     }
 

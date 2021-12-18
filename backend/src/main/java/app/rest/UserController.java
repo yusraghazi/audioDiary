@@ -6,8 +6,6 @@ import app.models.User;
 import app.repositories.JPARepository;
 import app.repositories.UserRepository;
 import app.security.JWTokenInfo;
-import app.security.PasswordEncoder;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +18,6 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserRepository userRepo;
-
-    @Autowired
-    private PasswordEncoder encoder;
 
     @GetMapping("/users")
     public List<User> getAllUsers() {
@@ -59,27 +54,17 @@ public class UserController {
     }
 
     @PutMapping("/users")
-    public ResponseEntity<Object> createUser(@RequestBody ObjectNode updateInfo) {
+    public ResponseEntity<Object> updateUser(@RequestBody User user) {
 
-        String email = updateInfo.get("email") == null  ? null : updateInfo.get("email").asText();
-        String username = updateInfo.get("username") == null  ? null : updateInfo.get("username").asText();
-        String name = updateInfo.get("name") == null  ? null : updateInfo.get("name").asText();
-        String givenPassword = updateInfo.get("encoded_password") == null  ? null : updateInfo.get("encoded_password").asText();
+        User userById = userRepo.findByEmail(user.getEmail());
 
-        User user = new User();
-        user.setEmail(email);
-        user.setName(name);
-        user.setUsername(username);
-        user.setEncodedPassword(encoder.encode(givenPassword));
-        user.setAdmin(false);
+        if(userById == null) {
+            throw new UserNotFoundException("id = " + user.getEmail());
+        }
 
-        User savedUser = userRepo.save(user);
+        userRepo.save(user);
 
-        URI location = ServletUriComponentsBuilder.
-                fromCurrentRequest().path("/{email}").
-                buildAndExpand(savedUser.getEmail()).toUri();
-
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.ok().build();
     }
 
 

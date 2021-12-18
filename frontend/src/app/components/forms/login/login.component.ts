@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
   myForm: NgForm;
 
   constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute) {
-    this.expectedUrl = '/feedview';
+    this.expectedUrl = '/';
   }
 
   ngOnInit(): void {

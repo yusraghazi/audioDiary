@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Post} from "../models/post";
 import {catchError, map} from "rxjs/operators";
-import {environment} from "../../environments/environment";
+import {environment} from "../../environments/environment.staging";
 
 
 @Injectable({
@@ -17,6 +17,7 @@ export class PostsService {
   }
 
   restGetPosts():Observable<Post[]> {
+
     return this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
       map( (postCards: any[]) => {
         const posts: Post[] = [];
