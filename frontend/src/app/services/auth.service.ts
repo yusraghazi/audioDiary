@@ -116,7 +116,7 @@ export class AuthService {
     return this.currentUser.email;
   }
 
-  public updateUserInformation(): void {
+  private updateUserInformation(): void {
 
     if (this.currentToken) {
 
