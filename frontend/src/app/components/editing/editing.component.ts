@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Post} from "../../models/post";
 import {Subscription} from "rxjs";
 import {PostsService} from "../../services/posts.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-editing',
