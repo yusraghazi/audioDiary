@@ -1,6 +1,5 @@
 
 export class Post {
-
   id:number | undefined;
   user:string | undefined;
   title:string | undefined;

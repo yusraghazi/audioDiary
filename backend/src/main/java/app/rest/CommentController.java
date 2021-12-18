@@ -2,11 +2,7 @@ package app.rest;
 
 import app.exceptions.PostNotFoundException;
 import app.models.Comment;
-import app.models.Posts;
-import app.models.User;
 import app.repositories.CommentRepository;
-import app.repositories.CommentRepositoryJPA;
-import app.repositories.JPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
