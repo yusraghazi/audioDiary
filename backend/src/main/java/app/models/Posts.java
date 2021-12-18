@@ -31,6 +31,7 @@ public class Posts {
     public int amountReport;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_email")
     @JsonIgnore
     private User user;
 
