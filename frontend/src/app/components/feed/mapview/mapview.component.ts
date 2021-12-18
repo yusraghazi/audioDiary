@@ -35,6 +35,9 @@ export class MapviewComponent implements OnInit, AfterViewInit {
     this.postsService.restGetPosts().subscribe(
       (data) => {
         // @ts-ignore
+        this.places =
+          `{"type": "FeatureCollection","features":`+JSON.stringify(data)+`}`;
+        console.log(this.places);
         this.posts = data; console.log(data);
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
@@ -45,137 +48,137 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.places = {
-      'type': 'FeatureCollection',
-      'features': [
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 1,
-            'color': Theme.SUN,
-            'theme': 'sun',
-            'image': 'river.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'River Sounds'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [2.294694, 48.858093]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 2,
-            'color': Theme.FOREST,
-            'theme': 'forest',
-            'image': 'amazon.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'Amazon Birds'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [116.383331, 39.916668]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 3,
-            'color': Theme.WATER,
-            'theme': 'water',
-            'image': 'seawaves.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'Sound of Waves'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [27.398056, -26.358055]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 4,
-            'color': Theme.WATER,
-            'theme': 'river',
-            'image': 'river.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'River Sounds'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [4.897070, 52.45667]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 5,
-            'color': Theme.SUN,
-            'theme': 'forest',
-            'image': 'amazon.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'River Sounds'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [-81.107016, 29.272083]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 6,
-            'color': Theme.FOREST,
-            'theme': 'forest',
-            'image': 'amazon.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'Amazon birds'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [4.82456, 52.377956]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 7,
-            'color': Theme.WATER,
-            'theme': 'sun',
-            'image': 'seawaves.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'Sound of waves'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [4.997070, 52.377956]
-          }
-        },
-        {
-          'type': 'Feature',
-          'properties': {
-            'iconSize': [20, 20],
-            'audioID': 8,
-            'color': Theme.WATER,
-            'theme': 'water',
-            'image': 'seawaves.jpg',
-            'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
-            'title': 'Sound of waves'
-          },
-          'geometry': {
-            'type': 'Point',
-            'coordinates': [6.2167070, 52.377956]
-          }
-        },
+    // this.places = {
+    //   'type': 'FeatureCollection',
+    //   'features': [
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 1,
+    //         'color': Theme.SUN,
+    //         'theme': 'sun',
+    //         'image': 'river.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'River Sounds'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [2.294694, 48.858093]
+    //       }
+    //     },
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 2,
+    //         'color': Theme.FOREST,
+    //         'theme': 'forest',
+    //         'image': 'amazon.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'Amazon Birds'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [116.383331, 39.916668]
+    //       }
+    //     },
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 3,
+    //         'color': Theme.WATER,
+    //         'theme': 'water',
+    //         'image': 'seawaves.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'Sound of Waves'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [27.398056, -26.358055]
+    //       }
+    //     },
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 4,
+    //         'color': Theme.WATER,
+    //         'theme': 'river',
+    //         'image': 'river.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'River Sounds'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [4.897070, 52.45667]
+    //       }
+    //     },
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 5,
+    //         'color': Theme.SUN,
+    //         'theme': 'forest',
+    //         'image': 'amazon.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'River Sounds'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [-81.107016, 29.272083]
+    //       }
+    //     },
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 6,
+    //         'color': Theme.FOREST,
+    //         'theme': 'forest',
+    //         'image': 'amazon.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'Amazon birds'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [4.82456, 52.377956]
+    //       }
+    //     },
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 7,
+    //         'color': Theme.WATER,
+    //         'theme': 'sun',
+    //         'image': 'seawaves.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'Sound of waves'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [4.997070, 52.377956]
+    //       }
+    //     },
+    //     {
+    //       'type': 'Feature',
+    //       'properties': {
+    //         'iconSize': [20, 20],
+    //         'audioID': 8,
+    //         'color': Theme.WATER,
+    //         'theme': 'water',
+    //         'image': 'seawaves.jpg',
+    //         'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+    //         'title': 'Sound of waves'
+    //       },
+    //       'geometry': {
+    //         'type': 'Point',
+    //         'coordinates': [6.2167070, 52.377956]
+    //       }
+    //     },
         // {
         //   'type': 'Feature',
         //   'properties': {
@@ -192,8 +195,8 @@ export class MapviewComponent implements OnInit, AfterViewInit {
         //     'coordinates': [1.00000, 42.666668]
         //   }
         // },
-      ]
-    };
+    //   ]
+    // };
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ';
     this.map = new mapboxgl.Map({

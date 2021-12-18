@@ -29,6 +29,8 @@ public class Posts {
     public String theme;
     public boolean isLiked;
     public int amountReport;
+    public long lng;
+    public long lat;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_email")
@@ -116,6 +118,22 @@ public class Posts {
 
     public void setLiked(boolean liked) {
         isLiked = liked;
+    }
+
+    public long getLng() {
+        return lng;
+    }
+
+    public void setLng(long lng) {
+        this.lng = lng;
+    }
+
+    public long getLat() {
+        return lat;
+    }
+
+    public void setLat(long lat) {
+        this.lat = lat;
     }
 
     @Override

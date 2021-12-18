@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="fixed all issues of database and backend">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test for deployment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -34,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,7 +79,7 @@
         <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="isSearchInLibrariesForStructure" value="false" />
@@ -239,13 +242,6 @@
       <workItem from="1639514078797" duration="6667000" />
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
-    </task>
-    <task id="LOCAL-00022" summary="fixed error">
-      <created>1637765389121</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1637765389121</updated>
     </task>
     <task id="LOCAL-00023" summary="fixed overlay">
       <created>1637767636863</created>
@@ -583,7 +579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639861370003</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="test for deployment">
+      <created>1639861481854</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1639861481854</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="ANOTHER TEST" />
     <MESSAGE value="further implementation of deployment" />
     <MESSAGE value="removed variables bc pipelining is not working anymore" />
     <MESSAGE value="last test" />
@@ -628,6 +630,7 @@
     <MESSAGE value="final test" />
     <MESSAGE value="fixed issues" />
     <MESSAGE value="fixed all issues of database and backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all issues of database and backend" />
+    <MESSAGE value="test for deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="test for deployment" />
   </component>
 </project>
