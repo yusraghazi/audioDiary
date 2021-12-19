@@ -34,12 +34,12 @@ public class Posts {
     public BigDecimal lat;
 
     @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "user_email")
-//    @JsonIgnore
+    @JoinColumn(name = "user_email")
+    @JsonIgnore
     private User user;
 
     @ManyToOne(fetch = FetchType.EAGER)
-//    @JsonIgnore
+    @JsonIgnore
     private Audio audio;
 
     public void setUser(User user, Audio audio) {
