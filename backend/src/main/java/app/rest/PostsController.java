@@ -58,12 +58,11 @@ public class PostsController {
         return ResponseEntity.created(location).build();
     }
 //    private PostsRepository postsRepository = new PostsRepositoryMock();
-//
     @GetMapping("/posts")
     public List<Posts> getAllPosts() {
         return postRepo.findAll();
     }
-//
+
     @GetMapping("/posts/{id}")
     public Posts getPostById(@PathVariable int id) {
 
