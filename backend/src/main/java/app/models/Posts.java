@@ -3,6 +3,7 @@ package app.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Entity
@@ -29,8 +30,8 @@ public class Posts {
     public String theme;
     public boolean isLiked;
     public int amountReport;
-    public long lng;
-    public long lat;
+    public BigDecimal lng;
+    public BigDecimal lat;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_email")
@@ -120,19 +121,19 @@ public class Posts {
         isLiked = liked;
     }
 
-    public long getLng() {
+    public BigDecimal getLng() {
         return lng;
     }
 
-    public void setLng(long lng) {
+    public void setLng(BigDecimal lng) {
         this.lng = lng;
     }
 
-    public long getLat() {
+    public BigDecimal getLat() {
         return lat;
     }
 
-    public void setLat(long lat) {
+    public void setLat(BigDecimal lat) {
         this.lat = lat;
     }
 

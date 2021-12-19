@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on converting database data to json" />
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on coordinates for map and edit page">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on coordinates in map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -35,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="map" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,7 +75,7 @@
         <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="isSearchInLibrariesForStructure" value="false" />
@@ -241,20 +239,6 @@
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
       <workItem from="1639914161679" duration="5552000" />
-    </task>
-    <task id="LOCAL-00025" summary="small fix">
-      <created>1637835936172</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1637835936172</updated>
-    </task>
-    <task id="LOCAL-00026" summary="workspace">
-      <created>1637836677183</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1637836677183</updated>
     </task>
     <task id="LOCAL-00027" summary="quick fix">
       <created>1637837039275</created>
@@ -585,12 +569,12 @@
       <option name="project" value="LOCAL" />
       <updated>1639920638705</updated>
     </task>
-    <task id="LOCAL-00074" summary="test for deployment">
-      <created>1639920868921</created>
+    <task id="LOCAL-00074" summary="worked on coordinates in map">
+      <created>1639923016138</created>
       <option name="number" value="00074" />
       <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
-      <updated>1639920868921</updated>
+      <updated>1639923016138</updated>
     </task>
     <task id="LOCAL-00075" summary="another test">
       <created>1639921011067</created>
@@ -599,15 +583,7 @@
       <option name="project" value="LOCAL" />
       <updated>1639921011067</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
-    <task id="LOCAL-00073" summary="worked on converting database data to json">
-      <created>1639920638704</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1639920638705</updated>
-    </task>
-    <option name="localTasksCounter" value="74" />
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,8 +603,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="last test" />
-    <MESSAGE value="last try" />
     <MESSAGE value="really the last try to fix backend in deployment" />
     <MESSAGE value="attempt on error fix" />
     <MESSAGE value="changed services from hardcoded code to environment apiUrl" />
@@ -653,9 +627,9 @@
     <MESSAGE value="worked on converting database data to json" />
     <MESSAGE value="test for deployment" />
     <MESSAGE value="another test" />
-    <option name="LAST_COMMIT_MESSAGE" value="another test" />
     <MESSAGE value="worked on coordinates for map and edit page" />
     <MESSAGE value="worked on converting database data to json" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on converting database data to json" />
+    <MESSAGE value="worked on coordinates in map" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on coordinates in map" />
   </component>
 </project>

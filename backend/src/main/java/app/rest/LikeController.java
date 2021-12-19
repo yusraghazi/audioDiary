@@ -30,7 +30,6 @@ public class LikeController {
             throw new PostNotFoundException("Not found id=" + id);
         }
         return like;
-        //return ResponseEntity.ok(post);
     }
 
 }
