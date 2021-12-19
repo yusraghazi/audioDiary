@@ -13,7 +13,7 @@
 <div id="map-mapbox" style="cursor: pointer">
   <div *ngIf="showOverlay">
     <button id="close" (click)="overlayTrue(false)"><h3>X</h3></button>
-    <div id="overlay" class="onClickWrapper">
+    <div id="overlay" class="cdk-overlay-container">
     <router-outlet></router-outlet>
     </div>
   </div>
