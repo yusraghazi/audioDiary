@@ -23,7 +23,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   map: mapboxgl.map;
   places: any;
   posts: Post[] = [];
-  theme: Theme = null;
+  theme: Theme;
 
   @Output()
   feedview: string = "Feedview";
@@ -253,7 +253,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
       for (const feature of this.places.features) {
         const symbol = feature.properties.theme;
-        const color: Theme = feature.properties.theme;
+        this.theme = this.getTheme(feature.properties.theme);
         const layerID = `poi-${symbol}`;
 
         if (!this.map.getLayer(layerID)) {
@@ -262,7 +262,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
             'type': 'circle',
             'source': 'places',
             'paint': {
-              'circle-color': Theme.SUN,
+              'circle-color': this.theme,
               'circle-stroke-color': 'white',
               'circle-radius': 10,
             },
@@ -386,6 +386,30 @@ export class MapviewComponent implements OnInit, AfterViewInit {
         });
       }
     });
+  }
+
+  getTheme(theme: string) {
+    switch (theme) {
+      case "Theme.SUN":
+        this.theme = Theme.SUN;
+        break;
+      case "Theme.SAND":
+        this.theme = Theme.SAND;
+        break;
+      case "Theme.FOREST":
+        this.theme = Theme.FOREST;
+        break;
+      case "Theme.WATER":
+        this.theme = Theme.WATER;
+        break;
+      case "Theme.CITY":
+        this.theme = Theme.CITY;
+        break;
+      case "Theme.MOUNTAIN":
+        this.theme = Theme.MOUNTAIN;
+        break;
+    }
+    return this.theme;
   }
 
   overlayTrue(condition: boolean) {
