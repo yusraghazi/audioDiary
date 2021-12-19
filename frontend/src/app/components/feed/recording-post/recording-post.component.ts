@@ -20,6 +20,7 @@ export class RecordingPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.audioPost);
 
 switch (this.audioPost.theme) {
   case "Theme.SUN":
@@ -40,7 +41,6 @@ switch (this.audioPost.theme) {
   case "Theme.MOUNTAIN":
     this.audioPost.theme = Theme.MOUNTAIN;
     break;
-
 }
 
 

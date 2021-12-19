@@ -252,9 +252,8 @@ export class MapviewComponent implements OnInit, AfterViewInit {
       });
 
       for (const feature of this.places.features) {
-        const symbol = feature.properties.theme.split(".")[1];
-        this.theme = feature.properties.theme;
-        const color = this.theme;
+        const symbol = feature.properties.theme;
+        const color: Theme = feature.properties.theme;
         const layerID = `poi-${symbol}`;
 
         if (!this.map.getLayer(layerID)) {
@@ -282,7 +281,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
           const label = document.createElement('label');
           label.setAttribute('for', layerID);
-          label.textContent = symbol;
+          label.textContent = symbol.split(".")[1];
           label.className = "mr-3";
 
           container.appendChild(label);
@@ -301,11 +300,9 @@ export class MapviewComponent implements OnInit, AfterViewInit {
         // @ts-ignore
         this.map.on('mouseenter', layerID, (e) => {
 
-          this.map.on('click', layerID, (e: { features: { properties: { audioID: number; }; }[]; }) => {
-
-            console.log(e.features[0].properties.audioID);
+          this.map.on('click', layerID, (e: { features: { properties: { id: number; }; }[]; }) => {
             this.overlayTrue(true);
-            this.openOverlay(e.features[0].properties.audioID);
+            this.openOverlay(e.features[0].properties.id);
           });
 
           this.map.getCanvas().style.cursor = 'pointer';
@@ -314,15 +311,14 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           //   center: e.features[0].geometry.coordinates
           // });
 
-          const coordinates = e.features[0].geometry.coordinates.slice();
-          const theme = e.features[0].properties.color;
-          const img = e.features[0].properties.image.trim();
+          const coordinates = e.features[0].geometry.coordinates;
+          const theme: Theme = e.features[0].properties.theme;
+          const img = e.features[0].properties.img;
           const title = e.features[0].properties.title;
           const description = e.features[0].properties.description;
 
           popup
             .setLngLat(coordinates)
-            .setHTML('hiiiiii')
             .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
             <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
           <img class="card-img-top" src="../../../../assets/img/postsimgs/`+img+`">
@@ -364,7 +360,6 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
               new mapboxgl.Popup()
                 .setLngLat(coordinates)
-                .setHTML('hiiiiii')
                 .setHTML(`<div class="postCard" style="background-color:` +theme+ `">
             <p class="postedByTag" style="color: white"><i class="bi bi-person-circle" style="color: white"></i>RenouYuyut</p>
           <img class="card-img-top" src="../../../../assets/img/postsimgs/`+img+`">

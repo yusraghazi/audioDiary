@@ -12,12 +12,12 @@ public class Comment {
     @GeneratedValue
     private int id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    //@JsonIgnore
     private Posts post;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+    //@JsonIgnore
     private User user;
 
     private String description;

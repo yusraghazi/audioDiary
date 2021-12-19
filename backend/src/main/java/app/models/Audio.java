@@ -16,8 +16,8 @@ public class Audio {
     public int location;
     public double duration;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+   // @JsonIgnore
     private User user;
 
     public void setUser(User user) {

@@ -32,13 +32,13 @@ public class Posts {
     public long lng;
     public long lat;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_email")
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "user_email")
+//    @JsonIgnore
     private User user;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
+//    @JsonIgnore
     private Audio audio;
 
     public void setUser(User user, Audio audio) {
