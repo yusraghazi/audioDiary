@@ -41,7 +41,8 @@ public class Posts {
     private User user;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
+    @JoinColumn(name = "audio_id")
+    @JsonManagedReference
     private Audio audio;
 
     public void setUser(User user, Audio audio) {

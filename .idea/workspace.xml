@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on map and backend data visualization">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/UserController.java" afterDir="false" />
-    </list>
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="fix data recursion by adding annotations" />
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -242,20 +237,6 @@
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
       <workItem from="1639914161679" duration="5552000" />
-    </task>
-    <task id="LOCAL-00027" summary="quick fix">
-      <created>1637837039275</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1637837039275</updated>
-    </task>
-    <task id="LOCAL-00028" summary="fixed error">
-      <created>1638444858792</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1638444858792</updated>
     </task>
     <task id="LOCAL-00029" summary="fixed error">
       <created>1638445417576</created>
@@ -579,14 +560,28 @@
       <option name="project" value="LOCAL" />
       <updated>1639923016138</updated>
     </task>
-    <task id="LOCAL-00075" summary="another test">
-      <created>1639921011067</created>
+    <task id="LOCAL-00075" summary="next test for backend data posts">
+      <created>1639939184499</created>
       <option name="number" value="00075" />
       <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
-      <updated>1639921011067</updated>
+      <updated>1639939184499</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00076" summary="next test for backend data posts">
+      <created>1639939306448</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1639939306448</updated>
+    </task>
+    <task id="LOCAL-00077" summary="fix data recursion by adding annotations">
+      <created>1639939826487</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1639939826487</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,10 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="really the last try to fix backend in deployment" />
-    <MESSAGE value="attempt on error fix" />
-    <MESSAGE value="changed services from hardcoded code to environment apiUrl" />
-    <MESSAGE value="cors mapping issue" />
     <MESSAGE value="worked on login" />
     <MESSAGE value="quick fix" />
     <MESSAGE value="quick fix" />
@@ -633,6 +624,8 @@
     <MESSAGE value="worked on coordinates for map and edit page" />
     <MESSAGE value="worked on converting database data to json" />
     <MESSAGE value="worked on coordinates in map" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on coordinates in map" />
+    <MESSAGE value="next test for backend data posts" />
+    <MESSAGE value="fix data recursion by adding annotations" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix data recursion by adding annotations" />
   </component>
 </project>

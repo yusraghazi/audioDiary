@@ -13,11 +13,11 @@ public class Comment {
     private int id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    //@JsonIgnore
+    @JsonIgnore
     private Posts post;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    //@JsonIgnore
+    @JsonIgnore
     private User user;
 
     private String description;

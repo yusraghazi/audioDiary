@@ -29,6 +29,7 @@ public class User {
     private List<Posts> posts;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */, fetch = FetchType.EAGER)
+    @JsonBackReference
     private List<Audio> audios;
 
     public User() {

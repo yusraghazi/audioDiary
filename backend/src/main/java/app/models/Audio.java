@@ -1,6 +1,7 @@
 package app.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 
@@ -17,6 +18,8 @@ public class Audio {
     public double duration;
 
     @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_email")
+    @JsonManagedReference
    // @JsonIgnore
     private User user;
 
