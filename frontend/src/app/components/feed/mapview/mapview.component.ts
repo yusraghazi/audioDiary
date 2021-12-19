@@ -10,6 +10,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import {Post} from "../../../models/post";
 import {PostsService} from "../../../services/posts.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Theme} from "../../../enums/theme";
 
 @Component({
   selector: 'app-mapview',
@@ -22,6 +23,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   map: mapboxgl.map;
   places: any;
   posts: Post[] = [];
+  theme: Theme = null;
 
   @Output()
   feedview: string = "Feedview";
@@ -251,7 +253,8 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
       for (const feature of this.places.features) {
         const symbol = feature.properties.theme.split(".")[1];
-        const color = feature.properties.theme;
+        this.theme = feature.properties.theme;
+        const color = this.theme;
         const layerID = `poi-${symbol}`;
 
         if (!this.map.getLayer(layerID)) {
@@ -260,7 +263,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
             'type': 'circle',
             'source': 'places',
             'paint': {
-              'circle-color': color,
+              'circle-color': Theme.SUN,
               'circle-stroke-color': 'white',
               'circle-radius': 10,
             },

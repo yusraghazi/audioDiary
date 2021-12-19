@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on converting database data to json" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on coordinates for map and edit page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
+    </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -581,6 +585,28 @@
       <option name="project" value="LOCAL" />
       <updated>1639920638705</updated>
     </task>
+    <task id="LOCAL-00074" summary="test for deployment">
+      <created>1639920868921</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1639920868921</updated>
+    </task>
+    <task id="LOCAL-00075" summary="another test">
+      <created>1639921011067</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1639921011067</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="worked on converting database data to json">
+      <created>1639920638704</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1639920638705</updated>
+    </task>
     <option name="localTasksCounter" value="74" />
     <servers />
   </component>
@@ -623,7 +649,11 @@
     <MESSAGE value="final test" />
     <MESSAGE value="fixed issues" />
     <MESSAGE value="fixed all issues of database and backend" />
+    <MESSAGE value="worked on coordinates for map and edit page" />
+    <MESSAGE value="worked on converting database data to json" />
     <MESSAGE value="test for deployment" />
+    <MESSAGE value="another test" />
+    <option name="LAST_COMMIT_MESSAGE" value="another test" />
     <MESSAGE value="worked on coordinates for map and edit page" />
     <MESSAGE value="worked on converting database data to json" />
     <option name="LAST_COMMIT_MESSAGE" value="worked on converting database data to json" />
