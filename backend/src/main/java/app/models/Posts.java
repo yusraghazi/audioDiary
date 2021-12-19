@@ -35,7 +35,7 @@ public class Posts {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_email")
-    @JsonIgnore
+    //@JsonIgnore
     private User user;
 
     @ManyToOne(fetch = FetchType.EAGER)
