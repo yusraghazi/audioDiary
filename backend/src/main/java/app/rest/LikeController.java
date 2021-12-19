@@ -21,7 +21,7 @@ public class LikeController {
     public List<Likes> getAllEvents() {
         return likeRepo.findAll();
     }
-    //
+
     @GetMapping("/likes/{id}")
     public Likes getEventById(@PathVariable int id) {
 
