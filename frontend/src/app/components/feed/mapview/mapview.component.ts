@@ -7,10 +7,9 @@ import * as mapboxgl from "mapbox-gl";
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
-import {Theme} from "../../../enums/theme";
 import {Post} from "../../../models/post";
 import {PostsService} from "../../../services/posts.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-mapview',
@@ -32,13 +31,21 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
   constructor(private postsService: PostsService , private router: Router,
               private activatedRoute: ActivatedRoute) {
+    this.places = {"type": "FeatureCollection", "features": []};
     this.postsService.restGetPosts().subscribe(
       (data) => {
+        //this.posts = data;
+        console.log(data);
+        JSON.parse(JSON.stringify(data));
+
+        for (let point of data) {
+          let coordinate = [point.lng, point.lat];
+          let feature = {"type": "Feature", "geometry": {"type": "Point", "coordinates": coordinate}, "properties": point}
+          this.places.features.push(feature);
+        }
         // @ts-ignore
-        this.places =
-          `{"type": "FeatureCollection","features":`+JSON.stringify(data)+`}`;
+        // this.places = GeoJSON.parse(JSON.stringify(data));
         console.log(this.places);
-        this.posts = data; console.log(data);
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );
@@ -243,8 +250,8 @@ export class MapviewComponent implements OnInit, AfterViewInit {
       });
 
       for (const feature of this.places.features) {
-        const symbol = feature.properties.theme;
-        const color = feature.properties.color;
+        const symbol = feature.properties.theme.split(".")[1];
+        const color = feature.properties.theme;
         const layerID = `poi-${symbol}`;
 
         if (!this.map.getLayer(layerID)) {
@@ -340,10 +347,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
       //this.map.on('load', () => {
       const id = parseInt(this.router.url.split("/")[2]);
       if (!isNaN(id)) {
-        for (let i = 0; i < this.places.features.length; i++) {
-            if (this.places.features[i].properties.audioID == id) {
+        for (let i = 0; i < this.places.length; i++) {
+            if (this.places.features[i].properties.audio_id == id) {
               this.map.flyTo({
-                center: this.places.features[i].geometry.coordinates
+                center: "[" + this.places[i].lng + "," + this.places[i].lat + "]"
               });
 
                 const coordinates = this.places.features[i].geometry.coordinates.slice();
@@ -351,6 +358,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
                 const img = this.places.features[i].properties.image.trim();
                 const title = this.places.features[i].properties.title;
                 const description = this.places.features[i].properties.description;
+
               new mapboxgl.Popup()
                 .setLngLat(coordinates)
                 .setHTML('hiiiiii')

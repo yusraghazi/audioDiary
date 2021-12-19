@@ -141,11 +141,11 @@ public class Posts {
         if (this == o) return true;
         if (!(o instanceof Posts)) return false;
         Posts posts = (Posts) o;
-        return isLiked() == posts.isLiked() && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && Objects.equals(getTheme(), posts.getTheme());
+        return isLiked() == posts.isLiked() && getAmountReport() == posts.getAmountReport() && getLng() == posts.getLng() && getLat() == posts.getLat() && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && Objects.equals(getTheme(), posts.getTheme()) && Objects.equals(getUser(), posts.getUser()) && Objects.equals(getAudio(), posts.getAudio());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getDescription(), getImg(), getTheme(), isLiked());
+        return Objects.hash(getId(), getTitle(), getDescription(), getImg(), getTheme(), isLiked(), getAmountReport(), getLng(), getLat(), getUser(), getAudio());
     }
 }
