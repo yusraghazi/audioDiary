@@ -1,6 +1,7 @@
 package app.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -35,6 +36,7 @@ public class Posts {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_email")
+    @JsonManagedReference
     //@JsonIgnore
     private User user;
 
