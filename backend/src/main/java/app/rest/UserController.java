@@ -41,7 +41,6 @@ public class UserController {
         User user = getUserByEmail(email);
         userRepo.delete(user);
         return ResponseEntity.ok(user);
-
     }
 
     @PutMapping("/users")
