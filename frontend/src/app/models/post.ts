@@ -10,7 +10,7 @@ export class Post {
   private _isLiked: boolean | undefined;
   private _lng: number | undefined;
   private _lat: number | undefined;
-
+  private _audio_id: number | undefined;
   constructor() {}
 
 
@@ -109,6 +109,15 @@ export class Post {
 
   set lat(value: number | undefined) {
     this._lat = value;
+  }
+
+
+  get audio_id(): number | undefined {
+    return this._audio_id;
+  }
+
+  set audio_id(value: number | undefined) {
+    this._audio_id = value;
   }
 }
 

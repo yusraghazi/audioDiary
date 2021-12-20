@@ -7,6 +7,8 @@ import {Router} from "@angular/router";
 import * as mapboxgl from "mapbox-gl";
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import {User} from "../../models/user";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-editing',
@@ -15,7 +17,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 })
 export class EditingComponent implements OnInit {
 private childparamsSub: Subscription;
-  newPost: Post;
+  newPost: Post = new Post();
 
   editTitle: string = 'card title';
   editDescription: string = 'here comes the description';
@@ -25,7 +27,7 @@ private childparamsSub: Subscription;
   imageSrc: string | ArrayBuffer;
   map: mapboxgl.map;
 
-  constructor(private postService: PostsService, private route: Router) { }
+  constructor(private postService: PostsService, private route: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ';
@@ -88,24 +90,30 @@ private childparamsSub: Subscription;
     }
   }
 
-
-  createNewPost(id: number) {
-    this.postService.restCreateNewPost(id).subscribe(
-      (data) => {
-        this.newPost = data; console.log(data);
-      },
-      (error) => console.log("Error: " + error.status + " - " + error.error)
-    );
-  }
-
   backButton(){
     if (confirm("do you want to discard changes")) {
       this.route.navigateByUrl('rec-done')
     }
   }
 
-  postButton(){
-    this.route.navigateByUrl('feedview');
+  onSubmit(){
+    // this.newPost.user = this.auth.getUser();
+    this.newPost.title = "hallo";
+    this.newPost.description = "hiii";
+    // this.newPost.theme = "Theme.SUN";
+    // this.newPost.img = "amazon.jpg";
+    // this.newPost.isLiked = false;
+    // this.newPost.lat = 5.66948;
+    // this.newPost.lng = 64.74320;
+    // this.newPost.audio_id = 2;
+
+    this.postService.restCreateNewPost(this.newPost).subscribe(
+      (data) => {
+        //this.newPost = data;
+        console.log(data);
+      },
+      (error) => console.log("Error: " + error.status + " - " + error.error)
+    );
   }
 
 

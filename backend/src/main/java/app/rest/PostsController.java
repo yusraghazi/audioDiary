@@ -6,6 +6,7 @@ import app.models.User;
 import app.repositories.PostsRepository;
 
 import app.repositories.PostsRepositoryJPA;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -36,24 +37,14 @@ public class PostsController {
 //        return user.getPosts();
 //    }
 
-    @PostMapping("/users/{email}/posts")
-    @Transactional
-    public ResponseEntity<Object> createPost(@RequestParam(name = "fail",required = false, defaultValue = "false") boolean shouldFail,
-                                             @PathVariable String email, @RequestBody Posts post) {
+    @PostMapping("/posts")
+    public ResponseEntity<Object> createPost(@RequestBody Posts post) {
 
-        User user = userResource.getUserByEmail(email);
-        Audio audio = audioResource.getAudioById(1);
+        Posts savedPost = postRepo.save(post);
 
-        post.setUser(user, audio);
-
-        postRepo.save(post);
-
-        // used to demonstrate transaction handling
-        if(shouldFail) {
-            throw new RuntimeException("Failed for demo purposes. This action will rollback the database transaction");
-        }
-
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{postId}").buildAndExpand(post.getId()).toUri();
+        URI location = ServletUriComponentsBuilder.
+                fromCurrentRequest().path("/{id}").
+                buildAndExpand(savedPost.getId()).toUri();
 
         return ResponseEntity.created(location).build();
     }
@@ -74,9 +65,9 @@ public class PostsController {
         //return ResponseEntity.ok(post);
     }
 
-    @GetMapping("users/{userId}/posts")
-    public List findPostByUserId(@PathVariable int userId) {
-        return postRepo.findPostByUserId(userId);
+    @GetMapping("users/{email}/posts")
+    public List findPostByUserId(@PathVariable String email) {
+        return postRepo.findPostByUserId(email);
     }
 
 

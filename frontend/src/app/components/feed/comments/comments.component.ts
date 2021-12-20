@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {SingleComment} from "../../../models/singleComment";
 import {Post} from "../../../models/post";
 import {CommentsService} from "../../../services/comments.service";
+import {AuthService} from "../../../services/auth.service";
 
 
 @Component({
@@ -19,9 +20,10 @@ export class CommentsComponent implements OnInit {
   description: string;
 
 
-  constructor(private commentService: CommentsService) { }
+  constructor(private commentService: CommentsService, private auth: AuthService) { }
+
   getComments(): void{
-    this.commentService.restFindCommentByPostId(4).subscribe(
+    this.commentService.restFindCommentByPostId(this.postInfo.id).subscribe(
       (data) => {
         // @ts-ignore
         this.comments = data; console.log(data);
@@ -40,9 +42,17 @@ export class CommentsComponent implements OnInit {
 
   }
   sendComment(){
-    this.comments.push(new SingleComment("Taner", this.description, "https://live.staticflickr.com/4314/35471113064_9599836188_b.jpg"));
-    this.description = "";
+    // this.comments.push(new SingleComment("Taner", this.description, "https://live.staticflickr.com/4314/35471113064_9599836188_b.jpg"));
+    // this.description = "";
 
+    let comment: SingleComment = new SingleComment(this.auth.getUser().username, this.description);
+    this.commentService.restPostComment(comment).subscribe(
+      (data) => {
+        console.log(data);
+      },(error) => {
+        console.log(error);
+      }
+    );
   }
 
 

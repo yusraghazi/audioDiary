@@ -17,8 +17,8 @@
             <i class="bi bi-share-fill"></i>
           </div>
         </div>
-        <h5 class="postCardTitle">{{editTitle}}</h5>
-        <p class="card-text">{{editDescription}}</p>
+        <h5 class="postCardTitle">{{newPost.title}}</h5>
+        <p class="card-text">{{newPost.description}}</p>
       </div>
       <div class="commentsPart">
       </div>
@@ -30,7 +30,7 @@
     <div class="editInputs">
       <div class="inputsTitle">
         <p class="inputHeader">Title:</p>
-        <input class="inputValue" [(ngModel)]="editTitle">
+        <input class="inputValue" [(ngModel)]="newPost.title">
       </div>
 
       <p class="inputHeader"> Duration:</p>
@@ -43,7 +43,7 @@
 
       <p class="inputHeader"> Description:</p>
       <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
-      <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="editDescription"></textarea>
+      <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="newPost.description"></textarea>
 
       <div class="picture">
         <p class="inputHeader"> Picture: </p>
@@ -64,7 +64,7 @@
 
       <div class="buttons">
         <button class="editButtons" id="discardButton" (click)="backButton()">Go back</button>
-        <button class="editButtons" id="postButton" (click)="postButton()">post</button>
+        <button type= "submit" class="editButtons" id="postButton" (click)="onSubmit()">post</button>
       </div>
     </div>
   </div>
