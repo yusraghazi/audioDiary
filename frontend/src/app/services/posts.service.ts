@@ -46,9 +46,9 @@ export class PostsService {
   restPostPost(postId: number):Observable<Post[]> {
     const url = `${environment.apiUrl}/posts/${postId}`;
     return this.http.post<Post[]>(url, postId);
-  // restPostPost(postId: number):Observable<Post[]> {
-  //   const url = `http://localhost:8084/posts/${postId}`;
-  //   return this.http.post<Post>(url, postId);
+    // restPostPost(postId: number):Observable<Post[]> {
+    //   const url = `http://localhost:8084/posts/${postId}`;
+    //   return this.http.post<Post>(url, postId);
   }
 
   restCreateNewPost(postId: number):Observable<Post>{
@@ -62,9 +62,9 @@ export class PostsService {
     return this.http.put<Post[]>(url, post);
   }
 
-  restDeletePosts(postId: number):void {
+  restDeletePosts(postId: number):Observable<Post[]> {
     const url = `${environment.apiUrl}/posts/${postId}`;
-    this.http.delete<Post[]>(url);
+     return this.http.delete<Post[]>(url);
   }
 
 }

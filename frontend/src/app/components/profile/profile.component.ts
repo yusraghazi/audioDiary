@@ -44,19 +44,20 @@ export class ProfileComponent implements OnInit {
     );
   }
 
+  deletePosts(postId: number): void{
+    this.postsService.restDeletePosts(postId).subscribe(
+      (response) =>{
+        console.log(response);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    );
+  }
+
   ngOnInit(): void {
     this.getAllPosts();
     this.getFavPosts();
-    // this.posts =[];
-    // this.posts.push(new Post(1, "River Sounds", this.text,"river.jpg",Theme.SUN, true))
-    // this.posts.push(new Post(3, "Amazon Birds", this.text,"amazon.jpg",Theme.FOREST, true))
-    // this.posts.push(new Post(4, "Sound of Waves", this.text,"seawaves.jpg",Theme.WATER, false))
-    // this.posts.push(new Post(5, "Sound of Waves", this.text,"seawaves.jpg",Theme.MOUNTAIN, false))
-    //
-    // this.favoritePost =[];
-    // this.favoritePost.push(new Post(1, "River Sounds", this.text,"river.jpg",Theme.SUN, true))
-    // this.favoritePost.push(new Post(3, "Amazon Birds", this.text,"amazon.jpg",Theme.FOREST, true))
-    // this.favoritePost.push(new Post(4, "Sound of Waves", this.text,"seawaves.jpg",Theme.WATER, false))
   }
 
   postSelection(postSelection:Post){
@@ -79,7 +80,10 @@ export class ProfileComponent implements OnInit {
     let index = this.posts.indexOf(post);
     if (index !== -1){
       this.posts.splice(index,1);
+      this.deletePosts(post.id);
+      console.log(post.id);
     }else {
+
       return;
     }
     this.selectedPost = undefined;
