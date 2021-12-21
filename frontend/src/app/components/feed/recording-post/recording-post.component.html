@@ -4,7 +4,7 @@
   <img class="card-img-top" src="assets/img/postsimgs/{{audioPost.img}}" alt="Card image cap">
   <div class="card-body">
     <div class="headerBody">
-      <p class="card-username">@user{{audioPost.user}}</p>
+      <p class="card-username">@{{audioPost.user.username}} {{audioPost.user.name}}</p>
       <div class="icons">
         <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
         <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>
