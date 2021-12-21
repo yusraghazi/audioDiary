@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="fix data recursion by adding annotations">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
-    </list>
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="fix cors policy" />
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -240,13 +237,6 @@
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
       <workItem from="1639914161679" duration="5552000" />
-    </task>
-    <task id="LOCAL-00029" summary="fixed error">
-      <created>1638445417576</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1638445417576</updated>
     </task>
     <task id="LOCAL-00030" summary="test">
       <created>1638445772611</created>
@@ -584,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639939826487</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="fix cors policy">
+      <created>1640095176697</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1640095176697</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on login" />
     <MESSAGE value="quick fix" />
     <MESSAGE value="quick fix" />
     <MESSAGE value="test" />
@@ -629,6 +625,7 @@
     <MESSAGE value="worked on coordinates in map" />
     <MESSAGE value="next test for backend data posts" />
     <MESSAGE value="fix data recursion by adding annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix data recursion by adding annotations" />
+    <MESSAGE value="fix cors policy" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cors policy" />
   </component>
 </project>
