@@ -21,7 +21,7 @@ public class Posts {
     }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     public Integer id;
     public String title;

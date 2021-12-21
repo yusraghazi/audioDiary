@@ -32,8 +32,11 @@ export class CommentsComponent implements OnInit {
   }
 
   sendComment(){
+    console.log()
     this.commentService.restPostComment(new SingleComment(null, this.postInfo, this.auth.getUser(), this.description)).subscribe(
       (data) => {
+        this.getComments();
+        this.description = null;
         console.log(data);
       },(error) => {
         console.log(error);

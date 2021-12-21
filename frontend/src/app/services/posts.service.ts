@@ -51,9 +51,9 @@ export class PostsService {
     //   return this.http.post<Post>(url, postId);
   }
 
-  restCreateNewPost(postId: number):Observable<Post>{
-    const url = `${environment.apiUrl}/posts/create/${postId}`;
-    return this.http.post<Post>(url, postId);
+  restCreateNewPost(post: Post):Observable<Post>{
+    const url = `${environment.apiUrl}/posts`;
+    return this.http.post<Post>(url, post);
   }
 
   restPutPost(post: Post):Observable<Post[]> {

@@ -30,7 +30,7 @@
     <div class="editInputs">
       <div class="inputsTitle">
         <p class="inputHeader">Title:</p>
-        <input class="inputValue" [(ngModel)]="editTitle">
+        <input class="inputValue" [(ngModel)]="newPost.title">
       </div>
 
       <p class="inputHeader"> Duration:</p>
@@ -43,7 +43,7 @@
 
       <p class="inputHeader"> Description:</p>
       <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
-      <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="editDescription"></textarea>
+      <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="newPost.description"></textarea>
 
       <div class="picture">
         <p class="inputHeader"> Picture: </p>

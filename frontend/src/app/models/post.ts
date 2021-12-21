@@ -1,15 +1,17 @@
 import {User} from "./user";
+import {Audio} from "./audio";
 
 export class Post {
-  private _id:number | undefined;
-  private _user:User | undefined;
-  private _title:string | undefined;
-  private _description:string | undefined;
-  private _img:string | undefined;
-  private _theme: string| undefined;
-  private _isLiked: boolean | undefined;
-  private _lng: number | undefined;
-  private _lat: number | undefined;
+  private _id:number | null;
+  private _user:User | null;
+  private _title:string | null;
+  private _description:string | null;
+  private _img:string | null;
+  private _theme: string| null;
+  private _isLiked: boolean | null;
+  private _lng: number | null;
+  private _lat: number | null;
+  private _audio: Audio | null;
 
   constructor() {}
 
@@ -109,6 +111,15 @@ export class Post {
 
   set lat(value: number | undefined) {
     this._lat = value;
+  }
+
+
+  get audio(): Audio | null {
+    return this._audio;
+  }
+
+  set audio(value: Audio | null) {
+    this._audio = value;
   }
 }
 

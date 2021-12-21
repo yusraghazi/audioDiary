@@ -34,16 +34,10 @@ public class PostsController {
 //        return user.getPosts();
 //    }
 
-    @RequestMapping("/posts")
-    @PostMapping(headers="Accept=application/json")
+    @PostMapping("/posts")
     public ResponseEntity<Posts> createPost(@RequestBody Posts post) {
 
         Posts savedPost = postRepo.save(post);
-
-        // used to demonstrate transaction handling
-//        if(shouldFail) {
-//            throw new RuntimeException("Failed for demo purposes. This action will rollback the database transaction");
-//        }
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPost.getId()).toUri();
 
