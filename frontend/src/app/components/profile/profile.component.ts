@@ -47,6 +47,7 @@ export class ProfileComponent implements OnInit {
   deletePosts(postId: number): void{
     this.postsService.restDeletePosts(postId).subscribe(
       (response) =>{
+        // this.getAllPosts();
         console.log(response);
       },
       (error)=>{
