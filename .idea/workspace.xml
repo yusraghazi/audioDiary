@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test deleting post on heroku" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="trying to fix cors mapping issue" />
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -237,13 +237,6 @@
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
       <workItem from="1639914161679" duration="5552000" />
-    </task>
-    <task id="LOCAL-00035" summary="second try">
-      <created>1638452675652</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1638452675652</updated>
     </task>
     <task id="LOCAL-00036" summary="second try">
       <created>1638453378929</created>
@@ -581,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640102116600</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="trying to fix cors mapping issue">
+      <created>1640102640107</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1640102640107</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed try" />
     <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
     <MESSAGE value="updated node version due to error" />
     <MESSAGE value="test 1" />
@@ -626,6 +625,7 @@
     <MESSAGE value="test" />
     <MESSAGE value="fixed deleting post" />
     <MESSAGE value="test deleting post on heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="test deleting post on heroku" />
+    <MESSAGE value="trying to fix cors mapping issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="trying to fix cors mapping issue" />
   </component>
 </project>
