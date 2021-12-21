@@ -12,5 +12,5 @@ public interface PostsRepository {
 
     Posts save(Posts aEvent);
 
-    Posts deleteById(int id);
+    void delete(Posts post);
 }

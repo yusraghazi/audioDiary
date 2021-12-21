@@ -62,9 +62,9 @@ export class PostsService {
     return this.http.put<Post[]>(url, post);
   }
 
-  restDeletePosts(postId: number):Observable<Post[]> {
+  restDeletePosts(postId: number):Observable<Post> {
     const url = `${environment.apiUrl}/posts/${postId}`;
-     return this.http.delete<Post[]>(url);
+     return this.http.delete<Post>(url);
   }
 
 }

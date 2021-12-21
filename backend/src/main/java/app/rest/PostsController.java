@@ -100,14 +100,12 @@ public class PostsController {
 //        return ResponseEntity.ok(post);
 //    }
 //
-//    @DeleteMapping("/posts/{id}")
-//    public ResponseEntity<Posts> deleteUser(@PathVariable int id) {
-//
-//        Posts post = postsRepository.deleteById(id);
-//        if(post == null) {
-//            throw new PostNotFoundException("id=" + id);
-//        }
-//        return ResponseEntity.ok(post);
-//
-//    }
+    @DeleteMapping("/posts/{id}")
+    public ResponseEntity<Posts> deleteUser(@PathVariable int id) {
+
+        Posts post = postRepo.findById(id);
+        postRepo.delete(post);
+        return ResponseEntity.ok(post);
+
+    }
 }
