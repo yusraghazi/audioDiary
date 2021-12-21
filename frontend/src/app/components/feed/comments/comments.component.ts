@@ -45,7 +45,7 @@ export class CommentsComponent implements OnInit {
     // this.comments.push(new SingleComment("Taner", this.description, "https://live.staticflickr.com/4314/35471113064_9599836188_b.jpg"));
     // this.description = "";
 
-    let comment: SingleComment = new SingleComment(this.auth.getUser().username, this.description);
+    let comment: SingleComment = new SingleComment(null, this.postInfo.id, this.auth.getUser().username, this.description);
     this.commentService.restPostComment(comment).subscribe(
       (data) => {
         console.log(data);
