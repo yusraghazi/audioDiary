@@ -76,18 +76,18 @@ export class ProfileComponent implements OnInit {
     return this.selectedFavoritePost;
   }
 
-  // onDelete(post: Post ){
-  //   let index = this.posts.indexOf(post);
-  //   if (index !== -1){
-  //     this.posts.splice(index,1);
-  //     this.deletePosts(post.id);
-  //     console.log(post.id);
-  //   }else {
-  //
-  //     return;
-  //   }
-  //   this.selectedPost = undefined;
-  // }
+  onDelete(post: Post ){
+    let index = this.posts.indexOf(post);
+    if (index !== -1){
+      this.posts.splice(index,1);
+      this.deletePosts(post.id);
+      console.log(post.id);
+    }else {
+
+      return;
+    }
+    this.selectedPost = undefined;
+  }
 
   onDeleteFavorite(fav:Post){
     let index = this.favoritePost.indexOf(fav);

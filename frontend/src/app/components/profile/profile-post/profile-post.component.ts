@@ -10,13 +10,10 @@ import {PostsService} from "../../../services/posts.service";
 })
 export class ProfilePostComponent implements OnInit {
   @Input() selectedPost: Post | undefined;
-  @Input() selectedFavoritePost: Post | undefined;
 
   @Input() audioPost: Post
-  // isShown: boolean;
 
-  @Input() deletedSelected: Post;
-  @Output() deletedFavoriteSelected = new EventEmitter<Post>();
+  @Output() deleteSelected = new EventEmitter<Post>();
 
   constructor(private postsService: PostsService) { }
 
@@ -53,21 +50,17 @@ export class ProfilePostComponent implements OnInit {
   }
 
   toRemovePost(){
-    const postId = this.selectedPost.id;
-    console.log(postId);
-    this.postsService.restDeletePosts(postId).subscribe(
-      (response) =>{
-        console.log(response);
-      },
-      (error)=>{
-        console.log(error);
-      }
-    );
+    this.deleteSelected.emit(this.selectedPost);
+    // const postId = this.selectedPost.id;
+    // console.log(postId);
+    // this.postsService.restDeletePosts(postId).subscribe(
+    //   (response) =>{
+    //     console.log(response);
+    //   },
+    //   (error)=>{
+    //     console.log(error);
+    //   }
+    // );
   }
-
-  toRemoveFavoritePost(){
-    this.deletedFavoriteSelected.emit(this.selectedFavoritePost);
-  }
-
 
 }

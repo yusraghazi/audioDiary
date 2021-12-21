@@ -11,7 +11,6 @@ export class ProfilePostFavoriteComponent implements OnInit {
   @Input() selectedFavoritePost: Post | undefined;
 
   @Input() audioPost: Post
-  // isShown: boolean;
 
   @Output() deletedFavoriteSelected = new EventEmitter<Post>();
 
