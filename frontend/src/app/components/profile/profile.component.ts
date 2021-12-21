@@ -44,16 +44,16 @@ export class ProfileComponent implements OnInit {
     );
   }
 
-  // deletePosts(postId: number): void{
-  //   this.postsService.restDeletePosts(postId).subscribe(
-  //     (response) =>{
-  //       console.log(response);
-  //     },
-  //     (error)=>{
-  //       console.log(error);
-  //     }
-  //   );
-  // }
+  deletePosts(postId: number): void{
+    this.postsService.restDeletePosts(postId).subscribe(
+      (response) =>{
+        console.log(response);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    );
+  }
 
   ngOnInit(): void {
     this.getAllPosts();
@@ -93,6 +93,7 @@ export class ProfileComponent implements OnInit {
     let index = this.favoritePost.indexOf(fav);
     if (index !== -1){
       this.favoritePost.splice(index,1);
+      this.deletePosts(fav.id);
     }else {
       return;
     }
