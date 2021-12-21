@@ -1,12 +1,18 @@
-export class SingleComment {
-  user: string | undefined;
-  description: string | undefined;
-  image: string | undefined;
+import {User} from "./user";
+import {Post} from "./post";
 
-  constructor(user: string | undefined, description: string | undefined, image: string | undefined) {
+export class SingleComment {
+  id: number | undefined;
+  post: Post | undefined;
+  user: User | undefined;
+  description: string | undefined;
+
+
+  constructor(id: number | undefined, post: Post | undefined, user: User | undefined, description: string | undefined) {
+    this.id = id;
+    this.post = post;
     this.user = user;
     this.description = description;
-    this.image = image;
   }
 
   static trueCopy(comment: SingleComment): SingleComment {

@@ -13,6 +13,7 @@ export class SingleCommentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

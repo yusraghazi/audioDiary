@@ -5,10 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.LazyToOne;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 @Entity(name = "AudioUser")
 @NamedQuery(name="find_all_users", query="select u from AudioUser u")
@@ -17,20 +14,21 @@ public class User {
     @Id
     private String email;
     private String name;
-    @JsonIgnore
     private String encodedPassword;
+
     private boolean admin;
     private String username;
     private String passwordReset;
     private boolean isVerified;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his posts */ )
-    @JsonBackReference
     private List<Posts> posts;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */, fetch = FetchType.EAGER)
-    @JsonBackReference
     private List<Audio> audios;
+
+    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */, fetch = FetchType.EAGER)
+    private Set<Comment> comments;
 
     public User() {
         posts = new ArrayList<>();
@@ -47,12 +45,8 @@ public class User {
         this.isVerified = isVerified;
     }
 
-    public void addAudio(Audio audio) {
-        this.audios.add(audio);
-    }
-
-    public void addPost(Posts post) {
-        this.posts.add(post);
+    public boolean isAdmin() {
+        return admin;
     }
 
     public String getEmail() {
@@ -77,10 +71,6 @@ public class User {
 
     public void setEncodedPassword(String encodedPassword) {
         this.encodedPassword = encodedPassword;
-    }
-
-    public boolean isAdmin() {
-        return admin;
     }
 
     public void setAdmin(boolean admin) {
@@ -111,28 +101,22 @@ public class User {
         isVerified = verified;
     }
 
-    public List<Posts> getPosts() {
-        return posts;
-    }
-
     public void setPosts(List<Posts> posts) {
         this.posts = posts;
-    }
-
-    public List<Audio> getAudios() {
-        return audios;
     }
 
     public void setAudios(List<Audio> audios) {
         this.audios = audios;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return isAdmin() == user.isAdmin() && isVerified() == user.isVerified() && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getName(), user.getName()) && Objects.equals(getEncodedPassword(), user.getEncodedPassword()) && Objects.equals(getUsername(), user.getUsername()) && Objects.equals(getPasswordReset(), user.getPasswordReset()) && Objects.equals(getPosts(), user.getPosts()) && Objects.equals(getAudios(), user.getAudios());
+        return isAdmin() == user.isAdmin() && isVerified() == user.isVerified() && Objects.equals(getEmail(), user.getEmail()) && Objects.equals(getName(), user.getName()) && Objects.equals(getEncodedPassword(), user.getEncodedPassword()) && Objects.equals(getUsername(), user.getUsername()) && Objects.equals(getPasswordReset(), user.getPasswordReset());
     }
 
     public boolean validateEncodedPassword(String given) {
@@ -141,6 +125,6 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getEmail(), getName(), getEncodedPassword(), isAdmin(), getUsername(), getPasswordReset(), isVerified(), getPosts(), getAudios());
+        return Objects.hash(getEmail(), getName(), getEncodedPassword(), isAdmin(), getUsername(), getPasswordReset(), isVerified());
     }
 }

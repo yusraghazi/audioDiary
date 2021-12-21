@@ -23,10 +23,10 @@ public class CommentController {
     }
 
     @GetMapping("/posts/comments")
-    public List<Comment> getAllComments(@PathVariable int postId) {
+    public List<Comment> getAllComments() {
         return commentRepo.findAll();
     }
-    //
+
     @GetMapping("/comments/{id}")
     public Comment getCommentById(@PathVariable int id) {
 
@@ -44,6 +44,6 @@ public class CommentController {
         URI location = ServletUriComponentsBuilder.
                 fromCurrentRequest().path("/{id}").
                 buildAndExpand(savedComment.getId()).toUri();
-        return ResponseEntity.created(location).body(comment);
+        return ResponseEntity.created(location).build();
     }
 }

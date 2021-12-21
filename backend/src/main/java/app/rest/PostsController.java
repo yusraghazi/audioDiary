@@ -26,8 +26,6 @@ public class PostsController {
     @Autowired
     private PostsRepository postRepo;
 
-    private PostsRepositoryJPA postsPostsRepositoryJPA;
-
 //    @GetMapping("/posts/{id}")
 //    public List<Posts> getPosts(@PathVariable int id) {
 //
@@ -36,24 +34,18 @@ public class PostsController {
 //        return user.getPosts();
 //    }
 
-    @PostMapping("/users/{email}/posts")
-    @Transactional
-    public ResponseEntity<Object> createPost(@RequestParam(name = "fail",required = false, defaultValue = "false") boolean shouldFail,
-                                             @PathVariable String email, @RequestBody Posts post) {
+    @RequestMapping("/posts")
+    @PostMapping(headers="Accept=application/json")
+    public ResponseEntity<Posts> createPost(@RequestBody Posts post) {
 
-        User user = userResource.getUserByEmail(email);
-        Audio audio = audioResource.getAudioById(1);
-
-        post.setUser(user, audio);
-
-        postRepo.save(post);
+        Posts savedPost = postRepo.save(post);
 
         // used to demonstrate transaction handling
-        if(shouldFail) {
-            throw new RuntimeException("Failed for demo purposes. This action will rollback the database transaction");
-        }
+//        if(shouldFail) {
+//            throw new RuntimeException("Failed for demo purposes. This action will rollback the database transaction");
+//        }
 
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{postId}").buildAndExpand(post.getId()).toUri();
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPost.getId()).toUri();
 
         return ResponseEntity.created(location).build();
     }

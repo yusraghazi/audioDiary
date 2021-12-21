@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="trying to fix cors mapping issue" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="last try">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Audio.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Audio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-comment/single-comment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/singleComment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/singleComment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/comments.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/comments.service.ts" afterDir="false" />
+    </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -48,7 +63,6 @@
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
@@ -237,13 +251,7 @@
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
       <workItem from="1639914161679" duration="5552000" />
-    </task>
-    <task id="LOCAL-00036" summary="second try">
-      <created>1638453378929</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1638453378929</updated>
+      <workItem from="1640109707172" duration="12812000" />
     </task>
     <task id="LOCAL-00037" summary="ANOTHER TEST">
       <created>1638453432005</created>
@@ -581,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640102640107</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="last try">
+      <created>1640103116592</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1640103116592</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +616,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
     <MESSAGE value="updated node version due to error" />
     <MESSAGE value="test 1" />
     <MESSAGE value="test 2" />
@@ -626,6 +640,7 @@
     <MESSAGE value="fixed deleting post" />
     <MESSAGE value="test deleting post on heroku" />
     <MESSAGE value="trying to fix cors mapping issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to fix cors mapping issue" />
+    <MESSAGE value="last try" />
+    <option name="LAST_COMMIT_MESSAGE" value="last try" />
   </component>
 </project>

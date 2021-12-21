@@ -17,15 +17,13 @@ public class Audio {
     public int location;
     public double duration;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne()
     @JoinColumn(name = "user_email")
-    @JsonManagedReference
-   // @JsonIgnore
     private User user;
 
     public void setUser(User user) {
         this.user = user;
-        user.addAudio(this);
+        //user.addAudio(this);
     }
 
     public Integer getId() {
