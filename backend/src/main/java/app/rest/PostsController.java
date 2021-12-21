@@ -103,10 +103,8 @@ public class PostsController {
     @DeleteMapping("/posts/{id}")
     public ResponseEntity<Posts> deleteUser(@PathVariable int id) {
 
-        Posts post = postRepo.deleteById(id);
-        if(post == null) {
-            throw new PostNotFoundException("id=" + id);
-        }
+        Posts post = postRepo.findById(id);
+        postRepo.delete(post);
         return ResponseEntity.ok(post);
 
     }

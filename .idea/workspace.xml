@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="fixed error backend" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test deleting post on heroku" />
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -237,34 +237,6 @@
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
       <workItem from="1639914161679" duration="5552000" />
-    </task>
-    <task id="LOCAL-00031" summary="second test for pipelining">
-      <created>1638446005778</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1638446005779</updated>
-    </task>
-    <task id="LOCAL-00032" summary="added variable">
-      <created>1638452220063</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1638452220063</updated>
-    </task>
-    <task id="LOCAL-00033" summary="test">
-      <created>1638452267027</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1638452267027</updated>
-    </task>
-    <task id="LOCAL-00034" summary="test 2.0">
-      <created>1638452404545</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1638452404545</updated>
     </task>
     <task id="LOCAL-00035" summary="second try">
       <created>1638452675652</created>
@@ -581,7 +553,35 @@
       <option name="project" value="LOCAL" />
       <updated>1640095541742</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="test">
+      <created>1640095926717</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1640095926717</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fixed deleting post">
+      <created>1640100098589</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1640100098589</updated>
+    </task>
+    <task id="LOCAL-00082" summary="test deleting post on heroku">
+      <created>1640101884949</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1640101884949</updated>
+    </task>
+    <task id="LOCAL-00083" summary="test deleting post on heroku">
+      <created>1640102116600</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1640102116600</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,9 +601,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="quick fix" />
-    <MESSAGE value="test" />
-    <MESSAGE value="last try..." />
     <MESSAGE value="removed try" />
     <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
     <MESSAGE value="updated node version due to error" />
@@ -626,6 +623,9 @@
     <MESSAGE value="fix data recursion by adding annotations" />
     <MESSAGE value="fix cors policy" />
     <MESSAGE value="fixed error backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed error backend" />
+    <MESSAGE value="test" />
+    <MESSAGE value="fixed deleting post" />
+    <MESSAGE value="test deleting post on heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="test deleting post on heroku" />
   </component>
 </project>
