@@ -12,6 +12,7 @@
       <div *ngFor="let post of posts;" (click)="postSelection(post)">
         <app-profile-post
           [selectedPost]="getSelectedPost"
+          (deleteSelected)="onDelete($event)"
           [audioPost]="post">
 
         </app-profile-post>
