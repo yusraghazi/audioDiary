@@ -35,7 +35,7 @@ public class Posts {
     public BigDecimal lat;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "user_email")
+    @JoinColumn(name = "user_email", referencedColumnName = "user_email")
     @JsonManagedReference
     //@JsonIgnore
     private User user;
