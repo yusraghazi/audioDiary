@@ -24,8 +24,8 @@ public class PostsRepositoryJPA implements PostsRepository {
         return namedQuery.getResultList();
     }
 
-    public List findPostByUserId(int userId) {
-        Query query = em.createQuery("select p From Posts p WHERE p.user.admin = ?1").setParameter(1, userId);
+    public List findPostByUserId(String email) {
+        Query query = em.createQuery("select p From Posts p WHERE p.user.email = ?1").setParameter(1, email);
         return query.getResultList();
     }
 
