@@ -6,7 +6,6 @@ import app.models.User;
 import app.repositories.PostsRepository;
 
 import app.repositories.PostsRepositoryJPA;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,8 +26,6 @@ public class PostsController {
     @Autowired
     private PostsRepository postRepo;
 
-    private PostsRepositoryJPA postsPostsRepositoryJPA;
-
 //    @GetMapping("/posts/{id}")
 //    public List<Posts> getPosts(@PathVariable int id) {
 //
@@ -38,13 +35,11 @@ public class PostsController {
 //    }
 
     @PostMapping("/posts")
-    public ResponseEntity<Object> createPost(@RequestBody Posts post) {
+    public ResponseEntity<Posts> createPost(@RequestBody Posts post) {
 
         Posts savedPost = postRepo.save(post);
 
-        URI location = ServletUriComponentsBuilder.
-                fromCurrentRequest().path("/{id}").
-                buildAndExpand(savedPost.getId()).toUri();
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPost.getId()).toUri();
 
         return ResponseEntity.created(location).build();
     }
@@ -91,14 +86,12 @@ public class PostsController {
 //        return ResponseEntity.ok(post);
 //    }
 //
-//    @DeleteMapping("/posts/{id}")
-//    public ResponseEntity<Posts> deleteUser(@PathVariable int id) {
-//
-//        Posts post = postsRepository.deleteById(id);
-//        if(post == null) {
-//            throw new PostNotFoundException("id=" + id);
-//        }
-//        return ResponseEntity.ok(post);
-//
-//    }
+    @DeleteMapping("/posts/{id}")
+    public ResponseEntity<Posts> deleteUser(@PathVariable int id) {
+
+        Posts post = postRepo.findById(id);
+        postRepo.delete(post);
+        return ResponseEntity.ok(post);
+
+    }
 }

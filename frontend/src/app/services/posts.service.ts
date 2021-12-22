@@ -2,7 +2,7 @@ import {ErrorHandler, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Post} from "../models/post";
-import {catchError, map, share} from "rxjs/operators";
+import {catchError, map} from "rxjs/operators";
 import {environment} from "../../environments/environment.staging";
 
 
@@ -46,23 +46,14 @@ export class PostsService {
   restPostPost(postId: number):Observable<Post[]> {
     const url = `${environment.apiUrl}/posts/${postId}`;
     return this.http.post<Post[]>(url, postId);
-  // restPostPost(postId: number):Observable<Post[]> {
-  //   const url = `http://localhost:8084/posts/${postId}`;
-  //   return this.http.post<Post>(url, postId);
+    // restPostPost(postId: number):Observable<Post[]> {
+    //   const url = `http://localhost:8084/posts/${postId}`;
+    //   return this.http.post<Post>(url, postId);
   }
 
-  restCreateNewPost(post: any) {
-    const observable = this.http.post(`${environment.apiUrl}/posts`,
-      {title: post.title, description: post.description}).pipe(share());
-
-    observable.subscribe((data) => {
-
-      },
-      (err) => {
-        console.log('creation error', err);
-      });
-
-    return observable;
+  restCreateNewPost(post: Post):Observable<Post>{
+    const url = `${environment.apiUrl}/posts`;
+    return this.http.post<Post>(url, post);
   }
 
   restPutPost(post: Post):Observable<Post[]> {
@@ -71,9 +62,9 @@ export class PostsService {
     return this.http.put<Post[]>(url, post);
   }
 
-  restDeletePosts(postId: number):void {
+  restDeletePosts(postId: number):Observable<Post> {
     const url = `${environment.apiUrl}/posts/${postId}`;
-    this.http.delete<Post[]>(url);
+     return this.http.delete<Post>(url);
   }
 
 }

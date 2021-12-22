@@ -21,7 +21,7 @@ export class CommentsService {
 
   restPostComment(comment: SingleComment):Observable<SingleComment> {
     const url = `${environment.apiUrl}/comments`;
-    return this.http.post<SingleComment>(url, comment.id);
+    return this.http.post<SingleComment>(url, comment);
   }
 
   restFindCommentByPostId(postId: number):Observable<SingleComment[]> {

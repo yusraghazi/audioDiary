@@ -19,7 +19,7 @@
           <div class="form-group">
             <label for="resetPassword">username</label>
             <input type="text" class="form-control" id="resetPassword" name="name"
-                   [(ngModel)]="user.resetPassword" #nameComponent="ngModel" required >
+                   [(ngModel)]="user.passwordReset" #nameComponent="ngModel" required >
             <div *ngIf="!nameComponent.valid && nameComponent.touched" class="alert alert-warning">Please enter a valid name</div>
           </div>
 
@@ -34,7 +34,7 @@
           <div class="form-group">
             <label for="inputPassword">Password</label>
             <input type="password" class="form-control" id="inputPassword" name="password"
-                   [(ngModel)]="user.password" #passwordComponent="ngModel" required >
+                   [(ngModel)]="user.encodedPassword" #passwordComponent="ngModel" required >
             <div *ngIf="!passwordComponent.valid && passwordComponent.touched" class="alert alert-warning">Please enter a valid password</div>
           </div>
 

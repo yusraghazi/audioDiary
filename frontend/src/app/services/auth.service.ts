@@ -29,7 +29,7 @@ export class AuthService {
     // using pipe(share()) to prevent multiple submissions per subscriber (observables are cold)
     // to find out more see https://blog.strongbrew.io/how-share()-can-reduce-network-requests/
     const observable = this.httpClient.post(`${environment.apiUrl}/auth`,
-      {email: user.email, encoded_password: user.encodedPassword}, { observe: 'response' }).pipe(share());
+      {email: user.email, password: user.encodedPassword}, { observe: 'response' }).pipe(share());
 
     observable.subscribe(data => {
 
@@ -56,7 +56,7 @@ export class AuthService {
     // using pipe(share()) to prevent multiple submissions per subscriber (observables are cold)
     // to find out more see https://blog.strongbrew.io/how-share()-can-reduce-network-requests/
     const observable = this.httpClient.post(`${environment.apiUrl}/auth/users`,
-      {email: user.email, name: user.name, encoded_password: user.password}).pipe(share());
+      {email: user.email, name: user.name, encoded_password: user.encodedPassword}).pipe(share());
 
     observable.subscribe((data) => {
 

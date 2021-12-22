@@ -1,19 +1,16 @@
+import {User} from "./user";
+import {Post} from "./post";
+
 export class SingleComment {
-  id: number | undefined
-  postId: number | undefined;
-  user: string | undefined;
+  id: number | undefined;
+  post: Post | undefined;
+  user: User | undefined;
   description: string | undefined;
-  // image: string | undefined;
-
-  // constructor(user: string | undefined, description: string | undefined) {
-  //   this.user = user;
-  //   this.description = description;
-  // }
 
 
-  constructor(id: number | undefined, postId: number | undefined, user: string | undefined, description: string | undefined) {
+  constructor(id: number | undefined, post: Post | undefined, user: User | undefined, description: string | undefined) {
     this.id = id;
-    this.postId = postId;
+    this.post = post;
     this.user = user;
     this.description = description;
   }

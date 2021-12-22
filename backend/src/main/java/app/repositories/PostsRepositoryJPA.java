@@ -24,8 +24,8 @@ public class PostsRepositoryJPA implements PostsRepository {
         return namedQuery.getResultList();
     }
 
-    public List findPostByUserId(String email) {
-        Query query = em.createQuery("select p From Posts p WHERE p.user.email = ?1").setParameter(1, email);
+    public List findPostByUserId(int userId) {
+        Query query = em.createQuery("select p From Posts p WHERE p.user.admin = ?1").setParameter(1, userId);
         return query.getResultList();
     }
 
@@ -40,11 +40,9 @@ public class PostsRepositoryJPA implements PostsRepository {
     }
 
     @Override
-    public Posts deleteById(int id) {
-        Posts post = findById(id);
+    public void delete(Posts post) {
         Posts toRemove = em.merge(post);
         em.remove(toRemove);
-        return toRemove;
     }
 
 

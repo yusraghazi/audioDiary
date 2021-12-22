@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
+import {PostsService} from "../../../services/posts.service";
 
 @Component({
   selector: 'app-profile-post',
@@ -9,15 +10,12 @@ import {Theme} from "../../../enums/theme";
 })
 export class ProfilePostComponent implements OnInit {
   @Input() selectedPost: Post | undefined;
-  @Input() selectedFavoritePost: Post | undefined;
 
   @Input() audioPost: Post
-  // isShown: boolean;
 
-  @Output() deletedSelected = new EventEmitter<Post>();
-  @Output() deletedFavoriteSelected = new EventEmitter<Post>();
+  @Output() deleteSelected = new EventEmitter<Post>();
 
-  constructor() { }
+  constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
 
@@ -52,12 +50,17 @@ export class ProfilePostComponent implements OnInit {
   }
 
   toRemovePost(){
-    this.deletedSelected.emit(this.selectedPost);
+    this.deleteSelected.emit(this.selectedPost);
+    // const postId = this.selectedPost.id;
+    // console.log(postId);
+    // this.postsService.restDeletePosts(postId).subscribe(
+    //   (response) =>{
+    //     console.log(response);
+    //   },
+    //   (error)=>{
+    //     console.log(error);
+    //   }
+    // );
   }
-
-  toRemoveFavoritePost(){
-    this.deletedFavoriteSelected.emit(this.selectedFavoritePost);
-  }
-
 
 }

@@ -96,21 +96,10 @@ private childparamsSub: Subscription;
     }
   }
 
-  onSubmit(){
-    // this.newPost.user = this.auth.getUser();
-    this.newPost.title = "hallo";
-    this.newPost.description = "hiii";
-    // this.newPost.theme = "Theme.SUN";
-    // this.newPost.img = "amazon.jpg";
-    // this.newPost.isLiked = false;
-    // this.newPost.lat = 5.66948;
-    // this.newPost.lng = 64.74320;
-    // this.newPost.audio_id = 2;
-
+  postButton(){
     this.postService.restCreateNewPost(this.newPost).subscribe(
       (data) => {
-        //this.newPost = data;
-        console.log(data);
+       console.log(data);
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );

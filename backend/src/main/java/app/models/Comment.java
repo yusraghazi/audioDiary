@@ -1,6 +1,7 @@
 package app.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 
@@ -9,18 +10,26 @@ import javax.persistence.*;
 public class Comment {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
+    @ManyToOne()
+    @JoinColumn(name = "post_id")
     private Posts post;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
+    @ManyToOne()
     private User user;
 
     private String description;
+
+    public Comment() {}
+
+    public Comment(int id, Posts post, User user, String description) {
+        this.id = id;
+        //this.post = post;
+        //this.user = user;
+        this.description = description;
+    }
 
     public int getId() {
         return id;
@@ -34,17 +43,22 @@ public class Comment {
         return post;
     }
 
-    public void setPost(Posts post) {
-        this.post = post;
-    }
-
     public User getUser() {
         return user;
+    }
+
+    public void setPost(Posts post) {
+        this.post = post;
     }
 
     public void setUser(User user) {
         this.user = user;
     }
+
+    //
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
     public String getDescription() {
         return description;

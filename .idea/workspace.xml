@@ -51,6 +51,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
@@ -58,7 +62,6 @@
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
@@ -275,6 +278,9 @@
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
       <updated>1638467901996</updated>
+      <workItem from="1640109707172" duration="16680000" />
+      <workItem from="1640171235723" duration="2099000" />
+      <workItem from="1640175220673" duration="3608000" />
     </task>
     <task id="LOCAL-00039" summary="test">
       <created>1638469260377</created>
@@ -592,6 +598,77 @@
       <updated>1640179121414</updated>
     </task>
     <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00078" summary="fix cors policy">
+      <created>1640095176697</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1640095176697</updated>
+    </task>
+    <task id="LOCAL-00079" summary="fixed error backend">
+      <created>1640095541742</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1640095541742</updated>
+    </task>
+    <task id="LOCAL-00080" summary="test">
+      <created>1640095926717</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1640095926717</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fixed deleting post">
+      <created>1640100098589</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1640100098589</updated>
+    </task>
+    <task id="LOCAL-00082" summary="test deleting post on heroku">
+      <created>1640101884949</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1640101884949</updated>
+    </task>
+    <task id="LOCAL-00083" summary="test deleting post on heroku">
+      <created>1640102116600</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1640102116600</updated>
+    </task>
+    <task id="LOCAL-00084" summary="trying to fix cors mapping issue">
+      <created>1640102640107</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1640102640107</updated>
+    </task>
+    <task id="LOCAL-00085" summary="last try">
+      <created>1640103116592</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1640103116592</updated>
+    </task>
+    <task id="LOCAL-00086" summary="worked on post comment">
+      <created>1640123459193</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1640123459193</updated>
+    </task>
+    <task id="LOCAL-00087" summary="worked on post request post">
+      <created>1640127409854</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1640127409854</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -645,6 +722,16 @@
     <MESSAGE value="worked on coordinates in map" />
     <MESSAGE value="next test for backend data posts" />
     <MESSAGE value="fix data recursion by adding annotations" />
+    <MESSAGE value="fix cors policy" />
+    <MESSAGE value="fixed error backend" />
+    <MESSAGE value="test" />
+    <MESSAGE value="fixed deleting post" />
+    <MESSAGE value="test deleting post on heroku" />
+    <MESSAGE value="trying to fix cors mapping issue" />
+    <MESSAGE value="last try" />
+    <MESSAGE value="worked on post comment" />
+    <MESSAGE value="worked on post request post" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on post request post" />
     <MESSAGE value="added function to get theme" />
     <MESSAGE value="worked on map overlay" />
     <MESSAGE value="tried to work with cloudinary" />
