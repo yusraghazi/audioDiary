@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="tried to work on post methods comment and post">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on post request post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/comments/comments.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/singleComment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/singleComment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -35,7 +37,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="cloudinary" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,9 +52,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryMock.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
@@ -241,35 +243,10 @@
       <workItem from="1639524345941" duration="588000" />
       <workItem from="1639572607881" duration="5517000" />
       <workItem from="1639914161679" duration="5552000" />
+      <workItem from="1640109707172" duration="16680000" />
+      <workItem from="1640171235723" duration="2099000" />
+      <workItem from="1640175220673" duration="11094000" />
       <workItem from="1640092027539" duration="1211000" />
-    </task>
-    <task id="LOCAL-00031" summary="second test for pipelining">
-      <created>1638446005778</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1638446005779</updated>
-    </task>
-    <task id="LOCAL-00032" summary="added variable">
-      <created>1638452220063</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1638452220063</updated>
-    </task>
-    <task id="LOCAL-00033" summary="test">
-      <created>1638452267027</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1638452267027</updated>
-    </task>
-    <task id="LOCAL-00034" summary="test 2.0">
-      <created>1638452404545</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1638452404545</updated>
     </task>
     <task id="LOCAL-00035" summary="second try">
       <created>1638452675652</created>
@@ -586,7 +563,35 @@
       <option name="project" value="LOCAL" />
       <updated>1640039678908</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00085" summary="last try">
+      <created>1640103116592</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1640103116592</updated>
+    </task>
+    <task id="LOCAL-00086" summary="worked on post comment">
+      <created>1640123459193</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1640123459193</updated>
+    </task>
+    <task id="LOCAL-00087" summary="worked on post request post">
+      <created>1640127409854</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1640127409854</updated>
+    </task>
+    <task id="LOCAL-00088" summary="worked on qol and update user with taner and altaaf">
+      <created>1640179121413</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1640179121414</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,6 +649,16 @@
     <MESSAGE value="worked on map overlay" />
     <MESSAGE value="tried to work with cloudinary" />
     <MESSAGE value="tried to work on post methods comment and post" />
-    <option name="LAST_COMMIT_MESSAGE" value="tried to work on post methods comment and post" />
+    <MESSAGE value="fix cors policy" />
+    <MESSAGE value="fixed error backend" />
+    <MESSAGE value="test" />
+    <MESSAGE value="fixed deleting post" />
+    <MESSAGE value="test deleting post on heroku" />
+    <MESSAGE value="trying to fix cors mapping issue" />
+    <MESSAGE value="last try" />
+    <MESSAGE value="worked on post comment" />
+    <MESSAGE value="worked on post request post" />
+    <MESSAGE value="worked on qol and update user with taner and altaaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on qol and update user with taner and altaaf" />
   </component>
 </project>
