@@ -5,6 +5,7 @@ import app.exceptions.UserNotFoundException;
 import app.models.User;
 import app.repositories.UserRepository;
 import app.security.JWTokenInfo;
+import app.security.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,9 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserRepository userRepo;
+
+    @Autowired
+    private PasswordEncoder encoder;
 
     @GetMapping("/users")
     public List<User> getAllUsers() {
@@ -48,12 +52,15 @@ public class UserController {
     public ResponseEntity<Object> updateUser(@RequestBody User user) {
         User userById = userRepo.findByEmail(user.getEmail());
 
+        String password = encoder.encode(user.getEncodedPassword());
+        user.setEncodedPassword(password);
         if(userById == null) {
             throw new UserNotFoundException("id = " + user.getEmail());
         }
 
         userRepo.save(user);
         return ResponseEntity.ok().build();
+
     }
 
 

@@ -95,7 +95,7 @@ public class AuthenticationController {
             throws AuthenticationException {
 
         String userEmail = signOnInfo.get("email").asText();
-        String password = signOnInfo.get("password").asText();
+        String password = signOnInfo.get("encodedPassword").asText();
 
         // Authenticate the user using the credentials provided
         User user = userRepo.findByEmail(userEmail);

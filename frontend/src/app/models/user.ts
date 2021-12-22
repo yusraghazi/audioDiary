@@ -1,9 +1,10 @@
 export class User {
   email: string;
   name: string;
+  encodedPassword: string;
   admin: boolean;
   username: string;
-  resetPassword: string;
-  password: string;
+  passwordReset: string;
+  verified: boolean;
   exp: number;
 }

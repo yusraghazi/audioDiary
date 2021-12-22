@@ -1,3 +1,4 @@
+<div style="height: 150px"></div>
 
 <h3>Profile Settings</h3>
 <div class="profile-settings-container">
@@ -7,25 +8,53 @@
   </div>
 
   <hr class="profile-hr">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3">
+      </div>
+      <div class="col-sm-6">
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
 
-  <form>
-    <label for="userName">User name</label>
-    <input type="text" id="userName" name="userName" placeholder="Your name..">
+          <div class="form-group">
+            <label for="userName">username</label>
+            <input type="text" class="form-control" id="userName" name="name"
+                   [(ngModel)]="user.username" #nameComponent="ngModel" required>
+            <div *ngIf="!nameComponent.valid && nameComponent.touched" class="alert alert-warning">Please enter a valid
+              name
+            </div>
+          </div>
 
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your email..">
 
-    <label for="con-email">Confirm Email</label>
-    <input type="text" id="con-email" name="con-email" placeholder="Confirm Your email..">
+          <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="name" name="name"
+                   [(ngModel)]="user.name" #nameComponent="ngModel" required>
+            <div *ngIf="!nameComponent.valid && nameComponent.touched" class="alert alert-warning">Please enter a valid
+              name
+            </div>
+          </div>
 
-    <label for="password">Change password</label>
-    <input type="text" id="password" name="password" placeholder="create new password">
 
-    <input routerLink="/feedview" class="submit-profile" type="submit" value="Submit">
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" id="inputPassword" name="password"
+                   [(ngModel)]="user.encodedPassword" #passwordComponent="ngModel" required>
+            <div *ngIf="!passwordComponent.valid && passwordComponent.touched" class="alert alert-warning">Please enter
+              a valid password
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Update</button>
+        </form>
 
-    <input routerLink="/feedview" class="cancel-submit" type="submit" value="cancel">
-
-  </form>
+      </div>
+      <div class="col-sm-3">
+      </div>
+    </div>
+    <hr>
+    <div class="row>">
+      <div class="col">
+        <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div style="height: 150px"></div>
