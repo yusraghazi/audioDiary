@@ -52,10 +52,9 @@
 
         <div class="form-group">
           <label for="inputEmail">Password</label>
-          <input type="password" class="form-control" id="inputPassword" name="password" [(ngModel)]="user.encodedPassword"
-                 #passwordComponent="ngModel" required>
-          <div *ngIf="!passwordComponent.valid && passwordComponent.touched" class="alert alert-warning">Please
-            enter a valid password</div>
+          <input type="password" class="form-control" id="inputPassword" name="password"
+                 [(ngModel)]="user.encodedPassword" #passwordComponent="ngModel" required >
+          <div *ngIf="!passwordComponent.valid && passwordComponent.touched" class="alert alert-warning">Please enter a valid password</div>
         </div>
 
         <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Login</button>
