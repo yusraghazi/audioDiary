@@ -7,6 +7,7 @@ import {Router} from "@angular/router";
 import * as mapboxgl from "mapbox-gl";
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+import {User} from "../../models/user";
 import {AuthService} from "../../services/auth.service";
 
 @Component({

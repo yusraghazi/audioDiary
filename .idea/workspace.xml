@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="updated node version due to error">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on qol and update user with taner and altaaf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" afterDir="false" />
+>>>>>>> master
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -35,7 +45,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="map" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,13 +59,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
@@ -242,14 +252,8 @@
       <workItem from="1639914161679" duration="5552000" />
       <workItem from="1640109707172" duration="16680000" />
       <workItem from="1640171235723" duration="2099000" />
-      <workItem from="1640175220673" duration="3608000" />
-    </task>
-    <task id="LOCAL-00039" summary="test">
-      <created>1638469260377</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1638469260377</updated>
+      <workItem from="1640175220673" duration="11094000" />
+      <workItem from="1640092027539" duration="1211000" />
     </task>
     <task id="LOCAL-00040" summary="removed variables bc pipelining is not working anymore">
       <created>1638470250828</created>
@@ -531,6 +535,34 @@
       <option name="project" value="LOCAL" />
       <updated>1640095541742</updated>
     </task>
+    <task id="LOCAL-00085" summary="last try">
+      <created>1640103116592</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1640103116592</updated>
+    </task>
+    <task id="LOCAL-00086" summary="worked on post comment">
+      <created>1640123459193</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1640123459193</updated>
+    </task>
+    <task id="LOCAL-00087" summary="worked on post request post">
+      <created>1640127409854</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1640127409854</updated>
+    </task>
+    <task id="LOCAL-00088" summary="worked on qol and update user with taner and altaaf">
+      <created>1640179121413</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1640179121414</updated>
+    </task>
     <task id="LOCAL-00080" summary="test">
       <created>1640095926717</created>
       <option name="number" value="00080" />
@@ -566,27 +598,6 @@
       <option name="project" value="LOCAL" />
       <updated>1640102640107</updated>
     </task>
-    <task id="LOCAL-00085" summary="last try">
-      <created>1640103116592</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1640103116592</updated>
-    </task>
-    <task id="LOCAL-00086" summary="worked on post comment">
-      <created>1640123459193</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1640123459193</updated>
-    </task>
-    <task id="LOCAL-00087" summary="worked on post request post">
-      <created>1640127409854</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1640127409854</updated>
-    </task>
     <option name="localTasksCounter" value="88" />
     <servers />
   </component>
@@ -598,7 +609,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="map" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -607,6 +630,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="test" />
+    <MESSAGE value="last try..." />
+    <MESSAGE value="removed try" />
+    <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
+    <MESSAGE value="updated node version due to error" />
+    <MESSAGE value="test 1" />
     <MESSAGE value="test 2" />
     <MESSAGE value="test 3" />
     <MESSAGE value="test 4" />
@@ -632,6 +661,20 @@
     <MESSAGE value="last try" />
     <MESSAGE value="worked on post comment" />
     <MESSAGE value="worked on post request post" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on post request post" />
+    <MESSAGE value="added function to get theme" />
+    <MESSAGE value="worked on map overlay" />
+    <MESSAGE value="tried to work with cloudinary" />
+    <MESSAGE value="tried to work on post methods comment and post" />
+    <MESSAGE value="fix cors policy" />
+    <MESSAGE value="fixed error backend" />
+    <MESSAGE value="test" />
+    <MESSAGE value="fixed deleting post" />
+    <MESSAGE value="test deleting post on heroku" />
+    <MESSAGE value="trying to fix cors mapping issue" />
+    <MESSAGE value="last try" />
+    <MESSAGE value="worked on post comment" />
+    <MESSAGE value="worked on post request post" />
+    <MESSAGE value="worked on qol and update user with taner and altaaf" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on qol and update user with taner and altaaf" />
   </component>
 </project>

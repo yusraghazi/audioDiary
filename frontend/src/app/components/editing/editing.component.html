@@ -17,8 +17,8 @@
             <i class="bi bi-share-fill"></i>
           </div>
         </div>
-        <h5 class="postCardTitle">{{editTitle}}</h5>
-        <p class="card-text">{{editDescription}}</p>
+        <h5 class="postCardTitle">{{newPost.title}}</h5>
+        <p class="card-text">{{newPost.description}}</p>
       </div>
       <div class="commentsPart">
       </div>
@@ -64,7 +64,7 @@
 
       <div class="buttons">
         <button class="editButtons" id="discardButton" (click)="backButton()">Go back</button>
-        <button class="editButtons" id="postButton" (click)="postButton()">post</button>
+        <button type= "submit" class="editButtons" id="postButton" (click)="postButton()">post</button>
       </div>
     </div>
   </div>

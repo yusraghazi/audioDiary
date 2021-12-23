@@ -8,9 +8,9 @@ public interface PostsRepository {
     List<Posts> findAll();
     Posts findById(int id);
 
-    List findPostByUserId(int userId);
+    List findPostByUserId(String email);
 
-    Posts save(Posts aEvent);
+    Posts save(Posts post);
 
     void delete(Posts post);
 }

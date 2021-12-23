@@ -44,7 +44,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'feedview', component: FeedviewComponent},
   {
-    path: 'mapview', component: MapviewComponent, canActivate: [AuthGuardLoggedinService], children: [
+    path: 'mapview', component: MapviewComponent, children: [
       {path: ":id", component: SingleAudioComponent}
     ]
   },

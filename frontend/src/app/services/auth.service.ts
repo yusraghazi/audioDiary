@@ -24,7 +24,7 @@ export class AuthService {
   }
 
 
-  auth(user: any) {
+  auth(user: User) {
 
     // using pipe(share()) to prevent multiple submissions per subscriber (observables are cold)
     // to find out more see https://blog.strongbrew.io/how-share()-can-reduce-network-requests/
@@ -52,7 +52,7 @@ export class AuthService {
     return observable;
   }
 
-  create(user: any) {
+  create(user: User) {
     // using pipe(share()) to prevent multiple submissions per subscriber (observables are cold)
     // to find out more see https://blog.strongbrew.io/how-share()-can-reduce-network-requests/
     const observable = this.httpClient.post(`${environment.apiUrl}/auth/users`,
