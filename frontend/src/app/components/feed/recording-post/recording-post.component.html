@@ -1,10 +1,11 @@
 
 <div class="card"  [ngStyle]="{'border-color':audioPost.theme, 'box-shadow':'2.4px 4.8px 4.8px'+audioPost.theme}">
   <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-  <img class="card-img-top" src="{{audioPost.img}}" alt="Card image cap">
+  <img style="min-height: 200px" class="card-img-top" src="{{audioPost.img}}" alt="Card image cap">
   <div class="card-body">
     <div class="headerBody">
-      <p class="card-username">@{{audioPost.user.username}} {{audioPost.user.name}}</p>
+<!--      <p class="card-username">@{{audioPost.user.username}} {{audioPost.user.name}}</p>-->
+      <p class="card-username">@user</p>
       <div class="icons">
         <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
         <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true" class="bi bi-heart"></i>
