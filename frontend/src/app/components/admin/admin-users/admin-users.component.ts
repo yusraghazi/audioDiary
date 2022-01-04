@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import Chart from 'chart.js/auto';
-import { getRelativePosition } from 'chart.js/helpers';
+import {PostsService} from "../../../services/posts.service";
+import {Post} from "../../../models/post";
 
 @Component({
   selector: 'app-admin-users',
@@ -9,9 +10,22 @@ import { getRelativePosition } from 'chart.js/helpers';
 })
 export class AdminUsersComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  posts: Post[];
+
+  constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
+    this.getPosts();
+  }
+
+  getPosts() {
+    this.postsService.getReportedPosts().subscribe(
+      (data) => {
+        // @ts-ignore
+        this.posts = data; console.log(data);
+      },
+      (error) => console.log("Error: " + error.status + " - " + error.error)
+    );
   }
 
   ngAfterViewInit() {

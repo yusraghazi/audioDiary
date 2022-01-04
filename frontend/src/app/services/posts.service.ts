@@ -28,6 +28,49 @@ export class PostsService {
       }));
   }
 
+  // getTopFiveThemes():Observable<any> {
+  //   return this.http.get<any[]>(`${environment.apiUrl}/posts`).pipe(
+  //     map( (postCards: any[]) => {
+  //       const themes: String[] = [];
+  //       let strArray = postCards;
+  //       let findDuplicates = (arr: any[]) => arr.filter((item, index) => arr.indexOf(item) != index)
+  //
+  //       return new Set(findDuplicates(strArray));
+  //     }));
+  // }
+
+  getTopFiveThemes():any {
+    let strArray = [ "q", "q", "w", "w", "w", "e", "i", "u", "r", "u", "u", "u"];
+    var count = {};
+    strArray.forEach(function(i) { // @ts-ignore
+      count[i] = (count[i]||0) + 1;});
+
+    // @ts-ignore
+    var result = Object.entries(count);
+    //let findDuplicates = (arr: any[]) => arr.filter((item, index) => arr.indexOf(item) != index)
+    //let set = new Set(findDuplicates(strArray));
+    //let array = Array.from(set);
+    result.sort((a: any, b: any) => {
+      return b[1] - a[1];
+    });
+    return result.slice(0, 5);
+  }
+
+  getReportedPosts():Observable<Post[]> {
+    return this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
+      map( (postCards: any[]) => {
+        const posts: Post[] = [];
+        for (const post of postCards) {
+          if (post.amountReport > 0) {
+            posts.push(post);
+          }
+        }
+        return posts.sort((a: Post, b: Post) => {
+          return b.amountReport - a.amountReport;
+        });
+      }));
+  }
+
   restGetPost(postId: number):Observable<Post> {
     return this.http.get<Post>(`${environment.apiUrl}/posts/${postId}`);
   }

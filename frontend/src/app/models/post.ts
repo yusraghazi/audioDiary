@@ -9,6 +9,7 @@ export class Post {
   private _img:string | null;
   private _theme: string| null;
   private _isLiked: boolean | null;
+  private _amountReport: number | null;
   private _lng: number | null;
   private _lat: number | null;
   private _audio: Audio | null;
@@ -120,6 +121,15 @@ export class Post {
 
   set audio(value: Audio | null) {
     this._audio = value;
+  }
+
+
+  get amountReport(): number | null {
+    return this._amountReport;
+  }
+
+  set amountReport(value: number | null) {
+    this._amountReport = value;
   }
 }
 

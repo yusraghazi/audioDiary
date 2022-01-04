@@ -1,5 +1,6 @@
 <!--<div class="footer">-->
-  <div class="footer" *ngIf="router.url !== '/' && router.url !== '/login' && router.url !== '/register'">
+  <div class="footer" *ngIf="router.url !== '/' && router.url !== '/login' && router.url !== '/register'
+  && router.url !== '/admin' && router.url !== '/admin/location' && router.url !== '/admin/users'">
 <!--  <span class="dot"></span>-->
   <div *ngIf="showRecordBtn">
     <a><img routerLink="/rec-done"  class="footer-rec-button" id="footerLeg" [src]="value" alt="recording button" (click)="startRecording()"></a>
