@@ -11,7 +11,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class AudioRepositoryJPA implements JPARepository<Audio> {
+public class AudioRepositoryJPA implements AudioRepository {
     @PersistenceContext
     EntityManager em;
 

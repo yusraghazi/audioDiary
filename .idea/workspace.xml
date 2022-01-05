@@ -4,24 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on qol and update user with taner and altaaf">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on adding hashtags instead of themes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" afterDir="false" />
->>>>>>> master
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/AudioRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/AudioRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application-staging-pg.properties" afterDir="false" />
     </list>
-    <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
-    <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +36,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="admin" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -254,6 +245,8 @@
       <workItem from="1640171235723" duration="2099000" />
       <workItem from="1640175220673" duration="11094000" />
       <workItem from="1640092027539" duration="1211000" />
+      <workItem from="1641238932180" duration="18031000" />
+      <workItem from="1641380700145" duration="4166000" />
     </task>
     <task id="LOCAL-00040" summary="removed variables bc pipelining is not working anymore">
       <created>1638470250828</created>
@@ -556,12 +549,12 @@
       <option name="project" value="LOCAL" />
       <updated>1640127409854</updated>
     </task>
-    <task id="LOCAL-00088" summary="worked on qol and update user with taner and altaaf">
-      <created>1640179121413</created>
+    <task id="LOCAL-00088" summary="worked on adding hashtags instead of themes">
+      <created>1641335129498</created>
       <option name="number" value="00088" />
       <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
-      <updated>1640179121414</updated>
+      <updated>1641335129498</updated>
     </task>
     <task id="LOCAL-00080" summary="test">
       <created>1640095926717</created>
@@ -598,7 +591,7 @@
       <option name="project" value="LOCAL" />
       <updated>1640102640107</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -630,8 +623,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test" />
-    <MESSAGE value="last try..." />
     <MESSAGE value="removed try" />
     <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
     <MESSAGE value="updated node version due to error" />
@@ -675,6 +666,7 @@
     <MESSAGE value="worked on post comment" />
     <MESSAGE value="worked on post request post" />
     <MESSAGE value="worked on qol and update user with taner and altaaf" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on qol and update user with taner and altaaf" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on adding hashtags instead of themes" />
   </component>
 </project>

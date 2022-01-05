@@ -17,8 +17,8 @@ import java.util.List;
 
 @RestController
 public class PostsController {
-    @Autowired
-    private UserController userResource;
+//    @Autowired
+//    private UserController userResource;
 
     @Autowired
     private AudioController audioResource;
