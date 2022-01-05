@@ -40,6 +40,7 @@ import { NgAudioRecorderModule } from 'ng-audio-recorder';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptorService} from './services/auth.interceptor';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import {FileUploadModule} from "ng2-file-upload";
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,20 +71,21 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
      SingleAudioComponent,
      WelcomeComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgbModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatIconModule,
-    NgAudioRecorderModule,
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        NgbModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        MatIconModule,
+        NgAudioRecorderModule,
+        ReactiveFormsModule,
+        FileUploadModule
+    ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }
   ],
