@@ -11,6 +11,7 @@ import {User} from "../../models/user";
 import {AuthService} from "../../services/auth.service";
 import {FileUploader, FileUploaderOptions, ParsedResponseHeaders} from "ng2-file-upload";
 import {Cloudinary} from "@cloudinary/angular-5.x";
+import {HttpClientModule} from "@angular/common/http";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -33,14 +34,15 @@ private childparamsSub: Subscription;
   @Input()
   responses: Array<any>;
 
+  private cloudinary: Cloudinary
+
   public hasBaseDropZoneOver: boolean = false;
   public uploader: FileUploader;
   private title: string;
 
   constructor(private postService: PostsService, private route: Router, private auth: AuthService,
-              private cloudinary: Cloudinary,
               private zone: NgZone,
-              private http: HttpClient) {
+              public http: HttpClient) {
     this.responses = [];
     this.title = '';
   }
@@ -172,7 +174,7 @@ private childparamsSub: Subscription;
         {
           file: item.file,
           status,
-          data: JSON.parse(response)
+          data: JSON.parse(JSON.stringify(response))
         }
       );
 
@@ -196,7 +198,7 @@ private childparamsSub: Subscription;
   // See also https://support.cloudinary.com/hc/en-us/articles/202521132-How-to-delete-an-image-from-the-client-side-
   deleteImage = function (this: any, data: any, index: number) {
     const url = `https://api.cloudinary.com/v1_1/${this.cloudinary.config().cloud_name}/delete_by_token`;
-    const headers = new Headers({ 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' });
+    const headers = new Headers({ 'Content-Type': 'blob', 'X-Requested-With': 'XMLHttpRequest' });
     const options = { headers: headers };
     const body = {
       token: data.delete_token

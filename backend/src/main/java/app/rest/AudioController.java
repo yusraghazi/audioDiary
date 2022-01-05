@@ -30,11 +30,6 @@ public class AudioController {
     @Autowired
     private AudioRepository audioRepository;
 
-    Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
-            "cloud_name", "hogeschool-van-amsterdam",
-            "api_key", "472636194661479",
-            "api_secret", "W4WFM4f4Jy7AAH3ThFR-L0z_qak"));
-
 //    @PostMapping("/users/{id}/audios")
 //    @Transactional
 //    public ResponseEntity<Object> createAudio(@RequestParam(name = "fail",required = false, defaultValue = "false") boolean shouldFail,
@@ -88,17 +83,6 @@ public class AudioController {
 ////            return "upload";
 ////        }
 //    }
-
-        @PostMapping("/posts/{id}/audio")
-    public ResponseEntity<Audio> postAudio(@PathVariable int postId, @RequestBody Audio audio) throws IOException {
-        Audio savedAudio = audioRepository.save(audio);
-        cloudinary.uploader().upload(new File(String.valueOf(savedAudio)),
-                ObjectUtils.asMap("public_id", postId));
-
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedAudio.getId()).toUri();
-
-        return ResponseEntity.created(location).build();
-    }
 
     @GetMapping("/audios/{id}")
     public Audio getAudioById(
