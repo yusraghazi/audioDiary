@@ -11,21 +11,11 @@ import {Post} from "../../../models/post";
 export class AdminUsersComponent implements OnInit, AfterViewInit {
 
   posts: Post[];
+  popularPosts: any;
 
   constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
-    this.getPosts();
-  }
-
-  getPosts() {
-    this.postsService.getReportedPosts().subscribe(
-      (data) => {
-        // @ts-ignore
-        this.posts = data; console.log(data);
-      },
-      (error) => console.log("Error: " + error.status + " - " + error.error)
-    );
   }
 
   ngAfterViewInit() {
@@ -60,14 +50,17 @@ export class AdminUsersComponent implements OnInit, AfterViewInit {
       }
     });
 
+    this.popularPosts = this.postsService.getTopFiveThemes()
+    console.log(this.popularPosts);
+
     // @ts-ignore
     const myChart2 = new Chart(ctx2, {
       type: 'doughnut',
       data: {
-        labels: ['Nature', 'City', 'Music', 'Urban'],
+        labels: [this.popularPosts[0][0], this.popularPosts[1][0], this.popularPosts[2][0], this.popularPosts[3][0], this.popularPosts[4][0]],
         datasets: [{
           label: 'User type',
-          data: [8203, 786, 278, 3330],
+          data: [this.popularPosts[1][0], this.popularPosts[2][0], this.popularPosts[3][0], this.popularPosts[4][0], this.popularPosts[5][0]],
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',

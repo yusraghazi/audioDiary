@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on mapview">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="further implementation of cloudinary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -177,11 +175,11 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="JavaScript Debug.admin-users.component.html" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.start (1)" />
       <item itemvalue="Spring Boot.BackendApplication" />
-      <item itemvalue="JavaScript Debug.admin-users.component.html" />
     </list>
     <recent_temporary>
       <list>
@@ -257,20 +255,6 @@
       <workItem from="1640175220673" duration="11094000" />
       <workItem from="1640092027539" duration="1211000" />
       <workItem from="1641238932180" duration="17922000" />
-    </task>
-    <task id="LOCAL-00040" summary="removed variables bc pipelining is not working anymore">
-      <created>1638470250828</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1638470250828</updated>
-    </task>
-    <task id="LOCAL-00041" summary="last test">
-      <created>1638470337830</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1638470337830</updated>
     </task>
     <task id="LOCAL-00042" summary="last try">
       <created>1638470883844</created>
@@ -601,7 +585,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640102640107</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00089" summary="worked on cloudinary server side">
+      <created>1641404242563</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1641404242563</updated>
+    </task>
+    <task id="LOCAL-00090" summary="further implementation of cloudinary">
+      <created>1641408542533</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1641408542534</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,6 +676,9 @@
     <MESSAGE value="worked on post comment" />
     <MESSAGE value="worked on post request post" />
     <MESSAGE value="worked on qol and update user with taner and altaaf" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
     <option name="LAST_COMMIT_MESSAGE" value="worked on qol and update user with taner and altaaf" />
   </component>
 </project>

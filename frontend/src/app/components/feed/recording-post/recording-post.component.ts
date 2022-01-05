@@ -13,7 +13,7 @@ export class RecordingPostComponent implements OnInit {
   @Input()
   audioPost: Post
   isShown: boolean;
-  popularThemes: String[];
+  popularThemes: [string, unknown][];
   theme: String;
 
   constructor(private postsService: PostsService) {
@@ -48,9 +48,8 @@ export class RecordingPostComponent implements OnInit {
 
   }
 
-  getMostPopularThemes(): String[] {
-    this.popularThemes = this.postsService.getTopFiveThemes();
-    return this.popularThemes;
+  getMostPopularThemes() {
+    //this.popularThemes = this.postsService.getTopFiveThemes()
     //console.log(this.popularThemes);
   }
 

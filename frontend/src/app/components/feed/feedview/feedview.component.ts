@@ -2,6 +2,7 @@ import {Component, OnInit, Output} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-feedview',
@@ -10,7 +11,7 @@ import {PostsService} from "../../../services/posts.service";
 })
 export class FeedviewComponent implements OnInit {
 
-  popularPosts: String[];
+  popularPosts: [string, unknown][];
   posts: Post[];
   text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
@@ -32,8 +33,7 @@ export class FeedviewComponent implements OnInit {
   }
 
   getMostPopularThemes(): void {
-    this.popularPosts = this.postsService.getTopFiveThemes();
-    console.log(this.popularPosts);
+    //this.popularPosts = this.postsService.getTopFiveThemes();
   }
 
   ngOnInit(): void {
