@@ -1,6 +1,6 @@
 import {ErrorHandler, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Observable, of} from "rxjs";
 import {Post} from "../models/post";
 import {catchError, map} from "rxjs/operators";
 import {environment} from "../../environments/environment.staging";
@@ -14,7 +14,7 @@ export class PostsService {
 
   posts: Post[];
   themesList: String[];
-  result: any;
+  result: any = "noting";
 
   constructor(private http: HttpClient) {
     this.restGetPosts();
@@ -32,35 +32,65 @@ export class PostsService {
       }));
   }
 
-  // TODO: fix to load in data before function fires
-  async getTopFiveThemes(): Promise<[string, unknown][]> {
-    await this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
-      await map( (postCards: any[]) => {
+  getAllThemes():Observable<String[]> {
+    return this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
+      map( (postCards: any[]) => {
         const themes: String[] = [];
         for (const post of postCards) {
           themes.push(post.theme);
         }
-        let strArray = themes;
-        console.log("array:" + strArray);
-        var count = {};
-        strArray.forEach(function (i) { // @ts-ignore
-          count[i] = (count[i] || 0) + 1;
-        });
+        return themes;
+      }));
+  }
+
+  // TODO: fix to load in data before function fires
+  async getTopFiveThemes() {
+    // await this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
+    //    map( (postCards: any[]) => {
+    //     const themes: String[] = [];
+    //     for (const post of postCards) {
+    //       themes.push(post.theme);
+    //     }
+        let strArray = await this.getAllThemes();
+        return new Promise(resolve =>
+          strArray.pipe().subscribe(
+          (data) => {
+            var count = {};
+            data.forEach(function (i) { // @ts-ignore
+              count[i] = (count[i] || 0) + 1;
+            });
+
+            var result = Object.entries(count);
+            result.sort((a: any, b: any) => {
+              return b[1] - a[1];
+            });
+
+            this.result = result.slice(0, 5);
+            console.log(this.result);
+            resolve(this.result);
+          }));
+    // console.log(this.result);
+    // return this.result;
+        // var count = {};
+        // strArray.forEach(function (i) { // @ts-ignore
+        //   count[i] = (count[i] || 0) + 1;
+        // });
 
         // @ts-ignore
-        var result = Object.entries(count);
+        // var result = Object.entries(count);
         //let findDuplicates = (arr: any[]) => arr.filter((item, index) => arr.indexOf(item) != index)
         //let set = new Set(findDuplicates(strArray));
         //let array = Array.from(set);
-        result.sort((a: any, b: any) => {
-          return b[1] - a[1];
-        });
-        this.result = result.slice(0, 5);
+        // result.sort((a: any, b: any) => {
+        //   return b[1] - a[1];
+        // });
+        // this.result = result.slice(0, 5);
         // this.themesList = themes;
         // console.log("themes loaded" + themes);
         // return themes;
-      }));
-    return this.result;
+    //  }));
+    //console.log("result" + this.result);
+    //return this.result;
     // let strArray = [ "q", "q", "w", "w", "w", "e", "i", "u", "r", "u", "u", "u"];
     // let strArray = this.themesList;
     // console.log("themes" + this.themesList);

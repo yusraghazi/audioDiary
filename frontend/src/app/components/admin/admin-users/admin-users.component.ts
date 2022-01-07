@@ -8,17 +8,26 @@ import {Post} from "../../../models/post";
   templateUrl: './admin-users.component.html',
   styleUrls: ['./admin-users.component.css']
 })
-export class AdminUsersComponent implements OnInit, AfterViewInit {
+export class AdminUsersComponent implements OnInit {
 
   posts: Post[];
-  popularPosts: any;
+  popularPosts: unknown;
 
   constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
+   this.loadPageData();
   }
 
-  ngAfterViewInit() {
+  async loadThemes() {
+    await this.postsService.getTopFiveThemes().then(result => {
+      this.popularPosts = result;
+      console.log(this.popularPosts);
+    });
+  }
+
+  async loadPageData() {
+    await this.loadThemes();
     const ctx = document.getElementById('account');
     const ctx2 = document.getElementById('age');
     // @ts-ignore
@@ -49,23 +58,22 @@ export class AdminUsersComponent implements OnInit, AfterViewInit {
         }
       }
     });
-
-    this.popularPosts = this.postsService.getTopFiveThemes()
-    console.log(this.popularPosts);
-
     // @ts-ignore
     const myChart2 = new Chart(ctx2, {
       type: 'doughnut',
       data: {
-        labels: [this.popularPosts[0][0], this.popularPosts[1][0], this.popularPosts[2][0], this.popularPosts[3][0], this.popularPosts[4][0]],
+        // @ts-ignore
+        labels: [this.popularPosts[0][0], this.popularPosts[1][0], this.popularPosts[2][0], this.popularPosts[3][0]],
         datasets: [{
           label: 'User type',
-          data: [this.popularPosts[1][0], this.popularPosts[2][0], this.popularPosts[3][0], this.popularPosts[4][0], this.popularPosts[5][0]],
+          // @ts-ignore
+          data: [this.popularPosts[0][1], this.popularPosts[1][1], this.popularPosts[2][1], this.popularPosts[3][1]],
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
             'rgb(255, 205, 86)',
             'rgb(100, 180, 2)',
+            'rgb(255, 130, 10)',
           ],
         }
         ]
