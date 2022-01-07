@@ -1,0 +1,1 @@
+{"ast":null,"code":"var createElement = require(\"./vdom/create-element.js\");\n\nmodule.exports = createElement;","map":null,"metadata":{},"sourceType":"script"}

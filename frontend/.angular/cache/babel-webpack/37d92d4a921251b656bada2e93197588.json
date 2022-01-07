@@ -1,0 +1,1 @@
+{"ast":null,"code":"var isWidget = require(\"../vnode/is-widget.js\");\n\nmodule.exports = updateWidget;\n\nfunction updateWidget(a, b) {\n  if (isWidget(a) && isWidget(b)) {\n    if (\"name\" in a && \"name\" in b) {\n      return a.id === b.id;\n    } else {\n      return a.init === b.init;\n    }\n  }\n\n  return false;\n}","map":null,"metadata":{},"sourceType":"script"}

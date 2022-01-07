@@ -1,0 +1,1 @@
+{"ast":null,"code":"var h = require(\"./virtual-hyperscript/index.js\");\n\nmodule.exports = h;","map":null,"metadata":{},"sourceType":"script"}

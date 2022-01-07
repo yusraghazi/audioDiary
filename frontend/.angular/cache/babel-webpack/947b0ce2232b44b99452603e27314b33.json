@@ -1,0 +1,1 @@
+{"ast":null,"code":"module.exports = isThunk;\n\nfunction isThunk(t) {\n  return t && t.type === \"Thunk\";\n}","map":null,"metadata":{},"sourceType":"script"}

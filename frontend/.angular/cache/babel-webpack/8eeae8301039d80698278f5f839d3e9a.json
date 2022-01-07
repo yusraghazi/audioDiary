@@ -1,0 +1,1 @@
+{"ast":null,"code":"module.exports = isHook;\n\nfunction isHook(hook) {\n  return hook && (typeof hook.hook === \"function\" && !hook.hasOwnProperty(\"hook\") || typeof hook.unhook === \"function\" && !hook.hasOwnProperty(\"unhook\"));\n}","map":null,"metadata":{},"sourceType":"script"}

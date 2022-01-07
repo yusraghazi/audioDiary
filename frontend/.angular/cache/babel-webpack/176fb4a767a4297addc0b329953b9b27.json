@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { Transformation } from \"./Transformation.js\";\n/**\n * @summary SDK\n * @extends {SDK.Transformation}\n * @memberOf SDK\n */\n\nclass ImageTransformation extends Transformation {}\n\nexport { ImageTransformation };","map":null,"metadata":{},"sourceType":"module"}
