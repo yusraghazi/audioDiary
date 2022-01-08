@@ -110,6 +110,20 @@ export class PostsService {
     // return result.slice(0, 5);
   }
 
+  getPostsByTheme(theme: string):Observable<Post[]> {
+    return this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
+      map( (postCards: any[]) => {
+        const posts: Post[] = [];
+        for (const post of postCards) {
+          if (post.theme == theme) {
+            posts.push(post);
+          }
+        }
+        this.posts = posts;
+        return posts;
+      }));
+  }
+
   getReportedPosts():Observable<Post[]> {
     return this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
       map( (postCards: any[]) => {

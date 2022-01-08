@@ -1,4 +1,4 @@
-<div class="card-deck">
+<div class="card-deck" *ngIf="!currentAdmin.verified">
 <div class="card">
   <div class="card-header">
     Popular theme
@@ -16,7 +16,7 @@
   </div>
 </div>
 </div>
-<div class="table-responsive">
+<div class="table-responsive" *ngIf="currentAdmin.verified">
   <table class="table table-striped" id="table">
     <thead>
     <tr>

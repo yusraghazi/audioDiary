@@ -4,6 +4,7 @@ import {PostsService} from "../../../services/posts.service";
 import {Post} from "../../../models/post";
 import {UserService} from "../../../services/user.service";
 import {User} from "../../../models/user";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-admin-users',
@@ -15,10 +16,13 @@ export class AdminUsersComponent implements OnInit {
   posts: Post[];
   users: User[];
   popularPosts: unknown;
+  currentAdmin: User = new User();
 
-  constructor(private postsService: PostsService, private userService: UserService) { }
+  constructor(private postsService: PostsService, private userService: UserService,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.checkAdminOrResearch();
     this.getUsers();
     this.loadPageData();
   }
@@ -67,11 +71,11 @@ export class AdminUsersComponent implements OnInit {
       type: 'doughnut',
       data: {
         // @ts-ignore
-        labels: [this.popularPosts[0][0], this.popularPosts[1][0], this.popularPosts[2][0], this.popularPosts[3][0]],
+        labels: [this.popularPosts[0][0], this.popularPosts[1][0], this.popularPosts[2][0]],
         datasets: [{
           label: 'User type',
           // @ts-ignore
-          data: [this.popularPosts[0][1], this.popularPosts[1][1], this.popularPosts[2][1], this.popularPosts[3][1]],
+          data: [this.popularPosts[0][1], this.popularPosts[1][1], this.popularPosts[2][1]],
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
@@ -114,6 +118,16 @@ export class AdminUsersComponent implements OnInit {
         this.userService.updateUser(data);
       }
     );
+  }
+
+  checkAdminOrResearch() {
+    let user = this.userService.restGetUser(this.authService.getUser().email)
+    user.pipe().subscribe(
+      (data) => {
+        this.currentAdmin = data;
+        console.log(this.currentAdmin.verified);
+      }
+    )
   }
 
 }

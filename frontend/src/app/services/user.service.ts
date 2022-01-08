@@ -17,13 +17,13 @@ export class UserService {
   }
 
   getAmountOfUsers() {
-    return this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
-      map( (postCards: any[]) => {
-        const posts: Post[] = [];
-        for (const post of postCards) {
-          posts.push(post);
-        }
-        return posts.length;
+    return this.http.get<User[]>(`${environment.apiUrl}/users`).pipe(
+      map( (userlist: any[]) => {
+        // const users: User[] = [];
+        // for (const user of userlist) {
+        //   users.push(user);
+        // }
+        return userlist.length;
       }));
   }
 

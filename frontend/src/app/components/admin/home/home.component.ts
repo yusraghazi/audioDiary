@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PostsService} from "../../../services/posts.service";
 import {User} from "../../../models/user";
 import {UserService} from "../../../services/user.service";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-home',
@@ -12,12 +13,24 @@ export class HomeComponent implements OnInit {
 
   amountOfUsers: number;
   amountOfPosts: number;
+  popularTheme: unknown;
+  currentAdmin: User;
 
-  constructor(private userService: UserService, private postService: PostsService) { }
+  constructor(private userService: UserService, private postsService: PostsService,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.checkAdminOrResearch();
     this.getAmountOfPosts();
     this.getAmountOfUsers();
+    this.loadThemes();
+  }
+
+  async loadThemes() {
+    await this.postsService.getTopFiveThemes().then(result => {
+      // @ts-ignore
+      this.popularTheme = result;
+    });
   }
 
   getAmountOfUsers() {
@@ -32,7 +45,7 @@ export class HomeComponent implements OnInit {
   }
 
   getAmountOfPosts() {
-    this.postService.restGetPosts().subscribe(
+    this.postsService.restGetPosts().subscribe(
       (data) => {
         // @ts-ignore
         this.amountOfPosts = data.length; console.log(data);
@@ -40,6 +53,16 @@ export class HomeComponent implements OnInit {
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );
     return this.amountOfPosts;
+  }
+
+  checkAdminOrResearch() {
+    let user = this.userService.restGetUser(this.authService.getUser().email)
+    user.pipe().subscribe(
+      (data) => {
+        this.currentAdmin = data;
+        console.log(this.currentAdmin.verified);
+      }
+    )
   }
 
 }

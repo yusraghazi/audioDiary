@@ -8,6 +8,9 @@ import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {AuthService} from "../../../services/auth.service";
+import {UserService} from "../../../services/user.service";
+import {User} from "../../../models/user";
 
 @Component({
   selector: 'app-admin-location',
@@ -25,12 +28,14 @@ export class AdminPostsComponent implements OnInit {
   posts: Post[] = [];
   reportedPosts: Post[] = [];
   theme: Theme;
+  currentAdmin: User;
 
-  constructor(private postsService: PostsService , private router: Router,
-              private activatedRoute: ActivatedRoute) { }
+  constructor(private postsService: PostsService, private authService: AuthService,
+              private userService: UserService) { }
 
   ngOnInit(): void {
     this.getPosts();
+    this.checkAdminOrResearch();
     this.data = {
       labels: ['Posts today'],
       datasets: [{
@@ -278,5 +283,26 @@ export class AdminPostsComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  downloadObjectAsJson() {
+    delete this.places['user'];
+    delete this.places['audio'];
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.places));
+    var downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href",     dataStr);
+    downloadAnchorNode.setAttribute("download", "GEO.json");
+    document.body.appendChild(downloadAnchorNode); // required for firefox
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+  }
+
+  checkAdminOrResearch() {
+    let user = this.userService.restGetUser(this.authService.getUser().email)
+    user.pipe().subscribe(
+      (data) => {
+        this.currentAdmin = data;
+      }
+    )
   }
 }

@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col">
     <div id="map-mapbox" style="height: 400px"></div>
+    <button (click)="downloadObjectAsJson()">Download data</button>
   </div>
 <!--  <table class="table table-striped">-->
 <!--  <thead>-->
@@ -66,7 +67,7 @@
 <!--      <canvas id="chart"></canvas>-->
 <!--  </div>-->
 
-    <div class="table-responsive">
+    <div class="table-responsive" *ngIf="currentAdmin.verified">
       <table class="table table-striped" id="table">
         <thead>
         <tr>
