@@ -7,15 +7,15 @@ import javax.persistence.*;
 @NamedQuery(name="find_all_likes", query="select l from Likes l")
 public class Likes {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
+//    @JsonIgnore
     private Posts post;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
+//    @JsonIgnore
     private User user;
 
     public int getId() {

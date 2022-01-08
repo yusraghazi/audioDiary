@@ -11,7 +11,8 @@ import {Observable} from "rxjs";
 })
 export class FeedviewComponent implements OnInit {
 
-  popularPosts: [string, unknown][];
+  @Output()
+  popularPosts: unknown = null;
   posts: Post[];
   text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
@@ -32,7 +33,11 @@ export class FeedviewComponent implements OnInit {
     );
   }
 
-  getMostPopularThemes(): void {
+  async getMostPopularThemes() {
+    await this.postsService.getTopFiveThemes().then(result => {
+      this.popularPosts = result;
+      console.log(this.popularPosts);
+    });
     //this.popularPosts = this.postsService.getTopFiveThemes();
   }
 

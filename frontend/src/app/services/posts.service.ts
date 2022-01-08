@@ -129,8 +129,8 @@ export class PostsService {
     return this.http.get<Post>(`${environment.apiUrl}/posts/${postId}`);
   }
 
-  restGetPostsOfUser(userId: number) {
-    return this.http.get<Post[]>(`${environment.apiUrl}/users/${userId}/posts`).pipe(
+  restGetPostsOfUser(email: string) {
+    return this.http.get<Post[]>(`${environment.apiUrl}/users/${email}/posts`).pipe(
       map( (postList: any[]) => {
         const posts: Post[] = [];
         for (const post of postList) {

@@ -12,8 +12,8 @@ import {map} from "rxjs/operators";
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  restGetUser(userId: number):Observable<User> {
-    return this.http.get<User>(`${environment.apiUrl}/users/${userId}`);
+  restGetUser(email: String):Observable<User> {
+    return this.http.get<User>(`${environment.apiUrl}/users/${email}`);
   }
 
   getAmountOfUsers() {
@@ -27,12 +27,12 @@ export class UserService {
       }));
   }
 
-  getUsers() {
+  getUsers():Observable<User[]> {
 
     return this.http.get<User[]>(`${environment.apiUrl}/users`);
   }
 
-  delete(user: User) {
+  delete(user: User):Observable<User>  {
     return this.http.delete<User>(`${environment.apiUrl}/users/${user.email}`);
   }
 

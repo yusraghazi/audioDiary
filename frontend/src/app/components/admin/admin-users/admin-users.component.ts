@@ -2,6 +2,8 @@ import {AfterViewInit, Component, OnInit} from '@angular/core';
 import Chart from 'chart.js/auto';
 import {PostsService} from "../../../services/posts.service";
 import {Post} from "../../../models/post";
+import {UserService} from "../../../services/user.service";
+import {User} from "../../../models/user";
 
 @Component({
   selector: 'app-admin-users',
@@ -11,12 +13,14 @@ import {Post} from "../../../models/post";
 export class AdminUsersComponent implements OnInit {
 
   posts: Post[];
+  users: User[];
   popularPosts: unknown;
 
-  constructor(private postsService: PostsService) { }
+  constructor(private postsService: PostsService, private userService: UserService) { }
 
   ngOnInit(): void {
-   this.loadPageData();
+    this.getUsers();
+    this.loadPageData();
   }
 
   async loadThemes() {
@@ -86,6 +90,30 @@ export class AdminUsersComponent implements OnInit {
         }
       }
     });
+  }
+
+  getUsers() {
+    this.userService.getUsers().pipe().subscribe(
+      (data) => {
+        this.users = data;
+      }
+    );
+  }
+
+  deleteUser(email: String) {
+    this.userService.restGetUser(email).pipe().subscribe(
+      (data) => {
+        this.userService.delete(data);
+      }
+    );
+  }
+
+  updateUser(email: String) {
+    this.userService.restGetUser(email).pipe().subscribe(
+      (data) => {
+        this.userService.updateUser(data);
+      }
+    );
   }
 
 }

@@ -2,6 +2,9 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
+import {LikesService} from "../../../services/likes.service";
+import {AuthService} from "../../../services/auth.service";
+import {Like} from "../../../models/like";
 
 
 @Component({
@@ -13,10 +16,10 @@ export class RecordingPostComponent implements OnInit {
   @Input()
   audioPost: Post
   isShown: boolean;
-  popularThemes: [string, unknown][];
+  popularThemes: unknown;
   theme: String;
 
-  constructor(private postsService: PostsService) {
+  constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService) {
 
   }
 
@@ -48,28 +51,35 @@ export class RecordingPostComponent implements OnInit {
 
   }
 
-  getMostPopularThemes() {
-    //this.popularThemes = this.postsService.getTopFiveThemes()
-    //console.log(this.popularThemes);
+  async getMostPopularThemes() {
+    await this.postsService.getTopFiveThemes().then(result => {
+      this.popularThemes = result;
+      console.log(this.popularThemes);
+    });
   }
 
   async returnColor() {
-    this.getMostPopularThemes();
+    await this.getMostPopularThemes();
     switch (this.audioPost.theme) {
+      // @ts-ignore
       case this.popularThemes[0][0]:
-        this.audioPost.theme = 'red'
+        this.audioPost.theme = Theme.SUN;
         break;
+      // @ts-ignore
       case this.popularThemes[1][0]:
-        this.audioPost.theme = 'orange'
+        this.audioPost.theme = Theme.WATER;
         break;
+      // @ts-ignore
       case this.popularThemes[2][0]:
-        this.audioPost.theme = 'yellow'
+        this.audioPost.theme = Theme.CITY;
         break;
+      // @ts-ignore
       case this.popularThemes[3][0]:
-        this.audioPost.theme = 'green'
+        this.audioPost.theme = Theme.SAND;
         break;
+      // @ts-ignore
       case this.popularThemes[4][0]:
-        this.audioPost.theme = 'blue'
+        this.audioPost.theme = Theme.MOUNTAIN;
         break;
       default:
         this.audioPost.theme = Theme.FOREST;
@@ -86,7 +96,10 @@ export class RecordingPostComponent implements OnInit {
 
   }
 
-
-
+  addToLikes() {
+    let currentUser = this.authService.getUser();
+    let like = new Like(null, this.audioPost.id, currentUser.email);
+    this.likesService.restPostLike(like);
+  }
 
 }

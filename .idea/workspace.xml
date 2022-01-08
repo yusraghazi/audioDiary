@@ -4,10 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on getting data from database admin side">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on getting data of themes from database admin side">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -123,7 +138,7 @@
       <recent name="E:\HVA ICT 2\EWA\Project\ad-vmc-1\app\src\assets\img" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.admin-users.component.html">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -250,14 +265,7 @@
       <workItem from="1640092027539" duration="1211000" />
       <workItem from="1641238932180" duration="17922000" />
       <workItem from="1641473204167" duration="2284000" />
-      <workItem from="1641589638420" duration="5810000" />
-    </task>
-    <task id="LOCAL-00043" summary="really the last try to fix backend in deployment">
-      <created>1638471800711</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1638471800711</updated>
+      <workItem from="1641589638420" duration="18138000" />
     </task>
     <task id="LOCAL-00044" summary="attempt on error fix">
       <created>1638476251451</created>
@@ -595,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641423772039</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="worked on getting data of themes from database admin side">
+      <created>1641595906439</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1641595906440</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,8 +642,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed try" />
-    <MESSAGE value="changed gitlab-ci.yml to fix deployment" />
     <MESSAGE value="updated node version due to error" />
     <MESSAGE value="test 1" />
     <MESSAGE value="test 2" />
@@ -674,6 +687,7 @@
     <MESSAGE value="worked on cloudinary server side" />
     <MESSAGE value="further implementation of cloudinary" />
     <MESSAGE value="worked on getting data from database admin side" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on getting data of themes from database admin side" />
   </component>
 </project>

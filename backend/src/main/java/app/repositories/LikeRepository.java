@@ -10,5 +10,5 @@ public interface LikeRepository {
 
     Likes save(Likes like);
 
-    Likes deleteById(int id);
+    void deleteById(int id);
 }

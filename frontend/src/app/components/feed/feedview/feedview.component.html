@@ -4,6 +4,16 @@
 <!--</div>-->
 
 <app-switch [switchText]="mapview"></app-switch>
+
+<div ngbDropdown class="d-inline-block" *ngIf="popularPosts">
+  <button class="btn btn-outline-primary" id="dropdownMenuButton" ngbDropdownToggle>Filter on popular hashtag</button>
+  <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
+    <button ngbDropdownItem>{{popularPosts[0][0]}}</button>
+    <button ngbDropdownItem>{{popularPosts[1][0]}}</button>
+    <button ngbDropdownItem>{{popularPosts[2][0]}}</button>
+    <button ngbDropdownItem>{{popularPosts[3][0]}}</button>
+  </div>
+</div>
 <div class="allPosts">
 <div *ngFor="let post of posts;">
   <app-recording-post [audioPost]="post"></app-recording-post>

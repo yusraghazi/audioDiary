@@ -16,3 +16,25 @@
   </div>
 </div>
 </div>
+<div class="table-responsive">
+  <table class="table table-striped" id="table">
+    <thead>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.email}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.name}}</td>
+      <td><button class="btn-primary" (click)="deleteUser(user.email)">Remove user</button></td>
+      <td><button class="btn-primary" (click)="updateUser(user.email)">Update user</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
