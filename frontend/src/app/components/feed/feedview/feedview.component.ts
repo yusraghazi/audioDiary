@@ -27,8 +27,17 @@ export class FeedviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllPosts();
-    console.log(this.getAllPosts());
+    const urlId = this.router.url.split("/")[2]
+
+    if(isNaN(+urlId)){
+      this.getPostById()
+    } else {
+      this.getAllPosts();
+
+    }
+
+
+
     this.getMostPopularThemes();
 
     this.route.queryParams.subscribe(
@@ -47,7 +56,6 @@ export class FeedviewComponent implements OnInit {
     // this.posts.push(new Post(6, "joost","Amsterdam bikes", this.text,"amsterdamBikes.jpg",Theme.CITY, false))
     //
 
-    this.getPostById()
 
   }
 
@@ -109,3 +117,4 @@ export class FeedviewComponent implements OnInit {
 
   }
 }
+
