@@ -5,6 +5,7 @@ import {PostsService} from "../../../services/posts.service";
 import {Observable} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Meta} from "@angular/platform-browser";
+import {ShareService} from "../../../services/share.service";
 
 @Component({
   selector: 'app-feedview',
@@ -21,7 +22,7 @@ export class FeedviewComponent implements OnInit {
   @Output()
   mapview: string = "Mapview";
 
-  constructor(private postsService: PostsService, private router: Router, private route: ActivatedRoute, private meta:Meta) {
+  constructor(private postsService: PostsService, private router: Router, private route: ActivatedRoute, private meta:Meta, private shareService: ShareService) {
 
   }
 
@@ -95,6 +96,11 @@ export class FeedviewComponent implements OnInit {
        (data) =>{
          this.posts = [];
          this.posts[0] = data;
+         this.shareService.setSocialMediaTags(
+           "this.router.url",
+           data.title,
+           data.description,
+           data.img);
          console.log(data);
        },
        (error) => console.log("Error: " + error.status + " - " + error.error)
