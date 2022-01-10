@@ -10,7 +10,7 @@
         <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false" class="bi bi-heart-fill"></i>
         <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true; addToLikes()" class="bi bi-heart"></i>
         <i class="bi bi-chat-dots"  (click)="toggleShow()"></i>
-        <i class="bi bi-share-fill"></i>
+        <i class="bi bi-share-fill" (click)="sharePost()"></i>
       </div>
     </div>
     <a href="#" class="badge badge-dark">{{audioPost.theme}}</a>
