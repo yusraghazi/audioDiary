@@ -4,6 +4,7 @@ import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
 import {Observable} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-feedview',
@@ -20,7 +21,7 @@ export class FeedviewComponent implements OnInit {
   @Output()
   mapview: string = "Mapview";
 
-  constructor(private postsService: PostsService, private router: Router, private route: ActivatedRoute) {
+  constructor(private postsService: PostsService, private router: Router, private route: ActivatedRoute, private meta:Meta) {
 
   }
 
@@ -44,7 +45,11 @@ export class FeedviewComponent implements OnInit {
     // this.posts.push(new Post(5, "aziz","Sand storm", this.text,"sandstorm.jpg",Theme.SAND, true))
     // this.posts.push(new Post(6, "joost","Amsterdam bikes", this.text,"amsterdamBikes.jpg",Theme.CITY, false))
     //
+
+    this.getPostById()
+
   }
+
 
   getAllPosts(): void{
     this.postsService.restGetPosts().subscribe(
@@ -80,29 +85,21 @@ export class FeedviewComponent implements OnInit {
     //this.popularPosts = this.postsService.getTopFiveThemes();
   }
 
-//  returnColor(post: Post) {
-  //   switch (post.theme) {
-  //     case this.popularPosts[0]:
-  //       post.theme = "red"
-  //       break;
-  //     case this.popularPosts[1]:
-  //       post.theme = "orange"
-  //       break;
-  //     case this.popularPosts[2]:
-  //       post.theme = "yellow"
-  //       break;
-  //     case this.popularPosts[3]:
-  //       post.theme = "green"
-  //       break;
-  //     case this.popularPosts[4]:
-  //       post.theme = "blue"
-  //       break;
-  //     case this.popularPosts[5]:
-  //       post.theme = "grey"
-  //       break;
-  //   }
-  //
-  //   return post.theme;
-  // }
+ getPostById():void {
+   const id = this.router.url.split("/")[2];
 
+   console.log(+id)
+   console.log(id)
+
+   console.log(this.postsService.restGetPost(+id).subscribe(
+       (data) =>{
+         this.posts = [];
+         this.posts[0] = data;
+         console.log(data);
+       },
+       (error) => console.log("Error: " + error.status + " - " + error.error)
+     )
+   );
+
+  }
 }

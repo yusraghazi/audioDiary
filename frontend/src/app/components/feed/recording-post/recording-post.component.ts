@@ -25,28 +25,7 @@ export class RecordingPostComponent implements OnInit {
 
   ngOnInit(): void {
     this.returnColor();
-//     console.log(this.audioPost);
-//
-// switch (this.audioPost.theme) {
-//   case "Theme.SUN":
-//     this.audioPost.theme = Theme.SUN;
-//     break;
-//   case "Theme.SAND":
-//     this.audioPost.theme = Theme.SAND;
-//     break;
-//   case "Theme.FOREST":
-//     this.audioPost.theme = Theme.FOREST;
-//     break;
-//   case "Theme.WATER":
-//     this.audioPost.theme = Theme.WATER;
-//     break;
-//   case "Theme.CITY":
-//     this.audioPost.theme = Theme.CITY;
-//     break;
-//   case "Theme.MOUNTAIN":
-//     this.audioPost.theme = Theme.MOUNTAIN;
-//     break;
-//}
+
 
 
   }
@@ -101,5 +80,7 @@ export class RecordingPostComponent implements OnInit {
     let like = new Like(null, this.audioPost.id, currentUser.email);
     this.likesService.restPostLike(like);
   }
+
+
 
 }
