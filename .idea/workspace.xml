@@ -7,6 +7,7 @@
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/meta-tag.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/meta-tag.spec.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -250,20 +251,6 @@
       <workItem from="1641238932180" duration="17922000" />
       <workItem from="1641473204167" duration="2284000" />
       <workItem from="1641589638420" duration="23842000" />
-    </task>
-    <task id="LOCAL-00046" summary="changed services from hardcoded code to environment apiUrl">
-      <created>1638711121429</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1638711121429</updated>
-    </task>
-    <task id="LOCAL-00047" summary="changed services from hardcoded code to environment apiUrl">
-      <created>1638786190387</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1638786190387</updated>
     </task>
     <task id="LOCAL-00048" summary="cors mapping issue">
       <created>1638786911556</created>
@@ -594,7 +581,21 @@
       <option name="project" value="LOCAL" />
       <updated>1641828976759</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="sharepost">
+      <created>1641834081792</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1641834081793</updated>
+    </task>
+    <task id="LOCAL-00096" summary="sharepost">
+      <created>1641834105290</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1641834105290</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -626,8 +627,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test 3" />
-    <MESSAGE value="test 4" />
     <MESSAGE value="test 5" />
     <MESSAGE value="final test" />
     <MESSAGE value="fixed issues" />
