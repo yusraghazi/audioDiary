@@ -86,7 +86,7 @@ export class FeedviewComponent implements OnInit {
     //this.popularPosts = this.postsService.getTopFiveThemes();
   }
 
- getPostById():void {
+ async getPostById() {
    const id = this.router.url.split("/")[2];
 
    console.log(+id)
