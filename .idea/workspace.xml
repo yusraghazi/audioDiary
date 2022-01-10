@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/meta-tag.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/meta-tag.spec.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -251,13 +249,6 @@
       <workItem from="1641238932180" duration="17922000" />
       <workItem from="1641473204167" duration="2284000" />
       <workItem from="1641589638420" duration="23842000" />
-    </task>
-    <task id="LOCAL-00048" summary="cors mapping issue">
-      <created>1638786911556</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1638786911556</updated>
     </task>
     <task id="LOCAL-00049" summary="worked on login">
       <created>1638894217926</created>
@@ -595,7 +586,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641834105290</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="sharepost">
+      <created>1641847269940</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1641847269940</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -627,7 +625,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test 5" />
     <MESSAGE value="final test" />
     <MESSAGE value="fixed issues" />
     <MESSAGE value="fixed all issues of database and backend" />

@@ -97,7 +97,7 @@ export class FeedviewComponent implements OnInit {
          this.posts = [ ];
          this.posts[0] = data;
          this.shareService.setSocialMediaTags(
-          "https://audiodiary-fe-team1-staging.herokuapp.com/"+ this.router.url,
+          "https://audiodiary-fe-team1-staging.herokuapp.com"+ this.router.url,
            data.title,
            data.description,
            data.img);
