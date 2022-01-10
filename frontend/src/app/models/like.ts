@@ -1,12 +1,15 @@
+import {User} from "./user";
+import {Post} from "./post";
+
 export class Like {
   id: number;
-  post_id: number;
-  user_email: string;
+  post: Post;
+  user: User;
 
 
-  constructor(id: number, post_id: number, user_email: string) {
+  constructor(id: number, post: Post, user: User) {
     this.id = id;
-    this.post_id = post_id;
-    this.user_email = user_email;
+    this.post = post;
+    this.user = user;
   }
 }

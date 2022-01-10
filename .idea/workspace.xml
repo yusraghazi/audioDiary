@@ -4,18 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on like crud operations and http get requests in several pages">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on dividing researcher and maintainer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/switch/switch.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/switch/switch.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/like.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/like.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/likes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/likes.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/user.service.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -259,13 +266,11 @@
       <workItem from="1641238932180" duration="17922000" />
       <workItem from="1641473204167" duration="2284000" />
       <workItem from="1641589638420" duration="23842000" />
-    </task>
-    <task id="LOCAL-00045" summary="changed services from hardcoded code to environment apiUrl">
-      <created>1638710119453</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1638710119453</updated>
+      <workItem from="1641238932180" duration="17922000" />
+      <workItem from="1641473204167" duration="2284000" />
+      <workItem from="1641589638420" duration="24150000" />
+      <workItem from="1641727429323" duration="3923000" />
+      <workItem from="1641819993066" duration="13388000" />
     </task>
     <task id="LOCAL-00046" summary="changed services from hardcoded code to environment apiUrl">
       <created>1638711121429</created>
@@ -603,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641662409340</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="worked on dividing researcher and maintainer">
+      <created>1641677401412</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1641677401412</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,6 +692,13 @@
     <MESSAGE value="worked on getting data from database admin side" />
     <MESSAGE value="worked on getting data of themes from database admin side" />
     <MESSAGE value="worked on like crud operations and http get requests in several pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
+    <MESSAGE value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on dividing researcher and maintainer" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on dividing researcher and maintainer" />
   </component>
 </project>

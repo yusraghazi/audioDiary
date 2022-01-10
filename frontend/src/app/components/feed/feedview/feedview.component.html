@@ -1,11 +1,6 @@
-<!--<div class="custom-control custom-switch">-->
-<!--  <input routerLink="/mapview"  type="checkbox" class="custom-control-input" id="customSwitch1">-->
-<!--  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>-->
-<!--</div>-->
-
 <app-switch [switchText]="mapview"></app-switch>
-
-<div ngbDropdown class="d-inline-block" *ngIf="popularPosts">
+<div *ngIf="popularPosts">
+<div ngbDropdown class="d-inline-block">
   <button class="btn btn-outline-primary" id="dropdownMenuButton" ngbDropdownToggle>Filter on popular hashtag</button>
   <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
     <button ngbDropdownItem (click)="getPostByTheme(popularPosts[0][0])">1.{{popularPosts[0][0]}}</button>
@@ -14,11 +9,10 @@
     <button ngbDropdownItem (click)="getPostByTheme(popularPosts[3][0])">4.{{popularPosts[3][0]}}</button>
   </div>
 </div>
+</div>
 <div class="allPosts">
-<div *ngFor="let post of posts;">
-  <app-recording-post [audioPost]="post"></app-recording-post>
+    <div *ngFor="let post of posts;">
+      <app-recording-post [audioPost]="post"></app-recording-post>
+    </div>
+    <div style="height: 140px"></div>
 </div>
-  <div style="height: 140px"></div>
-</div>
-
-

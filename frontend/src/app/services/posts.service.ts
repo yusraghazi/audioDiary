@@ -66,7 +66,6 @@ export class PostsService {
             });
 
             this.result = result.slice(0, 5);
-            console.log(this.result);
             resolve(this.result);
           }));
     // console.log(this.result);

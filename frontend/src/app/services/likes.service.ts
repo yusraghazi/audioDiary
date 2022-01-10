@@ -42,4 +42,8 @@ export class LikesService {
     return this.http.delete<Like>(url);
   }
 
+  restGetLike(likeId: number):Observable<Like> {
+    return this.http.get<Like>(`${environment.apiUrl}/posts/${likeId}`);
+  }
+
 }

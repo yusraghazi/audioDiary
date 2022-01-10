@@ -1,5 +1,5 @@
 <div *ngIf="!showOverlay">
-<div class="btn-group mb-2">
+<div class="btn-group mb-2" style="z-index: 100">
   <app-switch [switchText]="feedview"></app-switch>
 <div ngbDropdown class="d-inline-block">
   <button class="btn btn-outline-primary ml-2" id="dropdownMenuButton" ngbDropdownToggle>Filter theme</button>
@@ -12,9 +12,8 @@
 
 <div id="map-mapbox" style="cursor: pointer">
   <div *ngIf="showOverlay" style="z-index: 100">
-    <button id="close" (click)="overlayTrue(false)"><h3>X</h3></button>
-    <div id="overlay" class="cdk-overlay-container">
+<!--    <button id="close" (click)="overlayTrue(false)"><h3>X</h3></button>-->
     <router-outlet></router-outlet>
-    </div>
+<!--    </div>-->
   </div>
 </div>
