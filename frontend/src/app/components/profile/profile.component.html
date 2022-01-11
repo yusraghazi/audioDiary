@@ -2,40 +2,43 @@
   <div class="title-container">
     <!--    <span class="a"><img src="./assets/img/profile-pic-logo.png" alt="Paris" width="50" height="50"></span>-->
     <span class="profile-header-pic"> <i class="fa fa-user" aria-hidden="true"></i></span>
-    <span class="profile-header-name">user Diary</span>
+    <span class="profile-header-name">{{this.username}}</span>
   </div>
   <hr class="profile-hr">
 
   <div class="profile-top-section">
     <h5 class="profile-section-title">My Fragments</h5>
-    <div class="allPosts">
       <div *ngFor="let post of posts;" (click)="postSelection(post)">
+        <div class="allPosts">
         <app-profile-post
           [selectedPost]="getSelectedPost"
           (deleteSelected)="onDelete($event)"
           [audioPost]="post">
 
         </app-profile-post>
-      </div>
+        </div>
+    </div>
+    <div *ngIf="posts.length == 0">
+      <p>You have no fragments yet. Click here to record an audio.</p>
     </div>
   </div>
 
   <div style="height: 30px" class="whiteSpace"></div>
 
 
-<!--  <div class="profile-top-section">-->
-<!--    <hr class="profile-hr">-->
-<!--    <h5 class="profile-section-title">Favorites</h5>-->
-<!--    <div class="allPosts">-->
-<!--      <div *ngFor="let post of favoritePost" (click)="favoritePostSelection(post)">-->
-<!--        <app-profile-post-favorite-->
-<!--                          [selectedFavoritePost]="getSelectedFavoritePost"-->
-<!--                          (deletedFavoriteSelected)="onDeleteFavorite($event)"-->
-<!--                          [audioPost]="post">-->
+  <div class="profile-top-section">
+    <hr class="profile-hr">
+    <h5 class="profile-section-title">Favorites</h5>
+    <div class="allPosts">
+      <div *ngFor="let post of favoriteposts" (click)="favoritePostSelection(post)">
+        <app-profile-post-favorite
+                          [selectedFavoritePost]="getSelectedFavoritePost"
+                          (deletedFavoriteSelected)="onDeleteFavorite($event)"
+                          [audioPost]="post">
 
-<!--        </app-profile-post-favorite>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+        </app-profile-post-favorite>
+      </div>
+    </div>
+  </div>
 </div>
 <div style="height: 150px" class="whiteSpace"></div>

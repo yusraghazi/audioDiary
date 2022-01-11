@@ -56,10 +56,10 @@ export class AuthService {
     // using pipe(share()) to prevent multiple submissions per subscriber (observables are cold)
     // to find out more see https://blog.strongbrew.io/how-share()-can-reduce-network-requests/
     const observable = this.httpClient.post(`${environment.apiUrl}/auth/users`,
-      {email: user.email, name: user.name, encoded_password: user.encodedPassword}).pipe(share());
+      {email: user.email, username: user.username, name: user.name, encoded_password: user.encodedPassword}).pipe(share());
 
     observable.subscribe((data) => {
-
+      console.log(data);
       },
       (err) => {
         console.log('creation error', err);
@@ -124,6 +124,8 @@ export class AuthService {
 
       this.currentUser = new User();
       this.currentUser.email = decodedToken.sub;
+      this.currentUser.username = decodedToken.username;
+      this.currentUser.name = decodedToken.name;
       this.currentUser.admin = decodedToken.admin.toLowerCase() === 'true';
       this.currentUser.exp = decodedToken.exp;
 

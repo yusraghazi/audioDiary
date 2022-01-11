@@ -41,7 +41,6 @@ export class LoginComponent implements OnInit {
   myForm: NgForm;
 
   constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute) {
-    this.expectedUrl = '/feedview';
   }
 
   ngOnInit(): void {
@@ -57,6 +56,12 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     console.log(this.user);
     this.authService.auth(this.user).subscribe((data: any) => {
+
+      if (this.authService.getUser().admin == false) {
+        this.expectedUrl = '/feedview';
+      } else {
+        this.expectedUrl = '/admin';
+      }
 
       this.router.navigate([this.expectedUrl]);
     }, (error: any) => {

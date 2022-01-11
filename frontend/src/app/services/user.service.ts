@@ -4,6 +4,7 @@ import {Post} from "../models/post";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../environments/environment.staging";
 import {User} from "../models/user";
+import {map} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -11,16 +12,27 @@ import {User} from "../models/user";
 export class UserService {
   constructor(private http: HttpClient) {}
 
-  restGetUser(userId: number):Observable<Post> {
-    return this.http.get<Post>(`${environment.apiUrl}/users/${userId}`);
+  restGetUser(email: String):Observable<User> {
+    return this.http.get<User>(`${environment.apiUrl}/users/${email}`);
   }
 
-  getUsers() {
+  getAmountOfUsers() {
+    return this.http.get<User[]>(`${environment.apiUrl}/users`).pipe(
+      map( (userlist: any[]) => {
+        // const users: User[] = [];
+        // for (const user of userlist) {
+        //   users.push(user);
+        // }
+        return userlist.length;
+      }));
+  }
+
+  getUsers():Observable<User[]> {
 
     return this.http.get<User[]>(`${environment.apiUrl}/users`);
   }
 
-  delete(user: User) {
+  delete(user: User):Observable<User>  {
     return this.http.delete<User>(`${environment.apiUrl}/users/${user.email}`);
   }
 

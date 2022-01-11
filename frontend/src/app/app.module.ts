@@ -39,6 +39,8 @@ import { SingleAudioComponent } from './components/feed/single-audio/single-audi
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptorService} from './services/auth.interceptor';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import { DummyComponentComponent } from './components/dummy-component/dummy-component.component';
 import {FileUploadModule} from "ng2-file-upload";
 @NgModule({
   declarations: [
@@ -69,6 +71,7 @@ import {FileUploadModule} from "ng2-file-upload";
      AdminUsersComponent,
      SingleAudioComponent,
      WelcomeComponent,
+     DummyComponentComponent,
   ],
     imports: [
         BrowserModule,
@@ -83,7 +86,8 @@ import {FileUploadModule} from "ng2-file-upload";
         MatIconModule,
         ReactiveFormsModule,
         FileUploadModule,
-        CloudinaryModule
+        CloudinaryModule,
+        Ng2SearchPipeModule
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }

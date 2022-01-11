@@ -26,7 +26,7 @@ public class Posts {
     public String description;
     public String img;
 
-    //    @Enumerated()
+//    @Enumerated()
     public String theme;
     public boolean isLiked;
     public int amountReport;
@@ -60,7 +60,7 @@ public class Posts {
         this.user = user;
     }
 
-    public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, String location, User user, Audio audio, List<Comment> comments) {
+        public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, String location, User user, Audio audio, List<Comment> comments) {
         this.id = id;
         this.title = title;
         this.description = description;

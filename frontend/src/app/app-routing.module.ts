@@ -17,7 +17,8 @@ import {SingleAudioComponent} from "./components/feed/single-audio/single-audio.
 import {AuthGuardLoggedinService} from "./services/auth-guard-loggedin.service";
 import {AuthGuardAdminService} from "./services/auth-guard-admin.service";
 import {WelcomeComponent} from "./components/welcome/welcome.component";
-
+import {RecordingPostComponent} from "./components/feed/recording-post/recording-post.component";
+import {DummyComponentComponent} from "./components/dummy-component/dummy-component.component";
 // const routes: Routes = [
 //   {path: '', component: FeedviewComponent},
 //   {path: 'profile', component: ProfileComponent},
@@ -42,7 +43,10 @@ const routes: Routes = [
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuardLoggedinService]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'feedview', component: FeedviewComponent},
+  {path: 'feedview', component: FeedviewComponent, children:[
+      {path: ":id", component: SingleAudioComponent}
+    ] },
+
   {
     path: 'mapview', component: MapviewComponent, children: [
       {path: ":id", component: SingleAudioComponent}
@@ -58,7 +62,8 @@ const routes: Routes = [
       {path: 'location', component: AdminPostsComponent},
       {path: 'users', component: AdminUsersComponent}
     ]
-  }
+  },
+  { path: 'dummy', component: DummyComponentComponent}
 ];
 
 @NgModule({

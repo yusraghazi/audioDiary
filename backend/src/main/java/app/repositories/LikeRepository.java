@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface LikeRepository {
     List<Likes> findAll();
-    Likes findById(int id);
-
+    Likes findById(Integer id);
+    List<Likes> findLikeByUser(String email);
     Likes save(Likes like);
 
-    Likes deleteById(int id);
+    void deleteById(int id);
 }

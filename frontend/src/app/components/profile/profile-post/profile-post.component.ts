@@ -2,6 +2,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
+import {UserService} from "../../../services/user.service";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-profile-post',
@@ -15,7 +17,7 @@ export class ProfilePostComponent implements OnInit {
 
   @Output() deleteSelected = new EventEmitter<Post>();
 
-  constructor(private postsService: PostsService) { }
+  constructor(private postsService: PostsService, private authService: AuthService) { }
 
   ngOnInit(): void {
 

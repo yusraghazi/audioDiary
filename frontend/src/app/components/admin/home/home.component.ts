@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {PostsService} from "../../../services/posts.service";
+import {User} from "../../../models/user";
+import {UserService} from "../../../services/user.service";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-home',
@@ -7,9 +11,58 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  amountOfUsers: number;
+  amountOfPosts: number;
+  popularTheme: unknown;
+  currentAdmin: User;
+
+  constructor(private userService: UserService, private postsService: PostsService,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.checkAdminOrResearch();
+    this.getAmountOfPosts();
+    this.getAmountOfUsers();
+    this.loadThemes();
+  }
+
+  async loadThemes() {
+    await this.postsService.getTopFiveThemes().then(result => {
+      // @ts-ignore
+      this.popularTheme = result;
+    });
+  }
+
+  getAmountOfUsers() {
+    this.userService.getAmountOfUsers().subscribe(
+      (data) => {
+        // @ts-ignore
+        this.amountOfUsers = data; console.log(data);
+      },
+      (error) => console.log("Error: " + error.status + " - " + error.error)
+    );
+    return this.amountOfUsers;
+  }
+
+  getAmountOfPosts() {
+    this.postsService.restGetPosts().subscribe(
+      (data) => {
+        // @ts-ignore
+        this.amountOfPosts = data.length; console.log(data);
+      },
+      (error) => console.log("Error: " + error.status + " - " + error.error)
+    );
+    return this.amountOfPosts;
+  }
+
+  checkAdminOrResearch() {
+    let user = this.userService.restGetUser(this.authService.getUser().email)
+    user.pipe().subscribe(
+      (data) => {
+        this.currentAdmin = data;
+        console.log(this.currentAdmin.verified);
+      }
+    )
   }
 
 }

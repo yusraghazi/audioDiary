@@ -69,13 +69,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
@@ -147,6 +147,9 @@
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
+    <configuration name="admin-users.component.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ad-vmc-1/frontend/src/app/components/admin/admin-users/admin-users.component.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.BackendApplication" />
@@ -186,6 +189,7 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="JavaScript Debug.admin-users.component.html" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="npm.start" />
       <item itemvalue="npm.start (1)" />
@@ -195,9 +199,9 @@
       <list>
         <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.start" />
+        <item itemvalue="JavaScript Debug.admin-users.component.html" />
         <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.start (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -693,6 +697,91 @@
     </task>
     <option name="localTasksCounter" value="101" />
     <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00089" summary="worked on cloudinary server side">
+      <created>1641404242563</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1641404242563</updated>
+    </task>
+    <task id="LOCAL-00090" summary="further implementation of cloudinary">
+      <created>1641408542533</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1641408542534</updated>
+    </task>
+    <task id="LOCAL-00091" summary="worked on getting data from database admin side">
+      <created>1641423772039</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1641423772039</updated>
+    </task>
+    <task id="LOCAL-00092" summary="worked on getting data of themes from database admin side">
+      <created>1641595906439</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1641595906440</updated>
+    </task>
+    <task id="LOCAL-00093" summary="worked on like crud operations and http get requests in several pages">
+      <created>1641662409340</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1641662409340</updated>
+    </task>
+    <task id="LOCAL-00094" summary="worked on dividing researcher and maintainer">
+      <created>1641677401412</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1641677401412</updated>
+    </task>
+    <task id="LOCAL-00095" summary="worked on map and likes">
+      <created>1641853657188</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1641853657189</updated>
+    </task>
+    <task id="LOCAL-00096" summary="worked on map and admin">
+      <created>1641860035540</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1641860035540</updated>
+    </task>
+    <task id="LOCAL-00097" summary="added search filter for hashtags">
+      <created>1641900891601</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1641900891601</updated>
+    </task>
+    <task id="LOCAL-00098" summary="worked on last details of map">
+      <created>1641910020983</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1641910020983</updated>
+    </task>
+    <task id="LOCAL-00099" summary="worked on last details of map">
+      <created>1641912169942</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1641912169942</updated>
+    </task>
+    <task id="LOCAL-00100" summary="sharepost">
+      <created>1641849333575</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1641849333575</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -786,5 +875,24 @@
     <MESSAGE value="favorite post can also be removed now" />
     <option name="LAST_COMMIT_MESSAGE" value="favorite post can also be removed now" />
     <option name="LAST_COMMIT_MESSAGE" value="worked on cloudinary server side" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
+    <MESSAGE value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
+    <MESSAGE value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on dividing researcher and maintainer" />
+    <MESSAGE value="worked on map and likes" />
+    <MESSAGE value="worked on map and admin" />
+    <MESSAGE value="added search filter for hashtags" />
+    <MESSAGE value="worked on last details of map" />
+    <MESSAGE value="sharepost" />
+    <option name="LAST_COMMIT_MESSAGE" value="sharepost" />
   </component>
 </project>
