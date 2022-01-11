@@ -1,1 +1,0 @@
-{"ast":null,"code":"/**\n *\n * @param a\n */\nexport function isObject(a) {\n  return typeof a === 'object' && a !== null;\n}","map":null,"metadata":{},"sourceType":"module"}

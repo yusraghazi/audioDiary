@@ -1,1 +1,0 @@
-{"ast":null,"code":"/**\n *\n * @param publicID\n */\nexport function isUrl(publicID) {\n  return publicID.match(/^https?:\\//);\n}","map":null,"metadata":{},"sourceType":"module"}

@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { QualifierValue } from \"../../internal/qualifier/QualifierValue.js\";\n/**\n * @memberOf Qualifiers.GradientDirection\n * @extends {SDK.QualifierValue}\n */\n\nclass GradientDirectionQualifierValue extends QualifierValue {}\n\nexport { GradientDirectionQualifierValue };","map":null,"metadata":{},"sourceType":"module"}

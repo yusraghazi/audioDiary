@@ -1,1 +1,0 @@
-{"ast":null,"code":"import Loader from \"./Loader\";\nexport default class IdentityLoader extends Loader {\n  load() {\n    return Promise.resolve(this.src);\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

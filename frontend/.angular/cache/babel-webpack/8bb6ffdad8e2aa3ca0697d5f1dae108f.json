@@ -1,1 +1,0 @@
-{"ast":null,"code":"var patch = require(\"./vdom/patch.js\");\n\nmodule.exports = patch;","map":null,"metadata":{},"sourceType":"script"}

@@ -1,1 +1,0 @@
-{"ast":null,"code":"/**\n * Flip keys and values for given object\n * @param obj\n */\nfunction objectFlip(obj) {\n  const result = {};\n  Object.keys(obj).forEach(key => {\n    result[obj[key]] = key;\n  });\n  return result;\n}\n\nexport { objectFlip };","map":null,"metadata":{},"sourceType":"module"}

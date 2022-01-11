@@ -1,1 +1,0 @@
-{"ast":null,"code":"export const environment = {\n  production: false,\n  apiUrl: 'https://audiodiary-be-team1-staging.herokuapp.com',\n  environmentName: 'staging'\n};","map":null,"metadata":{},"sourceType":"module"}

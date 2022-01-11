@@ -1,1 +1,0 @@
-{"ast":null,"code":"/**\n *\n * @param arg\n */\nexport function toArray(arg) {\n  switch (true) {\n    case arg == null:\n      return [];\n\n    case Array.isArray(arg):\n      return arg;\n\n    default:\n      return [arg];\n  }\n}","map":null,"metadata":{},"sourceType":"module"}

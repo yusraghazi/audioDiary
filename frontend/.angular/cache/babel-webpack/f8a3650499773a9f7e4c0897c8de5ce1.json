@@ -1,1 +1,0 @@
-{"ast":null,"code":"/**\n * Validates obj is an instance of IErrorObject\n * @param obj\n */\nfunction isErrorObject(obj) {\n  const errorObj = obj;\n  return 'error' in errorObj && !!errorObj.error;\n}\n\nexport { isErrorObject };","map":null,"metadata":{},"sourceType":"module"}

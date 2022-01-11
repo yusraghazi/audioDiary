@@ -1,1 +1,0 @@
-{"ast":null,"code":"var version = require(\"./version\");\n\nmodule.exports = isVirtualNode;\n\nfunction isVirtualNode(x) {\n  return x && x.type === \"VirtualNode\" && x.version === version;\n}","map":null,"metadata":{},"sourceType":"script"}

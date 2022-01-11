@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { Action } from \"../../internal/Action.js\";\n/**\n * @memberOf Qualifiers.Region\n */\n\nclass NamedRegion extends Action {\n  constructor(type) {\n    super();\n    this.regionType = type;\n  }\n\n}\n\nexport { NamedRegion };","map":null,"metadata":{},"sourceType":"module"}

@@ -1,1 +1,0 @@
-{"ast":null,"code":"var version = require(\"./version\");\n\nmodule.exports = isVirtualText;\n\nfunction isVirtualText(x) {\n  return x && x.type === \"VirtualText\" && x.version === version;\n}","map":null,"metadata":{},"sourceType":"script"}

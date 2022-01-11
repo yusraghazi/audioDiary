@@ -1,1 +1,0 @@
-{"ast":null,"code":"var nativeIsArray = Array.isArray;\nvar toString = Object.prototype.toString;\nmodule.exports = nativeIsArray || isArray;\n\nfunction isArray(obj) {\n  return toString.call(obj) === \"[object Array]\";\n}","map":null,"metadata":{},"sourceType":"script"}

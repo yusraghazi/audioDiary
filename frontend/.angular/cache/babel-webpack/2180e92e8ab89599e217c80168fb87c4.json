@@ -1,1 +1,0 @@
-{"ast":null,"code":"var version = require(\"./version\");\n\nmodule.exports = VirtualText;\n\nfunction VirtualText(text) {\n  this.text = String(text);\n}\n\nVirtualText.prototype.version = version;\nVirtualText.prototype.type = \"VirtualText\";","map":null,"metadata":{},"sourceType":"script"}

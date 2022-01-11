@@ -1,1 +1,0 @@
-{"ast":null,"code":"var diff = require(\"./vtree/diff.js\");\n\nmodule.exports = diff;","map":null,"metadata":{},"sourceType":"script"}
