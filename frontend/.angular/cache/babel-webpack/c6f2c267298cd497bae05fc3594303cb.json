@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { QualifierValue } from \"../../internal/qualifier/QualifierValue.js\";\n/**\n * @memberOf Qualifiers.AnimatedFormat\n * @extends {SDK.QualifierValue}\n */\n\nclass AnimatedFormatQualifierValue extends QualifierValue {}\n\nexport { AnimatedFormatQualifierValue };","map":null,"metadata":{},"sourceType":"module"}

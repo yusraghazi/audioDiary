@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * Converts string to snake case\n * @param {string} str\n */\nexport const snakeCase = str => str.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);","map":null,"metadata":{},"sourceType":"module"}

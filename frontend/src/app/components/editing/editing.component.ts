@@ -97,13 +97,6 @@ export class EditingComponent implements OnInit {
       .then(this.successCallback.bind(this), this.errorCallback.bind(this));
 
   }
-  lng: number;
-  lat: number;
-  location: string;
-
-
-
-
 
   /**
    * Will be called automatically.
