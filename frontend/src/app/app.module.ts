@@ -40,6 +40,7 @@ import { NgAudioRecorderModule } from 'ng-audio-recorder';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptorService} from './services/auth.interceptor';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +83,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
     MatButtonModule,
     MatIconModule,
     NgAudioRecorderModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }

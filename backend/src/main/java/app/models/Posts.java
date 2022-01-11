@@ -32,6 +32,7 @@ public class Posts {
     public int amountReport;
     public BigDecimal lng;
     public BigDecimal lat;
+    public String location;
 
     @ManyToOne()
     @JoinColumn(name = "user_email")
@@ -59,7 +60,7 @@ public class Posts {
         this.user = user;
     }
 
-        public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, User user, Audio audio, List<Comment> comments) {
+        public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, String location, User user, Audio audio, List<Comment> comments) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -69,6 +70,7 @@ public class Posts {
         this.amountReport = amountReport;
         this.lng = lng;
         this.lat = lat;
+        this.location = location;
         this.user = user;
         this.audio = audio;
         this.comments = comments;
@@ -177,6 +179,14 @@ public class Posts {
 
     public void setLat(BigDecimal lat) {
         this.lat = lat;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     @Override

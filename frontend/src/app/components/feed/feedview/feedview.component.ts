@@ -1,4 +1,4 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, OnInit, Output, Pipe} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
@@ -17,9 +17,11 @@ export class FeedviewComponent implements OnInit {
   popularPosts: unknown = null;
   posts: Post[];
   text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+  term: string;
 
   @Output()
   mapview: string = "Mapview";
+  searchToken: string;
 
   constructor(private postsService: PostsService, private router: Router, public route: ActivatedRoute) {
 
@@ -63,6 +65,7 @@ export class FeedviewComponent implements OnInit {
     //this.popularPosts = this.postsService.getTopFiveThemes();
   }
 
+
 //  returnColor(post: Post) {
   //   switch (post.theme) {
   //     case this.popularPosts[0]:
@@ -89,3 +92,4 @@ export class FeedviewComponent implements OnInit {
   // }
 
 }
+

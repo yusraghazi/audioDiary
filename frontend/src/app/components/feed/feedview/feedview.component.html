@@ -10,8 +10,9 @@
   </div>
 </div>
 </div>
+<input type="text" [(ngModel)]="term" class="searchTerm" placeholder="What are you looking for?">
 <div class="allPosts">
-    <div *ngFor="let post of posts;">
+    <div *ngFor="let post of posts | filter:term;">
       <app-recording-post [audioPost]="post"></app-recording-post>
     </div>
     <div style="height: 140px"></div>
