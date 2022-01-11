@@ -1,13 +1,13 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Post} from "../../models/post";
 import {Subscription} from "rxjs";
 import {PostsService} from "../../services/posts.service";
 import {Router} from "@angular/router";
 // @ts-ignore
-import * as mapboxgl from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
+// import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import {User} from "../../models/user";
 import {AuthService} from "../../services/auth.service";
 
 @Component({
@@ -26,6 +26,10 @@ private childparamsSub: Subscription;
 
   imageSrc: string | ArrayBuffer;
   map: mapboxgl.map;
+  lng: number;
+  lat: number;
+  location: string;
+
 
   constructor(private postService: PostsService, private route: Router, private auth: AuthService) { }
 
@@ -64,8 +68,15 @@ private childparamsSub: Subscription;
     this.map.on('click', (e: any) => {
         // `e.lngLat` is the longitude, latitude geographical position of the event.
       console.log(e.lngLat);
-      console.log(e.lngLat.lat);
-      console.log(e.lngLat.lng);
+      console.log(e);
+      this.lng = e.lngLat.lng;
+      this.lat = e.lngLat.lat;
+
+      var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", "https://api.mapbox.com/geocoding/v5/mapbox.places/" + e.lngLat.lng + "," + e.lngLat.lat + ".json?access_token=pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ", false ); // false for synchronous request
+      xmlHttp.send( null );
+      this.location = JSON.parse(xmlHttp.responseText).features[0].place_name;
+
         if (marker != null) {
           // @ts-ignore
           marker.remove()

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Chart from "chart.js/auto";
 // @ts-ignore
-import * as mapboxgl from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import {Post} from "../../../models/post";
