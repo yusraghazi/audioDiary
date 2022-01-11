@@ -4,6 +4,8 @@ import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
 import {Observable} from "rxjs";
 import {ActivatedRoute, Router} from "@angular/router";
+import {Meta} from "@angular/platform-browser";
+import {ShareService} from "../../../services/share.service";
 import {share} from "rxjs/operators";
 
 @Component({
@@ -23,14 +25,27 @@ export class FeedviewComponent implements OnInit {
   mapview: string = "Mapview";
   searchToken: string;
 
-  constructor(private postsService: PostsService, private router: Router, public route: ActivatedRoute) {
+  constructor(private postsService: PostsService, private router: Router, private route: ActivatedRoute, private meta:Meta, private shareService: ShareService) {
 
   }
 
   ngOnInit(): void {
     this.getAllPosts();
+
     this.getMostPopularThemes();
+
+    this.route.queryParams.subscribe(
+      params => {
+        console.log(params);
+        if (params.hashtag != null) {
+          this.getPostByTheme(params.hashtag)
+        }
+      }
+    );
+
+    this.getPostById()
   }
+
 
   getAllPosts(): void{
     this.postsService.restGetPosts().subscribe(
@@ -65,6 +80,26 @@ export class FeedviewComponent implements OnInit {
     //this.popularPosts = this.postsService.getTopFiveThemes();
   }
 
+ async getPostById() {
+   const id = this.router.url.split("/")[2];
+
+   console.log(+id)
+   console.log(id)
+
+   console.log(this.postsService.restGetPost(+id).subscribe(
+       (data) =>{
+         this.posts = [ ];
+         this.posts[0] = data;
+         this.shareService.setSocialMediaTags(
+          "https://audiodiary-fe-team1-staging.herokuapp.com"+ this.router.url,
+           data.title,
+           data.description,
+           data.img);
+         console.log(data);
+       },
+       (error) => console.log("Error: " + error.status + " - " + error.error)
+     )
+   );
 
 //  returnColor(post: Post) {
   //   switch (post.theme) {
@@ -91,5 +126,6 @@ export class FeedviewComponent implements OnInit {
   //   return post.theme;
   // }
 
+  }
 }
 

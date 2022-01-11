@@ -115,7 +115,7 @@ export class RecordingPostComponent implements OnInit {
 
   toggleShow() {
 
-    this.isShown = ! this.isShown;
+    this.isShown = !this.isShown;
 
   }
 
@@ -149,4 +149,20 @@ export class RecordingPostComponent implements OnInit {
       );
   }
 
+
+ async sharePost() {
+    if (navigator.share) {
+      console.log("ja")
+
+    }
+    const shareData = {
+      title: this.audioPost.title,
+      text: this.audioPost.description,
+      url: 'https://audiodiary-fe-team1-staging.herokuapp.com/feedview/'+this.audioPost.id
+    }
+
+      await navigator.share(shareData)
+
+  }
 }
+
