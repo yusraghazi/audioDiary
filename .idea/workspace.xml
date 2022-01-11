@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on adding hashtags instead of themes">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="favorite post can also be removed now" />
+    <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -589,6 +585,84 @@
       <option name="project" value="LOCAL" />
       <updated>1641404242563</updated>
     </task>
+    <task id="LOCAL-00090" summary="further implementation of cloudinary">
+      <created>1641408542533</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1641408542534</updated>
+    </task>
+    <task id="LOCAL-00091" summary="worked on getting data from database admin side">
+      <created>1641423772039</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1641423772039</updated>
+    </task>
+    <task id="LOCAL-00092" summary="worked on getting data of themes from database admin side">
+      <created>1641595906439</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1641595906440</updated>
+    </task>
+    <task id="LOCAL-00093" summary="worked on like crud operations and http get requests in several pages">
+      <created>1641662409340</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1641662409340</updated>
+    </task>
+    <task id="LOCAL-00094" summary="worked on dividing researcher and maintainer">
+      <created>1641677401412</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1641677401412</updated>
+    </task>
+    <task id="LOCAL-00095" summary="worked on map and likes">
+      <created>1641853657188</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1641853657189</updated>
+    </task>
+    <task id="LOCAL-00096" summary="worked on map and admin">
+      <created>1641860035540</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1641860035540</updated>
+    </task>
+    <task id="LOCAL-00097" summary="added search filter for hashtags">
+      <created>1641900891601</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1641900891601</updated>
+    </task>
+    <task id="LOCAL-00098" summary="worked on last details of map">
+      <created>1641910020983</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1641910020983</updated>
+    </task>
+    <task id="LOCAL-00099" summary="worked on last details of map">
+      <created>1641912169942</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1641912169942</updated>
+    </task>
+    <task id="LOCAL-00100" summary="favorite post can also be removed now">
+      <created>1641938527722</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1641938527722</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <option name="localTasksCounter" value="90" />
     <servers />
   </component>
@@ -664,6 +738,24 @@
     <MESSAGE value="worked on qol and update user with taner and altaaf" />
     <MESSAGE value="worked on adding hashtags instead of themes" />
     <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
+    <MESSAGE value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
+    <MESSAGE value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on dividing researcher and maintainer" />
+    <MESSAGE value="worked on map and likes" />
+    <MESSAGE value="worked on map and admin" />
+    <MESSAGE value="added search filter for hashtags" />
+    <MESSAGE value="worked on last details of map" />
+    <MESSAGE value="sharepost" />
+    <MESSAGE value="favorite post can also be removed now" />
+    <option name="LAST_COMMIT_MESSAGE" value="favorite post can also be removed now" />
     <option name="LAST_COMMIT_MESSAGE" value="worked on cloudinary server side" />
   </component>
 </project>
