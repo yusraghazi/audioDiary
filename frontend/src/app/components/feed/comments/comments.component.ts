@@ -4,7 +4,6 @@ import {Post} from "../../../models/post";
 import {CommentsService} from "../../../services/comments.service";
 import {AuthService} from "../../../services/auth.service";
 
-
 @Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
