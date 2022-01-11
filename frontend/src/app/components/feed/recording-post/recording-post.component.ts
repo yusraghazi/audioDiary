@@ -5,9 +5,10 @@ import {PostsService} from "../../../services/posts.service";
 import {LikesService} from "../../../services/likes.service";
 import {AuthService} from "../../../services/auth.service";
 import {Like} from "../../../models/like";
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {User} from "../../../models/user";
+import {audit} from "rxjs/operators";
 
 
 @Component({
@@ -21,6 +22,7 @@ export class RecordingPostComponent implements OnInit {
   isShown: boolean;
   popularThemes: unknown;
   theme: String;
+  themeValue: string;
   private childParamsSubscription: Subscription;
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
@@ -76,6 +78,8 @@ export class RecordingPostComponent implements OnInit {
   async getMostPopularThemes() {
     await this.postsService.getTopFiveThemes().then(result => {
       this.popularThemes = result;
+      this.themeValue = this.audioPost.theme;
+      console.log(this.themeValue);
     });
   }
 
@@ -88,22 +92,22 @@ export class RecordingPostComponent implements OnInit {
         break;
       // @ts-ignore
       case this.popularThemes[1][0]:
-        this.audioPost.theme = Theme.WATER;
+        this.audioPost.theme = Theme.SAND;
         break;
       // @ts-ignore
       case this.popularThemes[2][0]:
-        this.audioPost.theme = Theme.CITY;
+        this.audioPost.theme = Theme.FOREST;
         break;
       // @ts-ignore
       case this.popularThemes[3][0]:
-        this.audioPost.theme = Theme.SAND;
+        this.audioPost.theme = Theme.WATER;
         break;
       // @ts-ignore
       case this.popularThemes[4][0]:
         this.audioPost.theme = Theme.MOUNTAIN;
         break;
       default:
-        this.audioPost.theme = Theme.FOREST;
+        this.audioPost.theme = Theme.CITY;
         break;
     }
     return this.theme;

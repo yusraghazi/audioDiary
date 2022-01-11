@@ -12,6 +12,7 @@ export class Post {
   amountReport: number;
   lng: number;
   lat: number;
+  location: string;
   audio: Audio;
 
   constructor() {

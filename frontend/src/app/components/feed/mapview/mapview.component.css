@@ -52,6 +52,15 @@
 /*  background-color: transparent;*/
 /*}*/
 
+#close {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  background: transparent;
+  color: transparent;
+}
+
 .postCard {
   position: absolute;
   z-index: 100;

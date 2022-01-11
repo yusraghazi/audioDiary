@@ -41,6 +41,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptorService} from './services/auth.interceptor';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
+import { DummyComponentComponent } from './components/dummy-component/dummy-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +71,7 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
      AdminUsersComponent,
      SingleAudioComponent,
      WelcomeComponent,
+     DummyComponentComponent,
   ],
   imports: [
     BrowserModule,

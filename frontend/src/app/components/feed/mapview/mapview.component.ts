@@ -9,7 +9,7 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import {Post} from "../../../models/post";
 import {PostsService} from "../../../services/posts.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import {ActivatedRoute, NavigationEnd, Params, Router} from "@angular/router";
 import {Theme} from "../../../enums/theme";
 
 @Component({
@@ -33,7 +33,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   showOverlay: boolean = false;
 
   constructor(private postsService: PostsService , private router: Router,
-              private activatedRoute: ActivatedRoute) {
+              public activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit() {
@@ -57,7 +57,6 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ';
     this.map = new mapboxgl.Map({
       style: 'mapbox://styles/mapbox/outdoors-v11',

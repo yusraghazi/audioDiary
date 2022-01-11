@@ -1,27 +1,16 @@
-.card {
+.card{
   margin: 10px auto;
   border-radius: 20px 20px 30px 30px ;
   color: black;
   width: 350px;
-  /*box-shadow: 2.4px 4.8px 4.8px hsl(0deg 0% 0% / 0.43);*/
+
+
   float: none;
   display: flex;
   flex: 1 1 auto;
-  top: 75px;
-}
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  cursor: pointer; /* Add a pointer on hover */
-  z-index: 10;
-}
 
+
+}
 .card-img-top{
   border-radius: 17px 17px 30px 30px ;
 }
@@ -48,160 +37,11 @@
   padding: 3px;
 }
 
-
-/*!**********animation********!*/
-/*.css_animation {*/
-/*  width: 100%;*/
-/*  margin-left: -13px;*/
-/*}*/
-
-/*.css_animation .wrapper {*/
-/*  position: relative;*/
-/*  width: 100%;*/
-/*  height: 100px;*/
-/*  !*   padding-top: 78%; *!*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  overflow: hidden;*/
-/*}*/
-
-/*.css_animation .wrapper div {*/
-/*  display: block;*/
-/*  width: 15px;*/
-/*  margin-right: 8px;*/
-/*  height: 15px;*/
-/*  border-radius: 20px;*/
-/*  animation: sound 0ms 1.2s linear infinite alternate;*/
-/*  transition: height 0.8s;*/
-/*}*/
-/*.css_animation .wrapper .pro-rec1{*/
-/*  background: #f9edf6;*/
-/*}*/
-
-/*@keyframes gradient {*/
-/*  0% {*/
-/*    background-position: 0% 50%;*/
-/*  }*/
-/*  50% {*/
-/*    background-position: 100% 50%;*/
-/*  }*/
-/*  100% {*/
-/*    background-position: 0% 50%;*/
-/*  }*/
-/*}*/
-
-/*@keyframes sound {*/
-/*  0% {*/
-/*    opacity: 0.35;*/
-/*    height: 5px;*/
-/*  }*/
-/*  100% {*/
-/*    opacity: 1;*/
-/*    height: 50px;*/
-/*  }*/
-/*}*/
-/*.css_animation .wrapper div:nth-of-type(1) {*/
-/*  !*   height: 2px; *!*/
-/*  animation-duration: 458ms;*/
-/*}*/
-/*.css_animation .wrapper div:nth-of-type(2) {*/
-/*  !*   height: 15px; *!*/
-/*  animation-duration: 400ms;*/
-/*}*/
-/*.css_animation .wrapper div:nth-of-type(3) {*/
-/*  !*   height: 25px; *!*/
-/*  animation-duration: 427ms;*/
-/*}*/
-/*.css_animation .wrapper div:nth-of-type(4) {*/
-/*  !*   height: 30px; *!*/
-/*  animation-duration: 441ms;*/
-/*}*/
-/*.css_animation .wrapper div:nth-of-type(5) {*/
-/*  !*   height: 40px; *!*/
-/*  animation-duration: 419ms;*/
-/*}*/
-/*.css_animation .wrapper div:nth-of-type(6) {*/
-/*  !*   height: 45px; *!*/
-/*  animation-duration: 487ms;*/
-/*}*/
-
-
-/*!*Onclick sound waves*!*/
-/*.css_animation .onClickWrapper {*/
-/*  position: relative;*/
-/*  width: 100%;*/
-/*  height: 100px;*/
-/*  !*   padding-top: 78%; *!*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  overflow: hidden;*/
-/*}*/
-
-/*.css_animation .onClickWrapper div {*/
-/*  display: block;*/
-/*  width: 15px;*/
-/*  margin-right: 8px;*/
-/*  height: 15px;*/
-/*  border-radius: 20px;*/
-
-/*}*/
-
-/*.css_animation .onClickWrapper .pro-rec1{*/
-/*  background: #f9edf6;*/
-/*}*/
-
-/*.css_animation .onClickWrapper div:nth-of-type(1) {*/
-/*  height: 70px;*/
-/*}*/
-/*.css_animation .onClickWrapper div:nth-of-type(2) {*/
-/*  height: 60px;*/
-/*}*/
-/*.css_animation .onClickWrapper div:nth-of-type(3) {*/
-/*  height: 50px;*/
-/*}*/
-/*.css_animation .onClickWrapper div:nth-of-type(4) {*/
-/*  height: 40px;*/
-/*}*/
-/*.css_animation .onClickWrapper div:nth-of-type(5) {*/
-/*  height: 30px;*/
-/*}*/
-/*.css_animation .onClickWrapper div:nth-of-type(6) {*/
-/*  height: 20px;*/
-/*}*/
-
-#play-pause {
-  display: none;
-}
-
-label {
-  cursor: pointer;
-}
-/*#playbutton {*/
-/*  color: white;*/
-/*  font-family: sans-serif;*/
-/*  font-weight: 300;*/
-/*  font-size: 6rem;*/
-/*  margin: 0;*/
-/*  box-sizing: border-box;*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*}*/
-
-/*#play-pause:checked + #play-pause-label::after {*/
-/*  content: '❙❙';*/
-/*}*/
-
-/*#play-pause-label::after {*/
-/*  content: '►';*/
-/*}*/
 .fa-play-circle-o{
   color: white;
   font-size: 70px;
   opacity: 90%;
   position: absolute;
-  top:100px;
-  left: 120px;
+  top:75px;
+  left: 145px;
 }
