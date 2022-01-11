@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="added search filter for hashtags">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on last details of map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/recording-post/recording-post.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
     </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -266,14 +255,7 @@
       <workItem from="1641589638420" duration="24150000" />
       <workItem from="1641727429323" duration="3923000" />
       <workItem from="1641819993066" duration="19416000" />
-      <workItem from="1641897168379" duration="9919000" />
-    </task>
-    <task id="LOCAL-00049" summary="worked on login">
-      <created>1638894217926</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1638894217926</updated>
+      <workItem from="1641897168379" duration="12208000" />
     </task>
     <task id="LOCAL-00050" summary="worked on login">
       <created>1638894344209</created>
@@ -611,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641900891601</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="worked on last details of map">
+      <created>1641910020983</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1641910020983</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -643,8 +632,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed all issues of database and backend" />
-    <MESSAGE value="worked on coordinates for map and edit page" />
     <MESSAGE value="worked on converting database data to json" />
     <MESSAGE value="test for deployment" />
     <MESSAGE value="another test" />
@@ -692,6 +679,7 @@
     <MESSAGE value="worked on map and likes" />
     <MESSAGE value="worked on map and admin" />
     <MESSAGE value="added search filter for hashtags" />
-    <option name="LAST_COMMIT_MESSAGE" value="added search filter for hashtags" />
+    <MESSAGE value="worked on last details of map" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on last details of map" />
   </component>
 </project>
