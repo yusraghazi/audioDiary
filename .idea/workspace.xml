@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on last details of map">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on last details of map" />
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -255,14 +252,7 @@
       <workItem from="1641589638420" duration="24150000" />
       <workItem from="1641727429323" duration="3923000" />
       <workItem from="1641819993066" duration="19416000" />
-      <workItem from="1641897168379" duration="12208000" />
-    </task>
-    <task id="LOCAL-00050" summary="worked on login">
-      <created>1638894344209</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1638894344210</updated>
+      <workItem from="1641897168379" duration="12937000" />
     </task>
     <task id="LOCAL-00051" summary="worked on login">
       <created>1638894742883</created>
@@ -600,7 +590,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641910020983</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="worked on last details of map">
+      <created>1641912169942</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1641912169942</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -632,8 +629,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on converting database data to json" />
-    <MESSAGE value="test for deployment" />
     <MESSAGE value="another test" />
     <MESSAGE value="worked on coordinates for map and edit page" />
     <MESSAGE value="worked on converting database data to json" />
