@@ -1,0 +1,1 @@
+{"ast":null,"code":"module.exports = isWidget;\n\nfunction isWidget(w) {\n  return w && w.type === \"Widget\";\n}","map":null,"metadata":{},"sourceType":"script"}

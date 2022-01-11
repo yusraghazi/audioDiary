@@ -1,4 +1,3 @@
-import {NgAudioRecorderService, OutputFormat} from 'ng-audio-recorder';
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {AuthService} from "../../services/auth.service";
@@ -32,7 +31,7 @@ export class FooterComponent implements OnInit {
 
 
 
-    constructor(private audioRecorderService: NgAudioRecorderService, public router: Router, private activatedRoute: ActivatedRoute, private domSanitizer: DomSanitizer,
+    constructor(public router: Router, private activatedRoute: ActivatedRoute, private domSanitizer: DomSanitizer,
       public auth: AuthService) {
       if (auth.isLoggedIn() == null) {
         this.login = false;
@@ -95,6 +94,7 @@ export class FooterComponent implements OnInit {
   errorCallback(error:any) {
     this.error = 'Can not play audio in your browser';
   }
+
 
 
   // startRecording() {

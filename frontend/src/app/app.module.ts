@@ -33,10 +33,9 @@ import { HomeComponent } from './components/admin/home/home.component';
 import { AdminPostsComponent } from './components/admin/admin-posts/admin-posts.component';
 import { AdminUsersComponent } from './components/admin/admin-users/admin-users.component';
 
-
+import {CloudinaryModule} from "@cloudinary/ng";
 import { ProfilePostFavoriteComponent } from './components/profile/profile-post-favorite/profile-post-favorite.component';
 import { SingleAudioComponent } from './components/feed/single-audio/single-audio.component';
-import { NgAudioRecorderModule } from 'ng-audio-recorder';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AuthInterceptorService} from './services/auth.interceptor';
 import { WelcomeComponent } from './components/welcome/welcome.component';
@@ -82,9 +81,9 @@ import {FileUploadModule} from "ng2-file-upload";
         MatInputModule,
         MatButtonModule,
         MatIconModule,
-        NgAudioRecorderModule,
         ReactiveFormsModule,
-        FileUploadModule
+        FileUploadModule,
+        CloudinaryModule
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }

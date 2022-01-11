@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n/*global window, global*/\n\nvar root = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : {};\nmodule.exports = Individual;\n\nfunction Individual(key, value) {\n  if (key in root) {\n    return root[key];\n  }\n\n  root[key] = value;\n  return value;\n}","map":null,"metadata":{},"sourceType":"script"}

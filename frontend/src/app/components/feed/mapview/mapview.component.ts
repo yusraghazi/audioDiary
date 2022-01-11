@@ -3,7 +3,7 @@ import {AfterViewInit, Component, Input, OnInit, Output} from '@angular/core';
 // @ts-ignore
 import H from '@here/maps-api-for-javascript';
 // @ts-ignore
-import * as mapboxgl from "mapbox-gl";
+import mapboxgl from "mapbox-gl";
 // @ts-ignore
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
