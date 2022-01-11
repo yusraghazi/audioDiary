@@ -3,17 +3,17 @@
 <script src="https://kit.fontawesome.com/ef69927139.js" crossorigin="anonymous"></script>
 <div class="editFileCard">
   <div class="fileCard" [style.background-color]="getSelectedColor()">
-
-    <div class="card-body">
-      <div class=" shadow-lg title-container">
-        <h5 class="card-title"> </h5>
-      </div>
-      <div class="shadow-lg text-container">
-        <p class="card-text"></p>
-      </div>
-      <div class="reportFlag">
-      </div>
-    </div>
+    <!--newly commented out card body-->
+<!--    <div class="card-body">-->
+<!--      <div class=" shadow-lg title-container">-->
+<!--        <h5 class="card-title"> </h5>-->
+<!--      </div>-->
+<!--      <div class="shadow-lg text-container">-->
+<!--        <p class="card-text"></p>-->
+<!--      </div>-->
+<!--      <div class="reportFlag">-->
+<!--      </div>-->
+<!--    </div>-->
 
 <!--
     <div class="boxContainer">
@@ -34,20 +34,17 @@
         <div class="spinner-center"></div>
         <div class="play-sprite"></div>
     </div> -->
-    <script>
 
-    </script>
+    <!--waves commented out-->
+<!--    <div class="Waves">-->
+<!--      <div id="soundWave">-->
+<!--        <div id="playlist"></div>-->
+<!--        <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
+<!--      </div>-->
+<!--      <h1 id="time"></h1>-->
+<!--    </div>-->
 
-
-    <div class="Waves">
-      <div id="soundWave">
-        <div id="playlist"></div>
-        <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>
-      </div>
-      <h1 id="time"></h1>
-    </div>
-
-      </div>
+<!--      </div>-->
 
 
 
@@ -99,3 +96,25 @@
 
 
       <pre>{{ closeResult }}</pre>
+
+
+
+
+  <a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+  <a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
+  <div class="clearfix"></div>
+  <audio controls="" *ngIf="url">
+    <source [src]="sanitize(url)" type="audio/wav">
+  </audio>
+  <!-- In your view, render the image in an Angular component.-->
+  <advanced-image [cldImg]="img"></advanced-image>
+  <advanced-video [cldVid]="vid" controls></advanced-video>
+
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" id="fileInput" name="files[]" multiple>
+    <input type="submit" value="Upload Files" (click)="eventListen()" name="submit">
+  </form>
+
+  <p id="data">
+  </p>
+</div>

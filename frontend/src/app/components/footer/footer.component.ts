@@ -96,6 +96,7 @@ export class FooterComponent implements OnInit {
   }
 
 
+
   // startRecording() {
   //   this.audioRecorderService.startRecording();
   //   console.log("recording")

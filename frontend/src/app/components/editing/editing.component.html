@@ -23,14 +23,118 @@
 <!--      </div>-->
 <!--    </div>-->
 
-<!-- 5. Deliver your image
+<div class="editingRec">
+
+  <h2 id="editHeader" >Edit recording</h2>
+
+
+  <div class="editCard">
+
+    <div class="card" [ngStyle]="{'color': getSelectedColor()}">
+      <img class="cardImg" [src]="imageSrc" alt="Add an image below">
+      <div class="card-body">
+        <div class="headerBody">
+          <p class="card-username">@user</p>
+          <div class="icons">
+            <i class="bi bi-heart-fill"></i>
+            <i class="bi bi-heart"></i>
+            <i class="bi bi-chat-dots"></i>
+            <i class="bi bi-share-fill"></i>
+          </div>
+        </div>
+        <h5 class="postCardTitle">{{newPost.title}}</h5>
+        <p class="card-text">{{newPost.description}}</p>
+      </div>
+      <div class="commentsPart">
+      </div>
+    </div>
+
+
+
+
+    <div class="editInputs">
+      <div class="inputsTitle">
+        <p class="inputHeader">Title:</p>
+        <input class="inputValue" [(ngModel)]="newPost.title">
+      </div>
+
+      <p class="inputHeader"> Duration:</p>
+      <input class="inputValue" id="durationInput" value="01:30:00">
+
+      <p class="inputHeader"> Location:</p>
+      <div id="map-mapbox" style="height: 200px"></div>
+      <!--      <input class="inputValue" id="locationInput" value="Amsterdam">-->
+
+
+      <p class="inputHeader"> Description:</p>
+      <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
+      <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="newPost.description"></textarea>
+
+      <div class="picture">
+        <p class="inputHeader"> Picture: </p>
+        <input type="file" (change)="readURL($event)">
+      </div>
+
+      <!--      <div class="themeSelection">-->
+      <!--        <p id="themeInput">Choose theme:</p>-->
+      <!--        <div id="chooseTheme">-->
+      <!--          <p class="themeOptions" id="option1" (click)="cardColor = '#FE5F38'"></p>-->
+      <!--          <p class="themeOptions" id="option2" (click)="cardColor = '#FFAA5B'" ></p>-->
+      <!--          <p class="themeOptions" id="option3" (click)="cardColor = '#9BC111'"></p>-->
+      <!--          <p class="themeOptions" id="option4" (click)="cardColor = '#7A9BC6'"></p>-->
+      <!--          <p class="themeOptions" id="option5" (click)="cardColor = '#A28EB2'"></p>-->
+      <!--          <p class="themeOptions" id="option6" (click)="cardColor = '#73251E'"></p>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <p class="inputHeader">Hashtag:</p>
+      <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
+      <input class="inputValue mb-5" id="hashtagArea" [(ngModel)]="newPost.theme">
+      <!--      <div class="themeSelection">-->
+      <!--        <p id="themeInput">Choose theme:</p>-->
+      <!--        <div id="chooseTheme">-->
+      <!--          <p class="themeOptions" id="option1" (click)="cardColor = 'Theme.SUN'"></p>-->
+      <!--          <p class="themeOptions" id="option2" (click)="cardColor = 'Theme.SAND'" ></p>-->
+      <!--          <p class="themeOptions" id="option3" (click)="cardColor = 'Theme.FOREST'"></p>-->
+      <!--          <p class="themeOptions" id="option4" (click)="cardColor = 'Theme.WATER'"></p>-->
+      <!--          <p class="themeOptions" id="option5" (click)="cardColor = 'Theme.CITY'"></p>-->
+      <!--          <p class="themeOptions" id="option6" (click)="cardColor = 'Theme.MOUNTAIN'"></p>-->
+      <!--        </div>-->
+      <!--      </div>-->
+
+      <div class="buttons">
+        <button class="editButtons" id="discardButton" (click)="backButton()">Go back</button>
+        <button type= "submit" class="editButtons" id="postButton" (click)="postButton()">post</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 150px"></div>
+</div>
+
+
+
+
+<a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+<a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
+<div class="clearfix"></div>
+<audio controls="" *ngIf="url">
+  <source [src]="sanitize(url)" type="audio/wav">
+</audio>
+
+
+<!-- 5. Deliver your image or audio
  ========================= -->
 
 <!-- In your view, render the image in an Angular component.-->
 <advanced-image [cldImg]="img"></advanced-image>
+<advanced-video [cldVid]="vid" controls></advanced-video>
+
+<!--<advanced-video [cldVid]="vid" [sources]="sources" controls></advanced-video>-->
+
+
 
 <form method="post" enctype="multipart/form-data">
-  <input type="file" name="files[]" multiple>
+  <input type="file" id="fileInput" name="files[]" multiple>
   <input type="submit" value="Upload Files" (click)="eventListen()" name="submit">
 </form>
 
@@ -111,7 +215,7 @@
 <!--      </div>-->
 <!--    </div>-->
 <!--  </form>-->
-  <h2>Status</h2>
+
 <!--  <div class="file" *ngFor="let response of responses; let i = index">-->
 <!--    <h3>{{response.file.name}}</h3>-->
 <!--    <button class="delete-image" *ngIf="!!response.data.delete_token" (click)="deleteImage(response.data, i)">Delete image</button>-->

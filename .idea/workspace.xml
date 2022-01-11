@@ -6,12 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="further implementation of cloudinary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/2.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/2.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/4.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/4.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/5.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/5.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/6.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/6.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/7.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/7.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/8.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/8.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/9.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/9.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/be47d93241ea18656ad71938114cf5a1ac3e3593/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/footer/footer.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +96,7 @@
         <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
     <option name="isSearchInLibrariesForStructure" value="false" />
@@ -125,7 +143,7 @@
       <recent name="E:\HVA ICT 2\EWA\Project\ad-vmc-1\app\src\assets\img" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start (1)">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -250,6 +268,8 @@
       <workItem from="1641380700145" duration="4166000" />
       <workItem from="1641497099689" duration="466000" />
       <workItem from="1641497622529" duration="10939000" />
+      <workItem from="1641579602860" duration="131000" />
+      <workItem from="1641813322753" duration="25811000" />
     </task>
     <task id="LOCAL-00041" summary="last test">
       <created>1638470337830</created>
