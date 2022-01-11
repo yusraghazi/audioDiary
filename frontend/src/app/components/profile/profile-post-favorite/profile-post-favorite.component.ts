@@ -52,26 +52,25 @@ export class ProfilePostFavoriteComponent implements OnInit {
     soundWaves.classList.add("wrapper");
   }
 
-  toRemoveFavoritePost(){
-    this.deletedFavoriteSelected.emit(this.selectedFavoritePost);
-  }
-
-  async getFavoritePosts() {
+  async toRemoveFavoritePost(){
     let currentUser = await this.auth.getUser();
-    this.likesService.getFavorites(currentUser.email).subscribe(
+    await this.likesService.getFavorites(currentUser.email).subscribe(
       (data) => {
         console.log(data);
         data.forEach(like => {
-            this.postsService.restGetPost(like.post.id).subscribe(
-              (data) => {
-                this.favoriteposts.push(data);
-              }
-            )
-        }
+            if (like.post.id == this.audioPost.id) {
+              this.likesService.restRemoveLike(like.id).subscribe(
+                (data) => {
+                  console.log(data);
+                }, (error => console.log(error))
+              );
+            }
+          }
         )
       }
 
     )
+    this.deletedFavoriteSelected.emit(this.selectedFavoritePost);
   }
 
 }

@@ -4,6 +4,7 @@ import {Theme} from "../../enums/theme";
 import {PostsService} from "../../services/posts.service";
 import {AuthService} from "../../services/auth.service";
 import {UserService} from "../../services/user.service";
+import {LikesService} from "../../services/likes.service";
 declare var $: any;
 @Component({
   selector: 'app-profile',
@@ -21,10 +22,11 @@ export class ProfileComponent implements OnInit {
   selectedPost: Post | undefined;
   selectedFavoritePost: Post | undefined;
   username: string;
+  favoriteposts: Post[] = [];
 
   text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
-  constructor(private postsService: PostsService, private authService: AuthService, private userService: UserService) {}
+  constructor(private postsService: PostsService, private authService: AuthService, private userService: UserService, private likesService: LikesService) {}
 
   // getAllPosts(): void{
   //   this.postsService.restGetPosts().subscribe(
@@ -48,15 +50,15 @@ export class ProfileComponent implements OnInit {
   }
 
 
-  getFavPosts(): void{
-    this.postsService.restGetPosts().subscribe(
-      (data) => {
-        // @ts-ignore
-        this.favoritePost = data; console.log(data);
-      },
-      (error) => console.log("Error: " + error.status + " - " + error.error)
-    );
-  }
+  // getFavPosts(): void{
+  //   this.postsService.restGetPosts().subscribe(
+  //     (data) => {
+  //       // @ts-ignore
+  //       this.favoritePost = data; console.log(data);
+  //     },
+  //     (error) => console.log("Error: " + error.status + " - " + error.error)
+  //   );
+  // }
 
   deletePosts(postId: number): void{
     this.postsService.restDeletePosts(postId).subscribe(
@@ -121,5 +123,24 @@ export class ProfileComponent implements OnInit {
         this.username = data.username;
       }
     );
+  }
+
+  async getFavPosts() {
+    let currentUser = await this.authService.getUser();
+    await this.likesService.getFavorites(currentUser.email).subscribe(
+      (data) => {
+        console.log(data);
+        data.forEach(like => {
+          console.log(like);
+            this.postsService.restGetPost(like.post.id).subscribe(
+              (post) => {
+                this.favoriteposts.push(post);
+              }
+            )
+          }
+        )
+      }
+
+    )
   }
 }

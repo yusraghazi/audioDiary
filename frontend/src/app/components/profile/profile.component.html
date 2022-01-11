@@ -26,19 +26,19 @@
   <div style="height: 30px" class="whiteSpace"></div>
 
 
-<!--  <div class="profile-top-section">-->
-<!--    <hr class="profile-hr">-->
-<!--    <h5 class="profile-section-title">Favorites</h5>-->
-<!--    <div class="allPosts">-->
-<!--      <div *ngFor="let post of favoritePost" (click)="favoritePostSelection(post)">-->
-<!--        <app-profile-post-favorite-->
-<!--                          [selectedFavoritePost]="getSelectedFavoritePost"-->
-<!--                          (deletedFavoriteSelected)="onDeleteFavorite($event)"-->
-<!--                          [audioPost]="post">-->
+  <div class="profile-top-section">
+    <hr class="profile-hr">
+    <h5 class="profile-section-title">Favorites</h5>
+    <div class="allPosts">
+      <div *ngFor="let post of favoriteposts" (click)="favoritePostSelection(post)">
+        <app-profile-post-favorite
+                          [selectedFavoritePost]="getSelectedFavoritePost"
+                          (deletedFavoriteSelected)="onDeleteFavorite($event)"
+                          [audioPost]="post">
 
-<!--        </app-profile-post-favorite>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+        </app-profile-post-favorite>
+      </div>
+    </div>
+  </div>
 </div>
 <div style="height: 150px" class="whiteSpace"></div>
