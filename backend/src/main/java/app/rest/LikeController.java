@@ -27,7 +27,7 @@ public class LikeController {
     }
 
     @GetMapping("/likes/{id}")
-    public Likes getLikeById(@PathVariable int id) {
+    public Likes getLikeById(@PathVariable Integer id) {
 
         Likes like = likeRepo.findById(id);
         if(like == null) {
@@ -36,10 +36,10 @@ public class LikeController {
         return like;
     }
 
-//    @GetMapping("/likes/{email}")
-//    public Likes<Likes[]> getLikedPostsByUser(@PathVariable String email) {
-//
-//    }
+    @RequestMapping(method = RequestMethod.GET)
+    public List<Likes> getLikedPostsByUser(@RequestParam(value="email")  String email) {
+        return likeRepo.findLikeByUser(email);
+    }
 
     @PostMapping("/likes")
     public ResponseEntity<Comment> createLike(@RequestBody Likes like) {

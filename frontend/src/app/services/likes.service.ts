@@ -32,6 +32,19 @@ export class LikesService {
       }));
   }
 
+  getFavorites(email: string):Observable<Like[]> {
+    return this.http.get<Like[]>(`${environment.apiUrl}/likes?email=` + email).pipe(
+      map( (likeList: any[]) => {
+        const likes: Like[] = [];
+        for (const like of likeList) {
+          likes.push(like);
+        }
+        this.likes = likes;
+        console.log(likes);
+        return likes;
+      }));
+  }
+
   restPostLike(like: Like):Observable<Like> {
     const url = `${environment.apiUrl}/likes`;
     return this.http.post<Like>(url, like);

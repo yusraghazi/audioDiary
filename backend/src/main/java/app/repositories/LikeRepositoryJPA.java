@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -23,8 +24,15 @@ public class LikeRepositoryJPA implements LikeRepository {
     }
 
     @Override
-    public Likes findById(int id) {
+    public Likes findById(Integer id) {
         return em.find(Likes.class,id);
+    }
+
+    @Override
+    public List<Likes> findLikeByUser(String email) {
+        TypedQuery<Likes> query = em.createQuery("select l From Likes l WHERE l.user = ?1", Likes.class);
+        query.setParameter(1, email);
+        return query.getResultList();
     }
 
     @Override

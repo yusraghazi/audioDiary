@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on last details of map" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on last details of map">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/LikeRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/likes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/likes.service.ts" afterDir="false" />
+    </list>
     <list id="e1602b1a-0e98-4e5c-a66f-7c5237051973" name="Changes by altaa" comment="" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <list id="67f8614f-0774-43f2-bb82-f2ae0e8624b6" name="Changes by taner" comment="" />
@@ -45,14 +52,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -72,7 +79,7 @@
         <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
     <option name="isSearchInLibrariesForStructure" value="false" />
@@ -253,13 +260,6 @@
       <workItem from="1641727429323" duration="3923000" />
       <workItem from="1641819993066" duration="19416000" />
       <workItem from="1641897168379" duration="12937000" />
-    </task>
-    <task id="LOCAL-00051" summary="worked on login">
-      <created>1638894742883</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1638894742883</updated>
     </task>
     <task id="LOCAL-00052" summary="quick fix">
       <created>1638895726430</created>
@@ -555,56 +555,6 @@
       <option name="project" value="LOCAL" />
       <updated>1641662409340</updated>
     </task>
-    <task id="LOCAL-00094" summary="sharepost">
-      <created>1641828976758</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1641828976759</updated>
-    </task>
-    <task id="LOCAL-00095" summary="sharepost">
-      <created>1641834081792</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1641834081793</updated>
-    </task>
-    <task id="LOCAL-00096" summary="sharepost">
-      <created>1641834105290</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1641834105290</updated>
-    </task>
-    <task id="LOCAL-00097" summary="sharepost">
-      <created>1641847269940</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1641847269940</updated>
-    </task>
-    <task id="LOCAL-00098" summary="sharepost">
-      <created>1641847466824</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1641847466825</updated>
-    </task>
-    <task id="LOCAL-00099" summary="sharepost">
-      <created>1641848621385</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1641848621389</updated>
-    </task>
-    <task id="LOCAL-00100" summary="sharepost">
-      <created>1641849333575</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1641849333575</updated>
-    </task>
-    <option name="localTasksCounter" value="101" />
     <task id="LOCAL-00094" summary="worked on dividing researcher and maintainer">
       <created>1641677401412</created>
       <option name="number" value="00094" />
@@ -646,6 +596,13 @@
       <option name="presentableId" value="LOCAL-00099" />
       <option name="project" value="LOCAL" />
       <updated>1641912169942</updated>
+    </task>
+    <task id="LOCAL-00100" summary="sharepost">
+      <created>1641849333575</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1641849333575</updated>
     </task>
     <option name="localTasksCounter" value="100" />
     <servers />
@@ -728,7 +685,6 @@
     <MESSAGE value="worked on map and admin" />
     <MESSAGE value="added search filter for hashtags" />
     <MESSAGE value="worked on last details of map" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on last details of map" />
     <MESSAGE value="sharepost" />
     <option name="LAST_COMMIT_MESSAGE" value="sharepost" />
   </component>

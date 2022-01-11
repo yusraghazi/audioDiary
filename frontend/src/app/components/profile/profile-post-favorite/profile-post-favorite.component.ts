@@ -2,6 +2,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Post} from "../../../models/post";
 import {Theme} from "../../../enums/theme";
 import {PostsService} from "../../../services/posts.service";
+import {LikesService} from "../../../services/likes.service";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-profile-post-favorite',
@@ -15,7 +17,9 @@ export class ProfilePostFavoriteComponent implements OnInit {
 
   @Output() deletedFavoriteSelected = new EventEmitter<Post>();
 
-  constructor(private postsService: PostsService) { }
+  favoriteposts: Post[];
+
+  constructor(private postsService: PostsService, private likesService: LikesService, private auth: AuthService) { }
 
   ngOnInit(): void {
     switch (this.audioPost.theme) {
@@ -52,5 +56,22 @@ export class ProfilePostFavoriteComponent implements OnInit {
     this.deletedFavoriteSelected.emit(this.selectedFavoritePost);
   }
 
+  async getFavoritePosts() {
+    let currentUser = await this.auth.getUser();
+    this.likesService.getFavorites(currentUser.email).subscribe(
+      (data) => {
+        console.log(data);
+        data.forEach(like => {
+            this.postsService.restGetPost(like.post.id).subscribe(
+              (data) => {
+                this.favoriteposts.push(data);
+              }
+            )
+        }
+        )
+      }
+
+    )
+  }
 
 }
