@@ -33,14 +33,11 @@ public class Posts {
     public BigDecimal lng;
     public BigDecimal lat;
     public String location;
+    public String audiofile;
 
     @ManyToOne()
     @JoinColumn(name = "user_email")
     private User user;
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "audio_id")
-    private Audio audio;
 
     @OneToMany(mappedBy = "post")
     private List<Comment> comments;
@@ -60,7 +57,7 @@ public class Posts {
         this.user = user;
     }
 
-        public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, String location, User user, Audio audio, List<Comment> comments) {
+        public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, String location, String audiofile, User user, List<Comment> comments) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -71,16 +68,9 @@ public class Posts {
         this.lng = lng;
         this.lat = lat;
         this.location = location;
+        this.audiofile = audiofile;
         this.user = user;
-        this.audio = audio;
         this.comments = comments;
-    }
-
-    public void setUser(User user, Audio audio) {
-        this.user = user;
-        //user.addPost(this);
-        this.audio = audio;
-        //user.addAudio(audio);
     }
 
     public int getAmountReport() {
@@ -90,15 +80,6 @@ public class Posts {
     public void setAmountReport(int amountReport) {
         this.amountReport = amountReport;
     }
-
-    public Audio getAudio() {
-        return audio;
-    }
-
-    public void setAudio(Audio audio) {
-        this.audio = audio;
-    }
-
 
     public Integer getId() {
         return id;
@@ -118,7 +99,7 @@ public class Posts {
         if (this == o) return true;
         if (!(o instanceof Posts)) return false;
         Posts posts = (Posts) o;
-        return isLiked() == posts.isLiked() && getAmountReport() == posts.getAmountReport() && getLng() == posts.getLng() && getLat() == posts.getLat() && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && Objects.equals(getTheme(), posts.getTheme()) && Objects.equals(getUser(), posts.getUser()) && Objects.equals(getAudio(), posts.getAudio());
+        return isLiked() == posts.isLiked() && getAmountReport() == posts.getAmountReport() && getLng() == posts.getLng() && getLat() == posts.getLat() && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && Objects.equals(getTheme(), posts.getTheme()) && Objects.equals(getUser(), posts.getUser());
     }
 
     public void setId(Integer id) {
@@ -189,8 +170,16 @@ public class Posts {
         this.location = location;
     }
 
+    public String getAudiofile() {
+        return audiofile;
+    }
+
+    public void setAudiofile(String audiofile) {
+        this.audiofile = audiofile;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getDescription(), getImg(), getTheme(), isLiked(), getAmountReport(), getLng(), getLat(), getUser(), getAudio());
+        return Objects.hash(getId(), getTitle(), getDescription(), getImg(), getTheme(), isLiked(), getAmountReport(), getLng(), getLat(), getUser());
     }
 }

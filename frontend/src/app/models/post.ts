@@ -13,6 +13,7 @@ export class Post {
   private _lng: number | null;
   private _lat: number | null;
   private _location: string | null;
+  private _audiofile: string | null;
   private _audio: Audio | null;
 
   constructor() {}
@@ -140,5 +141,14 @@ export class Post {
 
   set location(value: string | null) {
     this._location = value;
+  }
+
+
+  get audiofile(): string | null {
+    return this._audiofile;
+  }
+
+  set audiofile(value: string | null) {
+    this._audiofile = value;
   }
 }

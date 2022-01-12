@@ -1,9 +1,5 @@
 package app.models;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.LazyToOne;
-
 import javax.persistence.*;
 import java.util.*;
 
@@ -25,14 +21,10 @@ public class User {
     private List<Posts> posts;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */, fetch = FetchType.EAGER)
-    private List<Audio> audios;
-
-    @OneToMany(mappedBy = "user",cascade = CascadeType.REMOVE /* removing a user will remove also his audios */, fetch = FetchType.EAGER)
     private Set<Comment> comments;
 
     public User() {
         posts = new ArrayList<>();
-        audios = new ArrayList<>();
     }
 
     public User(String email, String name, String encodedPassword, boolean admin, String username, String passwordReset, boolean isVerified) {
@@ -104,12 +96,6 @@ public class User {
     public void setPosts(List<Posts> posts) {
         this.posts = posts;
     }
-
-    public void setAudios(List<Audio> audios) {
-        this.audios = audios;
-    }
-
-
 
     @Override
     public boolean equals(Object o) {

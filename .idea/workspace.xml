@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test for deployment">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="updated backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/0.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/1.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/index.pack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
+>>>>>>> master
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,14 +56,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -112,7 +117,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
-    <property name="ts.external.directory.path" value="C:\laragon\www\ad-vmc-1\frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -250,6 +255,15 @@
       <workItem from="1640171235723" duration="2099000" />
       <workItem from="1640175220673" duration="11094000" />
       <workItem from="1640092027539" duration="1211000" />
+      <workItem from="1641238932180" duration="17922000" />
+      <workItem from="1641473204167" duration="2284000" />
+      <workItem from="1641589638420" duration="23842000" />
+      <workItem from="1641238932180" duration="17922000" />
+      <workItem from="1641473204167" duration="2284000" />
+      <workItem from="1641589638420" duration="24150000" />
+      <workItem from="1641727429323" duration="3923000" />
+      <workItem from="1641819993066" duration="19416000" />
+      <workItem from="1641897168379" duration="12937000" />
       <workItem from="1641238932180" duration="18031000" />
       <workItem from="1641380700145" duration="4166000" />
       <workItem from="1641497099689" duration="466000" />
@@ -257,6 +271,7 @@
       <workItem from="1641579602860" duration="131000" />
       <workItem from="1641813322753" duration="25811000" />
       <workItem from="1641941369283" duration="1130000" />
+<<<<<<< HEAD
       <workItem from="1641991728865" duration="12567000" />
     </task>
     <task id="LOCAL-00053" summary="quick fix">
@@ -265,6 +280,9 @@
       <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
       <updated>1638896059901</updated>
+=======
+      <workItem from="1642009609504" duration="1163000" />
+>>>>>>> master
     </task>
     <task id="LOCAL-00054" summary="test">
       <created>1638896357026</created>
@@ -593,7 +611,14 @@
       <option name="number" value="00100" />
       <option name="presentableId" value="LOCAL-00100" />
       <option name="project" value="LOCAL" />
-      <updated>1641943241178</updated>
+      <updated>1642000838080</updated>
+    </task>
+    <task id="LOCAL-00102" summary="updated backend">
+      <created>1642010250421</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1642010250421</updated>
     </task>
     <task id="LOCAL-00101" summary="test for deployment">
       <created>1641943429690</created>
@@ -602,7 +627,7 @@
       <option name="project" value="LOCAL" />
       <updated>1641943429690</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,9 +659,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test 4" />
-    <MESSAGE value="test 5" />
     <MESSAGE value="final test" />
+    <MESSAGE value="fixed issues" />
+    <MESSAGE value="fixed all issues of database and backend" />
     <MESSAGE value="fixed issues" />
     <MESSAGE value="fixed all issues of database and backend" />
     <MESSAGE value="worked on coordinates for map and edit page" />
@@ -710,6 +735,31 @@
     <MESSAGE value="worked on merge with cloudinary and master together" />
     <MESSAGE value="deleted weird package" />
     <MESSAGE value="test for deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for deployment" />
+    <MESSAGE value="favorite post can also be removed now" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
+    <MESSAGE value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on adding hashtags instead of themes" />
+    <MESSAGE value="worked on cloudinary server side" />
+    <MESSAGE value="further implementation of cloudinary" />
+    <MESSAGE value="worked on getting data from database admin side" />
+    <MESSAGE value="worked on getting data of themes from database admin side" />
+    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
+    <MESSAGE value="worked on dividing researcher and maintainer" />
+    <MESSAGE value="worked on map and likes" />
+    <MESSAGE value="worked on map and admin" />
+    <MESSAGE value="added search filter for hashtags" />
+    <MESSAGE value="worked on last details of map" />
+    <MESSAGE value="sharepost" />
+    <MESSAGE value="worked on merge with cloudinary and master together" />
+    <MESSAGE value="deleted weird package" />
+    <MESSAGE value="test for deployment" />
+    <MESSAGE value="test for deployment 2.0" />
+    <MESSAGE value="worked on admin page" />
+    <MESSAGE value="updated backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated backend" />
   </component>
 </project>

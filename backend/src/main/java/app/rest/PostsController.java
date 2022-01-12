@@ -1,17 +1,13 @@
 package app.rest;
 import app.exceptions.PostNotFoundException;
-import app.models.Audio;
 import app.models.Posts;
-import app.models.User;
 import app.repositories.PostsRepository;
 
-import app.repositories.PostsRepositoryJPA;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.transaction.Transactional;
 import java.net.URI;
 import java.util.List;
 
@@ -19,9 +15,6 @@ import java.util.List;
 public class PostsController {
 //    @Autowired
 //    private UserController userResource;
-
-    @Autowired
-    private AudioController audioResource;
 
     @Autowired
     private PostsRepository postRepo;

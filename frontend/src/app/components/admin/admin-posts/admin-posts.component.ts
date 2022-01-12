@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import Chart from "chart.js/auto";
 // @ts-ignore
 import mapboxgl from "mapbox-gl";
@@ -28,14 +28,14 @@ export class AdminPostsComponent implements OnInit {
   posts: Post[] = [];
   reportedPosts: Post[] = [];
   theme: Theme;
-  currentAdmin: User;
+  currentAdmin: User = new User();
 
   constructor(private postsService: PostsService, private authService: AuthService,
               private userService: UserService) { }
 
   ngOnInit(): void {
-    this.getPosts();
     this.checkAdminOrResearch();
+    this.getPosts();
     this.data = {
       labels: ['Posts today'],
       datasets: [{
@@ -275,14 +275,17 @@ export class AdminPostsComponent implements OnInit {
 
   deletePosts(postId: number): void{
     this.postsService.restDeletePosts(postId).subscribe(
-      (response) =>{
-        this.posts.splice(postId,1);
-        console.log(response);
+      (response) => {
+        for (let i = 0; i < this.reportedPosts.length; i++) {
+          if (this.reportedPosts[i].id == postId) {
+            this.reportedPosts.splice(this.posts.indexOf(this.posts[i]), 1);
+          }
+        }
       },
       (error)=>{
         console.log(error);
       }
-    );
+    )
   }
 
   downloadObjectAsJson() {
@@ -297,11 +300,12 @@ export class AdminPostsComponent implements OnInit {
     downloadAnchorNode.remove();
   }
 
-  checkAdminOrResearch() {
-    let user = this.userService.restGetUser(this.authService.getUser().email)
+  async checkAdminOrResearch() {
+    let user = await this.userService.restGetUser(this.authService.getUser().email)
     user.pipe().subscribe(
       (data) => {
         this.currentAdmin = data;
+        console.log(this.currentAdmin.verified);
       }
     )
   }
