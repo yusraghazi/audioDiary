@@ -1,4 +1,4 @@
-<div class="card-deck" *ngIf="!currentAdmin.verified">
+<div class="card-deck">
 <div class="card">
   <div class="card-header">
     Popular theme
@@ -7,14 +7,14 @@
     <canvas id="age"></canvas>
   </div>
 </div>
-<div class="card">
-  <div class="card-header">
-    Account member
-  </div>
-  <div class="card-body">
-    <canvas id="account"></canvas>
-  </div>
-</div>
+<!--<div class="card">-->
+<!--  <div class="card-header">-->
+<!--    Account member-->
+<!--  </div>-->
+<!--  <div class="card-body">-->
+<!--    <canvas id="account"></canvas>-->
+<!--  </div>-->
+<!--</div>-->
 </div>
 <div class="table-responsive" *ngIf="currentAdmin.verified">
   <table class="table table-striped" id="table">
@@ -24,7 +24,7 @@
       <th scope="col">Username</th>
       <th scope="col">Name</th>
       <th scope="col"></th>
-      <th scope="col"></th>
+<!--      <th scope="col"></th>-->
     </tr>
     </thead>
     <tbody>
@@ -33,7 +33,7 @@
       <td>{{user.username}}</td>
       <td>{{user.name}}</td>
       <td><button class="btn-primary" (click)="deleteUser(user.email)">Remove user</button></td>
-      <td><button class="btn-primary" (click)="updateUser(user.email)">Update user</button></td>
+<!--      <td><button class="btn-primary" (click)="updateUser(user.email)">Update user</button></td>-->
     </tr>
     </tbody>
   </table>
