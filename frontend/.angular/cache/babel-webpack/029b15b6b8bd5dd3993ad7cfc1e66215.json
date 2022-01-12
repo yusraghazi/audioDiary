@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n * Simple Is Function check\n *\n * @param variableToCheck\n * @returns {boolean}\n */\nexport function isFunction(variableToCheck) {\n  return variableToCheck instanceof Function;\n}","map":null,"metadata":{},"sourceType":"module"}

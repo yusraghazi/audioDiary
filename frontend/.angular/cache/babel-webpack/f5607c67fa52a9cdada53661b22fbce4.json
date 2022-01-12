@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n *\n * @description - Replace (,) and (/) in a string to its URL encoded equivalence\n * @param {string} str\n * @private\n */\nfunction serializeCloudinaryCharacters(str = '') {\n  return str.replace(/,/g, '%2C').replace(/\\//g, '%2F');\n}\n\nexport { serializeCloudinaryCharacters };","map":null,"metadata":{},"sourceType":"module"}
