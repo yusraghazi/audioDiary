@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { QualifierValue } from \"../../internal/qualifier/QualifierValue.js\";\n/**\n * @memberOf Qualifiers.AspectRatio\n * @extends {SDK.QualifierValue}\n */\n\nexport class AspectRatioQualifierValue extends QualifierValue {}","map":null,"metadata":{},"sourceType":"module"}

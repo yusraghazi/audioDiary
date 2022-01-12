@@ -9,6 +9,9 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {User} from "../../../models/user";
 import {audit} from "rxjs/operators";
+import {Cloudinary, CloudinaryImage} from "@cloudinary/url-gen";
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
 
 
 @Component({
@@ -23,6 +26,7 @@ export class RecordingPostComponent implements OnInit {
   popularThemes: unknown;
   theme: String;
   themeValue: string;
+  img: CloudinaryImage;
   private childParamsSubscription: Subscription;
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
@@ -31,6 +35,16 @@ export class RecordingPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    const cld = new Cloudinary({
+      cloud: {
+        cloudName: 'hogeschool-van-amsterdam'
+      }
+    });
+
+    console.log("image:" + this.audioPost.img);
+    this.img = cld.image(this.audioPost.img.toString());
+    this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
     this.returnColor();
     this.childParamsSubscription =
       this.route.params.subscribe(

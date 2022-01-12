@@ -73,7 +73,7 @@ export class EditingComponent implements OnInit {
   private hasBaseDropZoneOver: boolean = false;
   private uploader: FileUploader;
   private title: string;
-
+  public image: string;
 
   constructor(private postService: PostsService, private route: Router, private auth: AuthService,
               private zone: NgZone,
@@ -143,10 +143,12 @@ export class EditingComponent implements OnInit {
     }
   }
 
-  postButton(){
+  async postButton(){
+    await this.eventListen();
     this.postService.restCreateNewPost(this.newPost).subscribe(
       (data) => {
         console.log(data);
+        this.route.navigate(['/feedview'], {queryParams: { post: this.newPost, msg: 'the post has been succesful!' } });
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );
@@ -172,7 +174,7 @@ export class EditingComponent implements OnInit {
 
 
 
-  eventListen(){
+  async eventListen(){
     const url = "https://api.cloudinary.com/v1_1/hogeschool-van-amsterdam/upload";
     const form = document.querySelector("form");
     // @ts-ignore
@@ -183,17 +185,19 @@ export class EditingComponent implements OnInit {
       let file = files[i];
       formData.append("file", file);
       formData.append("upload_preset", "ml_default");
-      formData.append("public_id", "5");
 
-      fetch(url, {
+      await fetch(url, {
         method: "POST",
         body: formData
       })
         .then((response) => {
+          console.log(response);
           return response.text();
         })
         .then((data) => {
-          document.getElementById("data").innerHTML += data;
+          let test = JSON.parse(data);
+          this.newPost.img = test.public_id;
+          // document.getElementById("data").innerHTML += data;
         });
     }
 
@@ -204,7 +208,7 @@ export class EditingComponent implements OnInit {
   ngOnInit(): void {
 
 
-
+    this.newPost.user = this.auth.getUser();
     // 2. Set your cloud name
     //========================
 

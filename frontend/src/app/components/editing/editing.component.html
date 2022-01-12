@@ -70,9 +70,20 @@
       <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
       <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="newPost.description"></textarea>
 
+<!--      <div class="picture">-->
+<!--        <p class="inputHeader"> Picture: </p>-->
+<!--        <input type="file" (change)="readURL($event)">-->
+<!--      </div>-->
+
       <div class="picture">
         <p class="inputHeader"> Picture: </p>
-        <input type="file" (change)="readURL($event)">
+        <form method="post" enctype="multipart/form-data">
+          <input type="file" id="fileInput" name="files[]" multiple>
+<!--          <input type="submit" value="Upload Files" name="submit">-->
+        </form>
+
+<!--        <p id="data">-->
+<!--        </p>-->
       </div>
 
       <!--      <div class="themeSelection">-->
@@ -133,13 +144,13 @@
 
 
 
-<form method="post" enctype="multipart/form-data">
-  <input type="file" id="fileInput" name="files[]" multiple>
-  <input type="submit" value="Upload Files" (click)="eventListen()" name="submit">
-</form>
+<!--<form method="post" enctype="multipart/form-data">-->
+<!--  <input type="file" id="fileInput" name="files[]" multiple>-->
+<!--  <input type="submit" value="Upload Files" (click)="eventListen()" name="submit">-->
+<!--</form>-->
 
-<p id="data">
-</p>
+<!--<p id="data">-->
+<!--</p>-->
 
 
 <!--    <div class="editInputs">-->

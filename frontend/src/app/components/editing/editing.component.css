@@ -2,7 +2,10 @@
   border-radius: 34px;
 }
 
-
+form.mb-5.ng-untouched.ng-pristine.ng-valid {
+  position: relative;
+  bottom: 155px;
+}
 
 /*-------------------------------------------------------------------------------------------*/
 /*Card styling*/
