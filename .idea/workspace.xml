@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="update profile-page with cloudinary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -266,13 +262,6 @@
       <workItem from="1641813322753" duration="25811000" />
       <workItem from="1641941369283" duration="1130000" />
       <workItem from="1642009609504" duration="7385000" />
-    </task>
-    <task id="LOCAL-00060" summary="changed gitlab-ci.yml to fix deployment">
-      <created>1638986161268</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1638986161268</updated>
     </task>
     <task id="LOCAL-00061" summary="changed gitlab-ci.yml to fix deployment">
       <created>1638986229396</created>
@@ -610,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642018494201</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="update profile-page with cloudinary">
+      <created>1642021037832</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1642021037832</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -641,8 +637,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on coordinates for map and edit page" />
-    <MESSAGE value="worked on converting database data to json" />
     <MESSAGE value="worked on coordinates in map" />
     <MESSAGE value="next test for backend data posts" />
     <MESSAGE value="fix data recursion by adding annotations" />
@@ -737,6 +731,7 @@
     <MESSAGE value="updated backend 2.0" />
     <MESSAGE value="merge image cloudinary" />
     <MESSAGE value="merge image cloudinary 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge image cloudinary 2.0" />
+    <MESSAGE value="update profile-page with cloudinary" />
+    <option name="LAST_COMMIT_MESSAGE" value="update profile-page with cloudinary" />
   </component>
 </project>
