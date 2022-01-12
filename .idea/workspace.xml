@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="update profile-page with cloudinary">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="p.json update" />
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,13 +259,6 @@
       <workItem from="1641813322753" duration="25811000" />
       <workItem from="1641941369283" duration="1130000" />
       <workItem from="1642009609504" duration="7385000" />
-    </task>
-    <task id="LOCAL-00061" summary="changed gitlab-ci.yml to fix deployment">
-      <created>1638986229396</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1638986229396</updated>
     </task>
     <task id="LOCAL-00062" summary="updated node version due to error">
       <created>1638986974671</created>
@@ -606,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642021037832</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="p.json update">
+      <created>1642021996776</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1642021996776</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,7 +634,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on coordinates in map" />
     <MESSAGE value="next test for backend data posts" />
     <MESSAGE value="fix data recursion by adding annotations" />
     <MESSAGE value="fix cors policy" />
@@ -732,6 +728,7 @@
     <MESSAGE value="merge image cloudinary" />
     <MESSAGE value="merge image cloudinary 2.0" />
     <MESSAGE value="update profile-page with cloudinary" />
-    <option name="LAST_COMMIT_MESSAGE" value="update profile-page with cloudinary" />
+    <MESSAGE value="p.json update" />
+    <option name="LAST_COMMIT_MESSAGE" value="p.json update" />
   </component>
 </project>
