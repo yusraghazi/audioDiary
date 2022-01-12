@@ -6,9 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on admin page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-users/admin-users.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Audio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/AudioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/AudioRepositoryJPA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/CommentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,17 +55,11 @@
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -269,13 +267,7 @@
       <workItem from="1641579602860" duration="131000" />
       <workItem from="1641813322753" duration="25811000" />
       <workItem from="1641941369283" duration="1130000" />
-    </task>
-    <task id="LOCAL-00053" summary="quick fix">
-      <created>1638896059900</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1638896059901</updated>
+      <workItem from="1642009609504" duration="356000" />
     </task>
     <task id="LOCAL-00054" summary="test">
       <created>1638896357026</created>
@@ -611,7 +603,6 @@
       <option name="number" value="00102" />
       <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
-      <updated>1641944297483</updated>
       <updated>1641943241178</updated>
     </task>
     <task id="LOCAL-00101" summary="test for deployment">
@@ -731,7 +722,6 @@
     <MESSAGE value="worked on merge with cloudinary and master together" />
     <MESSAGE value="deleted weird package" />
     <MESSAGE value="test for deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="test for deployment" />
     <MESSAGE value="favorite post can also be removed now" />
     <MESSAGE value="worked on adding hashtags instead of themes" />
     <MESSAGE value="worked on cloudinary server side" />
@@ -759,4 +749,3 @@
     <option name="LAST_COMMIT_MESSAGE" value="worked on admin page" />
   </component>
 </project>
-

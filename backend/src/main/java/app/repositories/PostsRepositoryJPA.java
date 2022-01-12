@@ -1,6 +1,5 @@
 package app.repositories;
 
-import app.models.Audio;
 import app.models.Posts;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,6 @@
 package app.repositories;
 
-import app.models.Audio;
 import app.models.Comment;
-import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
