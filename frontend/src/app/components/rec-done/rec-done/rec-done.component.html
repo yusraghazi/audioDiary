@@ -121,6 +121,7 @@
   <audio controls="" (pause)="isShow = false" (playing)="isShow = true" *ngIf="url">
     <source [src]="sanitize(url)" type="audio/wav">
   </audio>
+  <!--file input-->
   <form method="post" enctype="multipart/form-data">
     <input type="file" id="fileInput" name="files[]" multiple>
     <input type="submit" [disabled]="clicked" value="Upload Files" (click)="eventListen(); clicked = true;" class="btn btn-primary" name="submit">
