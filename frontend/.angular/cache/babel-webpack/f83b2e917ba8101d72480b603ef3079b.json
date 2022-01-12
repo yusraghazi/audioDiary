@@ -1,0 +1,1 @@
+{"ast":null,"code":"/**\n *\n * @param publicID\n */\nexport function publicIDContainsVersion(publicID) {\n  return publicID.match(/^v[0-9]+/);\n}","map":null,"metadata":{},"sourceType":"module"}

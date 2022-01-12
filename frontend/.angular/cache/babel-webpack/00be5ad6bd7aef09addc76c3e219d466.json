@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Like {\n  constructor(id, post, user) {\n    this.id = id;\n    this.post = post;\n    this.user = user;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
