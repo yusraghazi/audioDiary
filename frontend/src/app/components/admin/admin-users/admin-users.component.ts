@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import Chart from 'chart.js/auto';
 import {PostsService} from "../../../services/posts.service";
 import {Post} from "../../../models/post";
@@ -109,6 +109,11 @@ export class AdminUsersComponent implements OnInit {
       (data) => {
         this.userService.delete(data).subscribe(
           (data) => {
+            for (let i = 0; i < this.users.length; i++) {
+              if (this.users[i].email == email) {
+                this.users.splice(this.posts.indexOf(this.posts[i]), 1);
+              }
+            }
             console.log(data);
           }, (error => console.log(error))
         );
