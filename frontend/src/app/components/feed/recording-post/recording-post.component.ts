@@ -12,6 +12,7 @@ import {audit} from "rxjs/operators";
 import {Cloudinary, CloudinaryImage} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
+import {Formattedpost} from "../../../models/formattedpost";
 
 
 @Component({
@@ -138,7 +139,7 @@ export class RecordingPostComponent implements OnInit {
 
   async addToLikes() {
     let currentUser = Object.assign(new User(), this.authService.getUser());
-    let post = await Object.assign(new Post(), this.audioPost);
+    let post = await Object.assign(new Formattedpost(), this.audioPost);
     this.like = await new Like(null, post, currentUser);
     console.log(JSON.parse(JSON.stringify(this.like)));
     if (this.like != null) {
@@ -154,13 +155,21 @@ export class RecordingPostComponent implements OnInit {
   }
 
   removeFromLikes() {
-      this.likesService.restRemoveLike(this.updatedLike.id).subscribe(
-        (data) => {
-          console.log(data)
-        },
-        (error =>
-          console.log(error))
-      );
+    this.likesService.getFavorites(this.authService.getUser().email).subscribe(
+      (data) => {
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].post.id == this.audioPost.id) {
+            this.likesService.restRemoveLike(data[i].id).subscribe(
+              (data) => {
+                console.log(data)
+              },
+              (error =>
+                console.log(error))
+            );
+          }
+        }
+      }
+   );
   }
 
 
