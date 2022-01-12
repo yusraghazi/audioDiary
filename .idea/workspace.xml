@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="p.json update">
-      <change beforePath="$PROJECT_DIR$/.idea/ad-vmc-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ad-vmc-1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/3.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/3.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/index.pack.old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
