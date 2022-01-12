@@ -598,6 +598,7 @@
       <change afterPath="$PROJECT_DIR$/frontend/.angular/cache/babel-webpack/ff5749c61555a53c41512cbb539e6d64.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/.angular/cache/babel-webpack/ff70732296916c485ed1c4fd3a1a319c.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.ts" afterDir="false" />
@@ -858,13 +859,6 @@
       <workItem from="1641813322753" duration="25811000" />
       <workItem from="1641941369283" duration="1130000" />
       <workItem from="1642009609504" duration="7385000" />
-    </task>
-    <task id="LOCAL-00055" summary="final test">
-      <created>1638898288292</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1638898288292</updated>
     </task>
     <task id="LOCAL-00056" summary="final test">
       <created>1638898733134</created>
@@ -1201,6 +1195,13 @@
       <option name="presentableId" value="LOCAL-00103" />
       <option name="project" value="LOCAL" />
       <updated>1642010898922</updated>
+    </task>
+    <task id="LOCAL-00104" summary="updated backend 2.0">
+      <created>1642017623669</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1642017623670</updated>
     </task>
     <option name="localTasksCounter" value="104" />
     <servers />
