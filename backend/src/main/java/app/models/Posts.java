@@ -33,6 +33,7 @@ public class Posts {
     public BigDecimal lng;
     public BigDecimal lat;
     public String location;
+    public String audiofile;
 
     @ManyToOne()
     @JoinColumn(name = "user_email")
@@ -56,7 +57,7 @@ public class Posts {
         this.user = user;
     }
 
-        public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, String location, User user, List<Comment> comments) {
+        public Posts(Integer id, String title, String description, String img, String theme, boolean isLiked, int amountReport, BigDecimal lng, BigDecimal lat, String location, String audiofile, User user, List<Comment> comments) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -67,6 +68,7 @@ public class Posts {
         this.lng = lng;
         this.lat = lat;
         this.location = location;
+        this.audiofile = audiofile;
         this.user = user;
         this.comments = comments;
     }
@@ -166,6 +168,14 @@ public class Posts {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getAudiofile() {
+        return audiofile;
+    }
+
+    public void setAudiofile(String audiofile) {
+        this.audiofile = audiofile;
     }
 
     @Override

@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on admin page">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="updated backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Audio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/AudioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/AudioRepositoryJPA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/CommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/CommentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/AudioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/post.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +108,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
-    <property name="ts.external.directory.path" value="C:\laragon\www\ad-vmc-1\frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -267,7 +262,7 @@
       <workItem from="1641579602860" duration="131000" />
       <workItem from="1641813322753" duration="25811000" />
       <workItem from="1641941369283" duration="1130000" />
-      <workItem from="1642009609504" duration="356000" />
+      <workItem from="1642009609504" duration="1163000" />
     </task>
     <task id="LOCAL-00054" summary="test">
       <created>1638896357026</created>
@@ -598,12 +593,12 @@
       <option name="project" value="LOCAL" />
       <updated>1642000838080</updated>
     </task>
-    <task id="LOCAL-00102" summary="test for deployment 2.0">
-      <created>1641944297483</created>
+    <task id="LOCAL-00102" summary="updated backend">
+      <created>1642010250421</created>
       <option name="number" value="00102" />
       <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
-      <updated>1641943241178</updated>
+      <updated>1642010250421</updated>
     </task>
     <task id="LOCAL-00101" summary="test for deployment">
       <created>1641943429690</created>
@@ -612,7 +607,7 @@
       <option name="project" value="LOCAL" />
       <updated>1641943429690</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -644,8 +639,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test 4" />
-    <MESSAGE value="test 5" />
     <MESSAGE value="final test" />
     <MESSAGE value="fixed issues" />
     <MESSAGE value="fixed all issues of database and backend" />
@@ -746,6 +739,7 @@
     <MESSAGE value="test for deployment" />
     <MESSAGE value="test for deployment 2.0" />
     <MESSAGE value="worked on admin page" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on admin page" />
+    <MESSAGE value="updated backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated backend" />
   </component>
 </project>
