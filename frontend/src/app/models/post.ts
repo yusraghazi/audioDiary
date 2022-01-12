@@ -6,7 +6,7 @@ export class Post {
   private _user:User | null;
   private _title:string | null;
   private _description:string | null;
-  private _img:string | null;
+  _img:string | null;
   private _theme: string| null;
   private _isLiked: boolean | null;
   private _amountReport: number | null;

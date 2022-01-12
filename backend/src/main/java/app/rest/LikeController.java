@@ -36,8 +36,8 @@ public class LikeController {
         return like;
     }
 
-    @RequestMapping(method = RequestMethod.GET)
-    public List<Likes> getLikedPostsByUser(@RequestParam(value="email")  String email) {
+    @GetMapping("/likes/email/{email}")
+    public List<Likes> getLikedPostsByUser(@PathVariable String email) {
         return likeRepo.findLikeByUser(email);
     }
 

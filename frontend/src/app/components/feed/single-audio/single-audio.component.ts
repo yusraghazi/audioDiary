@@ -9,6 +9,10 @@ import {LikesService} from "../../../services/likes.service";
 import {AuthService} from "../../../services/auth.service";
 import {Like} from "../../../models/like";
 import {User} from "../../../models/user";
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
+import {Cloudinary, CloudinaryImage} from "@cloudinary/url-gen";
+import {Formattedpost} from "../../../models/formattedpost";
 
 @Component({
   selector: 'app-single-audio',
@@ -103,11 +107,12 @@ export class SingleAudioComponent implements OnInit {
 
 
   @Input()
-  audioPost: Post
+  audioPost: Post;
   isShown: boolean;
   popularThemes: unknown;
   theme: String;
   themeValue: string;
+  img: CloudinaryImage;
   private childParamsSubscription: Subscription;
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
@@ -119,9 +124,8 @@ export class SingleAudioComponent implements OnInit {
     this.childParamsSubscription =
       this.route.params.subscribe(
         (params: Params) => {
-          if (params['id'] != null) {
+          console.log(params['id']);
             this.setPost(params['id']);
-          }
         });
 //     console.log(this.audioPost);
 //
@@ -153,10 +157,19 @@ export class SingleAudioComponent implements OnInit {
     await this.postsService.restGetPost(id).subscribe(
       (data) => {
         // @ts-ignore
-        this.audioPost = Object.assign(new Post(), data);
-        console.log(this.audioPost);
+        console.log("data:" + data);
+        this.audioPost = data;
+        this.img = cld.image(data.img.toString());
+        this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
       }
     );
+    const cld = new Cloudinary({
+      cloud: {
+        cloudName: 'hogeschool-van-amsterdam'
+      }
+    });
+    // this.img = cld.image(this.audioPost.img.toString());
+    // this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
   }
 
   async getMostPopularThemes() {
@@ -224,12 +237,20 @@ export class SingleAudioComponent implements OnInit {
   }
 
   removeFromLikes() {
-    this.likesService.restRemoveLike(this.updatedLike.id).subscribe(
+    this.likesService.getFavorites(this.authService.getUser().email).subscribe(
       (data) => {
-        console.log(data)
-      },
-      (error =>
-        console.log(error))
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].post.id == this.audioPost.id) {
+            this.likesService.restRemoveLike(data[i].id).subscribe(
+              (data) => {
+                console.log(data)
+              },
+              (error =>
+                console.log(error))
+            );
+          }
+        }
+      }
     );
   }
 

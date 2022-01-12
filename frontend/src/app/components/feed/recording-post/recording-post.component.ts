@@ -36,7 +36,6 @@ export class RecordingPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     const cld = new Cloudinary({
       cloud: {
         cloudName: 'hogeschool-van-amsterdam'

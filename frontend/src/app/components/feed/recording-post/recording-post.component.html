@@ -6,7 +6,7 @@
   <div class="card-body">
     <div class="headerBody">
 <!--      <p class="card-username">@{{audioPost.user.username}} {{audioPost.user.name}}</p>-->
-      <p class="card-username">@{{audioPost.user.username}}</p>
+<!--      <p class="card-username">@{{audioPost.user.username}}</p>-->
       <div class="icons">
         <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false; removeFromLikes()" class="bi bi-heart-fill"></i>
         <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true; addToLikes()" class="bi bi-heart"></i>
@@ -14,6 +14,7 @@
         <i class="bi bi-share-fill" (click)="sharePost()"></i>
       </div>
     </div>
+    <h6 class="mt-3"><i>{{audioPost.location}}</i></h6>
     <a href="#" class="badge badge-dark">{{themeValue}}</a>
     <h5 class="card-title">{{audioPost.title}}</h5>
     <p class="card-text">{{audioPost.description}}</p>

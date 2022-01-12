@@ -42,6 +42,8 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import { DummyComponentComponent } from './components/dummy-component/dummy-component.component';
 import {FileUploadModule} from "ng2-file-upload";
+import { provideRoutes} from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,7 +89,7 @@ import {FileUploadModule} from "ng2-file-upload";
         ReactiveFormsModule,
         FileUploadModule,
         CloudinaryModule,
-        Ng2SearchPipeModule
+        Ng2SearchPipeModule,
     ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true }

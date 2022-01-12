@@ -30,7 +30,7 @@ public class LikeRepositoryJPA implements LikeRepository {
 
     @Override
     public List<Likes> findLikeByUser(String email) {
-        TypedQuery<Likes> query = em.createQuery("select l From Likes l WHERE l.user = ?1", Likes.class);
+        TypedQuery<Likes> query = em.createQuery("select l From Likes l WHERE l.user.email = ?1", Likes.class);
         query.setParameter(1, email);
         return query.getResultList();
     }

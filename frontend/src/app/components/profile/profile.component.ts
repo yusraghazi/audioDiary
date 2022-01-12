@@ -129,9 +129,9 @@ export class ProfileComponent implements OnInit {
     let currentUser = await this.authService.getUser();
     await this.likesService.getFavorites(currentUser.email).subscribe(
       (data) => {
-        console.log(data);
+        console.log("data: " + data);
         data.forEach(like => {
-          console.log(like);
+          console.log("like: " + like);
             this.postsService.restGetPost(like.post.id).subscribe(
               (post) => {
                 this.favoriteposts.push(post);
