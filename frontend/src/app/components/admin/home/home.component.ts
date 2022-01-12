@@ -11,19 +11,21 @@ import {AuthService} from "../../../services/auth.service";
 })
 export class HomeComponent implements OnInit {
 
-  amountOfUsers: number;
-  amountOfPosts: number;
-  popularTheme: unknown;
-  currentAdmin: User;
+  amountOfUsers: number = 0;
+  amountOfPosts: number = 0;
+  popularTheme: unknown = null;
+  currentAdmin: User = new User();
+  popularThemeText: string = "";
+  popularAmountText: string = "";
 
   constructor(private userService: UserService, private postsService: PostsService,
               private authService: AuthService) { }
 
   ngOnInit(): void {
+    this.loadThemes();
     this.checkAdminOrResearch();
     this.getAmountOfPosts();
     this.getAmountOfUsers();
-    this.loadThemes();
   }
 
   async loadThemes() {
@@ -31,6 +33,12 @@ export class HomeComponent implements OnInit {
       // @ts-ignore
       this.popularTheme = result;
     });
+
+    // @ts-ignore
+    this.popularThemeText = this.popularTheme[0][0];
+
+    // @ts-ignore
+    this.popularAmountText = this.popularTheme[0][1];
   }
 
   getAmountOfUsers() {

@@ -28,14 +28,14 @@ export class AdminPostsComponent implements OnInit {
   posts: Post[] = [];
   reportedPosts: Post[] = [];
   theme: Theme;
-  currentAdmin: User;
+  currentAdmin: User = new User();
 
   constructor(private postsService: PostsService, private authService: AuthService,
               private userService: UserService) { }
 
   ngOnInit(): void {
-    this.getPosts();
     this.checkAdminOrResearch();
+    this.getPosts();
     this.data = {
       labels: ['Posts today'],
       datasets: [{
@@ -297,8 +297,8 @@ export class AdminPostsComponent implements OnInit {
     downloadAnchorNode.remove();
   }
 
-  checkAdminOrResearch() {
-    let user = this.userService.restGetUser(this.authService.getUser().email)
+  async checkAdminOrResearch() {
+    let user = await this.userService.restGetUser(this.authService.getUser().email)
     user.pipe().subscribe(
       (data) => {
         this.currentAdmin = data;

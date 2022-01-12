@@ -11,6 +11,7 @@ import {Post} from "../../../models/post";
 import {PostsService} from "../../../services/posts.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Theme} from "../../../enums/theme";
+import {async, Observable, Observer} from "rxjs";
 
 @Component({
   selector: 'app-mapview',
@@ -25,6 +26,8 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   posts: Post[] = [];
   theme: Theme = Theme.CITY;
   popupTheme: string;
+  themesList: Theme[] = [];
+  i: number = 0;
 
   @Output()
   feedview: string = "Feedview";
@@ -37,24 +40,34 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    this.getMostPopularThemes();
     this.places = {"type": "FeatureCollection", "features": []};
     this.postsService.restGetPosts().subscribe(
       (data) => {
         //this.posts = data;
         this.posts = data;
         JSON.parse(JSON.stringify(data));
+        console.log(this.posts);
 
         for (let point of data) {
           let coordinate = [point.lng, point.lat];
           let feature = {"type": "Feature", "geometry": {"type": "Point", "coordinates": coordinate}, "properties": point}
           this.places.features.push(feature);
+          console.log("point: " + point.theme);
+          this.getTheme(point.theme).then(r => {
+              this.themesList.push(r)
+            }
+          )
+          // this.getTheme(point.theme).pipe().subscribe(r => {
+          //   this.themesList.push(r);
+          //   }
+          // )
         }
         // @ts-ignore
         // this.places = GeoJSON.parse(JSON.stringify(data));
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );
-    this.getMostPopularThemes();
   }
 
   ngAfterViewInit() {
@@ -102,30 +115,29 @@ export class MapviewComponent implements OnInit, AfterViewInit {
         closeOnClick: false
       });
 
+      console.log("themelist: " + this.themesList);
       let i = 0;
       for (const feature of this.places.features) {
         // const symbol = feature.properties.theme;
         // @ts-ignore
         const symbol = this.popularThemes[i][0];
-        this.getTheme(feature.properties.theme).then(r => {
-          this.theme = r;
-          console.log("theme: " + this.theme);
-        });
         const layerID = `poi-${symbol}`;
-
         if (!this.map.getLayer(layerID)) {
           this.map.addLayer({
             'id': layerID,
             'type': 'circle',
             'source': 'places',
             'paint': {
-              'circle-color': this.theme,
+              'circle-color': this.themesList[i],
               'circle-stroke-color': 'white',
               'circle-radius': 10,
             },
             'filter': ['==', 'theme', symbol]
           });
 
+          console.log(symbol + "/" + this.themesList[i]);
+
+          i++;
           const container = document.createElement('div');
           container.className = "form-check form-check-inline";
 
@@ -138,7 +150,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
           const label = document.createElement('label');
           label.setAttribute('for', layerID);
-          label.textContent = symbol.split(".")[1];
+          label.textContent = symbol;
           label.className = "mr-3";
 
           container.appendChild(label);
@@ -169,9 +181,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           });
 
           const coordinates = e.features[0].geometry.coordinates.slice();
-          this.getTheme(e.features[0].properties.theme).then(r => {
-            this.popupTheme = r;
-          });
+          // this.getTheme(e.features[0].properties.theme).pipe().subscribe(r => {
+          //   this.popupTheme = r;
+          // });
+          this.popupTheme = this.theme;
           const img = e.features[0].properties.img;
           const title = e.features[0].properties.title;
           const description = e.features[0].properties.description;
@@ -201,7 +214,6 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           this.map.getCanvas().style.cursor = '';
           popup.remove();
         });
-        i++;
       }
 
       const id = this.router.url.split("/")[2];
@@ -213,9 +225,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
               let theme = null;
                 const coordinates = this.places.features[i].geometry.coordinates.slice();
-                this.getTheme(this.places.features[i].properties.theme).then(r => {
-                  theme = r;
-                });
+                // this.getTheme(this.places.features[i].properties.theme).pipe().subscribe(r => {
+                //   theme = r;
+                // });
+                theme = this.theme;
                 const img = this.places.features[i].properties.img;
                 const title = this.places.features[i].properties.title;
                 const description = this.places.features[i].properties.description;
@@ -254,67 +267,42 @@ export class MapviewComponent implements OnInit, AfterViewInit {
     await this.postsService.getTopFiveThemes().then(result => {
       this.popularThemes = result;
       this.themeValue = this.theme;
-      console.log(this.themeValue);
     });
   }
 
   popularThemes: unknown;
   themeValue: string;
 
-  async getTheme(theme: Theme): Promise<Theme> {
+  async getTheme(theme: string) {
     await this.getMostPopularThemes();
-    switch (theme) {
-      // @ts-ignore
-      case this.popularThemes[0][0]:
-        this.theme = Theme.SUN;
-        break;
-      // @ts-ignore
-      case this.popularThemes[1][0]:
-        this.theme = Theme.SAND;
-        break;
-      // @ts-ignore
-      case this.popularThemes[2][0]:
-        this.theme = Theme.FOREST;
-        break;
-      // @ts-ignore
-      case this.popularThemes[3][0]:
-        this.theme = Theme.WATER;
-        break;
-      // @ts-ignore
-      case this.popularThemes[4][0]:
-        this.theme = Theme.MOUNTAIN;
-        break;
-      default:
-        this.theme = Theme.CITY;
-        break;
+      switch (theme) {
+        // @ts-ignore
+        case this.popularThemes[0][0]:
+          this.theme = Theme.SUN;
+          break;
+        // @ts-ignore
+        case this.popularThemes[1][0]:
+          this.theme = Theme.SAND;
+          break;
+        // @ts-ignore
+        case this.popularThemes[2][0]:
+          this.theme = Theme.FOREST;
+          break;
+        // @ts-ignore
+        case this.popularThemes[3][0]:
+          this.theme = Theme.WATER;
+          break;
+        // @ts-ignore
+        case this.popularThemes[4][0]:
+          this.theme = Theme.MOUNTAIN;
+          break;
+        default:
+          this.theme = Theme.CITY;
+          break;
+      }
+      // return new Observable<Theme>((observer: Observer<Theme>) => observer.next(this.theme));
+    return this.theme;
     }
-    console.log(theme);
-    return theme;
-  }
-
-  // getTheme(theme: string) {
-  //   switch (theme) {
-  //     case "Theme.SUN":
-  //       this.theme = Theme.SUN;
-  //       break;
-  //     case "Theme.SAND":
-  //       this.theme = Theme.SAND;
-  //       break;
-  //     case "Theme.FOREST":
-  //       this.theme = Theme.FOREST;
-  //       break;
-  //     case "Theme.WATER":
-  //       this.theme = Theme.WATER;
-  //       break;
-  //     case "Theme.CITY":
-  //       this.theme = Theme.CITY;
-  //       break;
-  //     case "Theme.MOUNTAIN":
-  //       this.theme = Theme.MOUNTAIN;
-  //       break;
-  //   }
-  //   return this.theme;
-  // }
 
   overlayTrue(condition: boolean) {
     this.showOverlay = condition;

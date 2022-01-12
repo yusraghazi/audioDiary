@@ -36,46 +36,46 @@ export class AdminUsersComponent implements OnInit {
 
   async loadPageData() {
     await this.loadThemes();
-    const ctx = document.getElementById('account');
+    ///const ctx = document.getElementById('account');
     const ctx2 = document.getElementById('age');
     // @ts-ignore
-    const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['User with account', 'User without account'],
-        datasets: [{
-          label: 'User type',
-          data: [8203, 786],
-          backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(255, 99, 132, 0.2)',
-          ],
-          borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(255, 99, 132, 1)',
-          ],
-          borderWidth: 1
-        }
-        ]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
+    // const myChart = new Chart(ctx, {
+    //   type: 'bar',
+    //   data: {
+    //     labels: ['User with account', 'User without account'],
+    //     datasets: [{
+    //       label: 'User type',
+    //       data: [8203, 786],
+    //       backgroundColor: [
+    //         'rgba(255, 99, 132, 0.2)',
+    //         'rgba(255, 99, 132, 0.2)',
+    //       ],
+    //       borderColor: [
+    //         'rgba(255, 99, 132, 1)',
+    //         'rgba(255, 99, 132, 1)',
+    //       ],
+    //       borderWidth: 1
+    //     }
+    //     ]
+    //   },
+    //   options: {
+    //     scales: {
+    //       y: {
+    //         beginAtZero: true
+    //       }
+    //     }
+    //   }
+    // });
     // @ts-ignore
     const myChart2 = new Chart(ctx2, {
       type: 'doughnut',
       data: {
         // @ts-ignore
-        labels: [this.popularPosts[0][0], this.popularPosts[1][0], this.popularPosts[2][0]],
+        labels: [this.popularPosts[0][0], this.popularPosts[1][0], this.popularPosts[2][0], this.popularPosts[3][0], this.popularPosts[4][0]],
         datasets: [{
           label: 'User type',
           // @ts-ignore
-          data: [this.popularPosts[0][1], this.popularPosts[1][1], this.popularPosts[2][1]],
+          data: [this.popularPosts[0][1], this.popularPosts[1][1], this.popularPosts[2][1], this.popularPosts[3][1], this.popularPosts[4][1]],
           backgroundColor: [
             'rgb(255, 99, 132)',
             'rgb(54, 162, 235)',
@@ -107,7 +107,11 @@ export class AdminUsersComponent implements OnInit {
   deleteUser(email: String) {
     this.userService.restGetUser(email).pipe().subscribe(
       (data) => {
-        this.userService.delete(data);
+        this.userService.delete(data).subscribe(
+          (data) => {
+            console.log(data);
+          }, (error => console.log(error))
+        );
       }
     );
   }

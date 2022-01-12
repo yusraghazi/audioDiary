@@ -38,11 +38,7 @@ public class UserController {
 
 
     @DeleteMapping("/users/{email}")
-    public ResponseEntity<User> deleteUser(@PathVariable String email, @RequestAttribute(value = JWTokenInfo.KEY) JWTokenInfo tokenInfo) {
-        if(!tokenInfo.isAdmin()) {
-            throw new AuthorizationException("only administrators can remove members");
-        }
-
+    public ResponseEntity<User> deleteUser(@PathVariable String email) {
         User user = getUserByEmail(email);
         userRepo.delete(user);
         return ResponseEntity.ok(user);
