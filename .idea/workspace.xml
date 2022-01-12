@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="test for deployment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/0.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/0.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/1.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/1.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.angular/cache/angular-webpack/693105b6b45b1f783600c072e7ed9e5b6c8aeaff/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/rec-done/rec-done/rec-done.component.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -252,6 +257,7 @@
       <workItem from="1641579602860" duration="131000" />
       <workItem from="1641813322753" duration="25811000" />
       <workItem from="1641941369283" duration="1130000" />
+      <workItem from="1641991728865" duration="12567000" />
     </task>
     <task id="LOCAL-00053" summary="quick fix">
       <created>1638896059900</created>

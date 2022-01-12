@@ -16,9 +16,10 @@ import {DomSanitizer} from "@angular/platform-browser";
 export class RecDoneComponent implements OnInit {
   closeResult = '';
   cardColor = '#FE5F38'
-
+  clicked = false;
   img: CloudinaryImage;
   vid: CloudinaryVideo;
+  isShow = false;
   // newly added
   public record:any;
   //Will use this flag for detect recording
@@ -50,15 +51,15 @@ export class RecDoneComponent implements OnInit {
   }
 
   initiateRecording() {
-
+    this.isShow = true;
     this.recording = true;
     let mediaConstraints = {
       video: false,
       audio: true
     };
     navigator.mediaDevices
-      .getUserMedia(mediaConstraints)
-      .then(this.successCallback.bind(this), this.errorCallback.bind(this));
+        .getUserMedia(mediaConstraints)
+        .then(this.successCallback.bind(this), this.errorCallback.bind(this));
 
   }
 
@@ -80,8 +81,11 @@ export class RecDoneComponent implements OnInit {
   }
 
   stopRecording() {
+    this.isShow = !this.isShow;
     this.recording = false;
     this.record.stop(this.processRecording.bind(this));
+
+
   }
   /**
    * processRecording Do what ever you want with blob
@@ -118,18 +122,18 @@ export class RecDoneComponent implements OnInit {
       let file = files[i];
       formData.append("file", file);
       formData.append("upload_preset", "ml_default");
-      formData.append("public_id", "6");
+      // formData.append("public_id", "6");
 
       fetch(url, {
         method: "POST",
         body: formData
       })
-        .then((response) => {
-          return response.text();
-        })
-        .then((data) => {
-          document.getElementById("data").innerHTML += data;
-        });
+          .then((response) => {
+            return response.text();
+          })
+          .then((data) => {
+            document.getElementById("data").innerHTML += "Your audio is uploaded succesfully!";
+          });
     }
 
   };

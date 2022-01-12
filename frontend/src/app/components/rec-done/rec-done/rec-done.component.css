@@ -12,11 +12,21 @@
     flex: 1 1 auto;
     /*box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;*/
   }
+  p#data {
+    position: fixed;
+    top: 56%;
+    left: 41%;
+    font-size: 19px;
+  }
   .editFileCard[_ngcontent-qmo-c18] {
     position: relative;
     top: 49px;
   }
-
+  audio {
+    left: 35px;
+    bottom: 47%;
+    position:absolute !important;
+  }
 
   i#playAudio {
     position: fixed;
@@ -174,26 +184,62 @@ img#play-btn_new {
   }
   button#discardFile {
     position: relative;
-    right: -17%;
+    right: 1%;
     border-radius: 29%;
     height: 49px;
-    top: 224px;
+    top: 315px;
     background: #484848;
     border: #484848;
-    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+    box-shadow: #00000029 0 10px 36px, #0000000f 0 0 0 1px;
+  }
+  audio {
+    position: relative;
+    bottom: 47%;
   }
   button#nextFile {
     position: relative;
-    left: 44%;
+    left: 34%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 224px;
+    top: 314px;
     background: white;
     border: white;
-    color: black;
-    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    color: #000;
+    box-shadow: #32325d40 0 13px 27px -5px, #0000004d 0 8px 16px -8px;
 
+  }
+
+  input.btn.btn-primary {
+    position: relative;
+    bottom: -13px;
+    left: 14px;
+  }
+  a.btn.btn-danger {
+    position: relative;
+    top: 50px;
+    left: 13px;
+  }
+
+  img#imageWave {
+    position: fixed;
+    width: 82%;
+    top: 27%;
+    left: 33px;
+    height: 157px;
+  }
+
+
+  input#fileInput {
+    position: relative;
+    bottom: 227px;
+    left: 10px;
+  }
+
+  a.btn.btn-primary {
+    position: relative;
+    top: 50px;
+    left: 13px;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -951,6 +997,33 @@ h1#max_recording_time {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+  input#fileInput {
+    position: relative;
+    left: 52%;
+    bottom: 242px;
+  }
+
+  a.btn.btn-primary {
+    position: relative;
+    left: 30%;
+    top: 72px;
+    left: 4%;
+  }
+
+  audio {
+    position: absolute;
+    left: 35%;
+    bottom: 57%;
+  }
+
+
+  input.btn.btn-primary {
+    position: relative;
+    top: 34px;
+  }
+
+
   .fileCard {
     width: 379px;
     height: 164px;
@@ -1090,25 +1163,37 @@ h1#max_recording_time {
   }
   button#discardFile {
     position: relative;
-    right: 9%;
+    right: 2%;
     border-radius: 29%;
     height: 49px;
-    top: 290px;
+    top: 322px;
     background: #484848;
     border: #484848;
-    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+    box-shadow: #00000029 0 10px 36px, #0000000f 0 0 0 1px;
+  }
+  a.btn.btn-danger {
+    position: relative;
+    left: 30%;
+    top: 72px;
+  }
+  img#imageWave {
+    position: fixed;
+    width: 35%;
+    top: 24%;
+    left: 32%;
+    height: 122px;
   }
   button#nextFile {
     position: relative;
-    left: 15%;
+    left: 40%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 290px;
+    top: 322px;
     background: white;
     border: white;
-    color: black;
-    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    color: #000;
+    box-shadow: #32325d40 0 13px 27px -5px, #0000004d 0 8px 16px -8px;
   }
   i.bi.bi-pause {
     position: fixed;
@@ -1236,6 +1321,39 @@ h1#max_recording_time {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+  audio{
+    position: absolute;
+    left: 42%;
+    bottom: 46%;
+  }
+  img#imageWave {
+    position: fixed;
+    width: 16%;
+    top: 31%;
+    left: 42%;
+    height: 119px;
+  }
+  a.btn.btn-primary{
+    position: relative;
+    left: 40%;
+    top: 72px;
+  }
+  a.btn.btn-danger{
+    position: relative;
+    left: 40%;
+    top: 72px;
+  }
+  input.btn.btn-primary{
+    position: relative;
+    top: 18px;
+    left: 25%;
+  }
+  p#data {
+    position: fixed;
+    left: 49%;
+    top: 59%;
+  }
   .fileCard {
     width: 379px;
     height: 164px;
@@ -1375,26 +1493,26 @@ h1#max_recording_time {
   }
   button#discardFile {
     position: relative;
-    left: 42%;
+    left: -6%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 268px;
+    top: 318px;
     background: #484848;
     border: #484848;
-    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+    box-shadow: #00000029 0 10px 36px, #0000000f 0 0 0 1px;
   }
   button#nextFile {
     position: relative;
-    left: 50%;
+    left: 38%;
     height: 49px;
     border-radius: 29%;
     width: 77px;
-    top: 268px;
+    top: 316px;
     background: white;
     border: white;
-    color: black;
-    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+    color: #000;
+    box-shadow: #32325d40 0 13px 27px -5px, #0000004d 0 8px 16px -8px;
   }
   i.bi.bi-pause {
 

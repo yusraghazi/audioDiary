@@ -1,57 +1,68 @@
 <script src="../../assets/js/audio.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/waveform-playlist@4.0.6/styles/playlist.css">
 <script src="https://kit.fontawesome.com/ef69927139.js" crossorigin="anonymous"></script>
+
+
+
+<!--newly added in gif-->
+<img src="assets/images/animatedwave.gif" id="myAnimation" [hidden] = "!isShow" alt="image" id="imageWave">
+
+<a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+<a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
 <div class="editFileCard">
   <div class="fileCard" [style.background-color]="getSelectedColor()">
-    <!--newly commented out card body-->
-<!--    <div class="card-body">-->
-<!--      <div class=" shadow-lg title-container">-->
-<!--        <h5 class="card-title"> </h5>-->
-<!--      </div>-->
-<!--      <div class="shadow-lg text-container">-->
-<!--        <p class="card-text"></p>-->
-<!--      </div>-->
-<!--      <div class="reportFlag">-->
-<!--      </div>-->
-<!--    </div>-->
 
-<!--
-    <div class="boxContainer">
-      <div class="box box1"></div>
-      <div class="box box2"></div>
-      <div class="box box3"></div>
-      <div class="box box4"></div>
-      <div class="box box5"></div>
 
+    <!--    newly commented out card body-->
+    <div class="card-body">
+      <div class=" shadow-lg title-container">
+        <h5 class="card-title"> </h5>
+
+      </div>
+      <div class="shadow-lg text-container">
+        <p class="card-text"></p>
+      </div>
+      <div class="reportFlag">
+      </div>
     </div>
 
+    <!--
+        <div class="boxContainer">
+          <div class="box box1"></div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+          <div class="box box4"></div>
+          <div class="box box5"></div>
 
-
-
-
-      <div class="spinner-wrap">
-        <div class="spinner-outer"></div>
-        <div class="spinner-center"></div>
-        <div class="play-sprite"></div>
-    </div> -->
-
-    <!--waves commented out-->
-<!--    <div class="Waves">-->
-<!--      <div id="soundWave">-->
-<!--        <div id="playlist"></div>-->
-<!--        <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
-<!--      </div>-->
-<!--      <h1 id="time"></h1>-->
-<!--    </div>-->
-
-<!--      </div>-->
+        </div>
 
 
 
 
 
+          <div class="spinner-wrap">
+            <div class="spinner-outer"></div>
+            <div class="spinner-center"></div>
+            <div class="play-sprite"></div>
+        </div> -->
 
-      <!-- musicplayer -->
+
+    <!--    <div class="Waves">-->
+    <!--      <div id="soundWave">-->
+    <!--        <div id="playlist"></div>-->
+    <!--        <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
+    <!--      </div>-->
+    <!--      <h1 id="time"></h1>-->
+    <!--    </div>-->
+
+
+
+
+
+
+
+
+    <!-- musicplayer -->
 
     <!-- <svg class="video-overlay-play-button"  (click)="playSound()" viewBox="0 0 200 200" alt="Play video">
       <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#000"/>
@@ -61,58 +72,58 @@
     <div class="container">
       <button class="btn-primary" id="discardFile" (click)="open(content)">Discard</button>
       <button class="btn-primary" routerLink="/editing" id="nextFile" (click)="buttonEditing()">Next</button>
-    <i class="bi bi-play" id="playAudio"></i>
-    <i class="bi bi-pause" id="pauseAudio"></i>
+      <!--    <i class="bi bi-play" id="playAudio"></i>-->
+      <!--    <i class="bi bi-pause" id="pauseAudio"></i>-->
 
-  <!--      <img src="../../../../assets/images/play-btn.png" id="play-btn_new">-->
-<!--      <div id="playlist"></div>-->
-<!--      <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
+      <!--      <img src="../../../../assets/images/play-btn.png" id="play-btn_new">-->
+      <!--      <div id="playlist"></div>-->
+      <!--      <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
 
-      <h1 id="max_recording_time">max 00:03:00 minutes of  <br> recording</h1>
-
-  </div>
-
-        <button class="btn btn-edit">Edit File</button>
-        <i class="bi bi-exclamation-circle-fill"></i>
-
-      <ng-template #content let-modal>
-        <div class="modal-header">
-          <h4 class="modal-title" id="modal-basic-title">Are you sure you want to discard the file?</h4>
-          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <button class="btn-primary" routerLink="/feedview" id="confirmFile"  (click)="modal.dismiss('Cross click')">Confirm</button>
-
-            </div>
-          </form>
-        </div>
-      </ng-template>
+      <!--      <h1 id="max_recording_time">max 00:03:00 minutes of  <br> recording</h1>-->
 
     </div>
 
+    <!--        <button class="btn btn-edit">Edit File</button>-->
+    <!--        <i class="bi bi-exclamation-circle-fill"></i>-->
 
-      <pre>{{ closeResult }}</pre>
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Are you sure you want to discard the file?</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <button class="btn-primary" routerLink="/feedview" id="confirmFile"  (click)="modal.dismiss('Cross click')">Confirm</button>
+
+          </div>
+        </form>
+      </div>
+    </ng-template>
+
+  </div>
+
+
+  <pre>{{ closeResult }}</pre>
 
 
 
 
-  <a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
-  <a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
+
+
   <div class="clearfix"></div>
-  <audio controls="" *ngIf="url">
+
+  <!-- In your view, render the image and audio in an Angular component.-->
+  <!--  <advanced-image [cldImg]="img"></advanced-image>-->
+  <!--  <advanced-video [cldVid]="vid" controls></advanced-video>-->
+  <audio controls="" (pause)="isShow = false" (playing)="isShow = true" *ngIf="url">
     <source [src]="sanitize(url)" type="audio/wav">
   </audio>
-  <!-- In your view, render the image in an Angular component.-->
-  <advanced-image [cldImg]="img"></advanced-image>
-  <advanced-video [cldVid]="vid" controls></advanced-video>
-
   <form method="post" enctype="multipart/form-data">
     <input type="file" id="fileInput" name="files[]" multiple>
-    <input type="submit" value="Upload Files" (click)="eventListen()" name="submit">
+    <input type="submit" [disabled]="clicked" value="Upload Files" (click)="eventListen(); clicked = true;" class="btn btn-primary" name="submit">
   </form>
 
   <p id="data">
