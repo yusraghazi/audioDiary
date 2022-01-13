@@ -71,7 +71,7 @@ export class RecordingPostComponent implements OnInit {
   }
 
   playButton() {
-    var audio = document.getElementById("postAudio") as HTMLAudioElement;
+    var audio = document.getElementById(this.audioPost.id.toString()) as HTMLAudioElement;
 
     console.log(this.audioUrl)
     if (!this.playBtn) {

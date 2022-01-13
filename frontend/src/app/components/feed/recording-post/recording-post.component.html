@@ -1,6 +1,6 @@
 
 <div class="card"  [ngStyle]="{'border-color':audioPost.theme, 'box-shadow':'2.4px 4.8px 4.8px'+audioPost.theme}">
-  <audio id="postAudio" >
+  <audio id="{{audioPost.id}}" >
     <source src="{{audioUrl}}" type="audio/wav">
   </audio>
 
