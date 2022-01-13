@@ -2,6 +2,12 @@
   border-radius: 34px;
 }
 
+cardUsertag{
+  font-size: 12px;
+  margin-bottom: 10px;
+
+}
+
 form.mb-5.ng-untouched.ng-pristine.ng-valid {
   position: relative;
   bottom: 155px;
@@ -21,12 +27,13 @@ h2#editHeader {
   border-radius: 20px 20px 30px 30px ;
   color: black;
   width: 350px;
-  box-shadow: 2.4px 4.8px 4.8px ;
+  box-shadow: rgb(159 125 90) 2.4px 4.8px 4.8px;
   float: none;
   display: flex;
   flex: 1 1 auto;
-
+  border-color: rgb(159, 125, 90);
 }
+
 .cardImg{
   border-radius: 17px 17px 30px 30px ;
 }
@@ -146,13 +153,6 @@ h2#editHeader {
   border-radius: 7px;
   background: white;
   overflow: initial;
-}
-
-.card-text {
-  margin-top: 1px;
-  margin-left: 2px;
-  font-size: 10px;
-  color: black;
 }
 
 .bi {
@@ -288,4 +288,1718 @@ h2, h2 {
 
 #discardButton {
   background-color: gray;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .fileCard {
+    width: 90%;
+    height: 164px;
+    background-color: #ff7f61 !important;
+    margin: 10px auto;
+    float: none;
+    border-radius: 20px;
+    display: flex;
+    flex: 1 1 auto;
+    /*box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;*/
+  }
+  p#data {
+    position: fixed;
+    top: 56%;
+    left: 41%;
+    font-size: 19px;
+  }
+  .editFileCard[_ngcontent-qmo-c18] {
+    position: relative;
+    top: 49px;
+  }
+  audio {
+    left: 35px;
+    bottom: 47%;
+    position:absolute !important;
+  }
+
+  i#playAudio {
+    position: fixed;
+    right: 53%;
+    bottom: 29%;
+    font-size: 95px;
+  }
+
+  div#soundWave {
+    position: relative;
+    right: 61%;
+    width: 161%;
+  }
+
+
+
+
+  /* visualizer */
+  @keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
+  }
+
+  @keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+  }
+  @keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    background: black;
+    margin: 0;padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .boxContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 94px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    left: -39%;
+    position: relative;
+    bottom: -19%;
+    width: 91px;
+  }
+  .box{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: #12E2DC;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+  }
+  i.bi.bi-exclamation-circle-fill {
+    font-size: 39px;
+    position: relative;
+    bottom: 418px;
+    right: 172px;
+    color:red;
+  }
+  .box1{
+    animation-name: quiet;
+  }
+
+  .box2{
+    animation-name: normal;
+  }
+
+  .box3{
+    animation-name: quiet;
+  }
+
+  .box4{
+    animation-name: loud;
+  }
+
+  .box5{
+    animation-name: quiet;
+  }
+  button#confirmFile{
+    position: relative;
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+  }
+
+  img#audio_clipper {
+    position: relative;
+    top: -41px;
+    width: 90%;
+    left: 20px;
+  }
+
+  img#play-btn_new {
+    width: 24%;
+    position: relative;
+    left: 37%;
+  }
+
+
+
+
+  /* mp3player */
+
+
+  /**
+  **/
+
+  svg.video-overlay-play-button {
+    width: 28%;
+    position: relative;
+    left: 36%;
+    top: 172px;
+  }
+  .editFileCard {
+    margin-top: 99px;
+  }
+  .buttons {
+    position: fixed;
+    top: 80%;
+    left: 34%;
+  }
+  button#discardFile {
+    position: relative;
+    right: 1%;
+    border-radius: 29%;
+    height: 49px;
+    top: 315px;
+    background: #484848;
+    border: #484848;
+    box-shadow: #00000029 0 10px 36px, #0000000f 0 0 0 1px;
+  }
+  audio {
+    position: relative;
+    bottom: 47%;
+  }
+  button#nextFile {
+    position: relative;
+    left: 34%;
+    height: 49px;
+    border-radius: 29%;
+    width: 77px;
+    top: 314px;
+    background: white;
+    border: white;
+    color: #000;
+    box-shadow: #32325d40 0 13px 27px -5px, #0000004d 0 8px 16px -8px;
+
+  }
+
+  input.btn.btn-primary {
+    position: relative;
+    bottom: -13px;
+    left: 14px;
+  }
+  a.btn.btn-danger {
+    position: relative;
+    top: 50px;
+    left: 13px;
+  }
+
+  img#imageWave {
+    position: fixed;
+    width: 82%;
+    top: 27%;
+    left: 33px;
+    height: 157px;
+  }
+
+
+  input#fileInput {
+    bottom: 227px;
+    left: 10px;
+  }
+
+  a.btn.btn-primary {
+    position: relative;
+    top: 50px;
+    left: 13px;
+  }
+  i.bi.bi-pause {
+    position: fixed;
+    right: 21%;
+    bottom: 29%;
+    font-size: 95px;
+  }
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+  h1#time{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    margin-left: 209px;
+    top: -88%;
+  }
+
+  h4#modal-basic-title {
+    position: relative;
+    top: 264%;
+    left: 12%;
+    color:white;
+  }
+
+  ::ng-deep.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #00000087 !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    height: 778px;
+    border-radius: 50px;
+  }
+  button.close {
+    color: white;
+  }
+  /*
+  ::ng-deep .modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+    position: relative;
+    top: 19%;
+  } */
+
+  .btn-edit {
+    font-family: Raleway-SemiBold;
+    font-size: 13px;
+    color: #000;
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: white;
+    border-radius: 40px;
+    background: white;
+    position: center;
+    display: inline;
+    width: 98px;
+    position: relative;
+    bottom: 341px;
+    left: 65%;
+    box-shadow: #0000003d 0 3px 8px;
+  }
+  h1#max_recording_time {
+    position: relative;
+    font-size: 13px;
+    bottom: 486px;
+    color: black;
+    margin-left: 70px;
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    /*   height: 2px; */
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    /*   height: 15px; */
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    /*   height: 25px; */
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    /*   height: 30px; */
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    /*   height: 40px; */
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    /*   height: 45px; */
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+    height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+    height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+    height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+    height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+    height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+    height: 20px;
+  }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .fileCard {
+    width: 379px;
+    height: 164px;
+    /*background: #F4B371;*/
+    background-color: #ff7f61 !important;
+    margin: 10px auto;
+    float: none;
+    border-radius: 23%;
+    display: flex;
+    flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
+  }
+  .editFileCard[_ngcontent-qmo-c18] {
+    position: relative;
+    top: 49px;
+  }
+
+  /* visualizer */
+  @keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
+  }
+
+  @keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+  }
+  @keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    background: black;
+    margin: 0;padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .boxContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 94px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    left: -39%;
+    position: relative;
+    bottom: -19%;
+    width: 91px;
+  }
+  .box{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: #12E2DC;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+  }
+
+  .box1{
+    animation-name: quiet;
+  }
+
+  .box2{
+    animation-name: normal;
+  }
+
+  .box3{
+    animation-name: quiet;
+  }
+
+  .box4{
+    animation-name: loud;
+  }
+
+  .box5{
+    animation-name: quiet;
+  }
+  button#confirmFile {
+    position: relative;
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+  }
+
+
+
+
+  /* mp3player */
+
+
+  /**
+  **/
+
+  svg.video-overlay-play-button {
+    width: 28%;
+    position: relative;
+    left: 36%;
+    top: 147px;
+  }
+  .editFileCard {
+    margin-top: 85px;
+  }
+  .buttons {
+    position: fixed;
+    top: 80%;
+    left: 34%;
+  }
+  button#discardFile {
+    position: relative;
+    right: 9%;
+    border-radius: 29%;
+    height: 49px;
+    top: 268px;
+    background: #484848;
+    border: #484848;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+  }
+  button#nextFile {
+    position: relative;
+    left: 15%;
+    height: 49px;
+    border-radius: 29%;
+    width: 77px;
+    top: 268px;
+    background: white;
+    border: white;
+    color: black;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+  }
+  i.bi.bi-pause {
+    position: fixed;
+    bottom: -11%;
+    width: 41%;
+    height: 51%;
+    right: 40px;
+    font-size: 121px;
+  }
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    height: 2px;
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    height: 15px;
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    height: 25px;
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    height: 30px;
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    height: 40px;
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    height: 45px;
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*   padding-top: 78%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+    height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+    height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+    height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+    height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+    height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+    height: 20px;
+  }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .fileCard {
+    width: 379px;
+    height: 164px;
+    background: #F4B371;
+    background-color: #ff7f61 !important;
+    margin: 10px auto;
+    float: none;
+    border-radius: 23%;
+    display: flex;
+    flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
+  }
+  .editFileCard[_ngcontent-qmo-c18] {
+    position: relative;
+    top: 49px;
+  }
+
+  /* visualizer */
+  @keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
+  }
+
+  @keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+  }
+  @keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    background: black;
+    margin: 0;padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .boxContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 94px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    left: -39%;
+    position: relative;
+    bottom: -19%;
+    width: 91px;
+  }
+  .box{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: #12E2DC;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+  }
+
+  .box1{
+    animation-name: quiet;
+  }
+
+  .box2{
+    animation-name: normal;
+  }
+
+  .box3{
+    animation-name: quiet;
+  }
+
+  .box4{
+    animation-name: loud;
+  }
+
+  .box5{
+    animation-name: quiet;
+  }
+  button#confirmFile{
+    position: relative;
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+  }
+
+
+
+
+
+  /* mp3player */
+
+
+  /**
+  **/
+
+  svg.video-overlay-play-button {
+    width: 28%;
+    position: relative;
+    left: 24%;
+    top: 202px;
+  }
+  .editFileCard {
+    margin-top: 85px;
+  }
+  .buttons {
+    position: fixed;
+    top: 80%;
+    left: 34%;
+  }
+  button#discardFile {
+    position: relative;
+    right: 9%;
+    border-radius: 29%;
+    height: 49px;
+    top: 290px;
+    background: #484848;
+    border: #484848;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+  }
+  button#nextFile {
+    position: relative;
+    left: 15%;
+    height: 49px;
+    border-radius: 29%;
+    width: 77px;
+    top: 290px;
+    background: white;
+    border: white;
+    color: black;
+    box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+  }
+  i.bi.bi-pause {
+    position: fixed;
+    bottom: -11%;
+    width: 41%;
+    height: 51%;
+    right: 40px;
+    font-size: 121px;
+  }
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    height: 2px;
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    height: 15px;
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    height: 25px;
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    height: 30px;
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    height: 40px;
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    height: 45px;
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+    height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+    height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+    height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+    height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+    height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+    height: 20px;
+  }
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  input#fileInput {
+    left: 52%;
+    bottom: 242px;
+  }
+
+  a.btn.btn-primary {
+    position: relative;
+    left: 30%;
+    top: 72px;
+    left: 4%;
+  }
+
+  audio {
+    position: absolute;
+    left: 35%;
+    bottom: 57%;
+  }
+
+
+  input.btn.btn-primary {
+    position: relative;
+    top: 34px;
+  }
+
+
+  .fileCard {
+    width: 379px;
+    height: 164px;
+    /*background: #F4B371;*/
+    background-color: #ff7f61 !important;
+    margin: 10px auto;
+    float: none;
+    border-radius: 23%;
+    display: flex;
+    flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
+  }
+  .editFileCard[_ngcontent-qmo-c18] {
+    position: relative;
+    top: 49px;
+  }
+
+  /* visualizer */
+  @keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
+  }
+
+  @keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+  }
+  @keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    background: black;
+    margin: 0;padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .boxContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 94px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    left: -39%;
+    position: relative;
+    bottom: -19%;
+    width: 91px;
+  }
+  .box{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: #12E2DC;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+  }
+
+  .box1{
+    animation-name: quiet;
+  }
+
+  .box2{
+    animation-name: normal;
+  }
+
+  .box3{
+    animation-name: quiet;
+  }
+
+  .box4{
+    animation-name: loud;
+  }
+
+  .box5{
+    animation-name: quiet;
+  }
+  button#confirmFile{
+    position: relative;
+    left: 31%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+  }
+
+
+
+
+
+  /* mp3player */
+
+
+  /**
+  **/
+
+  svg.video-overlay-play-button {
+    width: 28%;
+    position: relative;
+    left: 24%;
+    top: 202px;
+  }
+  .editFileCard {
+    margin-top: 85px;
+  }
+  .buttons {
+    position: fixed;
+    top: 80%;
+    left: 34%;
+  }
+  button#discardFile {
+    position: relative;
+    right: 2%;
+    border-radius: 29%;
+    height: 49px;
+    top: 322px;
+    background: #484848;
+    border: #484848;
+    box-shadow: #00000029 0 10px 36px, #0000000f 0 0 0 1px;
+  }
+  a.btn.btn-danger {
+    position: relative;
+    left: 30%;
+    top: 72px;
+  }
+  img#imageWave {
+    position: fixed;
+    width: 35%;
+    top: 24%;
+    left: 32%;
+    height: 122px;
+  }
+  button#nextFile {
+    position: relative;
+    left: 40%;
+    height: 49px;
+    border-radius: 29%;
+    width: 77px;
+    top: 322px;
+    background: white;
+    border: white;
+    color: #000;
+    box-shadow: #32325d40 0 13px 27px -5px, #0000004d 0 8px 16px -8px;
+  }
+  i.bi.bi-pause {
+    position: fixed;
+    bottom: -11%;
+    width: 41%;
+    height: 51%;
+    right: 40px;
+    font-size: 121px;
+  }
+
+
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    height: 2px;
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    height: 15px;
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    height: 25px;
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    height: 30px;
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    height: 40px;
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    height: 45px;
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+    height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+    height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+    height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+    height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+    height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+    height: 20px;
+  }
+
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  audio{
+    position: absolute;
+    left: 42%;
+    bottom: 46%;
+  }
+  img#imageWave {
+    position: fixed;
+    width: 16%;
+    top: 31%;
+    left: 42%;
+    height: 119px;
+  }
+  a.btn.btn-primary{
+    position: relative;
+    left: 40%;
+    top: 72px;
+  }
+  a.btn.btn-danger{
+    position: relative;
+    left: 40%;
+    top: 72px;
+  }
+  input.btn.btn-primary{
+    position: relative;
+    top: 18px;
+    left: 25%;
+  }
+  p#data {
+    position: fixed;
+    left: 49%;
+    top: 59%;
+  }
+  .fileCard {
+    width: 379px;
+    height: 164px;
+    background: #F4B371;
+    background-color: #ff7f61 !important;
+    margin: 10px auto;
+    float: none;
+    border-radius: 23%;
+    display: flex;
+    flex: 1 1 auto;
+    box-shadow: rgb(0 0 0 / 35%) 0px -50px 36px -28px inset;
+  }
+  .editFileCard[_ngcontent-qmo-c18] {
+    position: relative;
+    top: 49px;
+  }
+
+  /* visualizer */
+  @keyframes quiet {
+    25%{
+      transform: scaleY(.6);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.8);
+    }
+  }
+
+  @keyframes normal {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(.6);
+    }
+  }
+  @keyframes loud {
+    25%{
+      transform: scaleY(1);
+    }
+    50%{
+      transform: scaleY(.4);
+    }
+    75%{
+      transform: scaleY(1.2);
+    }
+  }
+  body{
+    display: flex;
+    justify-content: center;
+    background: black;
+    margin: 0;padding: 0;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .boxContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 94px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    left: -39%;
+    position: relative;
+    bottom: -19%;
+    width: 91px;
+  }
+  .box{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: #12E2DC;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+  }
+
+  .box1{
+    animation-name: quiet;
+  }
+
+  .box2{
+    animation-name: normal;
+  }
+
+  .box3{
+    animation-name: quiet;
+  }
+
+  .box4{
+    animation-name: loud;
+  }
+
+  .box5{
+    animation-name: quiet;
+  }
+  button#confirmFile{
+    position: relative;
+    left: 37%;
+    top: 251px;
+    background-color: red;
+    border-color: red;
+    color: white;
+    border-radius: 70px;
+    width: 130px;
+  }
+
+
+
+
+  /* mp3player */
+
+
+  /**
+  **/
+
+  svg.video-overlay-play-button {
+    width: 6%;
+    position: relative;
+    left: 47%;
+    top: 169px;
+  }
+
+  .editFileCard {
+    margin-top: 85px;
+  }
+  .buttons {
+    position: fixed;
+    top: 80%;
+    left: 34%;
+  }
+  button#discardFile {
+    position: relative;
+    left: -6%;
+    height: 49px;
+    border-radius: 29%;
+    width: 77px;
+    top: 318px;
+    background: #484848;
+    border: #484848;
+    box-shadow: #00000029 0 10px 36px, #0000000f 0 0 0 1px;
+  }
+  button#nextFile {
+    position: relative;
+    left: 38%;
+    height: 49px;
+    border-radius: 29%;
+    width: 77px;
+    top: 316px;
+    background: white;
+    border: white;
+    color: #000;
+    box-shadow: #32325d40 0 13px 27px -5px, #0000004d 0 8px 16px -8px;
+  }
+  i.bi.bi-pause {
+
+    width: 4%;
+    position: relative;
+    left: 48%;
+    top: 21px;
+    font-size: 186px;
+  }
+
+
+  .css_animation {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: -13px;
+
+  }
+
+  .css_animation .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .wrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+    animation: sound 0ms 1.2s linear infinite alternate;
+    transition: height 0.8s;
+  }
+  .css_animation .wrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  @keyframes sound {
+    0% {
+      opacity: 0.35;
+      height: 5px;
+    }
+    100% {
+      opacity: 1;
+      height: 50px;
+    }
+  }
+  .css_animation .wrapper div:nth-of-type(1) {
+    height: 2px;
+    animation-duration: 458ms;
+  }
+  .css_animation .wrapper div:nth-of-type(2) {
+    height: 15px;
+    animation-duration: 400ms;
+  }
+  .css_animation .wrapper div:nth-of-type(3) {
+    height: 25px;
+    animation-duration: 427ms;
+  }
+  .css_animation .wrapper div:nth-of-type(4) {
+    height: 30px;
+    animation-duration: 441ms;
+  }
+  .css_animation .wrapper div:nth-of-type(5) {
+    height: 40px;
+    animation-duration: 419ms;
+  }
+  .css_animation .wrapper div:nth-of-type(6) {
+    height: 45px;
+    animation-duration: 487ms;
+  }
+
+
+  /*Onclick sound waves*/
+  .css_animation .onClickWrapper {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding-top: 78%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .css_animation .onClickWrapper div {
+    display: block;
+    width: 15px;
+    margin-right: 8px;
+    height: 15px;
+    border-radius: 20px;
+
+  }
+
+  .css_animation .onClickWrapper .pro-rec1{
+    background: #f9edf6;
+  }
+
+  .css_animation .onClickWrapper div:nth-of-type(1) {
+    height: 70px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(2) {
+    height: 60px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(3) {
+    height: 50px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(4) {
+    height: 40px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(5) {
+    height: 30px;
+  }
+  .css_animation .onClickWrapper div:nth-of-type(6) {
+    height: 20px;
+  }
+  h1#time {
+    font-size: 20px;
+    color: white;
+    position: RELATIVE;
+    left: 71%;
+    top: -83%;
+  }
+  img#audio_clipper {
+    position: relative;
+    left: 32%;
+    top: 19px;
+  }
+  img#play-btn_new {
+    width: 120px;
+    position: relative;
+    top: 172px;
+    left: 19%;
+  }
+  .btn-edit {
+    font-family: Raleway-SemiBold;
+    font-size: 13px;
+    color: black;
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: white;
+    border-radius: 40px;
+    background: white;
+    position: center;
+    display: inline;
+    width: 150px;
+    position: relative;
+    bottom: 278px;
+    left: 24%;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  }
+  i.bi.bi-exclamation-circle-fill {
+    font-size: 39px;
+    position: relative;
+    bottom: 271px;
+    right: 99px;
+    color:red;
+  }
+  h1#max_recording_time {
+    position: relative;
+    font-size: 17px;
+    bottom: 364px;
+    color: black;
+    margin-left: 790px;
+  }
+
+
+  h4#modal-basic-title {
+    position: relative;
+    top: 264%;
+    left: 12%;
+    color:white;
+  }
+
+  ::ng-deep.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #00000087 !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    height: 778px;
+    border-radius: 50px;
+  }
+  button.close {
+    color: white;
+  }
+
+
+
 }

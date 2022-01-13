@@ -111,7 +111,7 @@ export class RecDoneComponent implements OnInit {
 
 
 
-  eventListen(){
+  eventListenAudio(){
     const url = "https://api.cloudinary.com/v1_1/hogeschool-van-amsterdam/upload";
     const form = document.querySelector("form");
     // @ts-ignore
@@ -171,56 +171,9 @@ export class RecDoneComponent implements OnInit {
     // newly added
     const uploaderOptions: FileUploaderOptions = {}
 
-
-
-
-    //
-    //
-    // var playlist = WaveformPlaylist({
-    //   samplesPerPixel: 3000,
-    //   waveHeight: 70,
-    //   container: document.getElementById("playlist"),
-    //   state: "cursor",
-    //   isAutomaticScroll: true,
-    //
-    //   colors: {
-    //     waveOutlineColor: "#E0EFF1",
-    //     timeColor: "orange",
-    //     fadeColor: "orange"
-    //   },
-    //
-    //   controls: {
-    //     show: false,
-    //     width: 150,
-    //   },
-    //   zoomLevels: [500, 1000, 3000, 5000]
-    // });
-    //
-    //
-    // playlist.load([
-    //   {
-    //     src: "../../assets/audio/creative_minds.mp3"
-    //   }
-    //
-    //
-    // ]).then(function () {
-    //   var ee = playlist.getEventEmitter();
-    //   document.getElementById("playAudio").addEventListener("click", function () {
-    //     ee.emit("play");
-    //     console.log("play")
-    //
-    //   });
-    //
-    //   document.getElementById("pauseAudio").addEventListener("click", function () {
-    //     ee.emit("pause");
-    //   });
-    //
-    //
-    // });
-
-
   }
-  open(content: any) {
+
+  openAudio(content: any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
 
     }, (reason) => {

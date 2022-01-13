@@ -163,7 +163,7 @@ export class PostsService {
 
   restCreateNewPost(post: Post){
     const observable = this.http.post(`${environment.apiUrl}/posts`,
-      {id: post.id, user: post.user, title: post.title, description:post.description, img: post.img, theme: post.theme, isLiked: false, amountReport: 0, lng: post.lng, lat: post.lat, location: post.location, audio: post.audio}).pipe(share());
+      {id: post.id, user: post.user, title: post.title, description:post.description, img: post.img, theme: post.theme, isLiked: false, amountReport: 0, lng: post.lng, lat: post.lat, location: post.location, audiofile: post.audiofile}).pipe(share());
 
     observable.subscribe((data) => {
         console.log(data);

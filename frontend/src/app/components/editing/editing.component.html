@@ -1,258 +1,211 @@
-<!--<div class="editingRec">-->
-<!--  <h2 id="editHeader" >Edit recording</h2>-->
+<script src="../../assets/js/audio.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/waveform-playlist@4.0.6/styles/playlist.css">
+<script src="https://kit.fontawesome.com/ef69927139.js" crossorigin="anonymous"></script>
 
 
-<!--  <div class="editCard">-->
+<!--newly added in gif-->
+<img src="assets/images/animatedwave.gif" id="myAnimation" [hidden] = "!isShow" alt="image" id="imageWave">
 
-<!--    <div class="card" [ngStyle]="{'color': getSelectedColor()}">-->
-<!--      <img class="cardImg" [src]="imageSrc" alt="Add an image below">-->
-<!--      <div class="card-body">-->
-<!--        <div class="headerBody">-->
-<!--          <p class="card-username">@user</p>-->
-<!--          <div class="icons">-->
-<!--            <i class="bi bi-heart-fill"></i>-->
-<!--            <i class="bi bi-heart"></i>-->
-<!--            <i class="bi bi-chat-dots"></i>-->
-<!--            <i class="bi bi-share-fill"></i>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <h5 class="postCardTitle">{{newPost.title}}</h5>-->
-<!--        <p class="card-text">{{newPost.description}}</p>-->
+<a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+<a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
+<div class="editFileCard">
+  <div class="fileCard" [style.background-color]="getSelectedColor()">
+
+
+<!--    &lt;!&ndash;    newly commented out card body&ndash;&gt;-->
+<!--    <div class="card-body">-->
+<!--      <div class=" shadow-lg title-container">-->
+<!--        <h5 class="card-title"> </h5>-->
+
 <!--      </div>-->
-<!--      <div class="commentsPart">-->
+<!--      <div class="shadow-lg text-container">-->
+<!--        <p class="card-text"></p>-->
+<!--      </div>-->
+<!--      <div class="reportFlag">-->
 <!--      </div>-->
 <!--    </div>-->
+  </div>
+    <!--
+        <div class="boxContainer">
+          <div class="box box1"></div>
+          <div class="box box2"></div>
+          <div class="box box3"></div>
+          <div class="box box4"></div>
+          <div class="box box5"></div>
 
-<div class="editingRec">
+        </div>
+
+
+
+
+
+          <div class="spinner-wrap">
+            <div class="spinner-outer"></div>
+            <div class="spinner-center"></div>
+            <div class="play-sprite"></div>
+        </div> -->
+
+
+    <!--    <div class="Waves">-->
+    <!--      <div id="soundWave">-->
+    <!--        <div id="playlist"></div>-->
+    <!--        <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
+    <!--      </div>-->
+    <!--      <h1 id="time"></h1>-->
+    <!--    </div>-->
+
+
+
+
+
+
+
+<hr>
+    <!-- musicplayer -->
+
+    <!-- <svg class="video-overlay-play-button"  (click)="playSound()" viewBox="0 0 200 200" alt="Play video">
+      <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#000"/>
+      <polygon points="70, 55 70, 145 145, 100" fill="#000" id="svg-play"/>
+    </svg> -->
+    <div class="container">
+      <button class="btn-primary" id="discardFile" (click)="openAudio(content)">Discard</button>
+      <button class="btn-primary" routerLink="/editing" id="nextFile" (click)="buttonEditing(); show = true">Next</button>
+      <!--    <i class="bi bi-play" id="playAudio"></i>-->
+      <!--    <i class="bi bi-pause" id="pauseAudio"></i>-->
+
+      <!--      <img src="../../../../assets/images/play-btn.png" id="play-btn_new">-->
+      <!--      <div id="playlist"></div>-->
+      <!--      <script src="https://unpkg.com/waveform-playlist@4.0.6/build/waveform-playlist.var.min.js"></script>-->
+
+      <!--      <h1 id="max_recording_time">max 00:03:00 minutes of  <br> recording</h1>-->
+
+    </div>
+
+    <!--        <button class="btn btn-edit">Edit File</button>-->
+    <!--        <i class="bi bi-exclamation-circle-fill"></i>-->
+
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Are you sure you want to discard the file?</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <button class="btn-primary" routerLink="/feedview" id="confirmFile"  (click)="modal.dismiss('Cross click')">Confirm</button>
+
+          </div>
+        </form>
+      </div>
+    </ng-template>
+
+  </div>
+
+
+  <pre>{{ closeResult }}</pre>
+
+
+
+
+
+
+  <div class="clearfix"></div>
+
+  <!-- In your view, render the image and audio in an Angular component.-->
+  <!--  <advanced-image [cldImg]="img"></advanced-image>-->
+  <!--  <advanced-video [cldVid]="vid" controls></advanced-video>-->
+  <audio controls="" (pause)="isShow = false" (playing)="isShow = true" *ngIf="url">
+    <source [src]="sanitize(url)" type="audio/wav">
+  </audio>
+  <!--file input-->
+  <form method="post" enctype="multipart/form-data">
+    <input type="file" id="fileInputAudio" name="files[]" multiple>
+<!--    <input type="submit" [disabled]="clicked" value="Upload Files" class="btn btn-primary" name="submit">-->
+  </form>
+
+  <p id="data">
+  </p>
+
 
   <h2 id="editHeader" >Edit recording</h2>
 
 
   <div class="editCard">
 
-    <div class="card" [ngStyle]="{'color': getSelectedColor()}">
-      <img class="cardImg" [src]="imageSrc" alt="Add an image below">
-      <div class="card-body">
-        <div class="headerBody">
-          <p class="card-username">@user</p>
-          <div class="icons">
-            <i class="bi bi-heart-fill"></i>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-chat-dots"></i>
-            <i class="bi bi-share-fill"></i>
+
+    <div class="editCard">
+
+      <div class="card" id="cardColor">
+        <img class="editCardImg" [src]="imageSrc || 'http://placehold.it/180' ">
+        <div class="card-body">
+          <div class="headerBody">
+            <p class="cardUsertag">@{{this.username}}</p>
+            <hr>
+            <div class="icons">
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-chat-dots"></i>
+              <i class="bi bi-share-fill"></i>
+            </div>
           </div>
+          <h5 class="postCardTitle"><em><b>{{newPost.location}}</b></em></h5>
+          <a href="#" class="badge badge-dark">{{newPost.theme}}</a>
+          <h5 class="postCardTitle">{{newPost.title}}</h5>
+          <p class="card-text">{{newPost.description}}</p>
         </div>
-        <h5 class="postCardTitle">{{newPost.title}}</h5>
-        <p class="card-text">{{newPost.description}}</p>
+        <div class="commentsPart">
+        </div>
       </div>
-      <div class="commentsPart">
-      </div>
-    </div>
 
-
-
-
-    <div class="editInputs">
       <div class="inputsTitle">
         <p class="inputHeader">Title:</p>
         <input class="inputValue" [(ngModel)]="newPost.title">
       </div>
 
-      <p class="inputHeader"> Duration:</p>
-      <input class="inputValue" id="durationInput" value="01:30:00">
-
       <p class="inputHeader"> Location:</p>
       <div id="map-mapbox" style="height: 200px"></div>
-      <!--      <input class="inputValue" id="locationInput" value="Amsterdam">-->
 
 
       <p class="inputHeader"> Description:</p>
-      <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
       <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="newPost.description"></textarea>
 
-<!--      <div class="picture">-->
-<!--        <p class="inputHeader"> Picture: </p>-->
-<!--        <input type="file" (change)="readURL($event)">-->
-<!--      </div>-->
 
       <div class="picture">
         <p class="inputHeader"> Picture: </p>
         <form method="post" enctype="multipart/form-data">
-          <input type="file" id="fileInput" name="files[]" multiple>
-<!--          <input type="submit" value="Upload Files" name="submit">-->
+          <input type="file" id="fileInput" name="files[]" (change)="readURL($event)">
         </form>
 
-<!--        <p id="data">-->
-<!--        </p>-->
       </div>
 
-      <!--      <div class="themeSelection">-->
-      <!--        <p id="themeInput">Choose theme:</p>-->
-      <!--        <div id="chooseTheme">-->
-      <!--          <p class="themeOptions" id="option1" (click)="cardColor = '#FE5F38'"></p>-->
-      <!--          <p class="themeOptions" id="option2" (click)="cardColor = '#FFAA5B'" ></p>-->
-      <!--          <p class="themeOptions" id="option3" (click)="cardColor = '#9BC111'"></p>-->
-      <!--          <p class="themeOptions" id="option4" (click)="cardColor = '#7A9BC6'"></p>-->
-      <!--          <p class="themeOptions" id="option5" (click)="cardColor = '#A28EB2'"></p>-->
-      <!--          <p class="themeOptions" id="option6" (click)="cardColor = '#73251E'"></p>-->
-      <!--        </div>-->
-      <!--      </div>-->
       <p class="inputHeader">Hashtag:</p>
-      <!--    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">-->
       <input class="inputValue mb-5" id="hashtagArea" [(ngModel)]="newPost.theme">
-      <!--      <div class="themeSelection">-->
-      <!--        <p id="themeInput">Choose theme:</p>-->
-      <!--        <div id="chooseTheme">-->
-      <!--          <p class="themeOptions" id="option1" (click)="cardColor = 'Theme.SUN'"></p>-->
-      <!--          <p class="themeOptions" id="option2" (click)="cardColor = 'Theme.SAND'" ></p>-->
-      <!--          <p class="themeOptions" id="option3" (click)="cardColor = 'Theme.FOREST'"></p>-->
-      <!--          <p class="themeOptions" id="option4" (click)="cardColor = 'Theme.WATER'"></p>-->
-      <!--          <p class="themeOptions" id="option5" (click)="cardColor = 'Theme.CITY'"></p>-->
-      <!--          <p class="themeOptions" id="option6" (click)="cardColor = 'Theme.MOUNTAIN'"></p>-->
-      <!--        </div>-->
-      <!--      </div>-->
 
       <div class="buttons">
-        <button class="editButtons" id="discardButton" (click)="backButton()">Go back</button>
         <button type= "submit" class="editButtons" id="postButton" (click)="postButton()">post</button>
       </div>
     </div>
   </div>
 
-  <div style="margin-bottom: 150px"></div>
-</div>
+  <div style="margin-bottom: 450px"></div>
 
 
 
 
-<a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
-<a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>
-<div class="clearfix"></div>
-<audio controls="" *ngIf="url">
-  <source [src]="sanitize(url)" type="audio/wav">
-</audio>
+<!--<a (click)="initiateRecording()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>-->
+<!--<a (click)="stopRecording()" class="btn btn-danger" *ngIf="recording"> Stop Recording </a>-->
+<!--<div class="clearfix"></div>-->
+<!--<audio controls="" *ngIf="url">-->
+<!--  <source [src]="sanitize(url)" type="audio/wav">-->
+<!--</audio>-->
 
 
 <!-- 5. Deliver your image or audio
  ========================= -->
 
-<!-- In your view, render the image in an Angular component.-->
-<advanced-image [cldImg]="img"></advanced-image>
-<advanced-video [cldVid]="vid" controls></advanced-video>
-
-<!--<advanced-video [cldVid]="vid" [sources]="sources" controls></advanced-video>-->
-
-
-
-<!--<form method="post" enctype="multipart/form-data">-->
-<!--  <input type="file" id="fileInput" name="files[]" multiple>-->
-<!--  <input type="submit" value="Upload Files" (click)="eventListen()" name="submit">-->
-<!--</form>-->
-
-<!--<p id="data">-->
-<!--</p>-->
-
-
-<!--    <div class="editInputs">-->
-<!--      <div class="inputsTitle">-->
-<!--        <p class="inputHeader">Title:</p>-->
-<!--        <input class="inputValue" [(ngModel)]="newPost.title">-->
-<!--      </div>-->
-
-<!--      <p class="inputHeader"> Duration:</p>-->
-<!--      <input class="inputValue" id="durationInput" value="01:30:00">-->
-
-<!--      <p class="inputHeader"> Location:</p>-->
-<!--      <div id="map-mapbox" style="height: 200px"></div>-->
-<!--&lt;!&ndash;      <input class="inputValue" id="locationInput" value="Amsterdam">&ndash;&gt;-->
-
-
-<!--      <p class="inputHeader"> Description:</p>-->
-<!--      &lt;!&ndash;    <input class="inputValue" id="discriptionInput" value="Here you can hear the rain while walking through Amsterdamse bos">&ndash;&gt;-->
-<!--      <textarea class="inputValue" id="descriptionArea" rows="10" cols="30" [(ngModel)]="newPost.description"></textarea>-->
-
-<!--      <div class="themeSelection">-->
-<!--        <p id="themeInput">Choose theme:</p>-->
-<!--        <div id="chooseTheme">-->
-<!--          <p class="themeOptions" id="option1" (click)="cardColor = '#FE5F38'"></p>-->
-<!--          <p class="themeOptions" id="option2" (click)="cardColor = '#FFAA5B'" ></p>-->
-<!--          <p class="themeOptions" id="option3" (click)="cardColor = '#9BC111'"></p>-->
-<!--          <p class="themeOptions" id="option4" (click)="cardColor = '#7A9BC6'"></p>-->
-<!--          <p class="themeOptions" id="option5" (click)="cardColor = '#A28EB2'"></p>-->
-<!--          <p class="themeOptions" id="option6" (click)="cardColor = '#73251E'"></p>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <form action="" method="post" enctype="multipart/form-data">-->
-<!--        <div class="picture">-->
-<!--          <p class="inputHeader"> Picture: </p>-->
-<!--          <input type="file" ng2FileSelect [uploader]="uploader" />-->
-<!--          <button [disabled]="loading" (click)="upload()" class="btn" (change)="readURL($event)">-->
-<!--        </div>-->
-<!--      </form>-->
-
-<!--      <div class="buttons">-->
-<!--        <button class="editButtons" id="discardButton" (click)="backButton()">Go back</button>-->
-<!--        <button type= "submit" class="editButtons" id="postButton" (click)="postButton()">post</button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <div style="margin-bottom: 150px"></div>-->
-<!--</div>-->
-
-<!--<div id="direct_upload" ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)" [ngClass]="{'nv-file-over': hasBaseDropZoneOver}">-->
-<!--  <h1>New Photo</h1>-->
-<!--  <h2>Direct upload from the browser with Angular File Upload</h2>-->
-<!--  <p>You can also drag and drop an image file into the dashed area.</p>-->
-<!--  <form>-->
-<!--    <div class="form_line">-->
-<!--      <label path="title">Title:</label>-->
-<!--      <div class="form_controls">-->
-<!--        <input type="text" class="form-control" #title placeholder="Title" (keyup.enter)="updateTitle(title.value)" (blur)="updateTitle(title.value)"-->
-<!--        />-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="form_line">-->
-<!--      <label>Image:</label>-->
-<!--      <div class="form_controls">-->
-<!--        <div class="upload_button_holder">-->
-<!--          <label class="upload_button" for="fileupload">Upload</label>-->
-<!--          &lt;!&ndash; onChange hanlder resets the input value to get the change event when uploading the same file consecutively &ndash;&gt;-->
-<!--          <input type="file" id="fileupload" #fileInput ng2FileSelect [style.display]="'none'" [uploader]="uploader" (change)="fileInput.value=''"-->
-<!--                 multiple />-->
-<!--        </div>-->
-
-<!--      </div>-->
-<!--    </div>-->
-<!--  </form>-->
-
-<!--  <div class="file" *ngFor="let response of responses; let i = index">-->
-<!--    <h3>{{response.file.name}}</h3>-->
-<!--    <button class="delete-image" *ngIf="!!response.data.delete_token" (click)="deleteImage(response.data, i)">Delete image</button>-->
-<!--    <div class="status">-->
-<!--      Uploading... {{response.progress}}%-->
-<!--      <div *ngIf="!response.status">In progress</div>-->
-<!--      <div class="status-code" *ngIf="response.status">Upload completed with status code {{response.status}}</div>-->
-<!--    </div>-->
-<!--    <div class="progress-bar">-->
-<!--      <div class="progress" role="progressbar" [style.width.%]="response.progress"></div>-->
-<!--    </div>-->
-<!--    <div class="form_line">-->
-<!--      <div class="form_controls">-->
-<!--        <div class="preview">-->
-<!--          &lt;!&ndash; Consider using https://github.com/valor-software/ng2-file-upload/issues/461 for image preview &ndash;&gt;-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    <div class="info">-->
-<!--      <table>-->
-<!--        <tr *ngFor="let property of getFileProperties(response.data)">-->
-<!--          <td> {{ property.key }} </td>-->
-<!--          <td> {{ property.value | json}} </td>-->
-<!--        </tr>-->
-<!--      </table>-->
-<!--    </div>-->
-<!--  </div>-->
+<!--&lt;!&ndash; In your view, render the image in an Angular component.&ndash;&gt;-->
+<!--<advanced-image [cldImg]="img"></advanced-image>-->
+<!--<advanced-video [cldVid]="vid" controls></advanced-video>-->
 
 

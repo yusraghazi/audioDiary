@@ -9,10 +9,11 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {User} from "../../../models/user";
 import {audit} from "rxjs/operators";
-import {Cloudinary, CloudinaryImage} from "@cloudinary/url-gen";
+import {Cloudinary, CloudinaryImage, CloudinaryVideo} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
 import {Formattedpost} from "../../../models/formattedpost";
+import Transformation from "@cloudinary/url-gen/backwards/transformation";
 
 
 @Component({
@@ -28,6 +29,7 @@ export class RecordingPostComponent implements OnInit {
   theme: String;
   themeValue: string;
   img: CloudinaryImage;
+  vid: CloudinaryVideo;
   private childParamsSubscription: Subscription;
   favoritePosts: Post[] = [];
 
@@ -45,7 +47,11 @@ export class RecordingPostComponent implements OnInit {
 
     console.log("image:" + this.audioPost.img);
     this.img = cld.image(this.audioPost.img.toString());
+    this.vid = cld.video(this.audioPost.audiofile.toString());
+
     this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
+    this.vid.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
+
     this.returnColor();
     this.childParamsSubscription =
       this.route.params.subscribe(
@@ -84,7 +90,7 @@ export class RecordingPostComponent implements OnInit {
     await this.postsService.restGetPost(id).subscribe(
       (data) => {
         // @ts-ignore
-        this.audioPost = Object.assign(new Post(), data);
+        this.audioPost = data;
         console.log(this.audioPost);
       }
     );
