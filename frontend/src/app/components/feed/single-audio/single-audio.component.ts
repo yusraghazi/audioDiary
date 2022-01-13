@@ -114,12 +114,15 @@ export class SingleAudioComponent implements OnInit {
   themeValue: string;
   img: CloudinaryImage;
   private childParamsSubscription: Subscription;
+  playBtn: boolean;
+  audioUrl: string;
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
     , private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit(): void {
+
     this.returnColor();
     this.childParamsSubscription =
       this.route.params.subscribe(
@@ -216,6 +219,23 @@ export class SingleAudioComponent implements OnInit {
 
   }
 
+  playButton() {
+    var audio = document.getElementById(this.audioPost.id.toString()) as HTMLAudioElement;
+    if (!this.playBtn) {
+      this.playBtn = true;
+      audio.play()
+
+    } else if (this.playBtn) {
+      this.playBtn = false;
+      audio.pause()
+    }
+
+    if (audio.ended) {
+      this.playBtn = false;
+    }
+
+  }
+
   like: Like = null;
   updatedLike: Like = null;
 
@@ -257,5 +277,20 @@ export class SingleAudioComponent implements OnInit {
   changeRoute() {
     this.router.navigateByUrl('/dummy', { skipLocationChange: true });
     setTimeout(() => this.router.navigate(["/mapview"]));
+  }
+
+  async sharePost() {
+    if (navigator.share) {
+      console.log("ja")
+
+    }
+    const shareData = {
+      title: this.audioPost.title,
+      text: this.audioPost.description,
+      url: 'https://audiodiary-fe-team1-staging.herokuapp.com/feedview/'+this.audioPost.id
+    }
+
+    await navigator.share(shareData)
+
   }
 }

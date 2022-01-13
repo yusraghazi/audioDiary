@@ -95,8 +95,6 @@ export class FeedviewComponent implements OnInit {
 
 
 
-   console.log(+id)
-   console.log(id)
 
  this.postsService.restGetPost(+id).subscribe(
        (data) =>{

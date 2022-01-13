@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on audio" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on audio">
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
+    </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,21 +262,7 @@
       <workItem from="1641941369283" duration="1130000" />
       <workItem from="1642009609504" duration="7385000" />
       <workItem from="1642039585686" duration="12000" />
-      <workItem from="1642066355380" duration="7710000" />
-    </task>
-    <task id="LOCAL-00068" summary="final test">
-      <created>1639855145497</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1639855145497</updated>
-    </task>
-    <task id="LOCAL-00069" summary="fixed issues">
-      <created>1639856552968</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1639856552968</updated>
+      <workItem from="1642066355380" duration="9747000" />
     </task>
     <task id="LOCAL-00070" summary="fixed all issues of database and backend">
       <created>1639861370003</created>
@@ -605,7 +593,21 @@
       <option name="project" value="LOCAL" />
       <updated>1642074201104</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="worked further on audio">
+      <created>1642074557414</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1642074557414</updated>
+    </task>
+    <task id="LOCAL-00118" summary="worked further on audio">
+      <created>1642076327792</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1642076327792</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,10 +639,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on post request post" />
-    <MESSAGE value="added function to get theme" />
-    <MESSAGE value="worked on map overlay" />
-    <MESSAGE value="tried to work with cloudinary" />
     <MESSAGE value="tried to work on post methods comment and post" />
     <MESSAGE value="fix cors policy" />
     <MESSAGE value="fixed error backend" />
@@ -726,6 +724,7 @@
     <MESSAGE value="try again for deployment" />
     <MESSAGE value="fixed bugs" />
     <MESSAGE value="worked on audio" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on audio" />
+    <MESSAGE value="worked further on audio" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked further on audio" />
   </component>
 </project>
