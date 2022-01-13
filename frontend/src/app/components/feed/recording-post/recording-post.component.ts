@@ -10,10 +10,11 @@ import {Subscription} from "rxjs";
 import {User} from "../../../models/user";
 import {audit} from "rxjs/operators";
 import {Cloudinary, CloudinaryImage, CloudinaryVideo} from "@cloudinary/url-gen";
-import {fill} from "@cloudinary/url-gen/actions/resize";
+import {fill, scale} from "@cloudinary/url-gen/actions/resize";
 import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
 import {Formattedpost} from "../../../models/formattedpost";
 import Transformation from "@cloudinary/url-gen/backwards/transformation";
+import {addWarning} from "@angular-devkit/build-angular/src/utils/webpack-diagnostics";
 
 
 @Component({
@@ -23,7 +24,7 @@ import Transformation from "@cloudinary/url-gen/backwards/transformation";
 })
 export class RecordingPostComponent implements OnInit {
   @Input()
-  audioPost: Post
+  audioPost: Post = new Post();
   isShown: boolean;
   popularThemes: unknown;
   theme: String;
@@ -32,6 +33,7 @@ export class RecordingPostComponent implements OnInit {
   vid: CloudinaryVideo;
   private childParamsSubscription: Subscription;
   favoritePosts: Post[] = [];
+  isShow: boolean;
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
   , private route: ActivatedRoute) {
@@ -39,61 +41,24 @@ export class RecordingPostComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.audioPost.id);
+
     const cld = new Cloudinary({
       cloud: {
         cloudName: 'hogeschool-van-amsterdam'
       }
     });
 
-    console.log("image:" + this.audioPost.img);
     this.img = cld.image(this.audioPost.img.toString());
+    console.log("img: " + this.audioPost.img.toString());
     this.vid = cld.video(this.audioPost.audiofile.toString());
-
+    console.log("vid: " + this.audioPost.audiofile.toString());
+    cld.video(this.audioPost.audiofile.toString()).resize(scale().width(400));
+    cld.video(this.audioPost.audiofile.toString()).toURL();
+    console.log( cld.video(this.audioPost.audiofile.toString()).toURL());
     this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
-    this.vid.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
 
     this.returnColor();
-    this.childParamsSubscription =
-      this.route.params.subscribe(
-        (params: Params) => {
-          if (params['id'] != null) {
-            this.setPost(params['id']);
-          }
-        });
-//     console.log(this.audioPost);
-//
-// switch (this.audioPost.theme) {
-//   case "Theme.SUN":
-//     this.audioPost.theme = Theme.SUN;
-//     break;
-//   case "Theme.SAND":
-//     this.audioPost.theme = Theme.SAND;
-//     break;
-//   case "Theme.FOREST":
-//     this.audioPost.theme = Theme.FOREST;
-//     break;
-//   case "Theme.WATER":
-//     this.audioPost.theme = Theme.WATER;
-//     break;
-//   case "Theme.CITY":
-//     this.audioPost.theme = Theme.CITY;
-//     break;
-//   case "Theme.MOUNTAIN":
-//     this.audioPost.theme = Theme.MOUNTAIN;
-//     break;
-//}
-
-
-  }
-
-  async setPost(id: number) {
-    await this.postsService.restGetPost(id).subscribe(
-      (data) => {
-        // @ts-ignore
-        this.audioPost = data;
-        console.log(this.audioPost);
-      }
-    );
   }
 
   async getMostPopularThemes() {
@@ -102,6 +67,12 @@ export class RecordingPostComponent implements OnInit {
       this.themeValue = this.audioPost.theme;
       console.log(this.themeValue);
     });
+  }
+
+  setShow() {
+    setTimeout(() => {
+      this.isShow = false;
+    }, 3000);
   }
 
   async returnColor() {

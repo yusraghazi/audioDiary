@@ -2,7 +2,10 @@
 <div class="card"  [ngStyle]="{'border-color':audioPost.theme, 'box-shadow':'2.4px 4.8px 4.8px'+audioPost.theme}">
   <i class="fa fa-play-circle-o" aria-hidden="true"></i>
   <advanced-image [cldImg]="img"></advanced-image>
-  <advanced-video [cldVid]="vid"></advanced-video>
+  <!--newly added in gif-->
+  <img src="assets/images/animatedwave.gif" id="myAnimation" [hidden] = "!isShow" alt="image" id="imageWave">
+  <advanced-video [cldVid]="vid" controls="" (pause)="isShow = false" (playing)="setShow(); isShow = true" ></advanced-video>
+
 <!--  <img style="min-height: 200px" class="card-img-top" src="{{audioPost.img}}" alt="Card image cap">-->
   <div class="card-body">
     <div class="headerBody">

@@ -42,3 +42,10 @@
   top:75px;
   left: 145px;
 }
+
+img#imageWave {
+position: absolute;
+bottom: 63%;
+height: 200px;
+width: 352px;
+}

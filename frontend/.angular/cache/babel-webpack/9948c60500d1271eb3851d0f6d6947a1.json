@@ -1,1 +1,0 @@
-{"ast":null,"code":"/**\n * Returns RGB or Color\n * @private\n * @param color\n */\nexport function prepareColor(color) {\n  if (color) {\n    return color.match(/^#/) ? `rgb:${color.substr(1)}` : color;\n  } else {\n    return color;\n  }\n}","map":null,"metadata":{},"sourceType":"module"}

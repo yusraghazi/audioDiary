@@ -1,1 +1,0 @@
-{"ast":null,"code":"export class MetaTag {\n  constructor(name, value) {\n    this.name = name;\n    this.value = value;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}
