@@ -6,7 +6,7 @@ import {LikesService} from "../../../services/likes.service";
 import {AuthService} from "../../../services/auth.service";
 import {Cloudinary, CloudinaryImage} from "@cloudinary/url-gen";
 import {Subscription} from "rxjs";
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
 
@@ -30,7 +30,7 @@ export class ProfilePostFavoriteComponent implements OnInit {
 
   favoriteposts: Post[];
 
-  constructor(private postsService: PostsService,private route: ActivatedRoute, private likesService: LikesService, private auth: AuthService) { }
+  constructor(private postsService: PostsService,private route: ActivatedRoute, private likesService: LikesService, private auth: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     const cld = new Cloudinary({
@@ -107,25 +107,25 @@ export class ProfilePostFavoriteComponent implements OnInit {
     soundWaves.classList.add("wrapper");
   }
 
-  async toRemoveFavoritePost(){
-    let currentUser = await this.auth.getUser();
-    await this.likesService.getFavorites(currentUser.email).subscribe(
+  async toRemoveFavoritePost() {
+    await this.likesService.getFavorites(this.auth.getUser().email).subscribe(
       (data) => {
-        console.log(data);
-        data.forEach(like => {
-            if (like.post.id == this.audioPost.id) {
-              this.likesService.restRemoveLike(like.id).subscribe(
-                (data) => {
-                  console.log(data);
-                }, (error => console.log(error))
-              );
-            }
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].post.id == this.audioPost.id) {
+            this.likesService.restRemoveLike(data[i].id).subscribe(
+              (data) => {
+                console.log(data)
+                window.location.reload();
+                //   this.router.navigate(["/profile"]);
+              },
+              (error =>
+                console.log(error))
+            );
           }
-        )
+        }
       }
-
-    )
-    this.deletedFavoriteSelected.emit(this.selectedFavoritePost);
+    );
   }
+
 
 }

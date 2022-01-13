@@ -7,6 +7,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Meta} from "@angular/platform-browser";
 import {ShareService} from "../../../services/share.service";
 import {share} from "rxjs/operators";
+import {LikesService} from "../../../services/likes.service";
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-feedview',
@@ -25,12 +27,14 @@ export class FeedviewComponent implements OnInit {
   mapview: string = "Mapview";
   searchToken: string;
 
-  constructor(private postsService: PostsService, private router: Router, private route: ActivatedRoute, private meta:Meta, private shareService: ShareService) {
+  constructor(private postsService: PostsService, private router: Router, private route: ActivatedRoute, private meta:Meta, private shareService: ShareService,
+              private likesService: LikesService, private authService: AuthService) {
 
   }
 
   ngOnInit(): void {
     this.getAllPosts();
+    this.getFavPosts();
 
     this.getMostPopularThemes();
 
@@ -126,6 +130,25 @@ export class FeedviewComponent implements OnInit {
   //   return post.theme;
   // }
 
+  }
+
+  async getFavPosts() {
+    let currentUser = await this.authService.getUser();
+    await this.likesService.getFavorites(currentUser.email).subscribe(
+      (data) => {
+        console.log("data: " + data);
+        data.forEach(like => {
+            console.log("like: " + like);
+            this.postsService.restGetPost(like.post.id).subscribe(
+              (post) => {
+                this.posts[this.posts.indexOf(post)].isLiked = true;
+              }
+            )
+          }
+        )
+      }
+
+    )
   }
 }
 

@@ -29,6 +29,7 @@ export class RecordingPostComponent implements OnInit {
   themeValue: string;
   img: CloudinaryImage;
   private childParamsSubscription: Subscription;
+  favoritePosts: Post[] = [];
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
   , private route: ActivatedRoute) {

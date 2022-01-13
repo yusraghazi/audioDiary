@@ -14,7 +14,7 @@ import {AuthService} from "../../../services/auth.service";
 export class AdminUsersComponent implements OnInit {
 
   posts: Post[];
-  users: User[];
+  users: User[] = [];
   popularPosts: unknown;
   currentAdmin: User = new User();
 
@@ -111,7 +111,7 @@ export class AdminUsersComponent implements OnInit {
           (data) => {
             for (let i = 0; i < this.users.length; i++) {
               if (this.users[i].email == email) {
-                this.users.splice(this.posts.indexOf(this.posts[i]), 1);
+                this.users.splice(this.users.indexOf(this.users[i]), 1);
               }
             }
             console.log(data);

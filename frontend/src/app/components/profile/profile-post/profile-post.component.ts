@@ -108,16 +108,16 @@ export class ProfilePostComponent implements OnInit {
 
   toRemovePost(){
     this.deleteSelected.emit(this.selectedPost);
-    // const postId = this.selectedPost.id;
-    // console.log(postId);
-    // this.postsService.restDeletePosts(postId).subscribe(
-    //   (response) =>{
-    //     console.log(response);
-    //   },
-    //   (error)=>{
-    //     console.log(error);
-    //   }
-    // );
+    const postId = this.selectedPost.id;
+    console.log(postId);
+    this.postsService.restDeletePosts(postId).subscribe(
+      (response) =>{
+        console.log(response);
+      },
+      (error)=>{
+        console.log(error);
+      }
+    );
   }
 
 }

@@ -6,7 +6,8 @@
   <div class="card-body">
     <div class="headerBody">
 <!--      <p class="card-username">@{{audioPost.user.username}} {{audioPost.user.name}}</p>-->
-<!--      <p class="card-username">@{{audioPost.user.username}}</p>-->
+      <p class="card-username">@{{audioPost.user.username}}</p>
+      <hr>
       <div class="icons">
         <i *ngIf="audioPost.isLiked" (click)="audioPost.isLiked = false; removeFromLikes()" class="bi bi-heart-fill"></i>
         <i *ngIf="!audioPost.isLiked" (click)="audioPost.isLiked = true; addToLikes()" class="bi bi-heart"></i>
