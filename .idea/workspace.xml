@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on audio">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,14 +262,7 @@
       <workItem from="1641941369283" duration="1130000" />
       <workItem from="1642009609504" duration="7385000" />
       <workItem from="1642039585686" duration="12000" />
-      <workItem from="1642066355380" duration="9421000" />
-    </task>
-    <task id="LOCAL-00069" summary="fixed issues">
-      <created>1639856552968</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1639856552968</updated>
+      <workItem from="1642066355380" duration="9747000" />
     </task>
     <task id="LOCAL-00070" summary="fixed all issues of database and backend">
       <created>1639861370003</created>
@@ -610,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642074557414</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="worked further on audio">
+      <created>1642076327792</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1642076327792</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,8 +639,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on map overlay" />
-    <MESSAGE value="tried to work with cloudinary" />
     <MESSAGE value="tried to work on post methods comment and post" />
     <MESSAGE value="fix cors policy" />
     <MESSAGE value="fixed error backend" />

@@ -87,9 +87,6 @@ export class FeedviewComponent implements OnInit {
  async getPostById() {
    const id = this.router.url.split("/")[2];
 
-   console.log(+id)
-   console.log(id)
-
    console.log(this.postsService.restGetPost(+id).subscribe(
        (data) =>{
          this.posts = [ ];
