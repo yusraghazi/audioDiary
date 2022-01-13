@@ -68,8 +68,8 @@
       <polygon points="70, 55 70, 145 145, 100" fill="#000" id="svg-play"/>
     </svg> -->
     <div class="container">
-      <button class="btn-primary" id="discardFile" (click)="openAudio(content)">Discard</button>
-      <button class="btn-primary" routerLink="/editing" id="nextFile" (click)="buttonEditing(); show = true">Next</button>
+<!--      <button class="btn-primary" id="discardFile" (click)="openAudio(content)">Discard</button>-->
+<!--      <button class="btn-primary" routerLink="/editing" id="nextFile" (click)="buttonEditing(); show = true">Next</button>-->
       <!--    <i class="bi bi-play" id="playAudio"></i>-->
       <!--    <i class="bi bi-pause" id="pauseAudio"></i>-->
 
@@ -121,7 +121,7 @@
   </audio>
   <!--file input-->
   <form method="post" enctype="multipart/form-data">
-    <input type="file" id="fileInputAudio" name="files[]" multiple>
+    <input type="file" id="fileInputAudio" name="audioFiles" multiple>
 <!--    <input type="submit" [disabled]="clicked" value="Upload Files" class="btn btn-primary" name="submit">-->
   </form>
 
@@ -174,7 +174,7 @@
       <div class="picture">
         <p class="inputHeader"> Picture: </p>
         <form method="post" enctype="multipart/form-data">
-          <input type="file" id="fileInput" name="files[]" (change)="readURL($event)">
+          <input type="file" id="fileInput" name="images" (change)="readURL($event)">
         </form>
 
       </div>
@@ -186,9 +186,9 @@
         <button type= "submit" class="editButtons" id="postButton" (click)="postButton()">post</button>
       </div>
     </div>
-  </div>
+    <div style="height: 500px"></div>
 
-  <div style="margin-bottom: 450px"></div>
+  </div>
 
 
 

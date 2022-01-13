@@ -1,10 +1,15 @@
 
 <div class="card"  [ngStyle]="{'border-color':audioPost.theme, 'box-shadow':'2.4px 4.8px 4.8px'+audioPost.theme}">
-  <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+  <audio id="postAudio" >
+    <source src="{{audioUrl}}" type="audio/wav">
+  </audio>
+
+  <a *ngIf="!playBtn" (click)="this.playButton()" class="fa fa-play-circle-o" aria-hidden="true"></a>
+  <a  *ngIf="playBtn"(click)="this.playButton()" class=" fa fa-pause-circle-o" aria-hidden="true"></a>
   <advanced-image [cldImg]="img"></advanced-image>
   <!--newly added in gif-->
-  <img src="assets/images/animatedwave.gif" id="myAnimation" [hidden] = "!isShow" alt="image" id="imageWave">
-  <advanced-video [cldVid]="vid" controls="" (pause)="isShow = false" (playing)="setShow(); isShow = true" ></advanced-video>
+<!--  <img src="assets/images/animatedwave.gif" id="myAnimation" [hidden] = "!isShow" alt="image" id="imageWave">-->
+<!--  <advanced-video [cldVid]="vid" controls="" (pause)="isShow = false" (playing)="setShow(); isShow = true" ></advanced-video>-->
 
 <!--  <img style="min-height: 200px" class="card-img-top" src="{{audioPost.img}}" alt="Card image cap">-->
   <div class="card-body">

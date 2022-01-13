@@ -33,7 +33,8 @@ export class RecordingPostComponent implements OnInit {
   vid: CloudinaryVideo;
   private childParamsSubscription: Subscription;
   favoritePosts: Post[] = [];
-  isShow: boolean;
+  playBtn: boolean;
+  audioUrl: string;
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
   , private route: ActivatedRoute) {
@@ -49,16 +50,43 @@ export class RecordingPostComponent implements OnInit {
       }
     });
 
+    this.audioUrl = cld.video(this.audioPost.audiofile).toURL();
     this.img = cld.image(this.audioPost.img.toString());
+
     console.log("img: " + this.audioPost.img.toString());
+
     this.vid = cld.video(this.audioPost.audiofile.toString());
+
     console.log("vid: " + this.audioPost.audiofile.toString());
+
     cld.video(this.audioPost.audiofile.toString()).resize(scale().width(400));
     cld.video(this.audioPost.audiofile.toString()).toURL();
+
     console.log( cld.video(this.audioPost.audiofile.toString()).toURL());
+
+    cld.image(this.audioPost.img.toString()).resize(fill().width(350).height(200)).roundCorners(byRadius(20))
     this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
 
     this.returnColor();
+  }
+
+  playButton() {
+    var audio = document.getElementById("postAudio") as HTMLAudioElement;
+
+    console.log(this.audioUrl)
+    if (!this.playBtn) {
+      this.playBtn = true;
+      audio.play()
+
+    } else if (this.playBtn) {
+      this.playBtn = false;
+      audio.pause()
+    }
+
+    if (audio.ended) {
+      this.playBtn = false;
+    }
+
   }
 
   async getMostPopularThemes() {
@@ -67,12 +95,6 @@ export class RecordingPostComponent implements OnInit {
       this.themeValue = this.audioPost.theme;
       console.log(this.themeValue);
     });
-  }
-
-  setShow() {
-    setTimeout(() => {
-      this.isShow = false;
-    }, 3000);
   }
 
   async returnColor() {

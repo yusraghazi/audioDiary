@@ -206,7 +206,7 @@ export class EditingComponent implements OnInit {
     const url = "https://api.cloudinary.com/v1_1/hogeschool-van-amsterdam/upload";
     const form = document.querySelector("form");
     // @ts-ignore
-    const files = document.querySelector("[type=file]").files;
+    const files = document.querySelector("[name=images]").files;
     const formData = new FormData();
 
     for (let i = 0; i < files.length; i++) {
@@ -280,7 +280,7 @@ export class EditingComponent implements OnInit {
     const url = "https://api.cloudinary.com/v1_1/hogeschool-van-amsterdam/upload";
     const form = document.querySelector("form");
     // @ts-ignore
-    const files = document.querySelector("[type=file]").files;
+    const files = document.querySelector("[name=audioFiles]").files;
     const formData = new FormData();
 
     for (let i = 0; i < files.length; i++) {
