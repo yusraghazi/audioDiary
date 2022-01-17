@@ -33,6 +33,7 @@ public class loginTest {
     // backend testen
     private TestRestTemplate testRestTemplate;
 
+    @Autowired
     private UserRepository userRepository;
 
     @Test
