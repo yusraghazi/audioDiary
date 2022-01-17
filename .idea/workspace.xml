@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on audio">
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/feedview/feedview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,14 +264,10 @@
       <workItem from="1641941369283" duration="1130000" />
       <workItem from="1642009609504" duration="7385000" />
       <workItem from="1642039585686" duration="12000" />
-      <workItem from="1642066355380" duration="9747000" />
-    </task>
-    <task id="LOCAL-00070" summary="fixed all issues of database and backend">
-      <created>1639861370003</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1639861370003</updated>
+      <workItem from="1642066355380" duration="10218000" />
+      <workItem from="1642079392516" duration="523000" />
+      <workItem from="1642082585574" duration="236000" />
+      <workItem from="1642416921776" duration="5853000" />
     </task>
     <task id="LOCAL-00071" summary="test for deployment">
       <created>1639861481854</created>
@@ -607,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642076327792</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="worked further on audio">
+      <created>1642076484138</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1642076484138</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,8 +644,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="tried to work on post methods comment and post" />
-    <MESSAGE value="fix cors policy" />
     <MESSAGE value="fixed error backend" />
     <MESSAGE value="test" />
     <MESSAGE value="fixed deleting post" />
