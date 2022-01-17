@@ -12,6 +12,7 @@ module.exports = function (config) {
       require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
+
     client: {
       jasmine: {
         // you can add configuration options for Jasmine here
@@ -24,12 +25,14 @@ module.exports = function (config) {
     jasmineHtmlReporter: {
       suppressAll: true // removes the duplicated traces
     },
+
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/ad-vmc'),
       subdir: '.',
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
+
       ]
     },
     reporters: ['progress', 'kjhtml'],

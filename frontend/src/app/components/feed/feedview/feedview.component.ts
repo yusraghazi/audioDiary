@@ -33,8 +33,15 @@ export class FeedviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllPosts();
+    const id = this.router.url.split("/")[2];
+
+    if (id == undefined){
+      this.getAllPosts();
+
+    }
     this.getFavPosts();
+
+    this.getPostById();
 
     this.getMostPopularThemes();
 
@@ -47,7 +54,6 @@ export class FeedviewComponent implements OnInit {
       }
     );
 
-    this.getPostById()
   }
 
 
@@ -87,7 +93,10 @@ export class FeedviewComponent implements OnInit {
  async getPostById() {
    const id = this.router.url.split("/")[2];
 
-   console.log(this.postsService.restGetPost(+id).subscribe(
+
+
+
+ this.postsService.restGetPost(+id).subscribe(
        (data) =>{
          this.posts = [ ];
          this.posts[0] = data;
@@ -98,9 +107,10 @@ export class FeedviewComponent implements OnInit {
            data.img);
          console.log(data);
        },
-       (error) => console.log("Error: " + error.status + " - " + error.error)
+       (error) =>this.getAllPosts(),
      )
-   );
+
+
 
 //  returnColor(post: Post) {
   //   switch (post.theme) {
