@@ -34,7 +34,7 @@ public class PostsController {
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPost.getId()).toUri();
 
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).body(savedPost);
     }
 //    private PostsRepository postsRepository = new PostsRepositoryMock();
     @GetMapping("/posts")

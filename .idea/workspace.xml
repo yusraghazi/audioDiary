@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on backend test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,14 +46,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -109,8 +107,6 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
-    <property name="ts.external.directory.path" value="C:\laragon\www\ad-vmc-1\frontend\node_modules\typescript\lib" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
@@ -129,12 +125,12 @@
       <recent name="com.example.backend" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.createPostTest">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="createPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.backend.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,11 +141,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="createPostTest.testCreatingPostShouldSucceed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.backend" />
+      <option name="MAIN_CLASS_NAME" value="com.example.backend.createPostTest" />
+      <option name="METHOD_NAME" value="testCreatingPostShouldSucceed" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.backend.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,7 +176,7 @@
       <module name="backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.backend.*" />
+          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,20 +186,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="LoginComponent.should check if email and password equals login data" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/frontend/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/frontend/node_modules/@angular/cli" />
-      <working-directory value="$PROJECT_DIR$/frontend" />
-      <node-interpreter value="project" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file-path value="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.spec.ts" />
-      <test-names>
-        <test-name value="LoginComponent" />
-        <test-name value="should check if email and password equals login data" />
-      </test-names>
-      <method v="2" />
     </configuration>
     <configuration name="ProfileSettingsComponent" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/frontend/karma.conf.js" />
@@ -207,7 +205,7 @@
     </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.backend.BackendApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="app.BackendApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -229,9 +227,11 @@
       <item itemvalue="JUnit.testUserRepository" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="JUnit.createPostTest.testCreatingPostShouldSucceed" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.createPostTest.testCreatingPostShouldSucceed" />
         <item itemvalue="JUnit.createPostTest" />
         <item itemvalue="JUnit.testUserRepository" />
         <item itemvalue="JUnit.loginTest" />
@@ -322,13 +322,6 @@
       <workItem from="1642066355380" duration="9747000" />
       <workItem from="1642422601447" duration="6894000" />
       <workItem from="1642429706894" duration="15086000" />
-    </task>
-    <task id="LOCAL-00071" summary="test for deployment">
-      <created>1639861481854</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1639861481854</updated>
     </task>
     <task id="LOCAL-00072" summary="worked on coordinates for map and edit page">
       <created>1639871351272</created>
@@ -666,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642076484138</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="worked on backend test">
+      <created>1642447221897</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1642447221898</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -698,9 +698,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="test deleting post on heroku" />
-    <MESSAGE value="trying to fix cors mapping issue" />
-    <MESSAGE value="last try" />
     <MESSAGE value="worked on post comment" />
     <MESSAGE value="worked on post request post" />
     <MESSAGE value="worked on qol and update user with taner and altaaf" />
@@ -781,6 +778,7 @@
     <MESSAGE value="worked further on audio" />
     <MESSAGE value="for merge" />
     <MESSAGE value="worked on frontend tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on frontend tests" />
+    <MESSAGE value="worked on backend test" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on backend test" />
   </component>
 </project>
