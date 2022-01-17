@@ -43,14 +43,13 @@ public class PostsController {
     }
 
     @GetMapping("/posts/{id}")
-    public Posts getPostById(@PathVariable int id) {
+    public ResponseEntity<Posts> getPostById(@PathVariable int id) {
 
         Posts post = postRepo.findById(id);
         if(post == null) {
             throw new PostNotFoundException("Not found id=" + id);
         }
-        return post;
-        //return ResponseEntity.ok(post);
+        return ResponseEntity.ok(post);
     }
 
     @GetMapping("users/{email}/posts")
