@@ -1,4 +1,4 @@
-package com.example.backend;
+package app;
 
 import app.models.Comment;
 import app.models.Posts;
@@ -28,7 +28,8 @@ public class createPostTest {
     @Test
     void testCreatingPostShouldSucceed() throws URISyntaxException {
         // Arrange
-        User user = new User();
+        User user = new User("janpieter@gmail.com", "Jan Pieter", "951dda5b84bc87b5de5f0baefd0266bcce960753745d6d98add9756eee9a8a73",
+                false, "janpieter1988", null, false);
         Posts post = new Posts(null, "Singing", "birds singing in the forest", "test.img", "nature", true, 4, new BigDecimal("4.895168"), new BigDecimal("52.370216"), "Amsterdam, the Netherlands", "audiofile", user, new ArrayList<>());
 
         // Act: Creating a user
@@ -43,7 +44,7 @@ public class createPostTest {
         assertEquals(post.getLocation(),creationResult.getBody().getLocation());
 
         // Act: Cross-check results - was the user persisted?
-        ResponseEntity<Posts> queryResult = this.restTemplate.getForEntity("/posts" + creationResult.getBody().getId(), Posts.class);
+        ResponseEntity<Posts> queryResult = this.restTemplate.getForEntity("/posts/" + creationResult.getBody().getId(), Posts.class);
 
         // Assert: Check if data is correct
         assertEquals(queryResult.getStatusCode(), HttpStatus.OK);
