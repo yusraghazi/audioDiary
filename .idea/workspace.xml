@@ -104,6 +104,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="PostgreSQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/node_modules/webpack" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -130,7 +131,36 @@
       <recent name="E:\HVA ICT 2\EWA\Project\ad-vmc-1\app\src\assets\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
+  <component name="RunManager" selected="JUnit.loginTest">
+    <configuration name="loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.backend" />
+      <option name="MAIN_CLASS_NAME" value="com.example.backend.loginTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginComponent.should check if email and password equals login data" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="$PROJECT_DIR$/frontend/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/frontend/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$/frontend" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file-path value="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.spec.ts" />
+      <test-names>
+        <test-name value="LoginComponent" />
+        <test-name value="should check if email and password equals login data" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="ProfileSettingsComponent" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/frontend/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/frontend/node_modules/@angular/cli" />
@@ -160,9 +190,6 @@
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
-    <configuration name="admin-users.component.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/ad-vmc-1/frontend/src/app/components/admin/admin-users/admin-users.component.html" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="app.BackendApplication" />
@@ -190,29 +217,24 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/frontend/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
       <item itemvalue="JavaScript Debug.admin-users.component.html" />
+      <item itemvalue="Karma.WelcomeComponent" />
+      <item itemvalue="Karma.ProfileSettingsComponent" />
       <item itemvalue="npm.Angular CLI Server" />
-      <item itemvalue="npm.start" />
       <item itemvalue="npm.start (1)" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Karma.LoginComponent.should check if email and password equals login data" />
+      <item itemvalue="JUnit.loginTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.loginTest" />
+        <item itemvalue="Karma.LoginComponent.should check if email and password equals login data" />
+        <item itemvalue="Karma.ProfileSettingsComponent" />
+        <item itemvalue="Karma.WelcomeComponent" />
         <item itemvalue="npm.start (1)" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="JavaScript Debug.admin-users.component.html" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +321,7 @@
       <workItem from="1642039585686" duration="12000" />
       <workItem from="1642066355380" duration="9747000" />
       <workItem from="1642422601447" duration="6894000" />
-      <workItem from="1642429706894" duration="3248000" />
+      <workItem from="1642429706894" duration="13482000" />
     </task>
     <task id="LOCAL-00071" summary="test for deployment">
       <created>1639861481854</created>
