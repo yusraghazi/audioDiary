@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/loginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/testUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/testUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/testUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/testUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/forms/login/login.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.spec.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -234,8 +237,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.loginTest" />
-        <item itemvalue="JUnit.createPostTest" />
         <item itemvalue="JUnit.testUserRepository" />
+        <item itemvalue="JUnit.createPostTest" />
         <item itemvalue="JUnit.createPostTest.testCreatingPostShouldSucceed" />
       </list>
     </recent_temporary>
@@ -781,5 +784,15 @@
     <MESSAGE value="worked on backend test" />
     <MESSAGE value="fixed my mistake" />
     <option name="LAST_COMMIT_MESSAGE" value="fixed my mistake" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

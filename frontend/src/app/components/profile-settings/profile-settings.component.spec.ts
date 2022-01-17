@@ -36,12 +36,14 @@ describe('ProfileSettingsComponent', () => {
     const updateButton: HTMLButtonElement | null = componentHtml.querySelector('#updateBtn');
 
     if (updateButton == null) return;
-    const inputEmail: HTMLInputElement = componentHtml.querySelector('#inputEmail');
-    const inputPassword: HTMLInputElement = componentHtml.querySelector('#inputPassword');
+    const inputUsername: HTMLInputElement = componentHtml.querySelector('#userName');
+    const inputName: HTMLInputElement = componentHtml.querySelector('#name');
+    const inputPassword: HTMLInputElement = componentHtml.querySelector('#password');
 
     // Act
-    inputEmail.value = "ekjsa!test.com";
-    inputPassword.value = "ar";
+    inputUsername.value = "deloer";
+    inputName.value = "vet";
+    inputPassword.value = "voer";
     fixture.detectChanges();
 
     // Assert

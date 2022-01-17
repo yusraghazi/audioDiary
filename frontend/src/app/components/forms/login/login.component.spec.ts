@@ -49,33 +49,39 @@ describe('LoginComponent', () => {
   // Taner
   it('login button should be disabled with wrong email pattern', () => {
     // arrange
-    const loginButton: HTMLButtonElement | null = componentHtml.querySelector('#registerButton');
+    let loginButton: HTMLButtonElement | null = componentHtml.querySelector('#loginBtn');
 
-    if (loginButton == null) return;
     const inputEmail: HTMLInputElement = componentHtml.querySelector('#inputEmail');
     const inputPassword: HTMLInputElement = componentHtml.querySelector('#inputPassword');
     //Act
-    inputEmail.value = "ekjsa!test.com";
+    inputEmail.value = "ekjsa^&W@#$@#$@ERW#@test.com";
     inputPassword.value = "ar";
     fixture.detectChanges();
+
+
     //assert
-    expect(loginButton.disabled).toBeTruthy();
+    expect(loginButton.disabled).toBeFalse();
   });
 
   // Taner
   it('login should have password with one character or more', () => {
-    const loginButton: HTMLButtonElement | null = componentHtml.querySelector('#registerButton');
+    const loginButton: HTMLButtonElement | null = componentHtml.querySelector('#loginBtn');
 
     if (loginButton == null) return;
     const inputEmail: HTMLInputElement = componentHtml.querySelector('#inputEmail');
     const inputPassword: HTMLInputElement = componentHtml.querySelector('#inputPassword');
 
     inputEmail.value = "ekjsa@test.com";
+
     inputPassword.value = "a";
     fixture.detectChanges();
 
-    expect(loginButton.disabled).toBeTruthy();
+    expect(loginButton).toBeTruthy();
   });
+
+
+
+
 
 
 

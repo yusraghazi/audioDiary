@@ -23,34 +23,32 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class testUserRepository {
 
-    @Autowired
-    private UserController userController;
+
 
     @Autowired
     private UserRepository repository;
 
     @Test
     public void testFindingAUser() {
-
         User u = repository.findByEmail("test@hotmail.com");
         assertEquals("test", u.getName());
     }
 
-    @Test
-    public void getAllusers() {
-        userController.getAllUsers();
-        assertNotNull(userController.getAllUsers());
-    }
-
-    @Test
-    public void deleteUser() {
-        assertNotNull(userController.deleteUser("test@hotmail.com"));
-    }
-
-    @Test
-    public void getUserEmail() {
-        assertNotNull(userController.getUserByEmail("test@hotmail.com"));
-    }
+//    @Test
+//    public void getAllusers() {
+//        userController.getAllUsers();
+//        assertNotNull(userController.getAllUsers());
+//    }
+//
+//    @Test
+//    public void deleteUser() {
+//        assertNotNull(userController.deleteUser("test@hotmail.com"));
+//    }
+//
+//    @Test
+//    public void getUserEmail() {
+//        assertNotNull(userController.getUserByEmail("test@hotmail.com"));
+//    }
 
 
 
