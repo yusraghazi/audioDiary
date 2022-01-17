@@ -17,17 +17,8 @@ describe('LoginComponent', () => {
     await TestBed.configureTestingModule({
         imports: [
             FormsModule,
-            MatDialogModule,
             HttpClientTestingModule,
-            RouterTestingModule,
-            RouterModule.forRoot([]),
-            ReactiveFormsModule],
-        providers: [
-            {
-                provide: MatDialogRef,
-                useValue: {}
-            },
-        ],
+            RouterTestingModule],
       declarations: [ LoginComponent ]
     })
     .compileComponents();
