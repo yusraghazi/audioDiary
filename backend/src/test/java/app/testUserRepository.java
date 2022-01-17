@@ -1,4 +1,4 @@
-package com.example.backend;
+package app;
 
 import app.models.User;
 import app.repositories.UserRepository;
@@ -19,7 +19,6 @@ import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//@RunWith(SpringRunner.class)
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class testUserRepository {

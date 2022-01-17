@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/testUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/testUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/testUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/testUserRepository.java" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +126,7 @@
       <recent name="com.example.backend" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.testUserRepository">
+  <component name="RunManager" selected="JUnit.loginTest">
     <configuration name="createPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -165,8 +166,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.backend" />
-      <option name="MAIN_CLASS_NAME" value="com.example.backend.loginTest" />
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.loginTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,8 +181,8 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.backend" />
-      <option name="MAIN_CLASS_NAME" value="com.example.backend.testUserRepository" />
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.testUserRepository" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -232,10 +233,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.loginTest" />
+        <item itemvalue="JUnit.createPostTest" />
         <item itemvalue="JUnit.testUserRepository" />
         <item itemvalue="JUnit.createPostTest.testCreatingPostShouldSucceed" />
-        <item itemvalue="JUnit.createPostTest" />
-        <item itemvalue="JUnit.loginTest" />
       </list>
     </recent_temporary>
   </component>
