@@ -2,84 +2,61 @@ package com.example.backend;
 
 import app.models.User;
 import app.repositories.UserRepository;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import app.rest.UserController;
+import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.platform.commons.logging.Logger;
 import org.junit.platform.commons.logging.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
-
-@SpringBootTest
+//@RunWith(SpringRunner.class)
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class testUserRepository {
 
-
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    @Autowired
+    private UserController userController;
 
     @Autowired
     private UserRepository repository;
 
     @Test
-    void testFindingAUser() {
+    public void testFindingAUser() {
 
         User u = repository.findByEmail("test@hotmail.com");
-        assertEquals("test",u.getName());
-
-    }
-
-    @Test
-    @DirtiesContext
-    void testRemovingAUser() {
-
-        User u = repository.findByEmail("test@hotmail.co");
-
-        repository.delete(u);
-
-        assertNull(repository.findByEmail("test@hotmail.com"));
-    }
-
-    @Test
-    @DirtiesContext
-    void testAddingAUser() {
-
-        User u = new User();
-
-        u = repository.save(u);
-
-        Assertions.assertNotNull(u.getEmail());
-
-        u = repository.findByEmail(u.getEmail());
-        u = repository.findByEmail(u.getUsername());
-        u = repository.findByEmail(u.getName());
-        u = repository.findByEmail(u.getEncodedPassword());
-
-
-
         assertEquals("test", u.getName());
-
     }
 
     @Test
-    @DirtiesContext
-    void testUpdatingAUser() {
-
-        User u = repository.findByEmail("test@hotmail.co");
-
-        u.setName("jandeboer");
-
-        repository.save(u);
-
-        u = repository.findByEmail("test@hotmail.com");
-
-        assertEquals("jandeboer", u.getName());
-
+    public void getAllusers() {
+        userController.getAllUsers();
+        assertNotNull(userController.getAllUsers());
     }
+
+    @Test
+    public void deleteUser() {
+        assertNotNull(userController.deleteUser("test@hotmail.com"));
+    }
+
+    @Test
+    public void getUserEmail() {
+        assertNotNull(userController.getUserByEmail("test@hotmail.com"));
+    }
+
+
 
 }
+
+
+
+
