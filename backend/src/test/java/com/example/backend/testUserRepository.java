@@ -24,26 +24,26 @@ public class testUserRepository {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired // repository is automatically injected into the test instance
+    @Autowired
     private UserRepository repository;
 
     @Test
     void testFindingAUser() {
 
         User u = repository.findByEmail("test@hotmail.com");
-        assertEquals("Okechukwu Onwunli",u.getName());
+        assertEquals("test",u.getName());
 
     }
 
     @Test
-    @DirtiesContext // indicates that the test is dirty and should therefore be closed and removed from the context cache
+    @DirtiesContext
     void testRemovingAUser() {
 
         User u = repository.findByEmail("test@hotmail.co");
 
         repository.delete(u);
 
-        assertNull(repository.findByEmail("test@hotmail.co"));
+        assertNull(repository.findByEmail("test@hotmail.com"));
     }
 
     @Test
@@ -57,8 +57,13 @@ public class testUserRepository {
         Assertions.assertNotNull(u.getEmail());
 
         u = repository.findByEmail(u.getEmail());
+        u = repository.findByEmail(u.getUsername());
+        u = repository.findByEmail(u.getName());
+        u = repository.findByEmail(u.getEncodedPassword());
 
-        assertEquals("Maria Palmer", u.getName());
+
+
+        assertEquals("test", u.getName());
 
     }
 
@@ -68,13 +73,13 @@ public class testUserRepository {
 
         User u = repository.findByEmail("test@hotmail.co");
 
-        u.setName("Mr Martijn Thorig");
+        u.setName("jandeboer");
 
         repository.save(u);
 
-        u = repository.findByEmail("test@hotmail.co");
+        u = repository.findByEmail("test@hotmail.com");
 
-        assertEquals("Mr Martijn Thorig", u.getName());
+        assertEquals("jandeboer", u.getName());
 
     }
 
