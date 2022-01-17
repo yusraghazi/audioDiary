@@ -125,6 +125,9 @@
       <recent name="$PROJECT_DIR$/app" />
       <recent name="E:\HVA ICT 2\EWA\Project\ad-vmc-1\app\src\assets\img" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.backend" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.createPostTest">
     <configuration name="createPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -222,24 +225,16 @@
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
       <item itemvalue="JUnit.loginTest" />
-      <item itemvalue="JUnit.loginTest" />
-      <item itemvalue="JUnit.TestUserResource" />
-      <item itemvalue="Karma.ProfileSettingsComponent" />
-      <item itemvalue="Karma.LoginComponent.should check if email and password equals login data" />
-      <item itemvalue="npm.Angular CLI Server" />
-      <item itemvalue="Spring Boot.BackendApplication" />
       <item itemvalue="JUnit.createPostTest" />
       <item itemvalue="JUnit.testUserRepository" />
+      <item itemvalue="npm.Angular CLI Server" />
+      <item itemvalue="Spring Boot.BackendApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.createPostTest" />
         <item itemvalue="JUnit.testUserRepository" />
-        <item itemvalue="JUnit.TestUserResource" />
         <item itemvalue="JUnit.loginTest" />
-        <item itemvalue="npm.start (1)" />
-        <item itemvalue="Karma.LoginComponent.should check if email and password equals login data" />
-        <item itemvalue="Karma.ProfileSettingsComponent" />
       </list>
     </recent_temporary>
   </component>
