@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="fixed my mistake">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="added backend test for Post">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/PostsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/com/example/backend/createPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/createPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/createPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/createPostTest.java" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +127,7 @@
       <recent name="com.example.backend" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.createPostTest">
+  <component name="RunManager" selected="JUnit.createPostTest.updateAPost">
     <configuration name="createPostTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
@@ -139,6 +139,38 @@
       <option name="PACKAGE_NAME" value="app" />
       <option name="MAIN_CLASS_NAME" value="app.createPostTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="createPostTest.postOfNullShouldCreateException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.createPostTest" />
+      <option name="METHOD_NAME" value="postOfNullShouldCreateException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="createPostTest.removeAPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.createPostTest" />
+      <option name="METHOD_NAME" value="removeAPost" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,7 +191,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="createPostTest.updateAPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -167,40 +199,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.example.backend" />
-      <option name="MAIN_CLASS_NAME" value="com.example.backend.loginTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.createPostTest" />
+      <option name="METHOD_NAME" value="updateAPost" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="testUserRepository" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.example.backend" />
-      <option name="MAIN_CLASS_NAME" value="com.example.backend.testUserRepository" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProfileSettingsComponent" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
-      <config-file value="$PROJECT_DIR$/frontend/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/frontend/node_modules/@angular/cli" />
-      <working-directory value="$PROJECT_DIR$/frontend" />
-      <node-interpreter value="project" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file-path value="$PROJECT_DIR$/frontend/src/app/components/profile-settings/profile-settings.component.spec.ts" />
-      <test-names>
-        <test-name value="ProfileSettingsComponent" />
-      </test-names>
-      <method v="2" />
     </configuration>
     <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
@@ -224,19 +229,21 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
-      <item itemvalue="JUnit.loginTest" />
       <item itemvalue="JUnit.createPostTest" />
-      <item itemvalue="JUnit.testUserRepository" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="Spring Boot.BackendApplication" />
       <item itemvalue="JUnit.createPostTest.testCreatingPostShouldSucceed" />
+      <item itemvalue="JUnit.createPostTest.postOfNullShouldCreateException" />
+      <item itemvalue="JUnit.createPostTest.updateAPost" />
+      <item itemvalue="JUnit.createPostTest.removeAPost" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.createPostTest" />
+        <item itemvalue="JUnit.createPostTest.updateAPost" />
+        <item itemvalue="JUnit.createPostTest.removeAPost" />
+        <item itemvalue="JUnit.createPostTest.postOfNullShouldCreateException" />
         <item itemvalue="JUnit.createPostTest.testCreatingPostShouldSucceed" />
-        <item itemvalue="JUnit.testUserRepository" />
-        <item itemvalue="JUnit.loginTest" />
+        <item itemvalue="JUnit.createPostTest" />
       </list>
     </recent_temporary>
   </component>
@@ -324,13 +331,6 @@
       <workItem from="1642066355380" duration="9747000" />
       <workItem from="1642422601447" duration="6894000" />
       <workItem from="1642429706894" duration="15086000" />
-    </task>
-    <task id="LOCAL-00073" summary="worked on converting database data to json">
-      <created>1639920638704</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1639920638705</updated>
     </task>
     <task id="LOCAL-00074" summary="worked on coordinates in map">
       <created>1639923016138</created>
@@ -668,7 +668,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642447947448</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="added backend test for Post">
+      <created>1642448569461</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1642448569461</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,8 +707,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on qol and update user with taner and altaaf" />
-    <MESSAGE value="worked on adding hashtags instead of themes" />
     <MESSAGE value="worked on cloudinary server side" />
     <MESSAGE value="further implementation of cloudinary" />
     <MESSAGE value="worked on getting data from database admin side" />
@@ -780,6 +785,7 @@
     <MESSAGE value="worked on frontend tests" />
     <MESSAGE value="worked on backend test" />
     <MESSAGE value="fixed my mistake" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed my mistake" />
+    <MESSAGE value="added backend test for Post" />
+    <option name="LAST_COMMIT_MESSAGE" value="added backend test for Post" />
   </component>
 </project>

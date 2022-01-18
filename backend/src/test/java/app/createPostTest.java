@@ -1,8 +1,12 @@
 package app;
 
+import app.exceptions.PostNotFoundException;
 import app.models.Comment;
 import app.models.Posts;
 import app.models.User;
+import app.repositories.PostsRepository;
+import app.rest.PostsController;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,14 +20,19 @@ import java.math.BigDecimal;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class createPostTest {
     @Autowired
     private TestRestTemplate restTemplate;
+
+    @Autowired
+    private PostsController postsController;
+
+    @Autowired
+    private PostsRepository postsRepository;
 
     @Test
     void testCreatingPostShouldSucceed() throws URISyntaxException {
@@ -32,7 +41,7 @@ public class createPostTest {
                 false, "janpieter1988", null, false);
         Posts post = new Posts(null, "Singing", "birds singing in the forest", "test.img", "nature", true, 4, new BigDecimal("4.895168"), new BigDecimal("52.370216"), "Amsterdam, the Netherlands", "audiofile", user, new ArrayList<>());
 
-        // Act: Creating a user
+        // Act: Creating a post
         ResponseEntity<Posts> creationResult
                 = this.restTemplate.postForEntity("/posts", post, Posts.class);
 
@@ -51,5 +60,32 @@ public class createPostTest {
         assertEquals(queryResult.getBody().getTitle(), creationResult.getBody().getTitle());
         assertEquals(queryResult.getBody().getDescription(), creationResult.getBody().getDescription());
         assertEquals(queryResult.getBody().getLocation(), creationResult.getBody().getLocation());
+    }
+
+    // check if controller works
+    @Test()
+    void postOfNullShouldCreateException() {
+        PostNotFoundException postNotFoundException = assertThrows(PostNotFoundException.class, () ->
+        this.postsController.getPostById(9000));
+        assertEquals("Could not find post Not found id=9000", postNotFoundException.getMessage());
+    }
+
+    // check if repository functions
+    @Test()
+    void updateAPost() {
+        ArrayList<Posts> posts = new ArrayList<>(this.postsRepository.findAll());
+        int indexLastPost = posts.get(posts.size() - 1).getId();
+        Posts post = postsRepository.findById(indexLastPost);
+        post.setTitle("Test");
+        postsRepository.save(post);
+        assertEquals(postsRepository.findById(indexLastPost).getTitle(), "Test");
+    }
+
+    @Test()
+    void removeAPost() {
+        ArrayList<Posts> posts = new ArrayList<>(this.postsRepository.findAll());
+        Posts lastPost = posts.get(posts.size() - 1);
+        this.postsRepository.delete(lastPost);
+        assertNull(this.postsRepository.findById(lastPost.getId()));
     }
 }
