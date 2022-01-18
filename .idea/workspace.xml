@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on audio">
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/app/getAllUsersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/repositories/UserRepositoryJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/repositories/UserRepositoryJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/getAllUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/getAllUsersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/testUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/testUserRepository.java" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -75,7 +74,7 @@
         <entry key="JPA Structure" value="false" />
         <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="isSearchInLibrariesForStructure" value="false" />
@@ -329,7 +328,8 @@
       <workItem from="1642066355380" duration="9747000" />
       <workItem from="1642422601447" duration="6894000" />
       <workItem from="1642429706894" duration="15086000" />
-      <workItem from="1642468303607" duration="846000" />
+      <workItem from="1642468303607" duration="959000" />
+      <workItem from="1642491276676" duration="3178000" />
     </task>
     <task id="LOCAL-00073" summary="worked on converting database data to json">
       <created>1639920638704</created>

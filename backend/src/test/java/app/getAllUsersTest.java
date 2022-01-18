@@ -22,7 +22,6 @@ import static org.junit.jupiter.api.Assertions.*;
 // Taner
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@AutoConfigureMockMvc
 public class getAllUsersTest {
 
     @MockBean
@@ -31,10 +30,9 @@ public class getAllUsersTest {
     @Test
     public void findAllUsersTest() throws Exception{
         List<User> allUsers = userController.getAllUsers();
-        // asserts that a list is not empty
-        assertThat(allUsers.isEmpty());
+        // asserting that the expression is true
+        assertTrue(allUsers.isEmpty());
     }
-
 
 
 }

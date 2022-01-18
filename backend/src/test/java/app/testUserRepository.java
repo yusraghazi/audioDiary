@@ -26,11 +26,10 @@ import static org.junit.jupiter.api.Assertions.*;
 // Taner
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@AutoConfigureMockMvc
 public class testUserRepository {
 
 
-    @MockBean
+    @Autowired
     UserRepository userRepository;
 
     @Test
@@ -48,9 +47,20 @@ public class testUserRepository {
         userRepository.save(updateUser);
         updateUser = userRepository.findByEmail("c@hotmail.com");
         assertEquals("jannie", updateUser.getUsername());
-        System.out.println("User is updated in the database:\n" + updateUser.getUsername());
+        System.out.println("User is updated in the table:\n" + updateUser.getUsername());
 
     }
+
+    @Test
+    public void removeUser() {
+        User removeUser = userRepository.findByEmail("gg@g.com");
+        userRepository.delete(removeUser);
+        assertNull(userRepository.findByEmail("gg@g.com"));
+        System.out.println("User is removed in the table:\n" + removeUser.getEmail());
+    }
+
+
+
 
 
 
