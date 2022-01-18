@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on audio">
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/CommentController.java" afterDir="false" />
     </list>
@@ -21,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="TypeScript File" />
         <option value="Class" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -79,6 +82,9 @@
     </option>
     <option name="isSearchInLibrariesForStructure" value="false" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1zXbSzDQ6TlAuP52V0pervWrYbA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -98,7 +104,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/" value="PostgreSQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/node_modules/webpack" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../project v5/ad-vmc-1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -109,6 +115,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="E:\HVA ICT 2\EWA\project v6\ad-vmc-1\frontend\node_modules\typescript\lib" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -329,6 +336,29 @@
       <workItem from="1642039585686" duration="12000" />
       <workItem from="1642066355380" duration="9747000" />
       <workItem from="1642422601447" duration="6894000" />
+      <workItem from="1642429706894" duration="3248000" />
+      <workItem from="1642440351223" duration="2574000" />
+    </task>
+    <task id="LOCAL-00070" summary="fixed all issues of database and backend">
+      <created>1639861370003</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1639861370003</updated>
+    </task>
+    <task id="LOCAL-00071" summary="test for deployment">
+      <created>1639861481854</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1639861481854</updated>
+    </task>
+    <task id="LOCAL-00072" summary="worked on coordinates for map and edit page">
+      <created>1639871351272</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1639871351272</updated>
       <workItem from="1642429706894" duration="15086000" />
       <workItem from="1642468303607" duration="959000" />
       <workItem from="1642491276676" duration="3592000" />
@@ -805,7 +835,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
