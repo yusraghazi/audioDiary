@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="finished back end test">
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/app/testLikes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/testComments.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/testComments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" afterDir="false" />
@@ -25,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="TypeScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,13 +54,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
@@ -167,7 +170,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="postTest.findPostByUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="postTest.updateAPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -183,7 +186,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="postTest.postOfNullShouldCreateException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testComments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -195,11 +198,13 @@
       <option name="MAIN_CLASS_NAME" value="app.postTest" />
       <option name="METHOD_NAME" value="postOfNullShouldCreateException" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="app.testComments" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="postTest.updateAPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testLikes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -211,11 +216,13 @@
       <option name="MAIN_CLASS_NAME" value="app.postTest" />
       <option name="METHOD_NAME" value="updateAPost" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="app.testLikes" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testComments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="testLikes.testDeleteLike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -224,8 +231,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.testComments" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="app.testLikes" />
+      <option name="METHOD_NAME" value="testDeleteLike" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -256,13 +264,19 @@
       <item itemvalue="JUnit.testComments" />
       <item itemvalue="JUnit.postTest.postOfNullShouldCreateException" />
       <item itemvalue="JUnit.postTest.updateAPost" />
-      <item itemvalue="JUnit.loginTest" />
       <item itemvalue="JUnit.postTest.findPostByUser" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="npm.Angular CLI Server" />
+      <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="JUnit.testLikes.testDeleteLike" />
+      <item itemvalue="JUnit.testLikes" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.testComments" />
+        <item itemvalue="JUnit.testLikes" />
+        <item itemvalue="JUnit.testLikes.testDeleteLike" />
         <item itemvalue="JUnit.postTest.findPostByUser" />
         <item itemvalue="JUnit.postTest.updateAPost" />
         <item itemvalue="JUnit.loginTest" />

@@ -18,6 +18,16 @@ public class Likes {
 //    @JsonIgnore
     private User user;
 
+
+    public Likes(int id, Posts post, User user) {
+        this.id = id;
+        this.post = post;
+        this.user = user;
+    }
+
+    public Likes() {
+    }
+
     public int getId() {
         return id;
     }
