@@ -57,7 +57,7 @@
           <div *ngIf="!passwordComponent.valid && passwordComponent.touched" class="alert alert-warning">Please enter a valid password</div>
         </div>
 
-        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Login</button>
+        <button type="submit" class="btn btn-primary"  id="loginBtn" [disabled]="!f.valid">Login</button>
       </form>
     </div>
     <div class="col-sm-3">

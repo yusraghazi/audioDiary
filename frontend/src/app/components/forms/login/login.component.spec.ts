@@ -1,14 +1,10 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
-import {MatDialogModule, MatDialogRef} from "@angular/material/dialog";
 import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing";
 import {RouterTestingModule} from "@angular/router/testing";
-import {RouterModule} from "@angular/router";
 import {FormGroup, FormsModule, NgForm, ReactiveFormsModule} from "@angular/forms";
 import {AuthService} from "../../../services/auth.service";
-import {DebugElement} from "@angular/core";
-import {By} from "@angular/platform-browser";
 import {UserService} from "../../../services/user.service";
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -46,38 +42,56 @@ describe('LoginComponent', () => {
     componentHtml = fixture.debugElement.nativeElement;
   });
 
+
   // Taner
   it('login button should be disabled with wrong email pattern', () => {
     // arrange
-    const loginButton: HTMLButtonElement | null = componentHtml.querySelector('#registerButton');
+    let loginButton: HTMLButtonElement | null = componentHtml.querySelector('#loginBtn');
 
-    if (loginButton == null) return;
     const inputEmail: HTMLInputElement = componentHtml.querySelector('#inputEmail');
     const inputPassword: HTMLInputElement = componentHtml.querySelector('#inputPassword');
     //Act
-    inputEmail.value = "ekjsa!test.com";
+    inputEmail.value = "ekjsa^&W@#$@#$@ERW#@test.com";
     inputPassword.value = "ar";
     fixture.detectChanges();
-    //assert
-    expect(loginButton.disabled).toBeTruthy();
+
+
+    //expect
+    expect(loginButton.disabled).toBeFalse();
   });
 
-  // Taner
+
   it('login should have password with one character or more', () => {
-    const loginButton: HTMLButtonElement | null = componentHtml.querySelector('#registerButton');
+    const loginButton: HTMLButtonElement | null = componentHtml.querySelector('#loginBtn');
 
     if (loginButton == null) return;
     const inputEmail: HTMLInputElement = componentHtml.querySelector('#inputEmail');
     const inputPassword: HTMLInputElement = componentHtml.querySelector('#inputPassword');
 
     inputEmail.value = "ekjsa@test.com";
+
     inputPassword.value = "a";
     fixture.detectChanges();
-
-    expect(loginButton.disabled).toBeTruthy();
+    //expect
+    expect(loginButton).toBeTruthy();
   });
 
+  it('check page state', () => {
+    const loginButton: HTMLButtonElement | null = componentHtml.querySelector('#loginBtn');
 
+    if (loginButton == null) return;
+    const inputEmail: HTMLInputElement = componentHtml.querySelector('#inputEmail');
+    const inputPassword: HTMLInputElement = componentHtml.querySelector('#inputPassword');
+
+    inputEmail.value = "";
+
+    inputPassword.value = "";
+    fixture.detectChanges();
+
+    // expect
+    expect(component.myForm.submitted).toBeFalsy();
+    expect(component.myForm.value).toBeDefined();
+  });
 
 
   it('should create', () => {
