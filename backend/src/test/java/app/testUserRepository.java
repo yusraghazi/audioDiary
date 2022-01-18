@@ -59,10 +59,15 @@ public class testUserRepository {
         System.out.println("User is removed in the table:\n" + removeUser.getEmail());
     }
 
-
-
-
-
+    @Test
+    public void addUser(){
+        User user = new User("meng@gmail.com", "vre jan", "951dda5b84bc87b5de5f0baefd0266bcce960753745d6d98add9756eee9a8a73",
+                false, "meng", null, false);
+        User addUser = userRepository.save(user);
+        userRepository.save(addUser);
+        assertEquals("meng@gmail.com", addUser.getEmail());
+        System.out.println("User is now added in the table:\n" + addUser.getEmail());
+    }
 
 
 
