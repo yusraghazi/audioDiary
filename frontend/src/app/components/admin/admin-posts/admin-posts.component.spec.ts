@@ -30,7 +30,7 @@ describe('AdminLocationComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should download the json file', () => {
+  it('Hanna test 03: should download the json file', () => {
     // create spy object with a click() method
     const spyObj = jasmine.createSpyObj('a', ['click']);
     // spy on document.createElement() and return the spy object

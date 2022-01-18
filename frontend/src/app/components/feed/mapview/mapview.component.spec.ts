@@ -1,20 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
 
 import { MapviewComponent } from './mapview.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 import {RouterTestingModule} from "@angular/router/testing";
+import {Router} from "@angular/router";
+import {routes} from "../../../app-routing.module";
+import {Location} from '@angular/common';
 
 describe('MapviewComponent', () => {
   let component: MapviewComponent;
   let fixture: ComponentFixture<MapviewComponent>;
+  let router: Router;
+  let location: Location;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        FormsModule,
         HttpClientTestingModule,
-        RouterTestingModule],
+        RouterTestingModule.withRoutes(routes)],
       declarations: [ MapviewComponent ]
     })
     .compileComponents();
@@ -24,11 +28,18 @@ describe('MapviewComponent', () => {
     fixture = TestBed.createComponent(MapviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    router = TestBed.inject(Router);
+    location = TestBed.inject(Location);
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-
+  it('Hanna Test 01: Should go to the right child component', fakeAsync(() => {
+    let id = 6;
+    router.navigate([`mapview/${id}`]);
+    tick();
+    expect(location.path()).toBe('/mapview/6');
+  }));
 });

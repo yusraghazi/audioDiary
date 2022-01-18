@@ -28,6 +28,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   popupTheme: string;
   themesList: Theme[] = [];
   i: number = 0;
+  id: number = 0;
 
   @Output()
   feedview: string = "Feedview";
@@ -171,6 +172,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
           this.map.on('click', layerID, (e: { features: { properties: { id: number; }; }[]; }) => {
             this.overlayTrue(true);
+            this.id = e.features[0].properties.id;
             this.openOverlay(e.features[0].properties.id);
           });
 

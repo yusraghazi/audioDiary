@@ -43,14 +43,7 @@ export class PostsService {
       }));
   }
 
-  // TODO: fix to load in data before function fires
   async getTopFiveThemes() {
-    // await this.http.get<Post[]>(`${environment.apiUrl}/posts`).pipe(
-    //    map( (postCards: any[]) => {
-    //     const themes: String[] = [];
-    //     for (const post of postCards) {
-    //       themes.push(post.theme);
-    //     }
     let strArray = await this.getAllThemes();
     return new Promise(resolve =>
       strArray.pipe().subscribe(
@@ -68,45 +61,6 @@ export class PostsService {
           this.result = result.slice(0, 5);
           resolve(this.result);
         }));
-    // console.log(this.result);
-    // return this.result;
-    // var count = {};
-    // strArray.forEach(function (i) { // @ts-ignore
-    //   count[i] = (count[i] || 0) + 1;
-    // });
-
-    // @ts-ignore
-    // var result = Object.entries(count);
-    //let findDuplicates = (arr: any[]) => arr.filter((item, index) => arr.indexOf(item) != index)
-    //let set = new Set(findDuplicates(strArray));
-    //let array = Array.from(set);
-    // result.sort((a: any, b: any) => {
-    //   return b[1] - a[1];
-    // });
-    // this.result = result.slice(0, 5);
-    // this.themesList = themes;
-    // console.log("themes loaded" + themes);
-    // return themes;
-    //  }));
-    //console.log("result" + this.result);
-    //return this.result;
-    // let strArray = [ "q", "q", "w", "w", "w", "e", "i", "u", "r", "u", "u", "u"];
-    // let strArray = this.themesList;
-    // console.log("themes" + this.themesList);
-    // var count = {};
-    // strArray.forEach(function (i) { // @ts-ignore
-    //   count[i] = (count[i] || 0) + 1;
-    // });
-    //
-    // // @ts-ignore
-    // var result = Object.entries(count);
-    // //let findDuplicates = (arr: any[]) => arr.filter((item, index) => arr.indexOf(item) != index)
-    // //let set = new Set(findDuplicates(strArray));
-    // //let array = Array.from(set);
-    // result.sort((a: any, b: any) => {
-    //   return b[1] - a[1];
-    // });
-    // return result.slice(0, 5);
   }
 
   getPostsByTheme(theme: string):Observable<Post[]> {

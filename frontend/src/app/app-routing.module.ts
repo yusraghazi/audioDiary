@@ -38,7 +38,7 @@ import {DummyComponentComponent} from "./components/dummy-component/dummy-compon
 //       {path: 'users', component: AdminUsersComponent}
 //     ]}
 // ];
-const routes: Routes = [
+export const routes: Routes = [
   {path: '', component: WelcomeComponent},
   {path: 'profile', component: ProfileComponent, canActivate: [AuthGuardLoggedinService]},
   {path: 'login', component: LoginComponent},
