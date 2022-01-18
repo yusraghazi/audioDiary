@@ -23,35 +23,6 @@ public class loginTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-//    @Test
-//    @DirtiesContext
-//    void testCreatingUserShouldSucceed() throws URISyntaxException {
-//        User user = new User("vre@gmail.com", "vre jan", "951dda5b84bc87b5de5f0baefd0266bcce960753745d6d98add9756eee9a8a73",
-//                false, "vre", null, false);
-//
-//        // Act: Creating a user
-//        ResponseEntity<User> creationResult
-//                = this.restTemplate.postForEntity("/auth/users", user, User.class);
-//
-//        // Assert: Checking if the response is correct
-//        assertEquals(creationResult.getStatusCode(), HttpStatus.CREATED);
-//
-//
-//        assertEquals(user.getEmail(), creationResult.getBody().getEmail());
-//        assertEquals(user.getName(),creationResult.getBody().getName());
-//        assertEquals(user.getEncodedPassword(),creationResult.getBody().getEncodedPassword());
-//        assertEquals(user.isAdmin(),creationResult.getBody().isAdmin());
-//        assertEquals(user.getUsername(),creationResult.getBody().getUsername());
-////        assertEquals(user.getPasswordReset(),creationResult.getBody().getPasswordReset());
-////        assertEquals(user.isVerified(),creationResult.getBody().isVerified());
-//
-//        // Act: Cross-check results - was the user persisted?
-//        ResponseEntity<User> queryResult = this.restTemplate.getForEntity("/auth/users" + creationResult.getBody().getEmail(), User.class);
-//
-//        // Assert: Check if data is correct
-//        assertEquals(queryResult.getStatusCode(), HttpStatus.OK);
-//        assertEquals(queryResult.getBody().getEmail(), creationResult.getBody().getEmail());
-//    }
     @DirtiesContext
     @Test
     void testAuthControllerCreateUser () throws URISyntaxException {
@@ -72,22 +43,30 @@ public class loginTest {
         assertEquals(user.getEncodedPassword(),creationResult.getBody().getEncodedPassword());
         assertEquals(user.isAdmin(),creationResult.getBody().isAdmin());
         assertEquals(user.getUsername(),creationResult.getBody().getUsername());
-        assertEquals(user.getPasswordReset(),creationResult.getBody().getPasswordReset());
-        assertEquals(user.isVerified(),creationResult.getBody().isVerified());
 
 
 
-        // Act : Crosscheck results - was user persisted?
-        ResponseEntity<User> queryResult = this.restTemplate.getForEntity("/user/find/" + creationResult.getBody().getEmail(), User.class);
+//        assertEquals(user.getPasswordReset(),creationResult.getBody().getPasswordReset());
+//        assertEquals(user.isVerified(),creationResult.getBody().isVerified());
 
-        // Assert: Check if data is correct
+
+
+        // Act :
+        ResponseEntity<User> queryResult = this.restTemplate.getForEntity("/auth/users" + creationResult.getBody().getEmail(), User.class);
+
+        // Assert:
         assertEquals(queryResult.getStatusCode(),HttpStatus.OK);
 
-        assertEquals(queryResult.getBody().getName(), creationResult.getBody().getName());
+
         assertEquals(queryResult.getBody().getEmail(), creationResult.getBody().getEmail());
+        assertEquals(queryResult.getBody().getName(), creationResult.getBody().getName());
+        assertEquals(queryResult.getBody().getEncodedPassword(), creationResult.getBody().getEncodedPassword());
+        assertEquals(queryResult.getBody().isAdmin(), creationResult.getBody().isAdmin());
+        assertEquals(queryResult.getBody().getUsername(), creationResult.getBody().getUsername());
+
 
         // Act : Delete the user
-        this.restTemplate.delete("/users/{email}" + creationResult.getBody().getEmail(), User.class);
+//        this.restTemplate.delete("/users/{email}" + creationResult.getBody().getEmail(), User.class);
 
     }
 
