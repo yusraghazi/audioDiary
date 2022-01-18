@@ -129,8 +129,8 @@ export class AdminUsersComponent implements OnInit {
     );
   }
 
-  checkAdminOrResearch() {
-    let user = this.userService.restGetUser(this.authService.getUser().email)
+  async checkAdminOrResearch() {
+    let user = await this.userService.restGetUser(this.authService.getUser().email)
     user.pipe().subscribe(
       (data) => {
         this.currentAdmin = data;

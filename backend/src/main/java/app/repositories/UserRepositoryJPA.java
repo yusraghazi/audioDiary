@@ -10,6 +10,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Repository
+//configuration can be specificially for a method using default settings or custom settings
 @Transactional
 public class UserRepositoryJPA implements UserRepository {
     @Autowired

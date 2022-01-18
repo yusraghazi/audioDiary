@@ -288,12 +288,10 @@ export class AdminPostsComponent implements OnInit {
     )
   }
 
-  downloadObjectAsJson() {
-    delete this.places['user'];
-    delete this.places['audio'];
+  async downloadObjectAsJson() {
     var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.places));
-    var downloadAnchorNode = document.createElement('a');
-    downloadAnchorNode.setAttribute("href",     dataStr);
+    var downloadAnchorNode = await document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", "GEO.json");
     document.body.appendChild(downloadAnchorNode); // required for firefox
     downloadAnchorNode.click();

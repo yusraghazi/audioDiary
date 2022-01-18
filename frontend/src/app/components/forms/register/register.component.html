@@ -17,8 +17,8 @@
 
 
           <div class="form-group">
-            <label for="resetPassword">Username</label>
-            <input type="text" class="form-control" id="resetPassword" name="name"
+            <label for="inputUsername">Username</label>
+            <input type="text" class="form-control" id="inputUsername" name="name"
                    [(ngModel)]="user.username" #usernameComponent="ngModel" required >
             <div *ngIf="!usernameComponent.valid && usernameComponent.touched" class="alert alert-warning">Please enter a valid name</div>
           </div>
@@ -43,7 +43,7 @@
 
 
 
-          <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Sign-up</button>
+          <button type="submit" id="registerBtn" class="btn btn-primary" [disabled]="!f.valid">Sign-up</button>
         </form>
 
       </div>

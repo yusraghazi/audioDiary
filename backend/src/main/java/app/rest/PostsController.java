@@ -34,7 +34,7 @@ public class PostsController {
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPost.getId()).toUri();
 
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).body(savedPost);
     }
 //    private PostsRepository postsRepository = new PostsRepositoryMock();
     @GetMapping("/posts")
@@ -50,7 +50,6 @@ public class PostsController {
             throw new PostNotFoundException("Not found id=" + id);
         }
         return post;
-        //return ResponseEntity.ok(post);
     }
 
     @GetMapping("users/{email}/posts")
