@@ -1,5 +1,6 @@
 package app.rest;
 
+import app.exceptions.CommentNotFoundException;
 import app.exceptions.PostNotFoundException;
 import app.models.Comment;
 import app.repositories.CommentRepository;
@@ -32,7 +33,7 @@ public class CommentController {
 
         Comment comment = commentRepo.findById(id);
         if(comment == null) {
-            throw new PostNotFoundException("Not found id=" + id);
+            throw new CommentNotFoundException("Not found id=" + id);
         }
         return comment;
         //return ResponseEntity.ok(post);

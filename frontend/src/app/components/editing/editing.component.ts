@@ -134,7 +134,7 @@ export class EditingComponent implements OnInit {
     });
   }
 
-  getname() {
+  async getname() {
     this.userService.restGetUser(this.auth.getUser().email).pipe().subscribe(
       (data) => {
         this.username = data.username;

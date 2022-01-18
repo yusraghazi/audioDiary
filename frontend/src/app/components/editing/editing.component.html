@@ -151,7 +151,7 @@
           </div>
           <h5 class="postCardTitle"><em><b>{{newPost.location}}</b></em></h5>
           <a href="#" class="badge badge-dark">{{newPost.theme}}</a>
-          <h5 class="postCardTitle">{{newPost.title}}</h5>
+          <h5 class="postCardTitle" id="postCardTitle">{{newPost.title}}</h5>
           <p class="card-text">{{newPost.description}}</p>
         </div>
         <div class="commentsPart">
@@ -160,7 +160,7 @@
 
       <div class="inputsTitle">
         <p class="inputHeader">Title:</p>
-        <input class="inputValue" [(ngModel)]="newPost.title">
+        <input class="inputValue" id="cardEditTitle" [(ngModel)]="newPost.title">
       </div>
 
       <p class="inputHeader"> Location:</p>
