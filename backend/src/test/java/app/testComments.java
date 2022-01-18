@@ -37,7 +37,7 @@ public class testComments {
 
     @Test
     public void findComment(){
-        Comment comment = commentRepository.findById(61);
+        Comment comment = commentRepository.findById(69);
         assertEquals("this is so bad delete this please", comment.getDescription());
         System.out.println(comment);
     }
@@ -45,7 +45,7 @@ public class testComments {
     @Test
     public void addComment() {
         User user = userRepository.findByEmail("Altaaf@gmail.com");
-        Posts post = postsRepository.findById(146);
+        Posts post = postsRepository.findById(24);
         Comment comment = new Comment(1, post, user, "No this is a nice sound");
 
 
