@@ -19,13 +19,6 @@ public class PostsController {
     @Autowired
     private PostsRepository postRepo;
 
-//    @GetMapping("/posts/{id}")
-//    public List<Posts> getPosts(@PathVariable int id) {
-//
-//        User user = userResource.getUserById(id);
-//
-//        return user.getPosts();
-//    }
 
     @PostMapping("/posts")
     public ResponseEntity<Posts> createPost(@RequestBody Posts post) {
@@ -36,7 +29,7 @@ public class PostsController {
 
         return ResponseEntity.created(location).body(savedPost);
     }
-//    private PostsRepository postsRepository = new PostsRepositoryMock();
+
     @GetMapping("/posts")
     public List<Posts> getAllPosts() {
         return postRepo.findAll();
@@ -53,31 +46,11 @@ public class PostsController {
     }
 
     @GetMapping("users/{email}/posts")
-    public List findPostByUserId(@PathVariable String email) {
+    public List<Posts> findPostByUserId(@PathVariable String email) {
         return postRepo.findPostByUserId(email);
     }
 
 
-    // TEST
-//
-//    @PostMapping("/posts")
-//    public ResponseEntity<Posts> createAEvent(@RequestBody Posts post) {
-//        Posts savedPost = postsRepository.save(post);
-//        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPost.getId()).toUri();
-//        return ResponseEntity.created(location).body(savedPost);
-//    }
-//
-//    @PutMapping("/posts/{id}")
-//    public ResponseEntity<Posts> updateEvent(@PathVariable int id) {
-//
-//        Posts post = postsRepository.findById(id);
-//        if(post == null) {
-//            throw new PostNotFoundException("id="+id);
-//        }
-//        postsRepository.save(post);
-//        return ResponseEntity.ok(post);
-//    }
-//
     @DeleteMapping("/posts/{id}")
     public ResponseEntity<Posts> deleteUser(@PathVariable int id) {
 

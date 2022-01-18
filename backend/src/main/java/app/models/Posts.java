@@ -99,7 +99,7 @@ public class Posts {
         if (this == o) return true;
         if (!(o instanceof Posts)) return false;
         Posts posts = (Posts) o;
-        return isLiked() == posts.isLiked() && getAmountReport() == posts.getAmountReport() && getLng() == posts.getLng() && getLat() == posts.getLat() && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && Objects.equals(getTheme(), posts.getTheme()) && Objects.equals(getUser(), posts.getUser());
+        return isLiked() == posts.isLiked() && getAmountReport() == posts.getAmountReport() && Objects.equals(getLng(), posts.getLng()) && Objects.equals(getLat(), posts.getLat()) && Objects.equals(getId(), posts.getId()) && Objects.equals(getTitle(), posts.getTitle()) && Objects.equals(getDescription(), posts.getDescription()) && Objects.equals(getImg(), posts.getImg()) && Objects.equals(getTheme(), posts.getTheme()) && Objects.equals(getUser(), posts.getUser());
     }
 
     public void setId(Integer id) {
@@ -178,8 +178,14 @@ public class Posts {
         this.audiofile = audiofile;
     }
 
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getId(), getTitle(), getDescription(), getImg(), getTheme(), isLiked(), getAmountReport(), getLng(), getLat(), getUser());
+//    }
+
+
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getDescription(), getImg(), getTheme(), isLiked(), getAmountReport(), getLng(), getLat(), getUser());
+        return Objects.hash(getId(), getTitle(), getDescription(), getImg(), getTheme(), isLiked(), getAmountReport(), getLng(), getLat(), getLocation(), getAudiofile(), getUser());
     }
 }

@@ -6,9 +6,13 @@ import app.models.Posts;
 import app.models.User;
 import app.repositories.PostsRepository;
 import app.rest.PostsController;
+import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -18,13 +22,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.math.BigDecimal;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
-
+import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class createPostTest {
+public class postTest {
+
     @Autowired
     private TestRestTemplate restTemplate;
 
@@ -33,6 +37,19 @@ public class createPostTest {
 
     @Autowired
     private PostsRepository postsRepository;
+
+    Set<Posts> postsByUserEmail = new HashSet<>();
+    String userEmail = "roosbakker@hotmail.com";
+
+    @BeforeEach
+    void fillArray() {
+        ArrayList<Posts> posts = new ArrayList<>(this.postsRepository.findAll());
+        for (Posts post: posts) {
+            if (Objects.equals(post.getUser().getEmail(), userEmail)) {
+                postsByUserEmail.add(post);
+            }
+        }
+    }
 
     @Test
     void testCreatingPostShouldSucceed() throws URISyntaxException {
@@ -52,7 +69,7 @@ public class createPostTest {
         assertEquals(post.getDescription(),creationResult.getBody().getDescription());
         assertEquals(post.getLocation(),creationResult.getBody().getLocation());
 
-        // Act: Cross-check results - was the user persisted?
+        // Act: Cross-check results - was the post persisted?
         ResponseEntity<Posts> queryResult = this.restTemplate.getForEntity("/posts/" + creationResult.getBody().getId(), Posts.class);
 
         // Assert: Check if data is correct
@@ -70,7 +87,13 @@ public class createPostTest {
         assertEquals("Could not find post Not found id=9000", postNotFoundException.getMessage());
     }
 
-    // check if repository functions
+    @Test()
+    void findPostByUser() {
+        Set<Posts> set = new HashSet<>(this.postsRepository.findPostByUserId(userEmail));
+        assertEquals(set, postsByUserEmail);
+    }
+
+    // check if repository functions work (save, findbyid, delete)
     @Test()
     void updateAPost() {
         ArrayList<Posts> posts = new ArrayList<>(this.postsRepository.findAll());
@@ -88,4 +111,6 @@ public class createPostTest {
         this.postsRepository.delete(lastPost);
         assertNull(this.postsRepository.findById(lastPost.getId()));
     }
+
+
 }
