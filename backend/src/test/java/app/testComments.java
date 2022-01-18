@@ -34,38 +34,43 @@ public class testComments {
     @Autowired
     CommentController commentController;
 
-
+    //Written by Altaaf
     @Test
-    public void findComment(){
+    public void findComment() {
         Comment comment = commentRepository.findById(69);
         assertEquals("this is so bad delete this please", comment.getDescription());
         System.out.println(comment);
     }
 
+    //Written by Altaaf
     @Test
     public void addComment() {
         User user = userRepository.findByEmail("Altaaf@gmail.com");
         Posts post = postsRepository.findById(24);
+
+        //create a new comment component
         Comment comment = new Comment(1, post, user, "No this is a nice sound");
 
-
+        //send comment to database via repository
         Comment add = commentRepository.save(comment);
 
         assertEquals("No this is a nice sound", add.getDescription());
-        System.out.println("a new comment has been created with id on post " + post.getTitle());
+        System.out.println("a new comment has been created on post " + post.getTitle());
+
+        //delete the comment after testing
+        commentRepository.deleteById(add.getId());
+
     }
 
 
-
+    //Written by Altaaf
     @Test
-    public void testExeptionThrowing(){
+    public void testExeptionThrowing() {
+        //throw exeption when comment is not found
         CommentNotFoundException commentNotFoundException = assertThrows(CommentNotFoundException.class, () ->
-            this.commentController.getCommentById(9999));
+                this.commentController.getCommentById(9999));
         assertEquals("Could not find comment Not found id=9999", commentNotFoundException.getMessage());
     }
-
-
-
 
 
 }
