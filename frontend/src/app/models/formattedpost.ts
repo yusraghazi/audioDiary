@@ -2,18 +2,18 @@ import {User} from "./user";
 import {Audio} from "./audio";
 
 export class Formattedpost {
-  private id: number | null;
-  private user: User | null;
-  private title: string | null;
-  private description: string | null;
-  private img: string | null;
-  private theme: string | null;
-  private isLiked: boolean | null;
-  private amountReport: number | null;
-  private lng: number | null;
-  private lat: number | null;
-  private location: string | null;
-  private audiofile: string | null;
+  public id: number | null;
+  public user: User | null;
+  public title: string | null;
+  public description: string | null;
+  public img: string | null;
+  public theme: string | null;
+  public isLiked: boolean | null;
+  public amountReport: number | null;
+  public lng: number | null;
+  public lat: number | null;
+  public location: string | null;
+  public audiofile: string | null;
 
   constructor() {
 

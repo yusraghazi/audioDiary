@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="finished back end test">
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/app/testLikes.java" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on frontend tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/models/Likes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/testComments.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/testComments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/formattedpost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/formattedpost.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
@@ -54,13 +51,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JpbToolWindowState">
@@ -195,10 +192,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.postTest" />
-      <option name="METHOD_NAME" value="postOfNullShouldCreateException" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="MAIN_CLASS_NAME" value="app.testComments" />
+      <option name="METHOD_NAME" value="postOfNullShouldCreateException" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -213,10 +208,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.postTest" />
-      <option name="METHOD_NAME" value="updateAPost" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="MAIN_CLASS_NAME" value="app.testLikes" />
+      <option name="METHOD_NAME" value="updateAPost" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -260,27 +253,22 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="JUnit.loginTest" />
       <item itemvalue="JUnit.createPostTest.updateAPost" />
       <item itemvalue="JUnit.testComments" />
-      <item itemvalue="JUnit.postTest.postOfNullShouldCreateException" />
       <item itemvalue="JUnit.postTest.updateAPost" />
-      <item itemvalue="JUnit.postTest.findPostByUser" />
-      <item itemvalue="npm.Angular CLI Server" />
-      <item itemvalue="Spring Boot.BackendApplication" />
-      <item itemvalue="npm.Angular CLI Server" />
-      <item itemvalue="Spring Boot.BackendApplication" />
       <item itemvalue="JUnit.testLikes.testDeleteLike" />
       <item itemvalue="JUnit.testLikes" />
+      <item itemvalue="npm.Angular CLI Server" />
+      <item itemvalue="Spring Boot.BackendApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.testComments" />
         <item itemvalue="JUnit.testLikes" />
         <item itemvalue="JUnit.testLikes.testDeleteLike" />
-        <item itemvalue="JUnit.postTest.findPostByUser" />
         <item itemvalue="JUnit.postTest.updateAPost" />
         <item itemvalue="JUnit.loginTest" />
-        <item itemvalue="JUnit.postTest.postOfNullShouldCreateException" />
         <item itemvalue="JUnit.testComments" />
         <item itemvalue="JUnit.createPostTest.updateAPost" />
       </list>
@@ -372,13 +360,7 @@
       <workItem from="1642429706894" duration="15086000" />
       <workItem from="1642468303607" duration="959000" />
       <workItem from="1642491276676" duration="3592000" />
-    </task>
-    <task id="LOCAL-00075" summary="next test for backend data posts">
-      <created>1639939184499</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1639939184499</updated>
+      <workItem from="1642591916794" duration="9123000" />
     </task>
     <task id="LOCAL-00076" summary="next test for backend data posts">
       <created>1639939306448</created>
@@ -716,7 +698,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642518074598</updated>
     </task>
-    <option name="localTasksCounter" value="124" />
+    <task id="LOCAL-00124" summary="worked on frontend tests">
+      <created>1642543950626</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1642543950626</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -849,8 +838,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on like crud operations and http get requests in several pages" />
-    <MESSAGE value="worked on adding hashtags instead of themes" />
     <MESSAGE value="worked on cloudinary server side" />
     <MESSAGE value="further implementation of cloudinary" />
     <MESSAGE value="worked on getting data from database admin side" />
@@ -920,12 +907,12 @@
     <MESSAGE value="worked on audio" />
     <MESSAGE value="worked further on audio" />
     <MESSAGE value="for merge" />
-    <MESSAGE value="worked on frontend tests" />
     <MESSAGE value="worked on backend test" />
     <MESSAGE value="fixed my mistake" />
     <MESSAGE value="added backend test for Post" />
     <MESSAGE value="finished back end test" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished back end test" />
+    <MESSAGE value="worked on frontend tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on frontend tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

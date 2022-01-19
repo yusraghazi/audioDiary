@@ -59,13 +59,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
               this.themesList.push(r)
             }
           )
-          // this.getTheme(point.theme).pipe().subscribe(r => {
-          //   this.themesList.push(r);
-          //   }
-          // )
         }
-        // @ts-ignore
-        // this.places = GeoJSON.parse(JSON.stringify(data));
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );

@@ -1,9 +1,10 @@
 import {ErrorHandler, Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable, of} from "rxjs";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
+import {Observable, of, throwError} from "rxjs";
 import {Post} from "../models/post";
 import {catchError, map, share} from "rxjs/operators";
 import {environment} from "../../environments/environment.staging";
+import {Formattedpost} from "../models/formattedpost";
 
 
 @Injectable({
@@ -74,7 +75,8 @@ export class PostsService {
         }
         this.posts = posts;
         return posts;
-      }));
+      }),
+      catchError(this.handleError));
   }
 
   getReportedPosts():Observable<Post[]> {
@@ -96,6 +98,10 @@ export class PostsService {
     return this.http.get<Post>(`${environment.apiUrl}/posts/${postId}`);
   }
 
+  restGetPostTest(postId: number):Observable<Formattedpost[]> {
+    return this.http.get<Formattedpost[]>(`${environment.apiUrl}/posts/${postId}`).pipe(catchError(this.handleError));
+  }
+
   restGetPostsOfUser(email: string) {
     return this.http.get<Post[]>(`${environment.apiUrl}/users/${email}/posts`).pipe(
       map( (postList: any[]) => {
@@ -110,9 +116,6 @@ export class PostsService {
   restPostPost(postId: number):Observable<Post[]> {
     const url = `${environment.apiUrl}/posts/${postId}`;
     return this.http.post<Post[]>(url, postId);
-    // restPostPost(postId: number):Observable<Post[]> {
-    //   const url = `http://localhost:8084/posts/${postId}`;
-    //   return this.http.post<Post>(url, postId);
   }
 
   restCreateNewPost(post: Post){
@@ -140,5 +143,28 @@ export class PostsService {
     const url = `${environment.apiUrl}/posts/${postId}`;
     return this.http.delete<Post>(url);
   }
+
+  /**
+   * Based on angular.io
+   * @param error error
+   */
+  private handleError(error: HttpErrorResponse) {
+    let message: string;
+    console.log(error);
+    if (error.error instanceof ErrorEvent) {
+      // A client-side or network error occurred. Handle it accordingly.
+      message = error.error.message;
+    } else {
+      // The backend returned an unsuccessful response code.
+      // The response body may contain clues as to what went wrong,
+      if(error.status === 0) {
+        message = 'backend error: status: ' + error.message;
+      } else {
+        message = 'backend error: status: ' + error.status + ' - ' + error.statusText;
+      }
+    }
+    // return an observable with a user-facing error message
+    return throwError(message);
+  };
 
 }
