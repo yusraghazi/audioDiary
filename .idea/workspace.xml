@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked on frontend tests">
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on frontend tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/models/formattedpost.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/models/formattedpost.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -360,14 +358,10 @@
       <workItem from="1642429706894" duration="15086000" />
       <workItem from="1642468303607" duration="959000" />
       <workItem from="1642491276676" duration="3592000" />
-      <workItem from="1642591916794" duration="9123000" />
-    </task>
-    <task id="LOCAL-00076" summary="next test for backend data posts">
-      <created>1639939306448</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1639939306448</updated>
+      <workItem from="1642591916794" duration="9163000" />
+      <workItem from="1642625703788" duration="1855000" />
+      <workItem from="1642721018795" duration="730000" />
+      <workItem from="1642791026423" duration="8073000" />
     </task>
     <task id="LOCAL-00077" summary="fix data recursion by adding annotations">
       <created>1639939826487</created>
@@ -705,7 +699,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642543950626</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="worked further on frontend tests">
+      <created>1642606825060</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1642606825060</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -838,8 +839,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on cloudinary server side" />
-    <MESSAGE value="further implementation of cloudinary" />
     <MESSAGE value="worked on getting data from database admin side" />
     <MESSAGE value="worked on getting data of themes from database admin side" />
     <MESSAGE value="worked on like crud operations and http get requests in several pages" />
@@ -912,7 +911,8 @@
     <MESSAGE value="added backend test for Post" />
     <MESSAGE value="finished back end test" />
     <MESSAGE value="worked on frontend tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="worked on frontend tests" />
+    <MESSAGE value="worked further on frontend tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked further on frontend tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

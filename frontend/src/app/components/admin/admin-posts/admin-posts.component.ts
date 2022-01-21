@@ -31,10 +31,10 @@ export class AdminPostsComponent implements OnInit {
   currentAdmin: User = new User();
 
   constructor(private postsService: PostsService, private authService: AuthService,
-              private userService: UserService) { }
+              private userService: UserService, private router: Router) { }
 
   ngOnInit(): void {
-    this.checkAdminOrResearch();
+    //this.checkAdminOrResearch();
     this.getPosts();
     this.data = {
       labels: ['Posts today'],
@@ -289,8 +289,8 @@ export class AdminPostsComponent implements OnInit {
   }
 
   async downloadObjectAsJson() {
-    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.places));
-    var downloadAnchorNode = await document.createElement('a');
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.places));
+    const downloadAnchorNode = await document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", "GEO.json");
     document.body.appendChild(downloadAnchorNode); // required for firefox
@@ -299,12 +299,16 @@ export class AdminPostsComponent implements OnInit {
   }
 
   async checkAdminOrResearch() {
-    let user = await this.userService.restGetUser(this.authService.getUser().email)
-    user.pipe().subscribe(
-      (data) => {
-        this.currentAdmin = data;
-        console.log(this.currentAdmin.verified);
-      }
-    )
+      let user = await this.userService.restGetUser(this.authService.getUser().email)
+      user.pipe().subscribe(
+        (data) => {
+          this.currentAdmin = data;
+          console.log(this.currentAdmin.verified);
+        }
+      )
+  }
+
+  getCurrentRouterPath(): Array<string> {
+    return this.router.url.split('/').filter(path => path);
   }
 }
