@@ -4,10 +4,12 @@ import { HomeComponent } from './home.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
 import {RouterTestingModule} from "@angular/router/testing";
+import {PostsService} from "../../../services/posts.service";
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
+  let postsService: PostsService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -15,7 +17,10 @@ describe('HomeComponent', () => {
         FormsModule,
         HttpClientTestingModule,
         RouterTestingModule],
-      declarations: [ HomeComponent ]
+      declarations: [ HomeComponent ],
+      providers: [
+        {provide: PostsService}
+      ]
     })
     .compileComponents();
   });
@@ -23,10 +28,22 @@ describe('HomeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
     component = fixture.componentInstance;
+    postsService = TestBed.inject(PostsService);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it("Hanna test03: html should have amount of posts", () => {
+    spyOn(postsService, 'restGetPosts').and.callThrough();
+    component.getAmountOfPosts();
+    fixture.detectChanges();
+    expect(postsService.restGetPosts).toHaveBeenCalled();
+
+    fixture.detectChanges();
+    const element = fixture.nativeElement.querySelector('#amountOfPosts');
+    expect(element.innerText).toContain(0);
+  })
 });

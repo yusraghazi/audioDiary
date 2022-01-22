@@ -52,11 +52,11 @@ export class HomeComponent implements OnInit {
     return this.amountOfUsers;
   }
 
-  getAmountOfPosts() {
-    this.postsService.restGetPosts().subscribe(
+  async getAmountOfPosts() {
+    await this.postsService.restGetPosts().subscribe(
       (data) => {
         // @ts-ignore
-        this.amountOfPosts = data.length; console.log(data);
+        return this.amountOfPosts = data.length; //console.log(data);
       },
       (error) => console.log("Error: " + error.status + " - " + error.error)
     );

@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on frontend tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/admin-posts/admin-posts.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -361,14 +361,8 @@
       <workItem from="1642591916794" duration="9163000" />
       <workItem from="1642625703788" duration="1855000" />
       <workItem from="1642721018795" duration="730000" />
-      <workItem from="1642791026423" duration="8073000" />
-    </task>
-    <task id="LOCAL-00077" summary="fix data recursion by adding annotations">
-      <created>1639939826487</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1639939826487</updated>
+      <workItem from="1642791026423" duration="8436000" />
+      <workItem from="1642860302385" duration="5855000" />
     </task>
     <task id="LOCAL-00078" summary="fix cors policy">
       <created>1640095176697</created>
@@ -706,7 +700,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642606825060</updated>
     </task>
-    <option name="localTasksCounter" value="126" />
+    <task id="LOCAL-00126" summary="worked further on frontend tests">
+      <created>1642805388417</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1642805388418</updated>
+    </task>
+    <option name="localTasksCounter" value="127" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -839,8 +840,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="worked on getting data from database admin side" />
-    <MESSAGE value="worked on getting data of themes from database admin side" />
     <MESSAGE value="worked on like crud operations and http get requests in several pages" />
     <MESSAGE value="worked on dividing researcher and maintainer" />
     <MESSAGE value="worked on map and likes" />
