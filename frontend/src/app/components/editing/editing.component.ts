@@ -78,7 +78,7 @@ export class EditingComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.getname();
+    // this.getname();
     this.newPost.user = this.auth.getUser();
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ';
@@ -135,7 +135,8 @@ export class EditingComponent implements OnInit {
   }
 
   async getname() {
-    this.userService.restGetUser(this.auth.getUser().email).pipe().subscribe(
+    let currentUser = await this.auth.getUser();
+    await this.userService.restGetUser(currentUser.email).subscribe(
       (data) => {
         this.username = data.username;
       }
@@ -173,6 +174,7 @@ export class EditingComponent implements OnInit {
     await this.eventListen();
     await this.eventListenAudio();
     console.log("audio: " + this.newPost.audiofile);
+    this.route.navigate(['/feedview'], {queryParams: { post: this.newPost, msg: 'the post has been succesful!' } });
     this.postService.restCreateNewPost(this.newPost).subscribe(
       (data) => {
         console.log(data);
