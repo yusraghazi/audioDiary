@@ -112,9 +112,7 @@ export class AuthService {
     return this.isLoggedIn() && this.currentUser.admin;
   }
 
-  get email(): string {
-    return this.currentUser.email;
-  }
+
 
   private updateUserInformation(): void {
 
@@ -134,7 +132,7 @@ export class AuthService {
     }
   }
 
-  getUser() {
+   getUser() {
     return this.currentUser;
   }
 }
