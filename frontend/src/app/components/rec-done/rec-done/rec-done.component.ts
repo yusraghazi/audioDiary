@@ -93,7 +93,6 @@ export class RecDoneComponent implements OnInit {
    */
   processRecording(blob:any) {
     this.url = URL.createObjectURL(blob);
-    console.log(blob);
     const file = new File([blob], 'audio.mp3', { type: blob.type })
 
 

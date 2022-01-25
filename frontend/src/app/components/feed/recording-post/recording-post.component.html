@@ -1,5 +1,5 @@
 
-<div class="card"  [ngStyle]="{'border-color':audioPost.theme, 'box-shadow':'2.4px 4.8px 4.8px'+audioPost.theme}">
+<div class="card"  [ngStyle]="{'border-color':color, 'box-shadow':'2.4px 4.8px 4.8px'+color}">
   <audio id="{{audioPost.id}}" >
     <source src="{{audioUrl}}" type="audio/wav">
   </audio>
@@ -7,14 +7,8 @@
   <a *ngIf="!playBtn" (click)="this.playButton()" class="fa fa-play-circle-o" aria-hidden="true"></a>
   <a  *ngIf="playBtn"(click)="this.playButton()" class=" fa fa-pause-circle-o" aria-hidden="true"></a>
   <advanced-image [cldImg]="img"></advanced-image>
-  <!--newly added in gif-->
-<!--  <img src="assets/images/animatedwave.gif" id="myAnimation" [hidden] = "!isShow" alt="image" id="imageWave">-->
-<!--  <advanced-video [cldVid]="vid" controls="" (pause)="isShow = false" (playing)="setShow(); isShow = true" ></advanced-video>-->
-
-<!--  <img style="min-height: 200px" class="card-img-top" src="{{audioPost.img}}" alt="Card image cap">-->
   <div class="card-body">
     <div class="headerBody">
-<!--      <p class="card-username">@{{audioPost.user.username}} {{audioPost.user.name}}</p>-->
       <p class="card-username">@{{audioPost.user.username}}</p>
       <hr>
       <div class="icons">

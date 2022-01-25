@@ -47,7 +47,6 @@ export class FeedviewComponent implements OnInit {
 
     this.route.queryParams.subscribe(
       params => {
-        console.log(params);
         if (params.hashtag != null) {
           this.getPostByTheme(params.hashtag)
         }
@@ -143,9 +142,7 @@ export class FeedviewComponent implements OnInit {
     let currentUser = await this.authService.getUser();
     await this.likesService.getFavorites(currentUser.email).subscribe(
       (data) => {
-        console.log("data: " + data);
         data.forEach(like => {
-            console.log("like: " + like);
             this.postsService.restGetPost(like.post.id).subscribe(
               (post) => {
                 this.posts[this.posts.indexOf(post)].isLiked = true;

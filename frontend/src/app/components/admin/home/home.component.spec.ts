@@ -36,14 +36,4 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it("Hanna test03: html should have amount of posts", () => {
-    spyOn(postsService, 'restGetPosts').and.callThrough();
-    component.getAmountOfPosts();
-    fixture.detectChanges();
-    expect(postsService.restGetPosts).toHaveBeenCalled();
-
-    fixture.detectChanges();
-    const element = fixture.nativeElement.querySelector('#amountOfPosts');
-    expect(element.innerText).toContain(0);
-  })
 });

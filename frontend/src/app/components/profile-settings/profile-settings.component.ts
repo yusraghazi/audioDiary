@@ -24,10 +24,8 @@ export class ProfileSettingsComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(JSON.parse(JSON.stringify(this.user)));
     this.service.updateUser(this.user).subscribe(
       (data) => {
-        console.log("fixed alles" + data);
         this.router.navigate(['/feedview']);
       },(error) => {
         this.errorMessage = error.message.toString();

@@ -40,7 +40,6 @@ export class ProfileComponent implements OnInit {
 
   async getCurrentUserPosts() {
     let currentUser = this.authService.getUser();
-    console.log(currentUser);
     await this.postsService.restGetPostsOfUser(currentUser.email).pipe().subscribe(
       (data) => {
         this.posts = data;
@@ -129,9 +128,7 @@ export class ProfileComponent implements OnInit {
     let currentUser = await this.authService.getUser();
     await this.likesService.getFavorites(currentUser.email).subscribe(
       (data) => {
-        console.log("data: " + data);
         data.forEach(like => {
-          console.log("like: " + like);
             this.postsService.restGetPost(like.post.id).subscribe(
               (post) => {
                 this.favoriteposts.push(post);

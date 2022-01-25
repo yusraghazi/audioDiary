@@ -54,7 +54,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.user);
     this.authService.auth(this.user).subscribe((data: any) => {
 
       if (this.authService.getUser().admin == false) {

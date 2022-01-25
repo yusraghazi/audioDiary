@@ -114,8 +114,6 @@ export class EditingComponent implements OnInit {
     let marker: any = null;
     this.map.on('click', (e: any) => {
       // `e.lngLat` is the longitude, latitude geographical position of the event.
-      console.log(e.lngLat);
-      console.log(e);
       this.newPost.lng = e.lngLat.lng;
       this.newPost.lat = e.lngLat.lat;
 
@@ -172,7 +170,6 @@ export class EditingComponent implements OnInit {
   async postButton(){
     await this.eventListen();
     await this.eventListenAudio();
-    console.log("audio: " + this.newPost.audiofile);
     this.postService.restCreateNewPost(this.newPost).subscribe(
       (data) => {
         console.log(data);
@@ -219,7 +216,6 @@ export class EditingComponent implements OnInit {
         body: formData
       })
         .then((response) => {
-          console.log(response);
           return response.text();
         })
         .then((data) => {
@@ -267,7 +263,6 @@ export class EditingComponent implements OnInit {
    */
   processRecording(blob:any) {
     this.url = URL.createObjectURL(blob);
-    console.log(blob);
     const file = new File([blob], 'audio.mp3', { type: blob.type })
 
 
@@ -298,7 +293,6 @@ export class EditingComponent implements OnInit {
         })
         .then((data) => {
           let test = JSON.parse(data);
-          console.log("id: " + test.public_id);
           this.newPost.audiofile = test.public_id;
           // document.getElementById("data").innerHTML += "Your audio is uploaded succesfully!";
         });

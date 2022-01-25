@@ -38,7 +38,6 @@ export class ProfilePostComponent implements OnInit {
       }
     });
 
-    console.log("image:" + this.audioPost.img);
     this.img = cld.image(this.audioPost.img.toString());
     this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
     this.returnColor();
@@ -56,7 +55,6 @@ export class ProfilePostComponent implements OnInit {
       (data) => {
         // @ts-ignore
         this.audioPost = Object.assign(new Post(), data);
-        console.log(this.audioPost);
       }
     );
   }
@@ -95,7 +93,6 @@ export class ProfilePostComponent implements OnInit {
     await this.postsService.getTopFiveThemes().then(result => {
       this.popularThemes = result;
       this.themeValue = this.audioPost.theme;
-      console.log(this.themeValue);
     });
   }
 
@@ -109,7 +106,6 @@ export class ProfilePostComponent implements OnInit {
   toRemovePost(){
     this.deleteSelected.emit(this.selectedPost);
     const postId = this.selectedPost.id;
-    console.log(postId);
     this.postsService.restDeletePosts(postId).subscribe(
       (response) =>{
         console.log(response);

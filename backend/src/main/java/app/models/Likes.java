@@ -11,11 +11,9 @@ public class Likes {
     private int id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-//    @JsonIgnore
     private Posts post;
 
     @ManyToOne(fetch = FetchType.EAGER)
-//    @JsonIgnore
     private User user;
 
 

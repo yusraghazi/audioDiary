@@ -8,13 +8,10 @@ import {Like} from "../../../models/like";
 import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {User} from "../../../models/user";
-import {audit} from "rxjs/operators";
 import {Cloudinary, CloudinaryImage, CloudinaryVideo} from "@cloudinary/url-gen";
 import {fill, scale} from "@cloudinary/url-gen/actions/resize";
 import {byRadius} from "@cloudinary/url-gen/actions/roundCorners";
 import {Formattedpost} from "../../../models/formattedpost";
-import Transformation from "@cloudinary/url-gen/backwards/transformation";
-import {addWarning} from "@angular-devkit/build-angular/src/utils/webpack-diagnostics";
 
 
 @Component({
@@ -27,6 +24,7 @@ export class RecordingPostComponent implements OnInit {
   audioPost: Post = new Post();
   isShown: boolean;
   popularThemes: unknown;
+  color: string = "transparent";
   theme: String;
   themeValue: string;
   img: CloudinaryImage;
@@ -38,12 +36,9 @@ export class RecordingPostComponent implements OnInit {
 
   constructor(private postsService: PostsService, private likesService: LikesService, private authService: AuthService
   , private route: ActivatedRoute) {
-
   }
 
   ngOnInit(): void {
-    console.log(this.audioPost.id);
-
     const cld = new Cloudinary({
       cloud: {
         cloudName: 'hogeschool-van-amsterdam'
@@ -53,16 +48,10 @@ export class RecordingPostComponent implements OnInit {
     this.audioUrl = cld.video(this.audioPost.audiofile).toURL();
     this.img = cld.image(this.audioPost.img.toString());
 
-    console.log("img: " + this.audioPost.img.toString());
-
     this.vid = cld.video(this.audioPost.audiofile.toString());
-
-    console.log("vid: " + this.audioPost.audiofile.toString());
 
     cld.video(this.audioPost.audiofile.toString()).resize(scale().width(400));
     cld.video(this.audioPost.audiofile.toString()).toURL();
-
-    console.log( cld.video(this.audioPost.audiofile.toString()).toURL());
 
     cld.image(this.audioPost.img.toString()).resize(fill().width(350).height(200)).roundCorners(byRadius(20))
     this.img.resize(fill().width(350).height(200)).roundCorners(byRadius(20));
@@ -92,7 +81,6 @@ export class RecordingPostComponent implements OnInit {
     await this.postsService.getTopFiveThemes().then(result => {
       this.popularThemes = result;
       this.themeValue = this.audioPost.theme;
-      console.log(this.themeValue);
     });
   }
 
@@ -101,26 +89,32 @@ export class RecordingPostComponent implements OnInit {
     switch (this.audioPost.theme) {
       // @ts-ignore
       case this.popularThemes[0][0]:
-        this.audioPost.theme = Theme.SUN;
+        this.color = Theme.SUN;
+        // this.audioPost.theme = Theme.SUN;
         break;
       // @ts-ignore
       case this.popularThemes[1][0]:
-        this.audioPost.theme = Theme.SAND;
+        this.color = Theme.SAND;
+        // this.audioPost.theme = Theme.SAND;
         break;
       // @ts-ignore
       case this.popularThemes[2][0]:
-        this.audioPost.theme = Theme.FOREST;
+        this.color = Theme.FOREST;
+        // this.audioPost.theme = Theme.FOREST;
         break;
       // @ts-ignore
       case this.popularThemes[3][0]:
-        this.audioPost.theme = Theme.WATER;
+        this.color = Theme.WATER;
+        // this.audioPost.theme = Theme.WATER;
         break;
       // @ts-ignore
       case this.popularThemes[4][0]:
-        this.audioPost.theme = Theme.MOUNTAIN;
+        this.color = Theme.MOUNTAIN;
+        // this.audioPost.theme = Theme.MOUNTAIN;
         break;
       default:
-        this.audioPost.theme = Theme.CITY;
+        this.color = Theme.CITY;
+        // this.audioPost.theme = Theme.CITY;
         break;
     }
     return this.theme;
@@ -139,7 +133,6 @@ export class RecordingPostComponent implements OnInit {
     let currentUser = Object.assign(new User(), this.authService.getUser());
     let post = await Object.assign(new Formattedpost(), this.audioPost);
     this.like = await new Like(null, post, currentUser);
-    console.log(JSON.parse(JSON.stringify(this.like)));
     if (this.like != null) {
       this.likesService.restPostLike(this.like).subscribe(
         (data) => {
@@ -173,7 +166,6 @@ export class RecordingPostComponent implements OnInit {
 
  async sharePost() {
     if (navigator.share) {
-      console.log("ja")
 
     }
     const shareData = {

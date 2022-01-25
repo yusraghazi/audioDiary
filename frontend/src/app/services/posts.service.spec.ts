@@ -29,7 +29,7 @@ describe('PostsService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('Hanna test 03: should return a valid post info object', async () => {
+  it('Hanna test 04: should return a valid post info object', async () => {
 
     const dummyData = {
       id: 24,
@@ -66,7 +66,7 @@ describe('PostsService', () => {
     req.flush([dummyData]);
   });
 
-  it('Hanna test 04: should generate an exception due to wrong argument', () => {
+  it('Hanna test 05: should generate an exception due to wrong argument', () => {
 
     service.restGetPostTest(90000).subscribe( (res: Formattedpost[]) => {}, (err) => {
       expect(err).toBeTruthy();
