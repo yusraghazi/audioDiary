@@ -42,7 +42,7 @@ public class LikeController {
     }
 
     @PostMapping("/likes")
-    public ResponseEntity<Comment> createLike(@RequestBody Likes like) {
+    public ResponseEntity<Object> createLike(@RequestBody Likes like) {
         Likes savedLike = likeRepo.save(like);
         URI location = ServletUriComponentsBuilder.
                 fromCurrentRequest().path("/{id}").

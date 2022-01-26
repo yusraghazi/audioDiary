@@ -41,6 +41,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    // creating GEOjson data
     this.places = {"type": "FeatureCollection", "features": []};
     this.postsService.restGetPosts().subscribe(
       (data) => {
@@ -60,6 +61,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    // initialising map
       mapboxgl.accessToken = 'pk.eyJ1IjoiaGFubmF0b2VuYnJla2VyIiwiYSI6ImNrdXdzMjNhdTF6cHAydmxuenY3ODQ3djkifQ.X7LsiDBkUfz7vn7LfkUvKQ';
       this.map = new mapboxgl.Map({
         style: 'mapbox://styles/mapbox/outdoors-v11',
@@ -68,6 +70,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
         container: 'map-mapbox',
       });
 
+      // adding search and location controls to the map
       const nav = new mapboxgl.NavigationControl();
       this.map.addControl(nav, 'top-left');
 
@@ -94,6 +97,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
 
       this.map.on('load', async () => {
 
+        // loading in the geojson data I have created before
         this.map.addSource('places', {
           'type': 'geojson',
           'data': this.places
@@ -104,6 +108,8 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           closeOnClick: false
         });
 
+        // user can specify their audio by adding a theme to their audio post
+        // create a filter by creating a layer for each theme
         for (const feature of this.places.features) {
           const symbol = feature.properties.theme;
           const layerID = `poi-${symbol}`;
@@ -120,6 +126,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
               'filter': ['==', 'theme', symbol]
             });
 
+            // filling the html with al the different themes
             const container = document.createElement('div');
             container.className = "form-check form-check-inline";
 
@@ -138,6 +145,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
             container.appendChild(label);
             filterGroup.appendChild(container);
 
+            // set visibility of the different layers based on the checkboxes
             input.addEventListener('change', (e) => {
               this.map.setLayoutProperty(
                 layerID,
@@ -151,6 +159,7 @@ export class MapviewComponent implements OnInit, AfterViewInit {
           // @ts-ignore
           this.map.on('mouseenter', layerID, (e) => {
 
+            // navigate to child component
             this.map.on('click', layerID, (e: { features: { properties: { id: number; }; }[]; }) => {
               this.id = e.features[0].properties.id;
               this.openOverlay(e.features[0].properties.id);
@@ -163,8 +172,6 @@ export class MapviewComponent implements OnInit, AfterViewInit {
             });
 
             const coordinates = e.features[0].geometry.coordinates.slice();
-            // this.popupTheme = this.theme;
-            const img = e.features[0].properties.img;
             const title = e.features[0].properties.title;
             const description = e.features[0].properties.description;
 
@@ -184,6 +191,9 @@ export class MapviewComponent implements OnInit, AfterViewInit {
   }
 
 
+  /**
+   * Getting the top 5 used themes from the database in descending order
+   */
   async getMostPopularThemes() {
     await this.postsService.getTopFiveThemes().then(result => {
       this.popularThemes = result;
@@ -191,6 +201,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
     });
   }
 
+  /**
+   * See if the theme matches with one of the top five themes and assign it its corresponding color.
+   * @param theme the theme value of the current audio post
+   */
   async getTheme(theme: string) {
     await this.getMostPopularThemes();
       switch (theme) {
@@ -222,6 +236,10 @@ export class MapviewComponent implements OnInit, AfterViewInit {
     }
 
 
+  /**
+   * navigate to a single audio post
+   * @param pId the id of the audio post/the parameter to give to the router
+   */
   async openOverlay(pId: number) {
     await this.router.navigate([pId], {relativeTo: this.activatedRoute});
   }

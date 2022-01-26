@@ -49,16 +49,20 @@ export class PostsService {
     return new Promise(resolve =>
       strArray.pipe().subscribe(
         (data) => {
-          var count = {};
+          let count = {};
+
+          // creating a 2D array
           data.forEach(function (i) { // @ts-ignore
             count[i] = (count[i] || 0) + 1;
           });
 
-          var result = Object.entries(count);
+          // sort array in descending order
+          let result = Object.entries(count);
           result.sort((a: any, b: any) => {
             return b[1] - a[1];
           });
 
+          // slice the 2D array to get top five
           this.result = result.slice(0, 5);
           resolve(this.result);
         }));

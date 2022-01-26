@@ -87,13 +87,13 @@ public class postTest {
         assertEquals("Could not find post Not found id=9000", postNotFoundException.getMessage());
     }
 
+    // check if repository functions work (save, findbyid, delete, findByUserId)
     @Test()
     void findPostByUser() {
         Set<Posts> set = new HashSet<>(this.postsRepository.findPostByUserId(userEmail));
         assertEquals(set, postsByUserEmail);
     }
 
-    // check if repository functions work (save, findbyid, delete)
     @Test()
     void updateAPost() {
         ArrayList<Posts> posts = new ArrayList<>(this.postsRepository.findAll());

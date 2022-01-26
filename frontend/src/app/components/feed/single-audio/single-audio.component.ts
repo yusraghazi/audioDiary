@@ -50,7 +50,6 @@ export class SingleAudioComponent implements OnInit {
   async setPost(id: number) {
     await this.postsService.restGetPost(id).subscribe(
       (data) => {
-
         this.audioPost = data;
         this.username = data.user.username;
         this.img = cld.image(data.img.toString());
@@ -64,6 +63,9 @@ export class SingleAudioComponent implements OnInit {
     });
   }
 
+  /**
+   * Getting the top 5 used themes from the database in descending order
+   */
   async getMostPopularThemes() {
     await this.postsService.getTopFiveThemes().then(result => {
       this.popularThemes = result;
@@ -71,6 +73,9 @@ export class SingleAudioComponent implements OnInit {
     });
   }
 
+  /**
+   * See if the theme matches with one of the top five themes and assign it its corresponding color.
+   */
   async returnColor() {
     await this.getMostPopularThemes();
     switch (this.audioPost.theme) {
@@ -102,9 +107,7 @@ export class SingleAudioComponent implements OnInit {
   }
 
   toggleShow() {
-
     this.isShown = ! this.isShown;
-
   }
 
   playButton() {
