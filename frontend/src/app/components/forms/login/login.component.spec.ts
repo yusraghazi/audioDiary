@@ -35,11 +35,13 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
     componentHtml = fixture.debugElement.nativeElement;
+    await sessionStorage.clear()
+
   });
 
 

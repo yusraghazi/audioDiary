@@ -1,6 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SwitchComponent } from './switch.component';
+import {SwitchComponent} from './switch.component';
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {RouterTestingModule} from "@angular/router/testing";
+import {routes} from "../../../app-routing.module";
 
 describe('SwitchComponent', () => {
   let component: SwitchComponent;
@@ -8,9 +11,12 @@ describe('SwitchComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SwitchComponent ]
+      imports: [
+        HttpClientTestingModule,
+        RouterTestingModule.withRoutes(routes)],
+      declarations: [SwitchComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -18,8 +24,21 @@ describe('SwitchComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+//
+  it('Redouan 5: should call change to mapview function on click', () => {
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+    //Arrange organize the click method and the button
+    spyOn(component, 'click');
+    let button = fixture.debugElement.nativeElement.querySelector('#toggle')
+
+    //Act clicking on the switch button
+    button.click()
+    fixture.detectChanges();
+
+    // Assert Checking if the method has been called en checking if the path is "/"
+    expect(component.click).toHaveBeenCalledOnceWith();
+    expect(component.router.url).toEqual('/')
   });
+
+
 });

@@ -15,19 +15,24 @@ export class CommentsComponent implements OnInit {
   postInfo: Post;
   comments: SingleComment[];
   description: string;
+  authservice: AuthService;
 
   constructor(private commentService: CommentsService, private auth: AuthService) { }
-  getComments(): void{
+  getComments(){
     this.commentService.restFindCommentByPostId(this.postInfo.id).subscribe(
       (data) => {
         // @ts-ignore
         this.comments = data; console.log(data);
       },
       (error) => console.log("Error: " + error.status + " - " + error.error));
-
   }
+
+
+
   ngOnInit(): void {
     this.getComments();
+
+
   }
 
   sendComment(){

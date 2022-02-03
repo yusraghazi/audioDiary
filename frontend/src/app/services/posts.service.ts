@@ -44,7 +44,7 @@ export class PostsService {
       }));
   }
 
-  async getTopFiveThemes() {
+  async getTopFiveThemes() : Promise<String[]>{
     let strArray = await this.getAllThemes();
     return new Promise(resolve =>
       strArray.pipe().subscribe(

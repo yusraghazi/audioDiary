@@ -1,5 +1,4 @@
 import {User} from "./user";
-import {Audio} from "./audio";
 
 export class Post {
   private _id:number | null;
@@ -14,7 +13,6 @@ export class Post {
   private _lat: number | null;
   private _location: string | null;
   private _audiofile: string | null;
-  private _audio: Audio | null;
 
   constructor() {}
 
@@ -117,13 +115,7 @@ export class Post {
   }
 
 
-  get audio(): Audio | null {
-    return this._audio;
-  }
 
-  set audio(value: Audio | null) {
-    this._audio = value;
-  }
 
 
   get amountReport(): number | null {

@@ -1,19 +1,21 @@
 <app-switch [switchText]="mapview"></app-switch>
 <div *ngIf="popularPosts">
 <div ngbDropdown class="d-inline-block">
-  <button class="btn btn-outline-primary" id="dropdownMenuButton" ngbDropdownToggle>Filter on popular hashtag</button>
+  <button class="btn btn-outline-primary" id="dropdownMenuButton"  ngbDropdownToggle>Filter on popular hashtag</button>
   <div ngbDropdownMenu aria-labelledby="dropdownMenuButton">
-    <button ngbDropdownItem (click)="getPostByTheme(popularPosts[0][0])" style="color: #fa4114">1.{{popularPosts[0][0]}}</button>
-    <button ngbDropdownItem (click)="getPostByTheme(popularPosts[1][0])" style="color: #FFB366">2.{{popularPosts[1][0]}}</button>
-    <button ngbDropdownItem (click)="getPostByTheme(popularPosts[2][0])" style="color: #ACDF8D">3.{{popularPosts[2][0]}}</button>
-    <button ngbDropdownItem (click)="getPostByTheme(popularPosts[3][0])" style="color: #90D2E0">4.{{popularPosts[3][0]}}</button>
+    <button id="pp0" ngbDropdownItem (click)="getPostByTheme(popularPosts[0][0])" style="color: #fa4114">1.{{popularPosts[0][0]}}</button>
+    <button id="pp1"  ngbDropdownItem (click)="getPostByTheme(popularPosts[1][0])" style="color: #FFB366">2.{{popularPosts[1][0]}}</button>
+    <button id="pp2"  ngbDropdownItem (click)="getPostByTheme(popularPosts[2][0])" style="color: #ACDF8D">3.{{popularPosts[2][0]}}</button>
+    <button id="pp3"  ngbDropdownItem (click)="getPostByTheme(popularPosts[3][0])" style="color: #90D2E0">4.{{popularPosts[3][0]}}</button>
   </div>
 </div>
 </div>
 <input type="text" [(ngModel)]="term" class="searchTerm" placeholder="What are you looking for?">
 <div class="allPosts">
-    <div *ngFor="let post of posts | filter:term;">
+    <div *ngFor="let post of posts ">
       <app-recording-post [audioPost]="post"></app-recording-post>
     </div>
     <div style="height: 140px"></div>
 </div>
+
+<button (click)="getMostPopularThemes()" id="lll"></button>

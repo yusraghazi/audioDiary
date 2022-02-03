@@ -113,4 +113,12 @@ public class postTest {
     }
 
 
+    //Test Redouan
+//    @Test()
+//    void getAllPosts(){
+//        this.postsRepository.findAll();
+//        assertEquals();
+//    }
+
+
 }

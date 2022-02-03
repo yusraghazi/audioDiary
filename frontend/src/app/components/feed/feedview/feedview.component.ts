@@ -10,15 +10,19 @@ import {share} from "rxjs/operators";
 import {LikesService} from "../../../services/likes.service";
 import {AuthService} from "../../../services/auth.service";
 
+
+
+
 @Component({
   selector: 'app-feedview',
   templateUrl: './feedview.component.html',
   styleUrls: ['./feedview.component.css']
+
 })
 export class FeedviewComponent implements OnInit {
 
   @Output()
-  popularPosts: unknown = null;
+  popularPosts: String[] = null;
   posts: Post[];
   text: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   term: string;
@@ -33,6 +37,9 @@ export class FeedviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
+
     const id = this.router.url.split("/")[2];
 
     if (id == undefined){
@@ -56,8 +63,8 @@ export class FeedviewComponent implements OnInit {
   }
 
 
-  getAllPosts(): void{
-    this.postsService.restGetPosts().subscribe(
+  async getAllPosts(){
+  await  this.postsService.restGetPosts().subscribe(
       (data) => {
         // @ts-ignore
         this.posts = data;
@@ -111,48 +118,27 @@ export class FeedviewComponent implements OnInit {
 
 
 
-//  returnColor(post: Post) {
-  //   switch (post.theme) {
-  //     case this.popularPosts[0]:
-  //       post.theme = "red"
-  //       break;
-  //     case this.popularPosts[1]:
-  //       post.theme = "orange"
-  //       break;
-  //     case this.popularPosts[2]:
-  //       post.theme = "yellow"
-  //       break;
-  //     case this.popularPosts[3]:
-  //       post.theme = "green"
-  //       break;
-  //     case this.popularPosts[4]:
-  //       post.theme = "blue"
-  //       break;
-  //     case this.popularPosts[5]:
-  //       post.theme = "grey"
-  //       break;
-  //   }
-  //
-  //   return post.theme;
-  // }
 
   }
 
   async getFavPosts() {
     let currentUser = await this.authService.getUser();
-    await this.likesService.getFavorites(currentUser.email).subscribe(
-      (data) => {
-        data.forEach(like => {
-            this.postsService.restGetPost(like.post.id).subscribe(
-              (post) => {
-                this.posts[this.posts.indexOf(post)].isLiked = true;
-              }
-            )
-          }
-        )
-      }
+    if (currentUser == undefined) return;
+      await this.likesService.getFavorites(currentUser.email).subscribe(
+        (data) => {
+          console.log("data: " + data);
+          data.forEach(like => {
+              console.log("like: " + like);
+              this.postsService.restGetPost(like.post.id).subscribe(
+                (post) => {
+                  this.posts[this.posts.indexOf(post)].isLiked = true;
+                }
+              )
+            }
+          )
+        }
+      )
+    }
 
-    )
-  }
 }
 

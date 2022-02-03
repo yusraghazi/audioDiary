@@ -18,7 +18,7 @@ import {routes} from "../../app-routing.module";
 import {coneMonochromacy} from "@cloudinary/url-gen/qualifiers/simulateColorBlind";
 
 
-fdescribe('EditingComponent', () => {
+describe('EditingComponent', () => {
   let component: EditingComponent;
   let fixture: ComponentFixture<EditingComponent>;
   let componentHtml: HTMLElement;

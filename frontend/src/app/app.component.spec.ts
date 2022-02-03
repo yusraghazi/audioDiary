@@ -18,6 +18,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
 import {MatInputModule} from "@angular/material/input";
 import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -44,13 +45,14 @@ describe('AppComponent', () => {
         MatSidenavModule,
         MatTableModule,
         MatIconModule,
-
+        Ng2SearchPipeModule
 
       ],
       declarations: [
         AppComponent
       ],
     }).compileComponents();
+
   });
 
   it('should create the app', () => {

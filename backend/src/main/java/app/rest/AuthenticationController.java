@@ -10,9 +10,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
@@ -65,7 +63,7 @@ public class AuthenticationController {
     public ResponseEntity refreshToken(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         String encodedToken = request.getHeader(HttpHeaders.AUTHORIZATION);
 
-        if(encodedToken == null) {
+        if (encodedToken == null) {
             // avoid giving clues to the caller (do not say that header is not present, for example)
             throw new AuthenticationException("authentication problem");
         }
@@ -77,7 +75,7 @@ public class AuthenticationController {
         JWTokenInfo tokenInfo = tokenUtils.decode(encodedToken, true);
 
         // Check if the token can be refreshed (You can also check if the user or the token was blacklisted)
-        if(!tokenUtils.isRenewable(tokenInfo)) {
+        if (!tokenUtils.isRenewable(tokenInfo)) {
             throw new AuthenticationException("Token is not renewable");
         }
 
@@ -116,5 +114,9 @@ public class AuthenticationController {
         return ResponseEntity.accepted()
                 .header(HttpHeaders.AUTHORIZATION, "Bearer " + tokenString)
                 .body(user);
+    }
+    @RequestMapping(path = "/test", method = RequestMethod.GET)
+    public String testEndpoint() {
+        return "Hello World!";
     }
 }

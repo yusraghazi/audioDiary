@@ -1,5 +1,4 @@
 import {User} from "./user";
-import {Audio} from "./audio";
 
 export class Formattedpost {
   public id: number | null;
