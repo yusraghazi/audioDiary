@@ -7,6 +7,7 @@ import app.repositories.UserRepository;
 import app.security.JWTokenInfo;
 import app.security.PasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +31,7 @@ public class UserController {
         User userById = userRepo.findByEmail(email);
 
         if(userById == null) {
-            throw new UserNotFoundException("id = " + email);
+            throw new UserNotFoundException(HttpStatus.NOT_FOUND.toString());
         }
 
         return userById;
@@ -40,6 +41,7 @@ public class UserController {
     @DeleteMapping("/users/{email}")
     public ResponseEntity<User> deleteUser(@PathVariable String email) {
         User user = getUserByEmail(email);
+
         userRepo.delete(user);
         return ResponseEntity.ok(user);
     }

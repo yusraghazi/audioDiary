@@ -16,7 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="backend" target="11" />
+      <module name="backend" target="15" />
       <module name="wrapper" target="1.5" />
     </bytecodeTargetLevel>
   </component>

@@ -4,6 +4,7 @@ import app.models.User;
 import app.repositories.UserRepository;
 import app.repositories.UserRepositoryJPA;
 import app.rest.UserController;
+import app.security.PasswordEncoder;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.platform.commons.logging.Logger;
@@ -14,13 +15,16 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import java.time.LocalDate;
 import java.util.Date;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 // Taner
@@ -31,6 +35,12 @@ public class testUserRepository {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    private PasswordEncoder encoder;
+
+
+
 
     @Test
     public void findUser(){
@@ -53,9 +63,9 @@ public class testUserRepository {
 
     @Test
     public void removeUser() {
-        User removeUser = userRepository.findByEmail("gg@g.com");
+        User removeUser = userRepository.findByEmail("meng@gmail.com");
         userRepository.delete(removeUser);
-        assertNull(userRepository.findByEmail("gg@g.com"));
+        assertNull(userRepository.findByEmail("meng@gmail.com"));
         System.out.println("User is removed in the table:\n" + removeUser.getEmail());
     }
 
@@ -70,6 +80,21 @@ public class testUserRepository {
     }
 
 
+
+    /**
+     * This Test Written by:
+     *<addAdmin()>
+     * @outhor redouanassakali
+     */
+    @Test
+    public void addAdmin(){
+        User adminUser = new User("admin@userdairy.com","Admin admin","2A5C5F2623024CE3DE6FE7DC8F5E13CA55B7AADC13174254B40AF574E37018C1",true,"admin1",null,true);
+        User addAminUser = userRepository.save(adminUser);
+        userRepository.save(addAminUser);
+        assertEquals(true, addAminUser.isAdmin());
+        System.out.println("User with the email "+addAminUser.getEmail()+" is a Administrator in the database");
+
+    }
 
 
 
