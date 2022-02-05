@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="cleaned up code for M&amp;T">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="bad58918-0d87-41cd-b20f-4eacf7ce3e7a" name="Changes" comment="worked further on audio">
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/app/getPostsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ad-vmc-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ad-vmc-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/app/rest/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/app/rest/LikeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/test/java/app/postTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/app/postTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/feed/single-audio/single-audio.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/services/posts.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/admin/home/home.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/editing/editing.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post-favorite/profile-post-favorite.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile-post/profile-post.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/components/profile/profile.component.spec.ts" afterDir="false" />
     </list>
     <list id="8fc66ea1-e0f5-4dd5-baa7-5dbda1598fdb" name="Changes by AnasE" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,13 +55,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/com/example/backend/ServletInitializer.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/app/components/feed/mapview/mapview.component.html" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepositoryJPA.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/models/Posts.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.gitignore" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/repositories/PostsRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/src/main/java/app/BackendApplication.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -125,6 +129,7 @@
       <recent name="$PROJECT_DIR$/backend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\HVA ICT 2\EWA\project v8\ad-vmc-1\frontend\node_modules\webpack" />
       <recent name="$PROJECT_DIR$/frontend/src/assets/images" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/app" />
@@ -135,8 +140,8 @@
       <recent name="com.example.backend" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication">
-    <configuration name="postTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.getPostsTest.TestExceptions">
+    <configuration name="getPostsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -145,13 +150,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.postTest" />
+      <option name="MAIN_CLASS_NAME" value="app.getPostsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="postTest.updateAPost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="getPostsTest.TestExceptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -160,14 +165,46 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.postTest" />
-      <option name="METHOD_NAME" value="findPostByUser" />
+      <option name="MAIN_CLASS_NAME" value="app.getPostsTest" />
+      <option name="METHOD_NAME" value="TestExceptions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testComments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="getPostsTest.ToDo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.getPostsTest" />
+      <option name="METHOD_NAME" value="ToDo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="getPostsTest.deletePost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="MAIN_CLASS_NAME" value="app.getPostsTest" />
+      <option name="METHOD_NAME" value="deletePost" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testComments.testExeptionThrowing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend" />
       <extension name="coverage">
         <pattern>
@@ -177,39 +214,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="app" />
       <option name="MAIN_CLASS_NAME" value="app.testComments" />
-      <option name="METHOD_NAME" value="postOfNullShouldCreateException" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testLikes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.testLikes" />
-      <option name="METHOD_NAME" value="updateAPost" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="testLikes.testDeleteLike" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app" />
-      <option name="MAIN_CLASS_NAME" value="app.testLikes" />
-      <option name="METHOD_NAME" value="testDeleteLike" />
+      <option name="METHOD_NAME" value="testExeptionThrowing" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -237,21 +242,21 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
-      <item itemvalue="JUnit.testComments" />
-      <item itemvalue="JUnit.postTest.updateAPost" />
-      <item itemvalue="JUnit.testLikes.testDeleteLike" />
-      <item itemvalue="JUnit.testLikes" />
+      <item itemvalue="JUnit.getPostsTest" />
+      <item itemvalue="JUnit.getPostsTest.deletePost" />
+      <item itemvalue="JUnit.getPostsTest.ToDo" />
+      <item itemvalue="JUnit.testComments.testExeptionThrowing" />
+      <item itemvalue="JUnit.getPostsTest.TestExceptions" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="Spring Boot.BackendApplication" />
-      <item itemvalue="JUnit.postTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.postTest" />
-        <item itemvalue="JUnit.testComments" />
-        <item itemvalue="JUnit.testLikes" />
-        <item itemvalue="JUnit.testLikes.testDeleteLike" />
-        <item itemvalue="JUnit.postTest.updateAPost" />
+        <item itemvalue="JUnit.getPostsTest.deletePost" />
+        <item itemvalue="JUnit.getPostsTest.TestExceptions" />
+        <item itemvalue="JUnit.getPostsTest.ToDo" />
+        <item itemvalue="JUnit.testComments.testExeptionThrowing" />
+        <item itemvalue="JUnit.getPostsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -348,6 +353,8 @@
       <workItem from="1642860302385" duration="6011000" />
       <workItem from="1643133251065" duration="12536000" />
       <workItem from="1643180587868" duration="5950000" />
+      <workItem from="1643551875567" duration="7151000" />
+      <workItem from="1643641394793" duration="302000" />
     </task>
     <task id="LOCAL-00085" summary="last try">
       <created>1640103116592</created>
@@ -821,7 +828,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -904,5 +910,11 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ad_vmc_1$testComments_addComment.ic" NAME="testComments.addComment Coverage Results" MODIFIED="1643207140865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>app.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/ad_vmc_1$BackendApplication.ic" NAME="BackendApplication Coverage Results" MODIFIED="1643207257363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -1,16 +1,26 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfilePostComponent} from "./profile-post.component";
+import {FormsModule} from "@angular/forms";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {RouterTestingModule} from "@angular/router/testing";
+import {PostsService} from "../../../services/posts.service";
 
 describe('ProfilePostComponent', () => {
   let component: ProfilePostComponent;
   let fixture: ComponentFixture<ProfilePostComponent>;
-  let h1: HTMLElement;
-  let comp: HTMLElement;
+  let postsService: PostsService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfilePostComponent ]
+      imports: [
+        FormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule],
+      declarations: [ ProfilePostComponent ],
+      providers: [
+        {provide: PostsService}
+      ]
     })
       .compileComponents();
   });
@@ -18,15 +28,11 @@ describe('ProfilePostComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProfilePostComponent);
     component = fixture.componentInstance;
+    postsService = TestBed.inject(PostsService);
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create????????????', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should display original title', () => {
-    // Hooray! No `fixture.detectChanges()` needed
-    expect(h1.textContent).toContain(comp.title);
   });
 });

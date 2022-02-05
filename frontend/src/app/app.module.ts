@@ -43,6 +43,7 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
 import { DummyComponentComponent } from './components/dummy-component/dummy-component.component';
 import {FileUploadModule} from "ng2-file-upload";
 import { provideRoutes} from '@angular/router';
+import { ProfileTestComponent } from './components/profile-test/profile-test.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { provideRoutes} from '@angular/router';
      SingleAudioComponent,
      WelcomeComponent,
      DummyComponentComponent,
+     ProfileTestComponent,
   ],
     imports: [
         BrowserModule,
